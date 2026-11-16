@@ -2,13 +2,17 @@ name: Descrever tabelas do SIDRA
 
 # Só manual. Grava nome, variáveis e classificações das tabelas pedidas em
 # dados/metadados/descricao_sidra, para conferir códigos antes de incluir
-# uma tabela na coleta.
+# uma tabela na coleta. Como a página de descrição pode recusar o acesso,
+# há também a opção de sondar códigos de classificação pela API de valores.
 on:
   workflow_dispatch:
     inputs:
       tabelas:
         description: Números das tabelas, separados por espaço
         required: true
+      faixa:
+        description: Opcional. Faixa de códigos de classificação para sondar na primeira tabela (ex. 12500 12700)
+        required: false
 
 permissions:
   contents: write
@@ -38,6 +42,13 @@ jobs:
         env:
           TABELAS: ${{ inputs.tabelas }}
         run: Rscript R/descrever_tabelas.R $TABELAS
+
+      - name: Sondar classificações
+        if: ${{ inputs.faixa != '' }}
+        env:
+          TABELAS: ${{ inputs.tabelas }}
+          FAIXA: ${{ inputs.faixa }}
+        run: Rscript R/sondar_classificacoes.R ${TABELAS%% *} $FAIXA
 
       - name: Gravar alterações
         run: |
