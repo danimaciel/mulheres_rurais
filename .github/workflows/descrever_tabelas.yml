@@ -35,7 +35,9 @@ jobs:
         run: Rscript -e 'install.packages("httr")'
 
       - name: Descrever tabelas
-        run: Rscript R/descrever_tabelas.R ${{ inputs.tabelas }}
+        env:
+          TABELAS: ${{ inputs.tabelas }}
+        run: Rscript R/descrever_tabelas.R $TABELAS
 
       - name: Gravar alterações
         run: |

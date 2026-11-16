@@ -27,10 +27,15 @@ limpar_html <- function(html) {
 
 for (tabela in tabelas) {
   url <- sprintf("https://apisidra.ibge.gov.br/desctabapi.aspx?c=%s", tabela)
-  resp <- tryCatch(GET(url, timeout(120), user_agent("mulheres-rurais-coleta")),
+  resp <- tryCatch(GET(url, timeout(120), user_agent("mulheres-rurais-coleta"),
+                       config(connecttimeout = 60, ipresolve = 1L)),
                    error = function(e) e)
-  if (inherits(resp, "error") || status_code(resp) != 200) {
-    message(sprintf("%s: falhou", tabela))
+  if (inherits(resp, "error")) {
+    message(sprintf("%s: falhou (%s)", tabela, conditionMessage(resp)))
+    next
+  }
+  if (status_code(resp) != 200) {
+    message(sprintf("%s: falhou (HTTP %d)", tabela, status_code(resp)))
     next
   }
   texto <- limpar_html(content(resp, as = "text", encoding = "UTF-8"))
