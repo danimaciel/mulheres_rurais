@@ -5,6 +5,8 @@
 # Na configuração, a coluna atividade diz se a tabela tem a classe de
 # atividade (classificação 12440). "sim" aplica o recorte, "nao" coleta sem
 # ele e "a confirmar" tenta com o recorte e, se a API recusar, coleta sem.
+# Use "a confirmar" ao incluir uma tabela nova e troque depois pelo que a
+# primeira coleta mostrar.
 # A coluna classificacoes lista as classificações abertas por categoria; as
 # que não aparecem vêm só no total.
 #
@@ -61,7 +63,7 @@ for (i in seq_len(nrow(tabelas))) {
   niveis <- strsplit(tabelas$niveis[i], ";", fixed = TRUE)[[1]]
   classificacoes <- strsplit(tabelas$classificacoes[i], ";", fixed = TRUE)[[1]]
   atividade <- tabelas$atividade[i]
-  arquivo <- sprintf("dados/sidra/censo_agro_%s.csv", tabela)
+  arquivo <- sprintf("dados/sidra/censo_agro_%s.csv.gz", tabela)
   detalhe <- ""
   message(sprintf("Tabela %s", tabela))
 

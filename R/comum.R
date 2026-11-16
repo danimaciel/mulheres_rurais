@@ -36,7 +36,12 @@ salvar_se_valido <- function(nova, arquivo, colunas_obrigatorias = character()) 
   }
   dir.create(dirname(arquivo), recursive = TRUE, showWarnings = FALSE)
   temporario <- paste0(arquivo, ".tmp")
-  write.csv(nova, temporario, row.names = FALSE, na = "", fileEncoding = "UTF-8")
+  # Arquivos .csv.gz são gravados comprimidos. As tabelas municipais passam
+  # de 100 MB em texto puro, que é o limite de arquivo do GitHub.
+  saida <- if (grepl("\\.gz$", arquivo)) gzfile(temporario, "w", encoding = "UTF-8") else
+    file(temporario, "w", encoding = "UTF-8")
+  write.csv(nova, saida, row.names = FALSE, na = "")
+  close(saida)
   mudou <- !file.exists(arquivo) ||
     !identical(unname(tools::md5sum(temporario)), unname(tools::md5sum(arquivo)))
   file.rename(temporario, arquivo)

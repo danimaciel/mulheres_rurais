@@ -11,7 +11,7 @@ Este repositório ainda não tem a interface. Por enquanto ele guarda a coleta d
 ```
 config/        o que coletar: cadeias e tabelas do SIDRA
 R/             scripts de coleta
-dados/sidra/   tabelas do Censo Agro 2017, uma por arquivo
+dados/sidra/   tabelas do Censo Agro 2017, uma por arquivo (.csv.gz)
 dados/organizacoes/
 dados/metadados/   situação da última coleta
 .github/workflows/ atualização mensal
@@ -29,6 +29,8 @@ A base de organizações da Amazônia é lida do repositório [organizacoes_mulh
 
 Uma regra vale para todas as fontes: um arquivo só é substituído quando a versão nova chega completa. Se a API estiver fora do ar, devolver erro ou uma base bem menor que a anterior (queda de mais de 20% nas linhas), o arquivo antigo fica como está e o motivo é registrado em `dados/metadados/situacao_coleta.csv`. Isso evita que uma falha pontual do IBGE apague dados que estavam corretos.
 
+Os arquivos do SIDRA são gravados como CSV comprimido (.csv.gz), porque a tabela 6887 no nível municipal passa de 200 MB em texto puro. O R lê direto com `read.csv`, sem precisar descompactar.
+
 O workflow `atualizar_dados.yml` roda no dia 5 de cada mês e também pode ser disparado manualmente pela aba Actions. Ele só faz commit quando algo mudou.
 
 Para rodar localmente, a partir da raiz do repositório, com os pacotes `httr` e `jsonlite` instalados:
@@ -44,6 +46,8 @@ Rscript R/importar_organizacoes.R
 Algumas coisas do Censo Agro 2017 precisam estar claras para quem for usar ou apresentar esses números.
 
 As tabelas 6883 e 6887 classificam o estabelecimento só pela atividade principal. Um estabelecimento que produz café como atividade secundária não aparece como café, então essas tabelas subestimam o tamanho real da cadeia.
+
+Das tabelas coletadas hoje, só a 6883 e a 6887 têm recorte por classe de atividade. As demais (6768, 6779, 6851, 6869, 6776, 6955 e 6957) a API só entrega para o conjunto dos estabelecimentos.
 
 O total de todas as atividades é referência, nunca dado de uma cadeia. Quando uma tabela não tem recorte por atividade, as linhas recebem a marca "Todas as atividades (tabela sem recorte por atividade)" e não podem ser apresentadas como dado de café, cacau ou qualquer outra cadeia.
 

@@ -1,10 +1,10 @@
 tabela,niveis,atividade,classificacoes,nota
 6883,n1;n3;n6,sim,c12564/all,Sexo do produtor. Considera só a atividade principal do estabelecimento.
 6887,n1;n3;n6,sim,c12578/all,Pessoal ocupado por tipo (com e sem laço de parentesco) e sexo. Considera só a atividade principal do estabelecimento.
-6768,n1;n3;n6,a confirmar,c346/all,
-6779,n1;n3,a confirmar,c12564/all,
+6768,n1;n3;n6,nao,c346/all,Sem recorte por atividade.
+6779,n1;n3,nao,c12564/all,Sem recorte por atividade.
 6851,n1;n3,nao,c12564/all,Estabelecimentos por sexo do produtor. Sem recorte por atividade.
 6869,n1;n3,nao,c12564/all,Estabelecimentos com tratores por sexo do produtor. Sem recorte por atividade.
 6776,n1;n3,nao,c12564/all,Estabelecimentos dirigidos pelo produtor por sexo. Sem recorte por atividade.
-6955,n1;n3,a confirmar,,
-6957,n1;n3,a confirmar,,
+6955,n1;n3,nao,,Sem recorte por atividade.
+6957,n1;n3,nao,,Sem recorte por atividade.
