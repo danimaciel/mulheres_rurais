@@ -10,10 +10,12 @@ Este repositório ainda não tem a interface. Por enquanto ele guarda a coleta d
 
 ```
 config/        o que coletar: cadeias e tabelas do SIDRA
-R/             scripts de coleta
+R/             scripts de coleta e de indicadores
 dados/sidra/   tabelas do Censo Agro 2017, uma por arquivo (.csv.gz)
+dados/indicadores/ indicadores de trabalho invisível por cadeia
 dados/organizacoes/
 dados/metadados/   situação da última coleta
+docs/          notas de método
 .github/workflows/ atualização mensal
 ```
 
@@ -42,7 +44,13 @@ Rscript R/coletar_censo_agro.R
 Rscript R/coletar_censo_agro.R 6883 6887
 Rscript R/coletar_series.R
 Rscript R/importar_organizacoes.R
+Rscript R/coletar_insumos_indicadores.R
+Rscript R/indicadores_trabalho_invisivel.R
 ```
+
+## Indicadores de trabalho invisível
+
+Os quatro indicadores do Atlas das Mulheres do Café (trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres) são recalculados para cada cadeia de `config/indicadores.csv` ao fim de cada coleta. Para incluir uma cadeia, basta uma linha nesse arquivo com a classe de atividade, o grupo de atividade da tabela 6768 e os filtros de produto da 6955 e da PAM. O método, as premissas e a conferência com os números do Atlas estão em [docs/indicadores.md](docs/indicadores.md).
 
 ## Cuidados na leitura dos dados
 

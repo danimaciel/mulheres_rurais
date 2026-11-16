@@ -47,6 +47,12 @@ jobs:
       - name: Organizações da Amazônia
         run: Rscript R/importar_organizacoes.R
 
+      - name: Insumos dos indicadores (6768 e 6955)
+        run: Rscript R/coletar_insumos_indicadores.R
+
+      - name: Indicadores de trabalho invisível
+        run: Rscript R/indicadores_trabalho_invisivel.R
+
       - name: Resumo
         if: always()
         run: |
