@@ -31,6 +31,8 @@ O serviço de metadados do IBGE não responde aos servidores do GitHub, por isso
 
 A base de organizações da Amazônia é lida do repositório [organizacoes_mulheres_amazonia](https://github.com/danimaciel/organizacoes_mulheres_amazonia), onde ela é mantida. Qualquer correção de registro deve ser feita lá; aqui ela só é importada, com a versão de origem anotada em cada linha.
 
+As organizações das outras cadeias são levantadas aqui mesmo, uma base por cadeia em `dados/organizacoes/`, com o mesmo esquema. A primeira é a do cacau (`cacau.csv`). O que entra, como cada registro é verificado e o que ficou de fora estão em [docs/organizacoes.md](docs/organizacoes.md).
+
 Uma regra vale para todas as fontes: um arquivo só é substituído quando a versão nova chega completa. Se a API estiver fora do ar, devolver erro ou uma base bem menor que a anterior (queda de mais de 20% nas linhas), o arquivo antigo fica como está e o motivo é registrado em `dados/metadados/situacao_coleta.csv`. Isso evita que uma falha pontual do IBGE apague dados que estavam corretos.
 
 Os arquivos do SIDRA são gravados como CSV comprimido (.csv.gz), porque a tabela 6887 no nível municipal passa de 200 MB em texto puro. O R lê direto com `read.csv`, sem precisar descompactar.
@@ -72,9 +74,10 @@ Na contagem de pessoal ocupado, a categoria "com laço de parentesco com o produ
 
 ## Próximos passos
 
-Está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. As organizações de outras cadeias vão entrar por um formulário com fila de validação antes da publicação.
+Está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. A base do cacau ainda precisa de uma segunda rodada na Bahia e da conferência dos CNPJs. As organizações das próximas cadeias vão entrar por um formulário com fila de validação antes da publicação.
 
 ## Fontes
 
 IBGE, Censo Agropecuário 2017, via SIDRA (sidra.ibge.gov.br).
 Base de organizações de mulheres da Amazônia, repositório organizacoes_mulheres_amazonia.
+Organizações de mulheres do cacau: levantamento próprio, com a fonte de cada registro em `dados/organizacoes/cacau.csv`.
