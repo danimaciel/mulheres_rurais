@@ -56,13 +56,23 @@ coletar_tabela <- function(tabela, niveis) {
 
 catalogo <- list()
 
+# Se as duas primeiras tabelas falharem, o IBGE provavelmente está fora do
+# ar ou inacessível. As demais são puladas para não gastar tempo de execução,
+# e todas ficam com a versão anterior.
+falhas_seguidas <- 0
+
 for (i in seq_len(nrow(tabelas))) {
   tabela <- tabelas$tabela[i]
   niveis <- strsplit(tabelas$niveis[i], ";", fixed = TRUE)[[1]]
   arquivo <- sprintf("dados/sidra/censo_agro_%s.csv", tabela)
   message(sprintf("Tabela %s", tabela))
 
-  coleta <- tryCatch(coletar_tabela(tabela, niveis), error = function(e) e)
+  coleta <- if (falhas_seguidas >= 2) {
+    simpleError("pulada: IBGE inacessível nesta execução")
+  } else {
+    tryCatch(coletar_tabela(tabela, niveis), error = function(e) e)
+  }
+  falhas_seguidas <- if (inherits(coleta, "error")) falhas_seguidas + 1 else 0
 
   if (inherits(coleta, "error")) {
     resultado <- list(situacao = "mantida versão anterior",

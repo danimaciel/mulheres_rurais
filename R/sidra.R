@@ -17,7 +17,8 @@ CODIGOS_UF <- c(11:17, 21:29, 31:33, 35, 41:43, 50:53)
 baixar_json <- function(url, tentativas = 4, espera = 10) {
   for (i in seq_len(tentativas)) {
     resp <- tryCatch(
-      GET(url, timeout(180), user_agent("mulheres-rurais-coleta")),
+      GET(url, timeout(180), user_agent("mulheres-rurais-coleta"),
+          config(connecttimeout = 60, ipresolve = 1L)),
       error = function(e) e
     )
     if (!inherits(resp, "error") && status_code(resp) == 200) {
