@@ -58,6 +58,8 @@ O IBGE omite valores com poucos informantes para proteger o sigilo, e eles apare
 
 PAM, PEVS e PPM medem a produção do município, sem informação sobre quem produz. Servem para dar a dimensão de cada cadeia no território, mas não podem ser lidas como produção de mulheres. O cruzamento com o Censo Agro, quando for feito, precisa deixar claro que é uma estimativa.
 
+A tabela 7015 da PNAD Contínua traz a média de horas semanais em afazeres domésticos e cuidados, por sexo, de 2016 a 2022, para Brasil e UFs. Ela cobre toda a população de 14 anos ou mais, sem separar a área rural, então serve de contexto para a dupla jornada e não como medida específica das mulheres rurais.
+
 Na contagem de pessoal ocupado, a categoria "com laço de parentesco com o produtor" inclui o próprio produtor ou produtora.
 
 ## Próximos passos

@@ -73,6 +73,6 @@ for (i in seq_len(nrow(series))) {
     resultado <- salvar_se_valido(coleta, arquivo, COLUNAS_OBRIGATORIAS)
     if (nzchar(detalhe)) resultado$detalhe <- detalhe
   }
-  registrar_situacao(paste0(tolower(gsub("[^A-Za-z]", "", s$fonte)), "_", s$tabela), arquivo, resultado)
+  registrar_situacao(s$arquivo, arquivo, resultado)
   message(sprintf("  %s (%s linhas) %s", resultado$situacao, resultado$linhas, resultado$detalhe))
 }
