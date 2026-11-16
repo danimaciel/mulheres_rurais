@@ -2,4 +2,4 @@ tabela,fonte,arquivo,niveis,periodo,periodo_municipio,produto,filtro,classificac
 5457,PAM,pam_5457,n1;n3;n6,last 10,last 5,782,Café|Cacau|Açaí|Guaraná|Urucum,,"Área, quantidade e valor da produção agrícola. Só os produtos do filtro."
 289,PEVS,pevs_289,n1;n3;n6,last 10,last 5,193,,,Quantidade e valor da extração vegetal. Todos os produtos.
 74,PPM,ppm_74,n1;n3;n6,last 10,last 5,80,,,"Produção de origem animal (leite, mel, ovos e outros). Todos os produtos."
-7015,PNAD Contínua,pnad_7015,n1;n3,all,,,,c2/all,Média de horas em afazeres domésticos e cuidados, por sexo. População de 14 anos ou mais, sem recorte rural.
+7015,PNAD Contínua,pnad_7015,n1;n3,all,,,,c2/all,"Média de horas em afazeres domésticos e cuidados, por sexo. População de 14 anos ou mais, sem recorte rural."
