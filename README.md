@@ -17,11 +17,13 @@ dados/metadados/   situação da última coleta
 .github/workflows/ atualização mensal
 ```
 
-`config/cadeias.csv` liga cada cadeia ao código da classe de atividade econômica no SIDRA (classificação 12440). Hoje estão lá café (112888), cacau (112889) e o total de todas as atividades (110016), que serve de referência para comparar. `config/tabelas_censo_agro.csv` lista as tabelas, os níveis territoriais de cada uma (n1 é Brasil, n3 são as UFs e n6 os municípios), se há recorte por atividade e quais classificações entram abertas.
+`config/cadeias.csv` liga cada cadeia ao código da classe de atividade econômica no SIDRA (classificação 12440). Hoje estão lá café (112888), cacau (112889) e o total de todas as atividades (110016), que serve de referência para comparar. `config/tabelas_censo_agro.csv` lista as tabelas, os níveis territoriais de cada uma (n1 é Brasil, n3 são as UFs e n6 os municípios), se há recorte por atividade e quais classificações entram abertas. `config/tabelas_series.csv` faz o mesmo para as séries anuais: PAM (5457), PEVS (289), PPM (74) e PNAD Contínua (7015).
 
 ## Coleta
 
 Os dados do IBGE vêm da API do SIDRA. Para cada tabela, a configuração diz se ela tem a classe de atividade e quais classificações devem vir abertas por categoria (sexo do produtor, tipo de pessoal ocupado etc.); as que não estão listadas vêm só no total, o que mantém o tamanho das consultas sob controle. Tabelas marcadas como "a confirmar" são testadas com o recorte por atividade e, se a API recusar, coletadas sem ele, com o registro disso na situação da coleta. Consultas municipais são feitas estado por estado e cadeia por cadeia, porque a API recusa respostas com mais de 100 mil valores.
+
+Na PAM, na PEVS e na PPM o recorte é por produto. Os produtos são escolhidos pelo nome, com um filtro na configuração (na PAM, por exemplo, café, cacau, açaí, guaraná e urucum), e os códigos são lidos da própria API a cada coleta. PEVS e PPM entram com todos os produtos. Brasil e UFs vêm com os dez últimos anos publicados e os municípios com os cinco últimos, para manter os arquivos num tamanho razoável.
 
 O serviço de metadados do IBGE não responde aos servidores do GitHub, por isso a coleta não depende dele e usa só a API de valores.
 
@@ -38,6 +40,7 @@ Para rodar localmente, a partir da raiz do repositório, com os pacotes `httr` e
 ```
 Rscript R/coletar_censo_agro.R
 Rscript R/coletar_censo_agro.R 6883 6887
+Rscript R/coletar_series.R
 Rscript R/importar_organizacoes.R
 ```
 
@@ -53,11 +56,13 @@ O total de todas as atividades é referência, nunca dado de uma cadeia. Quando 
 
 O IBGE omite valores com poucos informantes para proteger o sigilo, e eles aparecem como "X". Esses casos ficam com `sigilo = TRUE` e `valor` vazio, e o símbolo original é mantido em `valor_bruto`. Por causa do sigilo, a soma dos municípios não fecha com o total do estado; para totais, use sempre o dado da UF ou do Brasil. O traço ("-") é zero absoluto e vira 0.
 
+PAM, PEVS e PPM medem a produção do município, sem informação sobre quem produz. Servem para dar a dimensão de cada cadeia no território, mas não podem ser lidas como produção de mulheres. O cruzamento com o Censo Agro, quando for feito, precisa deixar claro que é uma estimativa.
+
 Na contagem de pessoal ocupado, a categoria "com laço de parentesco com o produtor" inclui o próprio produtor ou produtora.
 
 ## Próximos passos
 
-Entram em seguida a PAM, a PPM e a PEVS para as quantidades e valores de produção por cadeia, e a PNAD Contínua (tabela 7015) para comparação com dados mais recentes. Também está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. As organizações de outras cadeias vão entrar por um formulário com fila de validação antes da publicação.
+Está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. As organizações de outras cadeias vão entrar por um formulário com fila de validação antes da publicação.
 
 ## Fontes
 

@@ -45,8 +45,8 @@ baixar_json <- function(url, tentativas = 4, espera = 10) {
   stop("não foi possível baixar ", url)
 }
 
-url_valores <- function(tabela, territorio, classificacoes) {
-  partes <- c(URL_VALORES, "t", tabela, territorio, "v", "allxp", "p", "all",
+url_valores <- function(tabela, territorio, classificacoes, periodo = "all") {
+  partes <- c(URL_VALORES, "t", tabela, territorio, "v", "allxp", "p", periodo,
               classificacoes[nzchar(classificacoes)])
   utils::URLencode(paste0(paste(partes, collapse = "/"), "?formato=json"))
 }
@@ -54,16 +54,17 @@ url_valores <- function(tabela, territorio, classificacoes) {
 # A API devolve uma lista em que a primeira linha traz os rótulos das colunas.
 # Aqui viram nomes de coluna em snake_case. A primeira dimensão (D1) é sempre
 # o território e o rótulo dela muda conforme o nível ("Brasil",
-# "Município"...), por isso recebe nome fixo. Quando a classe de atividade
-# entra na consulta, ela vem logo depois de variável (D2) e ano (D3).
-ler_resposta <- function(bruto, com_atividade) {
+# "Município"...), por isso recebe nome fixo. Quando há uma classificação de
+# recorte (atividade no Censo, produto na PAM, PPM e PEVS), ela entra primeiro
+# na URL e vem logo depois de variável (D2) e ano (D3).
+ler_resposta <- function(bruto, nomes_recorte = character()) {
   if (!is.data.frame(bruto) || nrow(bruto) < 2) {
     stop("resposta vazia ou em formato inesperado")
   }
   fixos <- c(NC = "cod_nivel", NN = "nivel", MC = "cod_unidade",
              MN = "unidade", V = "valor", D1C = "cod_territorio",
              D1N = "territorio")
-  if (com_atividade) fixos <- c(fixos, D4C = "cod_atividade", D4N = "atividade")
+  if (length(nomes_recorte) == 2) fixos <- c(fixos, D4C = nomes_recorte[1], D4N = nomes_recorte[2])
   rotulos <- normalizar_nome(unlist(bruto[1, ], use.names = FALSE))
   troca <- match(names(bruto), names(fixos))
   rotulos[!is.na(troca)] <- fixos[troca[!is.na(troca)]]
@@ -94,21 +95,33 @@ tratar_valor <- function(dados) {
 }
 
 # Consulta um nível territorial. No nível municipal a consulta é quebrada por
-# UF e, quando há recorte de atividade, também por atividade, para ficar
-# abaixo do limite de valores por resposta.
-consultar_nivel <- function(tabela, nivel, classificacoes, atividades = character()) {
-  com_atividade <- length(atividades) > 0
+# UF e, quando há recorte, também por categoria do recorte, para ficar abaixo
+# do limite de valores por resposta.
+consultar_nivel <- function(tabela, nivel, classificacoes, codigos_recorte = character(),
+                            classe_recorte = "12440",
+                            nomes_recorte = c("cod_atividade", "atividade"),
+                            periodo = "all") {
+  com_recorte <- length(codigos_recorte) > 0
   territorios <- if (nivel == "n6") sprintf("n6/in n3 %d", CODIGOS_UF) else paste0(nivel, "/all")
-  grupos_atividade <- if (!com_atividade) list("") else
-    if (nivel == "n6") as.list(atividades) else list(atividades)
+  grupos <- if (!com_recorte) list("") else
+    if (nivel == "n6") as.list(codigos_recorte) else list(codigos_recorte)
 
-  pedidos <- expand.grid(t = seq_along(territorios), a = seq_along(grupos_atividade))
+  pedidos <- expand.grid(t = seq_along(territorios), g = seq_along(grupos))
   pedacos <- lapply(seq_len(nrow(pedidos)), function(i) {
-    recorte <- grupos_atividade[[pedidos$a[i]]]
-    classes <- c(if (com_atividade) paste0("c12440/", paste(recorte, collapse = ",")),
+    recorte <- grupos[[pedidos$g[i]]]
+    classes <- c(if (com_recorte) sprintf("c%s/%s", classe_recorte, paste(recorte, collapse = ",")),
                  classificacoes)
-    url <- url_valores(tabela, territorios[pedidos$t[i]], classes)
-    ler_resposta(baixar_json(url), com_atividade)
+    url <- url_valores(tabela, territorios[pedidos$t[i]], classes, periodo)
+    ler_resposta(baixar_json(url), if (com_recorte) nomes_recorte else character())
   })
   do.call(rbind, pedacos)
+}
+
+# Lista as categorias de uma classificação a partir de uma consulta pequena
+# (Brasil, último período). Serve para escolher produtos pelo nome sem
+# depender do serviço de metadados.
+categorias <- function(tabela, classe) {
+  url <- url_valores(tabela, "n1/all", sprintf("c%s/all", classe), "last 1")
+  dados <- ler_resposta(baixar_json(url), c("codigo", "nome"))
+  unique(dados[, c("codigo", "nome")])
 }

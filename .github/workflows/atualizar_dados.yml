@@ -41,6 +41,9 @@ jobs:
       - name: Censo Agropecuário 2017 (SIDRA)
         run: Rscript R/coletar_censo_agro.R
 
+      - name: PAM, PEVS, PPM e PNAD Contínua (SIDRA)
+        run: Rscript R/coletar_series.R
+
       - name: Organizações da Amazônia
         run: Rscript R/importar_organizacoes.R
 
