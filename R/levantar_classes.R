@@ -15,7 +15,7 @@ arquivo <- "dados/sidra/censo_agro_6883_classes.csv.gz"
 coleta <- tryCatch({
   partes <- lapply(c("n1", "n3"), function(nivel) {
     message(sprintf("nível %s", nivel))
-    consultar_nivel("6883", nivel, "c12564/all", atividades = "all")
+    consultar_nivel("6883", nivel, "c12564/all", codigos_recorte = "all")
   })
   dados <- tratar_valor(do.call(rbind, partes))
   cbind(tabela = "6883", dados)
