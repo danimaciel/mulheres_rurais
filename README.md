@@ -13,15 +13,17 @@ config/        o que coletar: cadeias e tabelas do SIDRA
 R/             scripts de coleta
 dados/sidra/   tabelas do Censo Agro 2017, uma por arquivo
 dados/organizacoes/
-dados/metadados/   situação da última coleta e catálogo das tabelas
+dados/metadados/   situação da última coleta
 .github/workflows/ atualização mensal
 ```
 
-`config/cadeias.csv` liga cada cadeia ao código da classe de atividade econômica no SIDRA (classificação 12440). Hoje estão lá café (112888), cacau (112889) e o total de todas as atividades (110016), que serve de referência para comparar. `config/tabelas_censo_agro.csv` lista as tabelas e os níveis territoriais de cada uma: n1 é Brasil, n3 são as UFs e n6 os municípios.
+`config/cadeias.csv` liga cada cadeia ao código da classe de atividade econômica no SIDRA (classificação 12440). Hoje estão lá café (112888), cacau (112889) e o total de todas as atividades (110016), que serve de referência para comparar. `config/tabelas_censo_agro.csv` lista as tabelas, os níveis territoriais de cada uma (n1 é Brasil, n3 são as UFs e n6 os municípios), se há recorte por atividade e quais classificações entram abertas.
 
 ## Coleta
 
-Os dados do IBGE vêm da API do SIDRA. O script não traz os códigos das classificações escritos à mão: a cada execução ele lê os metadados da tabela, monta a consulta com o recorte por atividade e pede as demais classificações completas, com os totais. Consultas municipais são feitas estado por estado, porque a API recusa respostas com mais de 100 mil valores.
+Os dados do IBGE vêm da API do SIDRA. Para cada tabela, a configuração diz se ela tem a classe de atividade e quais classificações devem vir abertas por categoria (sexo do produtor, tipo de pessoal ocupado etc.); as que não estão listadas vêm só no total, o que mantém o tamanho das consultas sob controle. Tabelas marcadas como "a confirmar" são testadas com o recorte por atividade e, se a API recusar, coletadas sem ele, com o registro disso na situação da coleta. Consultas municipais são feitas estado por estado e cadeia por cadeia, porque a API recusa respostas com mais de 100 mil valores.
+
+O serviço de metadados do IBGE não responde aos servidores do GitHub, por isso a coleta não depende dele e usa só a API de valores.
 
 A base de organizações da Amazônia é lida do repositório [organizacoes_mulheres_amazonia](https://github.com/danimaciel/organizacoes_mulheres_amazonia), onde ela é mantida. Qualquer correção de registro deve ser feita lá; aqui ela só é importada, com a versão de origem anotada em cada linha.
 

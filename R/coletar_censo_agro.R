@@ -2,6 +2,12 @@
 # config/tabelas_censo_agro.csv, recortadas pelas classes de atividade de
 # config/cadeias.csv.
 #
+# Na configuração, a coluna atividade diz se a tabela tem a classe de
+# atividade (classificação 12440). "sim" aplica o recorte, "nao" coleta sem
+# ele e "a confirmar" tenta com o recorte e, se a API recusar, coleta sem.
+# A coluna classificacoes lista as classificações abertas por categoria; as
+# que não aparecem vêm só no total.
+#
 # Uso, a partir da raiz do repositório:
 #   Rscript R/coletar_censo_agro.R            todas as tabelas
 #   Rscript R/coletar_censo_agro.R 6883 6887  só as indicadas
@@ -10,7 +16,8 @@ source("R/sidra.R")
 source("R/comum.R")
 
 cadeias <- read.csv("config/cadeias.csv", colClasses = "character", encoding = "UTF-8")
-tabelas <- read.csv("config/tabelas_censo_agro.csv", colClasses = "character", encoding = "UTF-8")
+tabelas <- read.csv("config/tabelas_censo_agro.csv", colClasses = "character",
+                    encoding = "UTF-8", na.strings = character())
 
 pedidas <- commandArgs(trailingOnly = TRUE)
 if (length(pedidas) > 0) tabelas <- tabelas[tabelas$tabela %in% pedidas, , drop = FALSE]
@@ -21,8 +28,8 @@ COLUNAS_OBRIGATORIAS <- c("tabela", "nivel", "cod_territorio", "territorio",
 # Liga cada linha à cadeia de config/cadeias.csv. Tabelas sem a classe de
 # atividade só podem ser lidas como "todas as atividades" e recebem esse
 # rótulo, nunca o de uma cadeia.
-marcar_cadeia <- function(dados, meta) {
-  if (tem_classe_atividade(meta)) {
+marcar_cadeia <- function(dados, com_atividade) {
+  if (com_atividade) {
     pos <- match(dados$cod_atividade, cadeias$codigo_12440)
     dados$cadeia <- cadeias$cadeia[pos]
     dados$cadeia_rotulo <- cadeias$rotulo[pos]
@@ -33,67 +40,56 @@ marcar_cadeia <- function(dados, meta) {
   dados
 }
 
-coletar_tabela <- function(tabela, niveis) {
-  meta <- metadados_tabela(tabela)
-  classificacoes <- trecho_classificacoes(meta, cadeias$codigo_12440)
-  extras <- colunas_atividade(meta)
-
-  disponiveis <- tolower(unlist(meta$nivelTerritorial))
-  niveis <- intersect(niveis, disponiveis)
-  if (length(niveis) == 0) stop("nenhum dos níveis pedidos existe na tabela")
-
+coletar_tabela <- function(tabela, niveis, classificacoes, com_atividade) {
+  atividades <- if (com_atividade) cadeias$codigo_12440 else character()
   partes <- lapply(niveis, function(nivel) {
     message(sprintf("  nível %s", nivel))
-    consultar_nivel(tabela, nivel, classificacoes, extras)
+    consultar_nivel(tabela, nivel, classificacoes, atividades)
   })
-  dados <- do.call(rbind, partes)
-  dados <- tratar_valor(dados)
-  dados <- marcar_cadeia(dados, meta)
-  dados <- cbind(tabela = tabela, dados)
-
-  list(dados = dados, nome = meta$nome)
+  dados <- tratar_valor(do.call(rbind, partes))
+  dados <- marcar_cadeia(dados, com_atividade)
+  cbind(tabela = tabela, dados)
 }
 
-catalogo <- list()
-
-# Se as duas primeiras tabelas falharem, o IBGE provavelmente está fora do
-# ar ou inacessível. As demais são puladas para não gastar tempo de execução,
-# e todas ficam com a versão anterior.
-falhas_seguidas <- 0
+# Se duas tabelas seguidas falharem por falta de conexão, o IBGE
+# provavelmente está fora do ar. As demais são puladas para não gastar tempo
+# de execução, e todas ficam com a versão anterior.
+falhas_conexao <- 0
 
 for (i in seq_len(nrow(tabelas))) {
   tabela <- tabelas$tabela[i]
   niveis <- strsplit(tabelas$niveis[i], ";", fixed = TRUE)[[1]]
+  classificacoes <- strsplit(tabelas$classificacoes[i], ";", fixed = TRUE)[[1]]
+  atividade <- tabelas$atividade[i]
   arquivo <- sprintf("dados/sidra/censo_agro_%s.csv", tabela)
+  detalhe <- ""
   message(sprintf("Tabela %s", tabela))
 
-  coleta <- if (falhas_seguidas >= 2) {
+  coleta <- if (falhas_conexao >= 2) {
     simpleError("pulada: IBGE inacessível nesta execução")
   } else {
-    tryCatch(coletar_tabela(tabela, niveis), error = function(e) e)
+    tryCatch(coletar_tabela(tabela, niveis, classificacoes, atividade != "nao"),
+             error = function(e) e)
   }
-  falhas_seguidas <- if (inherits(coleta, "error")) falhas_seguidas + 1 else 0
+
+  if (atividade == "a confirmar" && inherits(coleta, "erro_consulta")) {
+    message("  a API recusou o recorte por atividade, coletando sem ele")
+    recusa <- conditionMessage(coleta)
+    coleta <- tryCatch(coletar_tabela(tabela, niveis, classificacoes, FALSE),
+                       error = function(e) e)
+    detalhe <- paste("sem recorte por atividade;", recusa)
+  }
+
+  falhas_conexao <- if (inherits(coleta, "error") && !inherits(coleta, "erro_consulta"))
+    falhas_conexao + 1 else 0
 
   if (inherits(coleta, "error")) {
     resultado <- list(situacao = "mantida versão anterior",
                       detalhe = conditionMessage(coleta), linhas = 0L)
   } else {
-    resultado <- salvar_se_valido(coleta$dados, arquivo, COLUNAS_OBRIGATORIAS)
-    catalogo[[tabela]] <- data.frame(tabela = tabela, nome = coleta$nome,
-                                     arquivo = arquivo, nota = tabelas$nota[i])
+    resultado <- salvar_se_valido(coleta, arquivo, COLUNAS_OBRIGATORIAS)
+    if (nzchar(detalhe)) resultado$detalhe <- detalhe
   }
   registrar_situacao(paste0("sidra_", tabela), arquivo, resultado)
   message(sprintf("  %s (%s linhas) %s", resultado$situacao, resultado$linhas, resultado$detalhe))
-}
-
-# Catálogo com o nome oficial de cada tabela, como o IBGE publica.
-if (length(catalogo) > 0) {
-  novo <- do.call(rbind, catalogo)
-  arquivo_catalogo <- "dados/metadados/tabelas_sidra.csv"
-  if (file.exists(arquivo_catalogo)) {
-    antigo <- read.csv(arquivo_catalogo, colClasses = "character", encoding = "UTF-8")
-    novo <- rbind(antigo[!antigo$tabela %in% novo$tabela, , drop = FALSE], novo)
-  }
-  novo <- novo[order(novo$tabela), , drop = FALSE]
-  write.csv(novo, arquivo_catalogo, row.names = FALSE, na = "", fileEncoding = "UTF-8")
 }

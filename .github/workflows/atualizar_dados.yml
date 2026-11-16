@@ -35,10 +35,8 @@ jobs:
       - name: Testar acesso ao IBGE
         continue-on-error: true
         run: |
-          for url in https://servicodados.ibge.gov.br/api/v3/agregados/6883/metadados \
-                     "https://apisidra.ibge.gov.br/values/t/6883/n1/all/v/allxp/p/all?formato=json"; do
-            curl -4 -sS -o /dev/null --connect-timeout 30 -w "%{http_code} %{time_total}s $url\n" "$url" || true
-          done
+          url="https://apisidra.ibge.gov.br/values/t/6883/n1/all/v/allxp/p/all?formato=json"
+          curl -4 -sS -o /dev/null --connect-timeout 30 -w "%{http_code} %{time_total}s $url\n" "$url" || true
 
       - name: Censo Agropecuário 2017 (SIDRA)
         run: Rscript R/coletar_censo_agro.R
