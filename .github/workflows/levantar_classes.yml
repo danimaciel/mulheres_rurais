@@ -1,0 +1,46 @@
+name: Levantar classes de atividade
+
+# Coleta avulsa, só manual: tabela 6883 com todas as classes de atividade,
+# para comparar o tamanho das cadeias candidatas.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-dados
+  cancel-in-progress: false
+
+jobs:
+  coleta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Instalar pacotes
+        run: Rscript -e 'install.packages(c("httr", "jsonlite"))'
+
+      - name: Tabela 6883 por classe de atividade
+        run: Rscript R/levantar_classes.R
+
+      - name: Gravar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git commit -m "Levanta a tabela 6883 por classe de atividade"
+          git pull --rebase
+          git push
