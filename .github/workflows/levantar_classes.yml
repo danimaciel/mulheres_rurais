@@ -1,6 +1,6 @@
 name: Levantar classes de atividade
 
-# Coleta avulsa, só manual: tabela 6883 com todas as classes de atividade,
+# Coleta avulsa, só manual: tabelas 6883 e 6887 com todas as classes de atividade,
 # para comparar o tamanho das cadeias candidatas.
 on:
   workflow_dispatch:
@@ -29,7 +29,7 @@ jobs:
       - name: Instalar pacotes
         run: Rscript -e 'install.packages(c("httr", "jsonlite"))'
 
-      - name: Tabela 6883 por classe de atividade
+      - name: Tabelas 6883 e 6887 por classe de atividade
         run: Rscript R/levantar_classes.R
 
       - name: Gravar alterações
@@ -41,6 +41,6 @@ jobs:
             echo "Nada mudou."
             exit 0
           fi
-          git commit -m "Levanta a tabela 6883 por classe de atividade"
+          git commit -m "Levanta as tabelas 6883 e 6887 por classe de atividade"
           git pull --rebase
           git push
