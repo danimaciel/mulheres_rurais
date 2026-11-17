@@ -11,12 +11,14 @@ on:
       - "dados/**"
       - "config/**"
       - "scripts/montar_site.py"
+      - "scripts/conferir_*.py"
       - ".github/workflows/publicar_site.yml"
   workflow_run:
     workflows:
       - Atualizar dados
       - Levantar classes de atividade
       - Buscar CNPJ das organizações
+      - Indicadores de trabalho invisível
     types: [completed]
   workflow_dispatch:
 
@@ -46,6 +48,9 @@ jobs:
 
       - name: Conferir os números da página contra as tabelas do SIDRA
         run: python scripts/conferir_site.py _site/dados.json
+
+      - name: Conferir os indicadores contra as tabelas do SIDRA
+        run: python scripts/conferir_indicadores.py
 
       - uses: actions/configure-pages@v5
 
