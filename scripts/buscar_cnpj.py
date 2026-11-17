@@ -1,8 +1,8 @@
 """Procura CNPJ de organizações na base aberta da Receita Federal.
 
 Lê os arquivos de Empresas e Estabelecimentos do mês mais recente
-publicado em arquivos.receitafederal.gov.br, sem gravar os zips inteiros
-em disco, e separa associações e cooperativas cujo nome bate com os termos
+publicado em arquivos.receitafederal.gov.br (pasta pública Dados >
+Cadastros > CNPJ, servida por WebDAV), sem gravar os zips em disco, e separa associações e cooperativas cujo nome bate com os termos
 de busca. Serve para achar o CNPJ das organizações levantadas e conferir
 situação cadastral, data de abertura e município.
 
@@ -14,14 +14,21 @@ Uso: python scripts/buscar_cnpj.py
 Saída: dados/organizacoes/cnpj_candidatos.csv
 """
 
+import base64
 import csv
 import io
+import os
 import re
 import sys
 import urllib.request
 import zipfile
 
-BASE = "https://arquivos.receitafederal.gov.br/dados/cnpj/dados_abertos_cnpj/"
+# Código da pasta pública. Se a Receita trocar, o novo aparece no endereço
+# da pasta (depois de /index.php/s/) e pode ser passado em CNPJ_TOKEN.
+TOKEN = os.environ.get("CNPJ_TOKEN") or "gn672Ad4CF8N6TK"
+HOST = "https://arquivos.receitafederal.gov.br"
+LISTAGEM = HOST + "/public.php/webdav/Dados/Cadastros/CNPJ/"
+ARQUIVOS = HOST + f"/public.php/dav/files/{TOKEN}/Dados/Cadastros/CNPJ/"
 SAIDA = "dados/organizacoes/cnpj_candidatos.csv"
 
 # Associação privada, cooperativa e organização religiosa ficam de fora desta
@@ -37,16 +44,21 @@ UFS = {"BA", "ES", "PA", "AM", "RO", "MT", "AP", "AC", "RR", "TO", "MA", "MG", "
 CACAU = re.compile(r"CACAU|CHOCOLAT")
 
 
-def abrir(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "mulheres-rurais-coleta"})
-    return urllib.request.urlopen(req, timeout=600)
+def abrir(url, metodo="GET"):
+    credencial = base64.b64encode(f"{TOKEN}:".encode()).decode()
+    req = urllib.request.Request(url, method=metodo, headers={
+        "User-Agent": "mulheres-rurais-coleta",
+        "Authorization": "Basic " + credencial,
+        "Depth": "1",
+    })
+    return urllib.request.urlopen(req, timeout=900)
 
 
 def mes_mais_recente():
-    html = abrir(BASE).read().decode("utf-8", "replace")
-    meses = sorted(set(re.findall(r'href="(\d{4}-\d{2})/?"', html)))
+    xml = abrir(LISTAGEM, "PROPFIND").read().decode("utf-8", "replace")
+    meses = sorted(set(re.findall(r"/(\d{4}-\d{2})/?<", xml)))
     if not meses:
-        sys.exit("não achei a lista de meses em " + BASE)
+        sys.exit("não achei a lista de meses em " + LISTAGEM + "\n" + xml[:800])
     return meses[-1]
 
 
@@ -67,7 +79,7 @@ def campos(linha):
 
 def main():
     mes = mes_mais_recente()
-    pasta = BASE + mes + "/"
+    pasta = ARQUIVOS + mes + "/"
     print("mês:", mes, flush=True)
 
     municipios = {}
