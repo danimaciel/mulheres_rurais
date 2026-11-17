@@ -19,12 +19,21 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Mês mais recente da Receita
+        run: echo "CNPJ_MES=$(python scripts/buscar_cnpj.py --mes)" >> "$GITHUB_ENV"
+
+      - name: Procurar a base no cache
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/cnpj
+          key: cnpj-receita-${{ env.CNPJ_MES }}
+
       - name: Baixar a base da Receita
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          mes=$(python scripts/buscar_cnpj.py --mes)
-          echo "CNPJ_MES=$mes" >> "$GITHUB_ENV"
           mkdir -p /tmp/cnpj
-          base="https://arquivos.receitafederal.gov.br/public.php/dav/files/gn672Ad4CF8N6TK/Dados/Cadastros/CNPJ/$mes"
+          base="https://arquivos.receitafederal.gov.br/public.php/dav/files/gn672Ad4CF8N6TK/Dados/Cadastros/CNPJ/$CNPJ_MES"
           baixar() {
             for t in 1 2 3 4 5 6 7 8 9 10; do
               curl -sS -u "gn672Ad4CF8N6TK:" -C - --retry 5 --retry-all-errors \
@@ -37,6 +46,13 @@ jobs:
           printf '%s\n' Municipios.zip Empresas{0..9}.zip Estabelecimentos{0..9}.zip |
             xargs -P 7 -I{} bash -c 'baixar {}'
           ls -la /tmp/cnpj
+
+      - name: Guardar a base no cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/cnpj
+          key: cnpj-receita-${{ env.CNPJ_MES }}
 
       - name: Buscar na base da Receita
         env:

@@ -1,0 +1,74 @@
+name: Levantar cooperativas e associações rurais
+
+# Só manual. Levantamento geral por cadeia, separado das bases de mulheres e
+# fora do site. Os zips da Receita ficam em cache por mês (mesma chave do
+# workflow de busca de CNPJ), para não baixar a base duas vezes.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  levantar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Mês mais recente da Receita
+        run: echo "CNPJ_MES=$(python scripts/buscar_cnpj.py --mes)" >> "$GITHUB_ENV"
+
+      - name: Procurar a base no cache
+        id: cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /tmp/cnpj
+          key: cnpj-receita-${{ env.CNPJ_MES }}
+
+      - name: Baixar a base da Receita
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p /tmp/cnpj
+          base="https://arquivos.receitafederal.gov.br/public.php/dav/files/gn672Ad4CF8N6TK/Dados/Cadastros/CNPJ/$CNPJ_MES"
+          baixar() {
+            for t in 1 2 3 4 5 6 7 8 9 10; do
+              curl -sS -u "gn672Ad4CF8N6TK:" -C - --retry 5 --retry-all-errors \
+                -o "/tmp/cnpj/$1" "$base/$1" && return 0
+              echo "nova tentativa para $1 ($t)"; sleep 10
+            done
+            return 1
+          }
+          export -f baixar; export base
+          printf '%s\n' Municipios.zip Empresas{0..9}.zip Estabelecimentos{0..9}.zip |
+            xargs -P 7 -I{} bash -c 'baixar {}'
+          ls -la /tmp/cnpj
+
+      - name: Guardar a base no cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /tmp/cnpj
+          key: cnpj-receita-${{ env.CNPJ_MES }}
+
+      - name: Levantar organizações
+        env:
+          CNPJ_PASTA: /tmp/cnpj
+        run: python scripts/levantar_organizacoes_geral.py
+
+      - name: Gravar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dados/organizacoes_geral
+          if git diff --cached --quiet; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git commit -m "Levantamento geral de cooperativas e associações rurais (base da Receita)"
+          git pull --rebase
+          git push
