@@ -62,11 +62,20 @@ def mes_mais_recente():
     return meses[-1]
 
 
+PASTA_LOCAL = os.environ.get("CNPJ_PASTA")
+
+
 def linhas_zip(url):
-    """Baixa um zip para a memória e devolve as linhas do csv de dentro."""
-    print("baixando", url, flush=True)
-    dados = abrir(url).read()
-    with zipfile.ZipFile(io.BytesIO(dados)) as z:
+    """Devolve as linhas do csv de dentro de um zip. Se CNPJ_PASTA estiver
+    definida, lê o zip já baixado nessa pasta (o servidor da Receita é lento
+    e derruba conexões longas, então o workflow baixa antes com curl)."""
+    if PASTA_LOCAL:
+        origem = os.path.join(PASTA_LOCAL, url.rsplit("/", 1)[1])
+        print("lendo", origem, flush=True)
+    else:
+        print("baixando", url, flush=True)
+        origem = io.BytesIO(abrir(url).read())
+    with zipfile.ZipFile(origem) as z:
         nome = z.namelist()[0]
         with z.open(nome) as f:
             for linha in io.TextIOWrapper(f, encoding="latin-1", newline=""):
@@ -78,7 +87,10 @@ def campos(linha):
 
 
 def main():
-    mes = mes_mais_recente()
+    if len(sys.argv) > 1 and sys.argv[1] == "--mes":
+        print(mes_mais_recente())
+        return
+    mes = os.environ.get("CNPJ_MES") or mes_mais_recente()
     pasta = ARQUIVOS + mes + "/"
     print("mês:", mes, flush=True)
 
