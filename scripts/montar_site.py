@@ -266,6 +266,8 @@ def main():
                                      lambda r: r.get("escopo", "Brasil") == "Brasil")
     dados["orgs"]["amazonia"] = ler_orgs("dados/organizacoes/amazonia.csv")
     dados["orgs"]["cacau"] = ler_orgs("dados/organizacoes/cacau.csv")
+    for chave, arquivo in [("outras-temporarias", "outras_temporarias"), ("cereais", "cereais"), ("frutas", "frutas")]:
+        dados["orgs"][chave] = ler_orgs(f"dados/organizacoes/{arquivo}.csv")
     dados["atualizado"] = {
         "coleta": data_coleta(),
         "site": datetime.now(timezone.utc).strftime("%Y-%m-%d"),

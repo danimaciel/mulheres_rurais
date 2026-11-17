@@ -248,7 +248,7 @@ footer{border-top:1px solid var(--line);color:var(--ink-2);font-size:12.5px;padd
 </div></header>
 <div id="app"><div class="loading">Carregando os dados…</div></div>
 <footer><div class="in">
-  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau: levantamento próprio.</p>
+  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau, de mandioca e outras lavouras temporárias, de cereais e de frutas: levantamento próprio.</p>
   <p style="margin:0">A página é montada a partir dos dados do <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>, onde estão a coleta, os indicadores e as notas de método. <span id="upd"></span> Parte do Atlas das Mulheres do Café. Versão em construção: partes marcadas "em preparo" entram à medida que os dados chegam.</p>
 </div></footer>
 
@@ -278,11 +278,12 @@ const FR={
 };
 function montarFR(){
   Object.entries(D.meta).forEach(([k,m])=>{const g=GR[m.grupo];
-    FR[k]={nome:m.nome,cn:m.nome.replace(/ \(.*\)$/,'').toLowerCase(),dados:k,grupo:m.grupo,cls:g[2],band:g[1],terr:'1',orgs:null,
+    FR[k]={nome:m.nome,cn:m.nome.replace(/ \(.*\)$/,'').toLowerCase(),dados:k,grupo:m.grupo,cls:g[2],band:g[1],terr:'1',orgs:(D.orgs[k]&&D.orgs[k].length)?k:null,
       titulo:m.nome,sub:g[0].toLowerCase(),
       lead:k==='bovinos'?'A classe do Censo junta leite e corte. O leite com recorte por sexo espera uma tabela própria do Censo; até lá, este é o retrato mais próximo da pecuária bovina.'
         :k==='frutas'?'Soma das três classes de frutas do Censo: laranja, uva e as demais frutas de lavoura permanente, como banana, manga e açaí plantado.'
         :k==='florestas-nativas'?'Extrativismo em florestas nativas: açaí, castanha, babaçu, borracha. É um dos recortes possíveis da sociobiodiversidade, ao lado do cacau.'
+        :(D.orgs[k]&&D.orgs[k].length)?'Os dados do IBGE mostram quem dirige e quem trabalha nos estabelecimentos que têm esta atividade como principal. As organizações de mulheres estão na primeira rodada do levantamento; os indicadores entram depois.'
         :'Por enquanto só com os dados do IBGE: quem dirige e quem trabalha nos estabelecimentos que têm esta atividade como principal. Indicadores e organizações entram depois.'}});
   FR.cafe.grupo='perm';FR.amazonia.grupo='perm';
 }
@@ -447,7 +448,7 @@ function vCadeia(key){
     </section>
 
     ${f.orgs?`<section aria-labelledby="s5">
-      <div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p>${orgs.length} organizações mapeadas${ob==='amazonia'?' na Amazônia, de várias cadeias da sociobiodiversidade':ob==='cacau'?' no cacau, em todas as regiões produtoras':' no café'}. Cada uma aparece com seu canal institucional. Nenhuma ainda foi validada com a própria organização.</p></div>
+      <div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p>${orgs.length} ${orgs.length===1?'organização mapeada':'organizações mapeadas'}${ob==='amazonia'?' na Amazônia, de várias cadeias da sociobiodiversidade':ob==='cacau'?' no cacau, em todas as regiões produtoras':ob==='cafe'?' no café':' nesta cadeia (as da base da Amazônia ficam na página da Amazônia)'}. Cada uma aparece com seu canal institucional. Nenhuma ainda foi validada com a própria organização.</p></div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">${f.orgsAlt?`<div><label class="eyebrow" for="obase" style="display:block;margin-bottom:4px">Base</label><select id="obase" class="sel">${f.orgsAlt.map(([k,l])=>`<option value="${k}" ${k===ob?'selected':''}>${esc(l)} (${(D.orgs[k]||[]).length})</option>`).join('')}</select></div>`:''}
         <div><label class="eyebrow" for="ouf" style="display:block;margin-bottom:4px">Estado</label><select id="ouf" class="sel"><option value="">Todos</option>${[...new Set(orgs.map(o=>o.uf).filter(Boolean))].sort().map(u=>`<option>${esc(u)}</option>`).join('')}</select></div></div></div>
       <div class="orgs" id="orgs"></div>
