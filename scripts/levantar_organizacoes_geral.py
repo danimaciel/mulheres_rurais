@@ -99,8 +99,13 @@ NOME_RURAL = re.compile(
 # Cooperativa de crédito, saúde, transporte e afins ficam fora mesmo com nome rural.
 CNAE_FORA = re.compile(r"^(64|65|66|86|49|85)")
 
-NOME_MULHERES = re.compile(r"MULHER|FEMININ|AGRICULTORAS|PRODUTORAS|TRABALHADORAS|"
-                           r"QUEBRADEIRAS|ARTESAS|MARGARIDAS")
+# Palavra no feminino só conta quando não vem no par "agricultores e
+# agricultoras", que é o jeito comum de nomear organização mista.
+NOME_MULHERES = re.compile(
+    r"MULHER|FEMININ|QUEBRADEIRAS|MARGARIDAS|CHOCOLATEIRAS|"
+    r"(?<!ES E )(?<!ES E DAS )"
+    r"\b(AGRICULTORAS|PRODUTORAS|TRABALHADORAS|ARTESAS|CAFEICULTORAS)\b"
+)
 
 SITUACAO = {"02": "Ativa", "03": "Suspensa", "04": "Inapta"}
 
@@ -213,6 +218,10 @@ def main():
             })
         print(f"  estabelecimentos {i}: {len(linhas)} linhas até aqui", flush=True)
 
+    gravar(linhas)
+
+
+def gravar(linhas):
     linhas.sort(key=lambda r: (r["uf"], r["municipio"], r["razao_social"]))
     os.makedirs(SAIDA, exist_ok=True)
     campos_saida = list(linhas[0].keys())
@@ -253,5 +262,25 @@ def main():
     print("gravado", SAIDA, len(linhas), "estabelecimentos")
 
 
+def refazer_marcas():
+    """Recalcula nome_mulheres e base_mulheres sobre o levantamento já gravado,
+    sem baixar a base da Receita. Serve para quando as bases de mulheres
+    ganham CNPJ novo."""
+    mulheres = bases_mulheres()
+    with gzip.open(os.path.join(SAIDA, "organizacoes_rurais.csv.gz"), "rt",
+                   encoding="utf-8", newline="") as f:
+        linhas = list(csv.DictReader(f))
+    for r in linhas:
+        nome = (r["razao_social"] + " " + r["nome_fantasia"]).upper()
+        r["nome_mulheres"] = "sim" if NOME_MULHERES.search(nome) else ""
+        r["base_mulheres"] = ";".join(mulheres.get(r["cnpj"], []))
+    global MES
+    MES = linhas[0]["mes_base_receita"]
+    gravar(linhas)
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "--refazer-marcas":
+        refazer_marcas()
+    else:
+        main()

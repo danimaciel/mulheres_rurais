@@ -40,3 +40,5 @@ Só campos institucionais: CNPJ, razão social, nome fantasia, natureza, matriz 
 ## Cruzamento com as bases de mulheres
 
 `base_mulheres` traz o id da organização em `dados/organizacoes/` (café, cacau, Amazônia) quando o CNPJ é o mesmo. Como boa parte dessas bases ainda não tem CNPJ conferido, o cruzamento por enquanto é parcial. `nome_mulheres` marca nomes com termos como mulheres, feminino, agricultoras, produtoras ou trabalhadoras, para triagem de organizações que podem entrar nas bases da plataforma.
+
+Quando as bases de mulheres ganham CNPJ novo, dá para refazer só as duas colunas de cruzamento, sem baixar a Receita de novo: `python scripts/levantar_organizacoes_geral.py --refazer-marcas`. A marca `nome_mulheres` não conta o par "agricultores e agricultoras", que é o jeito comum de nomear organização mista.
