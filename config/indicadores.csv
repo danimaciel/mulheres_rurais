@@ -1,3 +1,25 @@
-cadeia,codigo_12440,grupo_6768,produtos_6955,produto_pam,min_estab_principal,min_estab_com_produto,min_producao_pam_t
-cafe,112888,111521,^Café,^Café \(em grão\) Total$,20,50,100
-cacau,112889,111521,^Cacau,^Cacau,20,50,100
+cadeia,codigos_12440,grupo_6768,produtos_6955,fonte_valor,produto_valor,min_estab_principal,min_estab_com_produto,min_producao_pam_t
+cafe,112888,111521,^Café,PAM,^Café \(em grão\) Total$,20,50,100
+cacau,112889,111521,^Cacau,PAM,^Cacau,20,50,100
+outras-temporarias,112879,111519,,,,20,,
+cereais,112873,111519,,PAM,^(Arroz|Milho|Trigo|Aveia|Centeio|Cevada|Sorgo|Triticale),20,,
+soja,112877,111519,,PAM,^Soja,20,,
+fumo,112876,111519,,PAM,^Fumo,20,,
+cana,112875,111519,,PAM,^Cana-de-açúcar,20,,
+oleaginosas,112878,111519,,PAM,^(Amendoim|Girassol|Mamona),20,,
+algodao,112874,111519,,PAM,^(Algodão herbáceo|Juta|Malva|Rami),20,,
+hortalicas,112882,111520,,,,20,,
+flores,112883,111520,,,,20,,
+frutas,112885;112886;112887,111521,,PAM,^(Laranja|Uva|Abacate|Açaí|Banana|Caqui|Castanha de caju|Coco-da-baía|Figo|Goiaba|Limão|Maçã|Mamão|Manga|Maracujá|Marmelo|Noz|Pera|Pêssego|Tangerina),20,,
+outras-permanentes,112890,111521,,PAM,^(Borracha|Chá-da-índia|Dendê|Erva-mate|Guaraná|Pimenta-do-reino|Urucum),20,,
+sementes,114048,111522,,,,20,,
+bovinos,112895,111523,,,,20,,
+aves,112899,111523,,,,20,,
+suinos,112898,111523,,,,20,,
+ovinos-caprinos,112897,111523,,,,20,,
+grande-porte,112896,111523,,,,20,,
+outros-animais,112900,111523,,,,20,,
+florestas-nativas,112902,111525,,PEVS,^Total$,20,,
+florestas-plantadas,112901,111524,,,,20,,
+pesca,114050,114349,,,,20,,
+aquicultura,112903,111526,,,,20,,

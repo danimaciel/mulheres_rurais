@@ -1,4 +1,4 @@
-# Coleta as tabelas do Censo Agro 2017 que os indicadores de trabalho
+# Coleta as tabelas do IBGE que os indicadores de trabalho
 # invisível precisam e que não estão na coleta geral, porque pedem outras
 # aberturas:
 #
@@ -6,13 +6,17 @@
 #   o grupo de atividade econômica. É daqui que sai a direção invisível. A
 #   6768 não tem a classe de atividade (12440), só o grupo (12517), então o
 #   recorte de cada cadeia é o grupo dela nos municípios onde a cadeia está.
+# - 6883 por classe de atividade nos municípios, para saber onde cada cadeia
+#   está, e a PAM do último ano com todos os produtos, para o valor da
+#   produção.
 # - 6955 com os produtos da lavoura permanente abertos, para contar os
 #   estabelecimentos que têm o produto mesmo quando ele não é a atividade
 #   principal. Os produtos são escolhidos pelo nome, com o filtro de
 #   config/indicadores.csv.
 #
 # Uso, a partir da raiz do repositório:
-#   Rscript R/coletar_insumos_indicadores.R
+#   Rscript R/coletar_insumos_indicadores.R              todas as fontes
+#   Rscript R/coletar_insumos_indicadores.R pam_5457_ultimo_ano   só as indicadas
 
 source("R/sidra.R")
 source("R/comum.R")
@@ -38,14 +42,35 @@ pedidos <- list(
   list(fonte = "sidra_6955_produtos", arquivo = "dados/sidra/censo_agro_6955_produtos.csv.gz",
        coleta = function() {
          cats <- categorias("6955", CLASSE_PRODUTOS_6955)
-         filtro <- paste(cadeias$produtos_6955, collapse = "|")
+         filtro <- paste(cadeias$produtos_6955[nzchar(cadeias$produtos_6955)], collapse = "|")
          cats <- cats[grepl(filtro, cats$nome, ignore.case = TRUE), , drop = FALSE]
          if (nrow(cats) == 0) stop("nenhum produto da 6955 corresponde aos filtros")
          message(sprintf("  produtos: %s", paste(cats$nome, collapse = "; ")))
          coletar("6955", character(), cats$codigo, classe_recorte = CLASSE_PRODUTOS_6955,
                  nomes_recorte = c("cod_produto", "produto"))
+       }),
+  # Estabelecimentos por classe de atividade em cada município, para saber
+  # onde cada cadeia está. Só o total de estabelecimentos e de área.
+  list(fonte = "sidra_6883_classes_mun", arquivo = "dados/sidra/censo_agro_6883_classes_mun.csv.gz",
+       coleta = function() {
+         d <- consultar_nivel("6883", "n6", "c12564/41145", codigos_recorte = "all")
+         cbind(tabela = "6883", tratar_valor(d))
+       }),
+  # Valor da produção da PAM no último ano, todos os produtos, Brasil e UFs.
+  # A coleta geral da PAM traz só alguns produtos, por causa do peso municipal.
+  list(fonte = "pam_5457_ultimo_ano", arquivo = "dados/sidra/pam_5457_ultimo_ano.csv.gz",
+       coleta = function() {
+         partes <- lapply(c("n1", "n3"), function(nivel)
+           consultar_nivel("5457", nivel, character(), "all", classe_recorte = "782",
+                           nomes_recorte = c("cod_produto", "produto"), periodo = "last 1"))
+         d <- tratar_valor(do.call(rbind, partes))
+         message(sprintf("  %d produtos", length(unique(d$produto))))
+         cbind(tabela = "5457", fonte = "PAM", d)
        })
 )
+
+pedidas <- commandArgs(trailingOnly = TRUE)
+if (length(pedidas) > 0) pedidos <- Filter(function(p) p$fonte %in% pedidas, pedidos)
 
 # Uma falha fica registrada na situação da coleta e o arquivo anterior é
 # mantido; o workflow segue para as próximas etapas.

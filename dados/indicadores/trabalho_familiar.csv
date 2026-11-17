@@ -1,6 +1,32 @@
 "cadeia","recorte","nivel","cod_territorio","territorio","estab","mulheres_familia","homens_familia","pct_mulheres_familia","dirigentes_m","mulheres_nao_dirigentes","valor_baixo","valor_medio","valor_alto"
 "cafe","principal","Brasil","1","Brasil",136604,82158,198524,29.27,14297,67861,330008043,660016086,1320032172
 "cafe","principal","UF","11","Rondônia",165,119,234,33.71,25,94,457122,914244,1828488
+"cafe","principal","UF","12","Acre",2,,,,1,,,,
+"cafe","principal","UF","13","Amazonas",26,,38,,5,,,,
+"cafe","principal","UF","14","Roraima",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","15","Pará",19,15,35,30,7,8,38904,77808,155616
+"cafe","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","17","Tocantins",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","21","Maranhão",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","22","Piauí",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","23","Ceará",25,9,32,21.95,4,5,24315,48630,97260
+"cafe","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","26","Pernambuco",47,33,56,37.08,12,21,102123,204246,408492
+"cafe","principal","UF","27","Alagoas",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","28","Sergipe",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","29","Bahia",10135,6959,13208,34.51,1922,5037,24494931,48989862,97979724
+"cafe","principal","UF","31","Minas Gerais",92314,53503,136844,28.11,8376,45127,219452601,438905202,877810404
+"cafe","principal","UF","32","Espírito Santo",19260,14090,27570,33.82,2391,11699,56892237,113784474,227568948
+"cafe","principal","UF","33","Rio de Janeiro",1319,544,1810,23.11,132,412,2003556,4007112,8014224
+"cafe","principal","UF","35","São Paulo",7068,3038,10427,22.56,701,2337,11364831,22729662,45459324
+"cafe","principal","UF","41","Paraná",6063,3702,8033,31.55,704,2998,14579274,29158548,58317096
+"cafe","principal","UF","42","Santa Catarina",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","43","Rio Grande do Sul",0,0,0,,0,0,0,0,0
+"cafe","principal","UF","50","Mato Grosso do Sul",50,41,65,38.68,2,39,189657,379314,758628
+"cafe","principal","UF","51","Mato Grosso",67,60,93,39.22,10,50,243150,486300,972600
+"cafe","principal","UF","52","Goiás",31,,,,2,,,,
+"cafe","principal","UF","53","Distrito Federal",13,,,,3,,,,
 "cafe","principal","Município","1100015","Alta Floresta D'Oeste - RO",52,,,,7,,,,
 "cafe","principal","Município","1100023","Ariquemes - RO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1100031","Cabixi - RO",1,,,,0,,,,
@@ -53,7 +79,6 @@
 "cafe","principal","Município","1101708","Urupá - RO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1101757","Vale do Anari - RO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1101807","Vale do Paraíso - RO",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","12","Acre",2,,,,1,,,,
 "cafe","principal","Município","1200013","Acrelândia - AC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1200054","Assis Brasil - AC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1200104","Brasiléia - AC",0,0,0,,0,0,0,0,0
@@ -76,7 +101,6 @@
 "cafe","principal","Município","1200609","Tarauacá - AC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1200708","Xapuri - AC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1200807","Porto Acre - AC",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","13","Amazonas",26,,38,,5,,,,
 "cafe","principal","Município","1300029","Alvarães - AM",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1300060","Amaturá - AM",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1300086","Anamã - AM",0,0,0,,0,0,0,0,0
@@ -139,7 +163,6 @@
 "cafe","principal","Município","1304260","Uarini - AM",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1304302","Urucará - AM",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1304401","Urucurituba - AM",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","14","Roraima",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1400027","Amajari - RR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1400050","Alto Alegre - RR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1400100","Boa Vista - RR",0,0,0,,0,0,0,0,0
@@ -155,7 +178,6 @@
 "cafe","principal","Município","1400506","São João da Baliza - RR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1400605","São Luiz do Anauá - RR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1400704","Uiramutã - RR",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","15","Pará",19,15,35,30,7,8,38904,77808,155616
 "cafe","principal","Município","1500107","Abaetetuba - PA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1500131","Abel Figueiredo - PA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1500206","Acará - PA",0,0,0,,0,0,0,0,0
@@ -300,7 +322,6 @@
 "cafe","principal","Município","1508308","Viseu - PA",3,,,,2,,,,
 "cafe","principal","Município","1508357","Vitória do Xingu - PA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1508407","Xinguara - PA",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1600055","Serra do Navio - AP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1600105","Amapá - AP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1600154","Pedra Branca do Amapari - AP",0,0,0,,0,0,0,0,0
@@ -317,7 +338,6 @@
 "cafe","principal","Município","1600600","Santana - AP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1600709","Tartarugalzinho - AP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1600808","Vitória do Jari - AP",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","17","Tocantins",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1700251","Abreulândia - TO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1700301","Aguiarnópolis - TO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1700350","Aliança do Tocantins - TO",0,0,0,,0,0,0,0,0
@@ -457,7 +477,6 @@
 "cafe","principal","Município","1721307","Tupiratins - TO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1722081","Wanderlândia - TO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","1722107","Xambioá - TO",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","21","Maranhão",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2100055","Açailândia - MA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2100105","Afonso Cunha - MA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2100154","Água Doce do Maranhão - MA",0,0,0,,0,0,0,0,0
@@ -675,7 +694,6 @@
 "cafe","principal","Município","2112902","Vitória do Mearim - MA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2113009","Vitorino Freire - MA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2114007","Zé Doca - MA",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","22","Piauí",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2200053","Acauã - PI",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2200103","Agricolândia - PI",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2200202","Água Branca - PI",0,0,0,,0,0,0,0,0
@@ -900,7 +918,6 @@
 "cafe","principal","Município","2211506","Vera Mendes - PI",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2211605","Vila Nova do Piauí - PI",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2211704","Wall Ferraz - PI",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","23","Ceará",25,9,32,21.95,4,5,24315,48630,97260
 "cafe","principal","Município","2300101","Abaiara - CE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2300150","Acarape - CE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2300200","Acaraú - CE",0,0,0,,0,0,0,0,0
@@ -1085,7 +1102,6 @@
 "cafe","principal","Município","2313955","Varjota - CE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2314003","Várzea Alegre - CE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2314102","Viçosa do Ceará - CE",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2400109","Acari - RN",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2400208","Assú - RN",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2400307","Afonso Bezerra - RN",0,0,0,,0,0,0,0,0
@@ -1253,7 +1269,6 @@
 "cafe","principal","Município","2414803","Vera Cruz - RN",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2414902","Viçosa - RN",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2415008","Vila Flor - RN",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2500106","Água Branca - PB",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2500205","Aguiar - PB",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2500304","Alagoa Grande - PB",0,0,0,,0,0,0,0,0
@@ -1477,7 +1492,6 @@
 "cafe","principal","Município","2517100","Várzea - PB",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2517209","Vieirópolis - PB",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2517407","Zabelê - PB",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","26","Pernambuco",47,33,56,37.08,12,21,102123,204246,408492
 "cafe","principal","Município","2600054","Abreu e Lima - PE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2600104","Afogados da Ingazeira - PE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2600203","Afrânio - PE",0,0,0,,0,0,0,0,0
@@ -1663,7 +1677,6 @@
 "cafe","principal","Município","2616308","Vicência - PE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2616407","Vitória de Santo Antão - PE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2616506","Xexéu - PE",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","27","Alagoas",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2700102","Água Branca - AL",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2700201","Anadia - AL",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2700300","Arapiraca - AL",0,0,0,,0,0,0,0,0
@@ -1766,7 +1779,6 @@
 "cafe","principal","Município","2709202","Traipu - AL",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2709301","União dos Palmares - AL",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2709400","Viçosa - AL",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","28","Sergipe",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2800100","Amparo do São Francisco - SE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2800209","Aquidabã - SE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2800308","Aracaju - SE",0,0,0,,0,0,0,0,0
@@ -1842,7 +1854,6 @@
 "cafe","principal","Município","2807402","Tobias Barreto - SE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2807501","Tomar do Geru - SE",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2807600","Umbaúba - SE",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","29","Bahia",10135,6959,13208,34.51,1922,5037,24494931,48989862,97979724
 "cafe","principal","Município","2900108","Abaíra - BA",68,35,94,27.13,4,31,150753,301506,603012
 "cafe","principal","Município","2900207","Abaré - BA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2900306","Acajutiba - BA",0,0,0,,0,0,0,0,0
@@ -2259,7 +2270,6 @@
 "cafe","principal","Município","2933455","Wanderley - BA",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","2933505","Wenceslau Guimarães - BA",1,0,,,0,0,0,0,0
 "cafe","principal","Município","2933604","Xique-Xique - BA",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","31","Minas Gerais",92314,53503,136844,28.11,8376,45127,219452601,438905202,877810404
 "cafe","principal","Município","3100104","Abadia dos Dourados - MG",1,0,,,0,0,0,0,0
 "cafe","principal","Município","3100203","Abaeté - MG",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3100302","Abre Campo - MG",621,352,786,30.93,47,305,1483215,2966430,5932860
@@ -3113,7 +3123,6 @@
 "cafe","principal","Município","3172004","Visconde do Rio Branco - MG",2,,,,2,,,,
 "cafe","principal","Município","3172103","Volta Grande - MG",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3172202","Wenceslau Braz - MG",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","32","Espírito Santo",19260,14090,27570,33.82,2391,11699,56892237,113784474,227568948
 "cafe","principal","Município","3200102","Afonso Cláudio - ES",893,727,1374,34.6,79,648,3151224,6302448,12604896
 "cafe","principal","Município","3200136","Águia Branca - ES",3,0,,,0,0,0,0,0
 "cafe","principal","Município","3200169","Água Doce do Norte - ES",147,,,,20,,,,
@@ -3192,7 +3201,6 @@
 "cafe","principal","Município","3205176","Vila Valério - ES",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3205200","Vila Velha - ES",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3205309","Vitória - ES",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","33","Rio de Janeiro",1319,544,1810,23.11,132,412,2003556,4007112,8014224
 "cafe","principal","Município","3300100","Angra dos Reis - RJ",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3300159","Aperibé - RJ",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3300209","Araruama - RJ",1,,,,0,,,,
@@ -3284,7 +3292,6 @@
 "cafe","principal","Município","3306156","Varre-Sai - RJ",407,192,568,25.26,43,149,724587,1449174,2898348
 "cafe","principal","Município","3306206","Vassouras - RJ",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3306305","Volta Redonda - RJ",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","35","São Paulo",7068,3038,10427,22.56,701,2337,11364831,22729662,45459324
 "cafe","principal","Município","3500105","Adamantina - SP",16,7,22,24.14,3,4,19452,38904,77808
 "cafe","principal","Município","3500204","Adolfo - SP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3500303","Aguaí - SP",5,,,,0,,,,
@@ -3924,7 +3931,6 @@
 "cafe","principal","Município","3557154","Zacarias - SP",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","3557204","Chavantes - SP",2,,,,1,,,,
 "cafe","principal","Município","3557303","Estiva Gerbi - SP",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","41","Paraná",6063,3702,8033,31.55,704,2998,14579274,29158548,58317096
 "cafe","principal","Município","4100103","Abatiá - PR",105,,141,,12,,,,
 "cafe","principal","Município","4100202","Adrianópolis - PR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4100301","Agudos do Sul - PR",0,0,0,,0,0,0,0,0
@@ -4324,7 +4330,6 @@
 "cafe","principal","Município","4128658","Virmond - PR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4128708","Vitorino - PR",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4128807","Xambrê - PR",8,7,7,50,1,6,29178,58356,116712
-"cafe","principal","UF","42","Santa Catarina",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4200051","Abdon Batista - SC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4200101","Abelardo Luz - SC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4200200","Agrolândia - SC",0,0,0,,0,0,0,0,0
@@ -4620,7 +4625,6 @@
 "cafe","principal","Município","4219705","Xaxim - SC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4219853","Zortéa - SC",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4220000","Balneário Rincão - SC",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","43","Rio Grande do Sul",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4300034","Aceguá - RS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4300059","Água Santa - RS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4300109","Agudo - RS",0,0,0,,0,0,0,0,0
@@ -5118,7 +5122,6 @@
 "cafe","principal","Município","4323754","Vitória das Missões - RS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4323770","Westfália - RS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","4323804","Xangri-lá - RS",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","50","Mato Grosso do Sul",50,41,65,38.68,2,39,189657,379314,758628
 "cafe","principal","Município","5000203","Água Clara - MS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5000252","Alcinópolis - MS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5000609","Amambai - MS",0,0,0,,0,0,0,0,0
@@ -5198,7 +5201,6 @@
 "cafe","principal","Município","5008008","Terenos - MS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5008305","Três Lagoas - MS",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5008404","Vicentina - MS",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","51","Mato Grosso",67,60,93,39.22,10,50,243150,486300,972600
 "cafe","principal","Município","5100102","Acorizal - MT",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5100201","Água Boa - MT",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5100250","Alta Floresta - MT",0,0,0,,0,0,0,0,0
@@ -5340,7 +5342,6 @@
 "cafe","principal","Município","5108857","Nova Marilândia - MT",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5108907","Nova Maringá - MT",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5108956","Nova Monte Verde - MT",0,0,0,,0,0,0,0,0
-"cafe","principal","UF","52","Goiás",31,,,,2,,,,
 "cafe","principal","Município","5200050","Abadia de Goiás - GO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5200100","Abadiânia - GO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5200134","Acreúna - GO",0,0,0,,0,0,0,0,0
@@ -5587,7 +5588,6 @@
 "cafe","principal","Município","5222054","Vicentinópolis - GO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5222203","Vila Boa - GO",0,0,0,,0,0,0,0,0
 "cafe","principal","Município","5222302","Vila Propício - GO",1,,,,0,,,,
-"cafe","principal","UF","53","Distrito Federal",13,,,,3,,,,
 "cafe","principal","Município","5300108","Brasília - DF",13,,,,3,,,,
 "cafe","onde_ha","Brasil","1","Brasil",264361,150127.34,366420.98,29.06,33684.62,116442.73,566260979.94,1132521959.88,2265043919.75
 "cafe","onde_ha","UF","11","Rondônia",17336,13166.01,23869.96,35.55,2486.4,10679.61,51934940.94,103869881.88,207739763.77
@@ -7599,6 +7599,32 @@
 "cafe","onde_ha","Município","5300108","Brasília - DF",42,19.04,44.91,29.78,6.79,12.25,59593.78,119187.55,238375.11
 "cacau","principal","Brasil","1","Brasil",55509,37793,77028,32.91,12375,25418,123607734,247215468,494430936
 "cacau","principal","UF","11","Rondônia",504,416,642,39.32,95,321,1561023,3122046,6244092
+"cacau","principal","UF","12","Acre",1,,,,0,,,,
+"cacau","principal","UF","13","Amazonas",56,,99,,10,,,,
+"cacau","principal","UF","14","Roraima",2,,,,0,,,,
+"cacau","principal","UF","15","Pará",10120,8406,15455,35.23,1781,6625,32217375,64434750,128869500
+"cacau","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","17","Tocantins",2,,,,2,,,,
+"cacau","principal","UF","21","Maranhão",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","22","Piauí",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","23","Ceará",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","26","Pernambuco",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","27","Alagoas",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","28","Sergipe",2,0,,,0,0,0,0,0
+"cacau","principal","UF","29","Bahia",44428,28728,60355,32.25,10446,18282,88905366,177810732,355621464
+"cacau","principal","UF","31","Minas Gerais",5,,,,1,,,,
+"cacau","principal","UF","32","Espírito Santo",370,166,432,27.76,38,128,622464,1244928,2489856
+"cacau","principal","UF","33","Rio de Janeiro",1,,0,,1,,,,
+"cacau","principal","UF","35","São Paulo",2,0,,,0,0,0,0,0
+"cacau","principal","UF","41","Paraná",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","42","Santa Catarina",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","43","Rio Grande do Sul",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","50","Mato Grosso do Sul",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","51","Mato Grosso",16,,,,1,,,,
+"cacau","principal","UF","52","Goiás",0,0,0,,0,0,0,0,0
+"cacau","principal","UF","53","Distrito Federal",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1100015","Alta Floresta D'Oeste - RO",1,,,,1,,,,
 "cacau","principal","Município","1100023","Ariquemes - RO",35,,,,3,,,,
 "cacau","principal","Município","1100031","Cabixi - RO",1,,0,,1,,,,
@@ -7651,7 +7677,6 @@
 "cacau","principal","Município","1101708","Urupá - RO",18,24,,,1,23,111849,223698,447396
 "cacau","principal","Município","1101757","Vale do Anari - RO",4,5,8,38.46,1,4,19452,38904,77808
 "cacau","principal","Município","1101807","Vale do Paraíso - RO",6,,,,2,,,,
-"cacau","principal","UF","12","Acre",1,,,,0,,,,
 "cacau","principal","Município","1200013","Acrelândia - AC",1,,,,0,,,,
 "cacau","principal","Município","1200054","Assis Brasil - AC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1200104","Brasiléia - AC",0,0,0,,0,0,0,0,0
@@ -7674,7 +7699,6 @@
 "cacau","principal","Município","1200609","Tarauacá - AC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1200708","Xapuri - AC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1200807","Porto Acre - AC",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","13","Amazonas",56,,99,,10,,,,
 "cacau","principal","Município","1300029","Alvarães - AM",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1300060","Amaturá - AM",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1300086","Anamã - AM",0,0,0,,0,0,0,0,0
@@ -7737,7 +7761,6 @@
 "cacau","principal","Município","1304260","Uarini - AM",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1304302","Urucará - AM",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1304401","Urucurituba - AM",5,9,,,1,8,38904,77808,155616
-"cacau","principal","UF","14","Roraima",2,,,,0,,,,
 "cacau","principal","Município","1400027","Amajari - RR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1400050","Alto Alegre - RR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1400100","Boa Vista - RR",0,0,0,,0,0,0,0,0
@@ -7753,7 +7776,6 @@
 "cacau","principal","Município","1400506","São João da Baliza - RR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1400605","São Luiz do Anauá - RR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1400704","Uiramutã - RR",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","15","Pará",10120,8406,15455,35.23,1781,6625,32217375,64434750,128869500
 "cacau","principal","Município","1500107","Abaetetuba - PA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1500131","Abel Figueiredo - PA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1500206","Acará - PA",6,,,,0,,,,
@@ -7898,7 +7920,6 @@
 "cacau","principal","Município","1508308","Viseu - PA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1508357","Vitória do Xingu - PA",189,217,277,43.93,15,202,982326,1964652,3929304
 "cacau","principal","Município","1508407","Xinguara - PA",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1600055","Serra do Navio - AP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1600105","Amapá - AP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1600154","Pedra Branca do Amapari - AP",0,0,0,,0,0,0,0,0
@@ -7915,7 +7936,6 @@
 "cacau","principal","Município","1600600","Santana - AP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1600709","Tartarugalzinho - AP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1600808","Vitória do Jari - AP",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","17","Tocantins",2,,,,2,,,,
 "cacau","principal","Município","1700251","Abreulândia - TO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1700301","Aguiarnópolis - TO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1700350","Aliança do Tocantins - TO",0,0,0,,0,0,0,0,0
@@ -8055,7 +8075,6 @@
 "cacau","principal","Município","1721307","Tupiratins - TO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1722081","Wanderlândia - TO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","1722107","Xambioá - TO",1,,,,1,,,,
-"cacau","principal","UF","21","Maranhão",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2100055","Açailândia - MA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2100105","Afonso Cunha - MA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2100154","Água Doce do Maranhão - MA",0,0,0,,0,0,0,0,0
@@ -8273,7 +8292,6 @@
 "cacau","principal","Município","2112902","Vitória do Mearim - MA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2113009","Vitorino Freire - MA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2114007","Zé Doca - MA",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","22","Piauí",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2200053","Acauã - PI",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2200103","Agricolândia - PI",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2200202","Água Branca - PI",0,0,0,,0,0,0,0,0
@@ -8498,7 +8516,6 @@
 "cacau","principal","Município","2211506","Vera Mendes - PI",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2211605","Vila Nova do Piauí - PI",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2211704","Wall Ferraz - PI",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","23","Ceará",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2300101","Abaiara - CE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2300150","Acarape - CE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2300200","Acaraú - CE",0,0,0,,0,0,0,0,0
@@ -8683,7 +8700,6 @@
 "cacau","principal","Município","2313955","Varjota - CE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2314003","Várzea Alegre - CE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2314102","Viçosa do Ceará - CE",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2400109","Acari - RN",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2400208","Assú - RN",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2400307","Afonso Bezerra - RN",0,0,0,,0,0,0,0,0
@@ -8851,7 +8867,6 @@
 "cacau","principal","Município","2414803","Vera Cruz - RN",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2414902","Viçosa - RN",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2415008","Vila Flor - RN",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2500106","Água Branca - PB",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2500205","Aguiar - PB",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2500304","Alagoa Grande - PB",0,0,0,,0,0,0,0,0
@@ -9075,7 +9090,6 @@
 "cacau","principal","Município","2517100","Várzea - PB",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2517209","Vieirópolis - PB",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2517407","Zabelê - PB",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","26","Pernambuco",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2600054","Abreu e Lima - PE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2600104","Afogados da Ingazeira - PE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2600203","Afrânio - PE",0,0,0,,0,0,0,0,0
@@ -9261,7 +9275,6 @@
 "cacau","principal","Município","2616308","Vicência - PE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2616407","Vitória de Santo Antão - PE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2616506","Xexéu - PE",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","27","Alagoas",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2700102","Água Branca - AL",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2700201","Anadia - AL",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2700300","Arapiraca - AL",0,0,0,,0,0,0,0,0
@@ -9364,7 +9377,6 @@
 "cacau","principal","Município","2709202","Traipu - AL",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2709301","União dos Palmares - AL",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2709400","Viçosa - AL",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","28","Sergipe",2,0,,,0,0,0,0,0
 "cacau","principal","Município","2800100","Amparo do São Francisco - SE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2800209","Aquidabã - SE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2800308","Aracaju - SE",0,0,0,,0,0,0,0,0
@@ -9440,7 +9452,6 @@
 "cacau","principal","Município","2807402","Tobias Barreto - SE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2807501","Tomar do Geru - SE",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2807600","Umbaúba - SE",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","29","Bahia",44428,28728,60355,32.25,10446,18282,88905366,177810732,355621464
 "cacau","principal","Município","2900108","Abaíra - BA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2900207","Abaré - BA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2900306","Acajutiba - BA",0,0,0,,0,0,0,0,0
@@ -9857,7 +9868,6 @@
 "cacau","principal","Município","2933455","Wanderley - BA",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","2933505","Wenceslau Guimarães - BA",1816,1371,2656,34.05,454,917,4459371,8918742,17837484
 "cacau","principal","Município","2933604","Xique-Xique - BA",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","31","Minas Gerais",5,,,,1,,,,
 "cacau","principal","Município","3100104","Abadia dos Dourados - MG",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3100203","Abaeté - MG",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3100302","Abre Campo - MG",0,0,0,,0,0,0,0,0
@@ -10711,7 +10721,6 @@
 "cacau","principal","Município","3172004","Visconde do Rio Branco - MG",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3172103","Volta Grande - MG",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3172202","Wenceslau Braz - MG",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","32","Espírito Santo",370,166,432,27.76,38,128,622464,1244928,2489856
 "cacau","principal","Município","3200102","Afonso Cláudio - ES",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3200136","Águia Branca - ES",16,,,,4,,,,
 "cacau","principal","Município","3200169","Água Doce do Norte - ES",0,0,0,,0,0,0,0,0
@@ -10790,7 +10799,6 @@
 "cacau","principal","Município","3205176","Vila Valério - ES",5,,,,1,,,,
 "cacau","principal","Município","3205200","Vila Velha - ES",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3205309","Vitória - ES",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","33","Rio de Janeiro",1,,0,,1,,,,
 "cacau","principal","Município","3300100","Angra dos Reis - RJ",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3300159","Aperibé - RJ",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3300209","Araruama - RJ",0,0,0,,0,0,0,0,0
@@ -10882,7 +10890,6 @@
 "cacau","principal","Município","3306156","Varre-Sai - RJ",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3306206","Vassouras - RJ",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3306305","Volta Redonda - RJ",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","35","São Paulo",2,0,,,0,0,0,0,0
 "cacau","principal","Município","3500105","Adamantina - SP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3500204","Adolfo - SP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3500303","Aguaí - SP",0,0,0,,0,0,0,0,0
@@ -11522,7 +11529,6 @@
 "cacau","principal","Município","3557154","Zacarias - SP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3557204","Chavantes - SP",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","3557303","Estiva Gerbi - SP",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","41","Paraná",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4100103","Abatiá - PR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4100202","Adrianópolis - PR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4100301","Agudos do Sul - PR",0,0,0,,0,0,0,0,0
@@ -11922,7 +11928,6 @@
 "cacau","principal","Município","4128658","Virmond - PR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4128708","Vitorino - PR",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4128807","Xambrê - PR",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","42","Santa Catarina",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4200051","Abdon Batista - SC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4200101","Abelardo Luz - SC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4200200","Agrolândia - SC",0,0,0,,0,0,0,0,0
@@ -12218,7 +12223,6 @@
 "cacau","principal","Município","4219705","Xaxim - SC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4219853","Zortéa - SC",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4220000","Balneário Rincão - SC",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","43","Rio Grande do Sul",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4300034","Aceguá - RS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4300059","Água Santa - RS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4300109","Agudo - RS",0,0,0,,0,0,0,0,0
@@ -12716,7 +12720,6 @@
 "cacau","principal","Município","4323754","Vitória das Missões - RS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4323770","Westfália - RS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","4323804","Xangri-lá - RS",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","50","Mato Grosso do Sul",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5000203","Água Clara - MS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5000252","Alcinópolis - MS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5000609","Amambai - MS",0,0,0,,0,0,0,0,0
@@ -12796,7 +12799,6 @@
 "cacau","principal","Município","5008008","Terenos - MS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5008305","Três Lagoas - MS",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5008404","Vicentina - MS",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","51","Mato Grosso",16,,,,1,,,,
 "cacau","principal","Município","5100102","Acorizal - MT",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5100201","Água Boa - MT",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5100250","Alta Floresta - MT",1,0,0,,0,0,0,0,0
@@ -12938,7 +12940,6 @@
 "cacau","principal","Município","5108857","Nova Marilândia - MT",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5108907","Nova Maringá - MT",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5108956","Nova Monte Verde - MT",1,0,,,0,0,0,0,0
-"cacau","principal","UF","52","Goiás",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5200050","Abadia de Goiás - GO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5200100","Abadiânia - GO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5200134","Acreúna - GO",0,0,0,,0,0,0,0,0
@@ -13185,7 +13186,6 @@
 "cacau","principal","Município","5222054","Vicentinópolis - GO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5222203","Vila Boa - GO",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5222302","Vila Propício - GO",0,0,0,,0,0,0,0,0
-"cacau","principal","UF","53","Distrito Federal",0,0,0,,0,0,0,0,0
 "cacau","principal","Município","5300108","Brasília - DF",0,0,0,,0,0,0,0,0
 "cacau","onde_ha","Brasil","1","Brasil",93314,64764.42,129279.73,33.38,20803.13,43961.29,213783750.71,427567501.42,855135002.85
 "cacau","onde_ha","UF","11","Rondônia",2342,1733.17,3075.34,36.04,376.69,1356.48,6596553.43,13193106.85,26386213.71
@@ -13671,3 +13671,619 @@
 "cacau","onde_ha","Município","5107578","Rondolândia - MT",5,1.9,3.79,33.36,0.55,1.34,6536.63,13073.26,26146.52
 "cacau","onde_ha","Município","5108600","Vila Rica - MT",1,0.8,1.31,37.92,0.15,0.65,3172.84,6345.68,12691.36
 "cacau","onde_ha","Município","5108956","Nova Monte Verde - MT",5,2.55,5.45,31.88,0.9,1.65,8014.33,16028.66,32057.32
+"outras-temporarias","principal","Brasil","1","Brasil",891167,734074,1287976,36.3,210604,523470,2545634610,5091269220,10182538440
+"outras-temporarias","principal","UF","11","Rondônia",4021,3857,5956,39.31,894,2963,14409069,28818138,57636276
+"outras-temporarias","principal","UF","12","Acre",13793,13376,24979,34.87,2913,10463,50881569,101763138,203526276
+"outras-temporarias","principal","UF","13","Amazonas",42501,52221,81521,39.05,9685,42536,206852568,413705136,827410272
+"outras-temporarias","principal","UF","14","Roraima",5153,7182,11072,39.34,1211,5971,29036973,58073946,116147892
+"outras-temporarias","principal","UF","15","Pará",88022,88344,159086,35.7,20736,67608,328777704,657555408,1315110816
+"outras-temporarias","principal","UF","16","Amapá",3395,3714,6151,37.65,933,2781,13524003,27048006,54096012
+"outras-temporarias","principal","UF","17","Tocantins",6209,5470,9246,37.17,1290,4180,20327340,40654680,81309360
+"outras-temporarias","principal","UF","21","Maranhão",64775,51944,109536,32.17,12921,39023,189768849,379537698,759075396
+"outras-temporarias","principal","UF","22","Piauí",52650,42781,71182,37.54,11939,30842,149984646,299969292,599938584
+"outras-temporarias","principal","UF","23","Ceará",90081,61661,119938,33.95,18101,43560,211832280,423664560,847329120
+"outras-temporarias","principal","UF","24","Rio Grande do Norte",13031,7946,20559,27.88,2179,5767,28044921,56089842,112179684
+"outras-temporarias","principal","UF","25","Paraíba",37568,26922,51142,34.49,9871,17051,82919013,165838026,331676052
+"outras-temporarias","principal","UF","26","Pernambuco",73771,58661,95637,38.02,21913,36748,178705524,357411048,714822096
+"outras-temporarias","principal","UF","27","Alagoas",31558,25737,44549,36.62,8718,17019,82763397,165526794,331053588
+"outras-temporarias","principal","UF","28","Sergipe",21167,13519,26888,33.46,5857,7662,37260306,74520612,149041224
+"outras-temporarias","principal","UF","29","Bahia",165332,136713,220815,38.24,48728,87985,427871055,855742110,1711484220
+"outras-temporarias","principal","UF","31","Minas Gerais",50838,36333,66456,35.35,9876,26457,128660391,257320782,514641564
+"outras-temporarias","principal","UF","32","Espírito Santo",5282,3584,7249,33.08,940,2644,12857772,25715544,51431088
+"outras-temporarias","principal","UF","33","Rio de Janeiro",7706,3069,9586,24.25,1212,1857,9030591,18061182,36122364
+"outras-temporarias","principal","UF","35","São Paulo",9938,5355,13678,28.14,1481,3874,18839262,37678524,75357048
+"outras-temporarias","principal","UF","41","Paraná",30582,22345,37098,37.59,5902,16443,79962309,159924618,319849236
+"outras-temporarias","principal","UF","42","Santa Catarina",15725,13146,20153,39.48,2012,11134,54144642,108289284,216578568
+"outras-temporarias","principal","UF","43","Rio Grande do Sul",36629,30468,44101,40.86,6297,24171,117543573,235087146,470174292
+"outras-temporarias","principal","UF","50","Mato Grosso do Sul",7571,5721,9556,37.45,2093,3628,17642964,35285928,70571856
+"outras-temporarias","principal","UF","51","Mato Grosso",7469,9352,13392,41.12,1753,7599,36953937,73907874,147815748
+"outras-temporarias","principal","UF","52","Goiás",5800,4240,7582,35.87,1020,3220,15658860,31317720,62635440
+"outras-temporarias","principal","UF","53","Distrito Federal",600,413,868,32.24,129,284,1381092,2762184,5524368
+"cereais","principal","Brasil","1","Brasil",392714,280915,529488,34.66,74865,206050,1002021150,2004042300,4008084600
+"cereais","principal","UF","11","Rondônia",761,620,1052,37.08,121,499,2426637,4853274,9706548
+"cereais","principal","UF","12","Acre",2209,1863,3454,35.04,447,1416,6886008,13772016,27544032
+"cereais","principal","UF","13","Amazonas",578,557,896,38.33,147,410,1993830,3987660,7975320
+"cereais","principal","UF","14","Roraima",338,316,793,28.49,83,233,1133079,2266158,4532316
+"cereais","principal","UF","15","Pará",4939,4257,7981,34.79,949,3308,16086804,32173608,64347216
+"cereais","principal","UF","16","Amapá",50,36,82,30.51,10,26,126438,252876,505752
+"cereais","principal","UF","17","Tocantins",2182,1744,3218,35.15,373,1371,6667173,13334346,26668692
+"cereais","principal","UF","21","Maranhão",37088,25285,58105,30.32,6364,18921,92012823,184025646,368051292
+"cereais","principal","UF","22","Piauí",45226,32927,63840,34.03,7975,24952,121341576,242683152,485366304
+"cereais","principal","UF","23","Ceará",69134,43200,90167,32.39,12332,30868,150111084,300222168,600444336
+"cereais","principal","UF","24","Rio Grande do Norte",4084,2570,5967,30.1,776,1794,8724222,17448444,34896888
+"cereais","principal","UF","25","Paraíba",14850,10516,19653,34.86,3622,6894,33525522,67051044,134102088
+"cereais","principal","UF","26","Pernambuco",30310,24049,37319,39.19,9717,14332,69696516,139393032,278786064
+"cereais","principal","UF","27","Alagoas",9476,7968,13539,37.05,2483,5485,26673555,53347110,106694220
+"cereais","principal","UF","28","Sergipe",5295,2757,7052,28.11,1100,1657,8057991,16115982,32231964
+"cereais","principal","UF","29","Bahia",26480,20235,35349,36.4,7676,12559,61074417,122148834,244297668
+"cereais","principal","UF","31","Minas Gerais",31270,22318,40092,35.76,6314,16004,77827452,155654904,311309808
+"cereais","principal","UF","32","Espírito Santo",1588,1533,2389,39.09,300,1233,5996079,11992158,23984316
+"cereais","principal","UF","33","Rio de Janeiro",299,115,,,57,58,282054,564108,1128216
+"cereais","principal","UF","35","São Paulo",5923,2716,8309,24.63,762,1954,9502302,19004604,38009208
+"cereais","principal","UF","41","Paraná",30365,22408,38668,36.69,4780,17628,85724964,171449928,342899856
+"cereais","principal","UF","42","Santa Catarina",24357,18649,31924,36.88,2432,16217,78863271,157726542,315453084
+"cereais","principal","UF","43","Rio Grande do Sul",39455,29271,50305,36.78,4854,24417,118739871,237479742,474959484
+"cereais","principal","UF","50","Mato Grosso do Sul",1148,791,1555,33.72,215,576,2801088,5602176,11204352
+"cereais","principal","UF","51","Mato Grosso",1214,1228,2072,37.21,209,1019,4955397,9910794,19821588
+"cereais","principal","UF","52","Goiás",3859,2840,5003,36.21,713,2127,10343601,20687202,41374404
+"cereais","principal","UF","53","Distrito Federal",236,146,355,29.14,54,92,447396,894792,1789584
+"soja","principal","Brasil","1","Brasil",169977,107764,257419,29.51,13014,94750,460769250,921538500,1843077000
+"soja","principal","UF","11","Rondônia",352,162,663,19.64,19,143,695409,1390818,2781636
+"soja","principal","UF","12","Acre",0,0,0,,0,0,0,0,0
+"soja","principal","UF","13","Amazonas",1,0,,,0,0,0,0,0
+"soja","principal","UF","14","Roraima",50,,88,,1,,,,
+"soja","principal","UF","15","Pará",525,222,1033,17.69,37,185,899655,1799310,3598620
+"soja","principal","UF","16","Amapá",14,3,13,18.75,1,2,9726,19452,38904
+"soja","principal","UF","17","Tocantins",977,429,1658,20.56,39,390,1896570,3793140,7586280
+"soja","principal","UF","21","Maranhão",421,188,760,19.83,17,171,831573,1663146,3326292
+"soja","principal","UF","22","Piauí",226,98,375,20.72,3,95,461985,923970,1847940
+"soja","principal","UF","23","Ceará",2,0,,,0,0,0,0,0
+"soja","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
+"soja","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
+"soja","principal","UF","26","Pernambuco",1,0,,,0,0,0,0,0
+"soja","principal","UF","27","Alagoas",0,0,0,,0,0,0,0,0
+"soja","principal","UF","28","Sergipe",1,0,,,0,0,0,0,0
+"soja","principal","UF","29","Bahia",643,304,1116,21.41,28,276,1342188,2684376,5368752
+"soja","principal","UF","31","Minas Gerais",3770,1124,6190,15.37,211,913,4439919,8879838,17759676
+"soja","principal","UF","32","Espírito Santo",0,0,0,,0,0,0,0,0
+"soja","principal","UF","33","Rio de Janeiro",0,0,0,,0,0,0,0,0
+"soja","principal","UF","35","São Paulo",5591,1786,9182,16.28,388,1398,6798474,13596948,27193896
+"soja","principal","UF","41","Paraná",61980,36112,94398,27.67,4600,31512,153242856,306485712,612971424
+"soja","principal","UF","42","Santa Catarina",8262,5982,12125,33.04,588,5394,26231022,52462044,104924088
+"soja","principal","UF","43","Rio Grande do Sul",67244,51570,97731,34.54,5406,46164,224495532,448991064,897982128
+"soja","principal","UF","50","Mato Grosso do Sul",6298,3074,9667,24.13,580,2494,12128322,24256644,48513288
+"soja","principal","UF","51","Mato Grosso",6584,3554,11617,23.43,587,2967,14428521,28857042,57714084
+"soja","principal","UF","52","Goiás",6807,3006,10382,22.45,489,2517,12240171,24480342,48960684
+"soja","principal","UF","53","Distrito Federal",228,119,416,22.24,20,99,481437,962874,1925748
+"fumo","principal","Brasil","1","Brasil",89316,91118,128656,41.46,7690,83428,405710364,811420728,1622841456
+"fumo","principal","UF","11","Rondônia",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","12","Acre",13,17,,,3,14,68082,136164,272328
+"fumo","principal","UF","13","Amazonas",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","14","Roraima",3,,,,0,,,,
+"fumo","principal","UF","15","Pará",1,0,,,0,0,0,0,0
+"fumo","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","17","Tocantins",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","21","Maranhão",1,0,,,0,0,0,0,0
+"fumo","principal","UF","22","Piauí",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","23","Ceará",4,,,,1,,,,
+"fumo","principal","UF","24","Rio Grande do Norte",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","25","Paraíba",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","26","Pernambuco",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","27","Alagoas",6081,6463,9747,39.87,1272,5191,25243833,50487666,100975332
+"fumo","principal","UF","28","Sergipe",259,120,,,24,96,466848,933696,1867392
+"fumo","principal","UF","29","Bahia",2610,2992,3289,47.64,1087,1905,9264015,18528030,37056060
+"fumo","principal","UF","31","Minas Gerais",238,,363,,17,,,,
+"fumo","principal","UF","32","Espírito Santo",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","33","Rio de Janeiro",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","35","São Paulo",1,,,,1,,,,
+"fumo","principal","UF","41","Paraná",15676,15016,23612,38.87,907,14109,68612067,137224134,274448268
+"fumo","principal","UF","42","Santa Catarina",18929,19168,27454,41.11,1135,18033,87694479,175388958,350777916
+"fumo","principal","UF","43","Rio Grande do Sul",45485,47197,63773,42.53,3241,43956,213758028,427516056,855032112
+"fumo","principal","UF","50","Mato Grosso do Sul",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","51","Mato Grosso",0,0,0,,0,0,0,0,0
+"fumo","principal","UF","52","Goiás",15,,,,2,,,,
+"fumo","principal","UF","53","Distrito Federal",0,0,0,,0,0,0,0,0
+"cana","principal","Brasil","1","Brasil",54531,31898,78588,28.87,7439,24459,118944117,237888234,475776468
+"cana","principal","UF","11","Rondônia",155,,195,,28,,,,
+"cana","principal","UF","12","Acre",112,112,213,34.46,17,95,461985,923970,1847940
+"cana","principal","UF","13","Amazonas",351,411,,,65,346,1682598,3365196,6730392
+"cana","principal","UF","14","Roraima",48,59,75,44.03,10,49,238287,476574,953148
+"cana","principal","UF","15","Pará",244,523,641,44.93,39,484,2353692,4707384,9414768
+"cana","principal","UF","16","Amapá",45,27,58,31.76,6,21,102123,204246,408492
+"cana","principal","UF","17","Tocantins",236,163,335,32.73,25,138,671094,1342188,2684376
+"cana","principal","UF","21","Maranhão",528,314,1011,23.7,52,262,1274106,2548212,5096424
+"cana","principal","UF","22","Piauí",713,389,1201,24.47,54,335,1629105,3258210,6516420
+"cana","principal","UF","23","Ceará",1090,544,1663,24.65,122,422,2052186,4104372,8208744
+"cana","principal","UF","24","Rio Grande do Norte",252,114,405,21.97,19,95,461985,923970,1847940
+"cana","principal","UF","25","Paraíba",1387,759,2323,24.63,211,548,2664924,5329848,10659696
+"cana","principal","UF","26","Pernambuco",4636,2579,7461,25.69,766,1813,8816619,17633238,35266476
+"cana","principal","UF","27","Alagoas",2365,932,3687,20.18,411,521,2533623,5067246,10134492
+"cana","principal","UF","28","Sergipe",456,203,589,25.63,71,132,641916,1283832,2567664
+"cana","principal","UF","29","Bahia",5442,4303,8251,34.28,942,3361,16344543,32689086,65378172
+"cana","principal","UF","31","Minas Gerais",12569,8739,16952,34.02,1831,6908,33593604,67187208,134374416
+"cana","principal","UF","32","Espírito Santo",492,,665,,65,,,,
+"cana","principal","UF","33","Rio de Janeiro",1926,828,2617,24.03,319,509,2475267,4950534,9901068
+"cana","principal","UF","35","São Paulo",11357,3214,17009,15.89,1123,2091,10168533,20337066,40674132
+"cana","principal","UF","41","Paraná",1595,842,1898,30.73,179,663,3224169,6448338,12896676
+"cana","principal","UF","42","Santa Catarina",1481,,1911,,156,,,,
+"cana","principal","UF","43","Rio Grande do Sul",4575,3603,5554,39.35,595,3008,14627904,29255808,58511616
+"cana","principal","UF","50","Mato Grosso do Sul",463,288,523,35.51,77,211,1026093,2052186,4104372
+"cana","principal","UF","51","Mato Grosso",747,729,1180,38.19,135,594,2888622,5777244,11554488
+"cana","principal","UF","52","Goiás",1235,754,1506,33.36,115,639,3107457,6214914,12429828
+"cana","principal","UF","53","Distrito Federal",31,,,,6,,,,
+"oleaginosas","principal","Brasil","1","Brasil",13923,9787,18815,34.22,3416,6371,30982173,61964346,123928692
+"oleaginosas","principal","UF","11","Rondônia",21,,23,,5,,,,
+"oleaginosas","principal","UF","12","Acre",18,,58,,2,,,,
+"oleaginosas","principal","UF","13","Amazonas",0,0,0,,0,0,0,0,0
+"oleaginosas","principal","UF","14","Roraima",7,11,,,1,10,48630,97260,194520
+"oleaginosas","principal","UF","15","Pará",25,,,,9,,,,
+"oleaginosas","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
+"oleaginosas","principal","UF","17","Tocantins",20,16,,,3,13,63219,126438,252876
+"oleaginosas","principal","UF","21","Maranhão",153,99,,,32,67,325821,651642,1303284
+"oleaginosas","principal","UF","22","Piauí",32,19,37,33.93,4,15,72945,145890,291780
+"oleaginosas","principal","UF","23","Ceará",351,213,480,30.74,42,171,831573,1663146,3326292
+"oleaginosas","principal","UF","24","Rio Grande do Norte",10,,,,0,,,,
+"oleaginosas","principal","UF","25","Paraíba",129,95,195,32.76,18,77,374451,748902,1497804
+"oleaginosas","principal","UF","26","Pernambuco",21,8,35,18.6,3,5,24315,48630,97260
+"oleaginosas","principal","UF","27","Alagoas",238,,,,39,,,,
+"oleaginosas","principal","UF","28","Sergipe",515,377,727,34.15,128,249,1210887,2421774,4843548
+"oleaginosas","principal","UF","29","Bahia",11220,8054,14843,35.17,2951,5103,24815889,49631778,99263556
+"oleaginosas","principal","UF","31","Minas Gerais",347,279,478,36.86,80,199,967737,1935474,3870948
+"oleaginosas","principal","UF","32","Espírito Santo",12,,18,,0,,,,
+"oleaginosas","principal","UF","33","Rio de Janeiro",1,0,,,0,0,0,0,0
+"oleaginosas","principal","UF","35","São Paulo",427,,792,,30,,,,
+"oleaginosas","principal","UF","41","Paraná",173,95,198,32.42,31,64,311232,622464,1244928
+"oleaginosas","principal","UF","42","Santa Catarina",32,,30,,6,,,,
+"oleaginosas","principal","UF","43","Rio Grande do Sul",108,,127,,22,,,,
+"oleaginosas","principal","UF","50","Mato Grosso do Sul",17,,,,3,,,,
+"oleaginosas","principal","UF","51","Mato Grosso",21,,,,2,,,,
+"oleaginosas","principal","UF","52","Goiás",23,,31,,3,,,,
+"oleaginosas","principal","UF","53","Distrito Federal",2,,,,2,,,,
+"algodao","principal","Brasil","1","Brasil",1685,1226,2704,31.2,225,1001,4867863,9735726,19471452
+"algodao","principal","UF","11","Rondônia",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","12","Acre",1,,,,0,,,,
+"algodao","principal","UF","13","Amazonas",564,456,1162,28.18,67,389,1891707,3783414,7566828
+"algodao","principal","UF","14","Roraima",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","15","Pará",43,,61,,2,,,,
+"algodao","principal","UF","16","Amapá",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","17","Tocantins",1,0,,,0,0,0,0,0
+"algodao","principal","UF","21","Maranhão",1,0,0,,0,0,0,0,0
+"algodao","principal","UF","22","Piauí",42,41,62,39.81,7,34,165342,330684,661368
+"algodao","principal","UF","23","Ceará",108,,141,,12,,,,
+"algodao","principal","UF","24","Rio Grande do Norte",5,,,,1,,,,
+"algodao","principal","UF","25","Paraíba",38,23,61,27.38,7,16,77808,155616,311232
+"algodao","principal","UF","26","Pernambuco",10,6,,,1,5,24315,48630,97260
+"algodao","principal","UF","27","Alagoas",1,,,,0,,,,
+"algodao","principal","UF","28","Sergipe",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","29","Bahia",616,518,809,39.04,117,401,1950063,3900126,7800252
+"algodao","principal","UF","31","Minas Gerais",54,,58,,5,,,,
+"algodao","principal","UF","32","Espírito Santo",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","33","Rio de Janeiro",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","35","São Paulo",15,,,,0,,,,
+"algodao","principal","UF","41","Paraná",4,0,4,0,0,0,0,0,0
+"algodao","principal","UF","42","Santa Catarina",0,0,0,,0,0,0,0,0
+"algodao","principal","UF","43","Rio Grande do Sul",10,,16,,2,,,,
+"algodao","principal","UF","50","Mato Grosso do Sul",11,,,,0,,,,
+"algodao","principal","UF","51","Mato Grosso",147,,,,4,,,,
+"algodao","principal","UF","52","Goiás",14,,,,0,,,,
+"algodao","principal","UF","53","Distrito Federal",0,0,0,,0,0,0,0,0
+"hortalicas","principal","Brasil","1","Brasil",144481,109399,205110,34.78,26445,82954,403405302,806810604,1613621208
+"hortalicas","principal","UF","11","Rondônia",1267,1133,1780,38.89,284,849,4128687,8257374,16514748
+"hortalicas","principal","UF","12","Acre",569,600,809,42.58,220,380,1847940,3695880,7391760
+"hortalicas","principal","UF","13","Amazonas",2501,2524,4236,37.34,579,1945,9458535,18917070,37834140
+"hortalicas","principal","UF","14","Roraima",470,618,927,40,96,522,2538486,5076972,10153944
+"hortalicas","principal","UF","15","Pará",3769,3052,5814,34.42,842,2210,10747230,21494460,42988920
+"hortalicas","principal","UF","16","Amapá",553,,,,97,,,,
+"hortalicas","principal","UF","17","Tocantins",972,805,1216,39.83,287,518,2519034,5038068,10076136
+"hortalicas","principal","UF","21","Maranhão",3050,2706,4385,38.16,930,1776,8636688,17273376,34546752
+"hortalicas","principal","UF","22","Piauí",2504,2379,2515,48.61,1285,1094,5320122,10640244,21280488
+"hortalicas","principal","UF","23","Ceará",5830,3042,8743,25.81,636,2406,11700378,23400756,46801512
+"hortalicas","principal","UF","24","Rio Grande do Norte",1334,721,2260,24.19,167,554,2694102,5388204,10776408
+"hortalicas","principal","UF","25","Paraíba",5644,,8372,,1024,,,,
+"hortalicas","principal","UF","26","Pernambuco",10761,7270,14776,32.98,2355,4915,23901645,47803290,95606580
+"hortalicas","principal","UF","27","Alagoas",2542,,3591,,528,,,,
+"hortalicas","principal","UF","28","Sergipe",5166,3807,7622,33.31,1093,2714,13198182,26396364,52792728
+"hortalicas","principal","UF","29","Bahia",15686,12908,21351,37.68,4008,8900,43280700,86561400,173122800
+"hortalicas","principal","UF","31","Minas Gerais",18583,12384,25925,32.33,2600,9784,47579592,95159184,190318368
+"hortalicas","principal","UF","32","Espírito Santo",7265,7323,10260,41.65,1130,6193,30116559,60233118,120466236
+"hortalicas","principal","UF","33","Rio de Janeiro",10526,6814,13998,32.74,1638,5176,25170888,50341776,100683552
+"hortalicas","principal","UF","35","São Paulo",18016,13131,26884,32.82,2373,10758,52316154,104632308,209264616
+"hortalicas","principal","UF","41","Paraná",9288,7579,12576,37.6,1604,5975,29056425,58112850,116225700
+"hortalicas","principal","UF","42","Santa Catarina",4330,3920,5876,40.02,660,3260,15853380,31706760,63413520
+"hortalicas","principal","UF","43","Rio Grande do Sul",5912,5247,8498,38.17,730,4517,21966171,43932342,87864684
+"hortalicas","principal","UF","50","Mato Grosso do Sul",1187,,1545,,247,,,,
+"hortalicas","principal","UF","51","Mato Grosso",1844,1635,2473,39.8,393,1242,6039846,12079692,24159384
+"hortalicas","principal","UF","52","Goiás",3328,2080,4842,30.05,469,1611,7834293,15668586,31337172
+"hortalicas","principal","UF","53","Distrito Federal",1584,1111,2803,28.39,170,941,4576083,9152166,18304332
+"flores","principal","Brasil","1","Brasil",9076,6087,12255,33.19,1504,4583,22287129,44574258,89148516
+"flores","principal","UF","11","Rondônia",49,41,63,39.42,18,23,111849,223698,447396
+"flores","principal","UF","12","Acre",18,16,28,36.36,4,12,58356,116712,233424
+"flores","principal","UF","13","Amazonas",91,73,107,40.56,25,48,233424,466848,933696
+"flores","principal","UF","14","Roraima",14,15,18,45.45,8,7,34041,68082,136164
+"flores","principal","UF","15","Pará",79,60,94,38.96,24,36,175068,350136,700272
+"flores","principal","UF","16","Amapá",3,,,,1,,,,
+"flores","principal","UF","17","Tocantins",34,29,33,46.77,11,18,87534,175068,350136
+"flores","principal","UF","21","Maranhão",71,48,90,34.78,24,24,116712,233424,466848
+"flores","principal","UF","22","Piauí",25,14,32,30.43,7,7,34041,68082,136164
+"flores","principal","UF","23","Ceará",169,75,187,28.63,33,42,204246,408492,816984
+"flores","principal","UF","24","Rio Grande do Norte",21,7,20,25.93,4,3,14589,29178,58356
+"flores","principal","UF","25","Paraíba",41,,48,,9,,,,
+"flores","principal","UF","26","Pernambuco",440,287,643,30.86,120,167,812121,1624242,3248484
+"flores","principal","UF","27","Alagoas",21,,16,,5,,,,
+"flores","principal","UF","28","Sergipe",146,76,181,29.57,29,47,228561,457122,914244
+"flores","principal","UF","29","Bahia",438,304,473,39.12,146,158,768354,1536708,3073416
+"flores","principal","UF","31","Minas Gerais",1110,561,1528,26.85,127,434,2110542,4221084,8442168
+"flores","principal","UF","32","Espírito Santo",245,211,322,39.59,53,158,768354,1536708,3073416
+"flores","principal","UF","33","Rio de Janeiro",925,559,1203,31.73,166,393,1911159,3822318,7644636
+"flores","principal","UF","35","São Paulo",2808,1928,4070,32.14,344,1584,7702992,15405984,30811968
+"flores","principal","UF","41","Paraná",608,443,793,35.84,89,354,1721502,3443004,6886008
+"flores","principal","UF","42","Santa Catarina",613,480,832,36.59,78,402,1954926,3909852,7819704
+"flores","principal","UF","43","Rio Grande do Sul",751,631,989,38.95,126,505,2455815,4911630,9823260
+"flores","principal","UF","50","Mato Grosso do Sul",47,,61,,8,,,,
+"flores","principal","UF","51","Mato Grosso",85,62,109,36.26,16,46,223698,447396,894792
+"flores","principal","UF","52","Goiás",137,65,194,25.1,14,51,248013,496026,992052
+"flores","principal","UF","53","Distrito Federal",87,42,118,26.25,15,27,131301,262602,525204
+"frutas","principal","Brasil","1","Brasil",279618,188593,411664,31.42,45393,143200,696381600,1392763200,2785526400
+"frutas","principal","UF","11","Rondônia",8679,,,,1197,,,,
+"frutas","principal","UF","12","Acre",1986,1783,3724,32.38,377,1406,6837378,13674756,27349512
+"frutas","principal","UF","13","Amazonas",9035,8822,16357,35.04,1802,7020,34138260,68276520,136553040
+"frutas","principal","UF","14","Roraima",2033,,,,330,,,,
+"frutas","principal","UF","15","Pará",22776,19829,41199,32.49,5223,14606,71028978,142057956,284115912
+"frutas","principal","UF","16","Amapá",865,724,1552,31.81,176,548,2664924,5329848,10659696
+"frutas","principal","UF","17","Tocantins",496,,,,79,,,,
+"frutas","principal","UF","21","Maranhão",3169,,4880,,610,,,,
+"frutas","principal","UF","22","Piauí",7463,6023,9686,38.34,1500,4523,21995349,43990698,87981396
+"frutas","principal","UF","23","Ceará",27226,18482,38911,32.2,5058,13424,65280912,130561824,261123648
+"frutas","principal","UF","24","Rio Grande do Norte",4212,,,,656,,,,
+"frutas","principal","UF","25","Paraíba",5384,3451,7912,30.37,943,2508,12196404,24392808,48785616
+"frutas","principal","UF","26","Pernambuco",17384,9363,25562,26.81,2846,6517,31692171,63384342,126768684
+"frutas","principal","UF","27","Alagoas",4991,2657,7036,27.41,1040,1617,7863471,15726942,31453884
+"frutas","principal","UF","28","Sergipe",9337,4675,,,2103,2572,12507636,25015272,50030544
+"frutas","principal","UF","29","Bahia",47627,29147,66680,30.42,9301,19846,96511098,193022196,386044392
+"frutas","principal","UF","31","Minas Gerais",12623,,,,1751,,,,
+"frutas","principal","UF","32","Espírito Santo",40888,,58736,,4884,,,,
+"frutas","principal","UF","33","Rio de Janeiro",5130,,6677,,804,,,,
+"frutas","principal","UF","35","São Paulo",14877,6944,,,1327,5617,27315471,54630942,109261884
+"frutas","principal","UF","41","Paraná",5111,3658,6874,34.73,683,2975,14467425,28934850,57869700
+"frutas","principal","UF","42","Santa Catarina",6418,4458,9752,31.37,513,3945,19184535,38369070,76738140
+"frutas","principal","UF","43","Rio Grande do Sul",17090,14098,25056,36.01,1430,12668,61604484,123208968,246417936
+"frutas","principal","UF","50","Mato Grosso do Sul",377,259,495,34.35,78,181,880203,1760406,3520812
+"frutas","principal","UF","51","Mato Grosso",2662,,,,418,,,,
+"frutas","principal","UF","52","Goiás",1507,,,,205,,,,
+"frutas","principal","UF","53","Distrito Federal",272,,,,59,,,,
+"outras-permanentes","principal","Brasil","1","Brasil",88585,56419,115753,32.77,19339,37080,180320040,360640080,721280160
+"outras-permanentes","principal","UF","11","Rondônia",1593,1138,2118,34.95,271,867,4216221,8432442,16864884
+"outras-permanentes","principal","UF","12","Acre",186,146,311,31.95,46,100,486300,972600,1945200
+"outras-permanentes","principal","UF","13","Amazonas",1194,976,1820,34.91,296,680,3306840,6613680,13227360
+"outras-permanentes","principal","UF","14","Roraima",207,183,288,38.85,56,127,617601,1235202,2470404
+"outras-permanentes","principal","UF","15","Pará",12371,9427,20500,31.5,2386,7041,34240383,68480766,136961532
+"outras-permanentes","principal","UF","16","Amapá",122,84,188,30.88,34,50,243150,486300,972600
+"outras-permanentes","principal","UF","17","Tocantins",171,136,270,33.5,43,93,452259,904518,1809036
+"outras-permanentes","principal","UF","21","Maranhão",947,,1275,,419,,,,
+"outras-permanentes","principal","UF","22","Piauí",1047,865,1149,42.95,375,490,2382870,4765740,9531480
+"outras-permanentes","principal","UF","23","Ceará",2856,1864,3008,38.26,929,935,4546905,9093810,18187620
+"outras-permanentes","principal","UF","24","Rio Grande do Norte",192,,298,,25,,,,
+"outras-permanentes","principal","UF","25","Paraíba",903,600,1101,35.27,249,351,1706913,3413826,6827652
+"outras-permanentes","principal","UF","26","Pernambuco",4166,2523,5111,33.05,1142,1381,6715803,13431606,26863212
+"outras-permanentes","principal","UF","27","Alagoas",795,446,997,30.91,192,254,1235202,2470404,4940808
+"outras-permanentes","principal","UF","28","Sergipe",1968,1038,2009,34.07,626,412,2003556,4007112,8014224
+"outras-permanentes","principal","UF","29","Bahia",25126,16981,31989,34.68,6820,10161,49412943,98825886,197651772
+"outras-permanentes","principal","UF","31","Minas Gerais",7781,3495,9547,26.8,1231,2264,11009832,22019664,44039328
+"outras-permanentes","principal","UF","32","Espírito Santo",6705,4781,9328,33.89,1115,3666,17827758,35655516,71311032
+"outras-permanentes","principal","UF","33","Rio de Janeiro",994,426,1109,27.75,226,200,972600,1945200,3890400
+"outras-permanentes","principal","UF","35","São Paulo",7763,2955,9333,24.05,982,1973,9594699,19189398,38378796
+"outras-permanentes","principal","UF","41","Paraná",4359,2744,5185,34.61,802,1942,9443946,18887892,37775784
+"outras-permanentes","principal","UF","42","Santa Catarina",2130,1157,2561,31.12,274,883,4294029,8588058,17176116
+"outras-permanentes","principal","UF","43","Rio Grande do Sul",2949,2047,3722,35.48,368,1679,8164977,16329954,32659908
+"outras-permanentes","principal","UF","50","Mato Grosso do Sul",515,353,646,35.34,138,215,1045545,2091090,4182180
+"outras-permanentes","principal","UF","51","Mato Grosso",837,616,1056,36.84,177,439,2134857,4269714,8539428
+"outras-permanentes","principal","UF","52","Goiás",679,365,791,31.57,113,252,1225476,2450952,4901904
+"outras-permanentes","principal","UF","53","Distrito Federal",29,,43,,4,,,,
+"sementes","principal","Brasil","1","Brasil",3687,2337,5246,30.82,493,1844,8967372,17934744,35869488
+"sementes","principal","UF","11","Rondônia",38,37,53,41.11,4,33,160479,320958,641916
+"sementes","principal","UF","12","Acre",10,,,,1,,,,
+"sementes","principal","UF","13","Amazonas",31,,,,8,,,,
+"sementes","principal","UF","14","Roraima",7,,,,1,,,,
+"sementes","principal","UF","15","Pará",245,205,,,59,146,709998,1419996,2839992
+"sementes","principal","UF","16","Amapá",7,,,,4,,,,
+"sementes","principal","UF","17","Tocantins",23,10,40,20,3,7,34041,68082,136164
+"sementes","principal","UF","21","Maranhão",26,,36,,7,,,,
+"sementes","principal","UF","22","Piauí",22,,,,2,,,,
+"sementes","principal","UF","23","Ceará",41,,,,6,,,,
+"sementes","principal","UF","24","Rio Grande do Norte",14,,,,3,,,,
+"sementes","principal","UF","25","Paraíba",32,,43,,6,,,,
+"sementes","principal","UF","26","Pernambuco",96,42,146,22.34,12,30,145890,291780,583560
+"sementes","principal","UF","27","Alagoas",314,388,423,47.84,78,310,1507530,3015060,6030120
+"sementes","principal","UF","28","Sergipe",9,,,,0,,,,
+"sementes","principal","UF","29","Bahia",856,,,,156,,,,
+"sementes","principal","UF","31","Minas Gerais",588,273,806,25.3,43,230,1118490,2236980,4473960
+"sementes","principal","UF","32","Espírito Santo",119,79,181,30.38,7,72,350136,700272,1400544
+"sementes","principal","UF","33","Rio de Janeiro",45,,44,,9,,,,
+"sementes","principal","UF","35","São Paulo",383,139,600,18.81,24,115,559245,1118490,2236980
+"sementes","principal","UF","41","Paraná",105,67,146,31.46,10,57,277191,554382,1108764
+"sementes","principal","UF","42","Santa Catarina",178,,256,,7,,,,
+"sementes","principal","UF","43","Rio Grande do Sul",213,155,315,32.98,17,138,671094,1342188,2684376
+"sementes","principal","UF","50","Mato Grosso do Sul",50,,76,,6,,,,
+"sementes","principal","UF","51","Mato Grosso",70,42,117,26.42,7,35,170205,340410,680820
+"sementes","principal","UF","52","Goiás",158,67,221,23.26,11,56,272328,544656,1089312
+"sementes","principal","UF","53","Distrito Federal",7,,,,2,,,,
+"bovinos","principal","Brasil","1","Brasil",1692588,1102942,2316736,32.25,225839,877103,4265351889,8530703778,17061407556
+"bovinos","principal","UF","11","Rondônia",65677,52108,91372,36.32,9441,42667,207489621,414979242,829958484
+"bovinos","principal","UF","12","Acre",11799,9215,18434,33.33,1798,7417,36068871,72137742,144275484
+"bovinos","principal","UF","13","Amazonas",8914,6931,16606,29.45,1087,5844,28419372,56838744,113677488
+"bovinos","principal","UF","14","Roraima",4520,3766,7317,33.98,761,3005,14613315,29226630,58453260
+"bovinos","principal","UF","15","Pará",74931,58185,115926,33.42,10623,47562,231294006,462588012,925176024
+"bovinos","principal","UF","16","Amapá",381,202,633,24.19,49,153,744039,1488078,2976156
+"bovinos","principal","UF","17","Tocantins",41958,30216,58029,34.24,5667,24549,119381787,238763574,477527148
+"bovinos","principal","UF","21","Maranhão",57530,38803,96459,28.69,6729,32074,155975862,311951724,623903448
+"bovinos","principal","UF","22","Piauí",37558,29191,55535,34.45,4337,24854,120865002,241730004,483460008
+"bovinos","principal","UF","23","Ceará",75364,44983,107904,29.42,7426,37557,182639691,365279382,730558764
+"bovinos","principal","UF","24","Rio Grande do Norte",26366,15300,43859,25.86,3106,12194,59299422,118598844,237197688
+"bovinos","principal","UF","25","Paraíba",53921,34519,79193,30.36,8198,26321,127999023,255998046,511996092
+"bovinos","principal","UF","26","Pernambuco",69692,50004,98202,33.74,13248,36756,178744428,357488856,714977712
+"bovinos","principal","UF","27","Alagoas",27199,17800,42102,29.72,4274,13526,65776938,131553876,263107752
+"bovinos","principal","UF","28","Sergipe",34107,18029,47917,27.34,5164,12865,62562495,125124990,250249980
+"bovinos","principal","UF","29","Bahia",197178,127531,276996,31.53,29768,97763,475421469,950842938,1901685876
+"bovinos","principal","UF","31","Minas Gerais",280866,147000,362861,28.83,31071,115929,563762727,1127525454,2255050908
+"bovinos","principal","UF","32","Espírito Santo",18872,10007,25180,28.44,2371,7636,37133868,74267736,148535472
+"bovinos","principal","UF","33","Rio de Janeiro",26679,7959,33154,19.36,2987,4972,24178836,48357672,96715344
+"bovinos","principal","UF","35","São Paulo",82037,35419,103036,25.58,10585,24834,120767742,241535484,483070968
+"bovinos","principal","UF","41","Paraná",94950,68951,120542,36.39,12255,56696,275712648,551425296,1102850592
+"bovinos","principal","UF","42","Santa Catarina",67065,60549,89027,40.48,6860,53689,261089607,522179214,1044358428
+"bovinos","principal","UF","43","Rio Grande do Sul",100989,86206,132048,39.5,13307,72899,354507837,709015674,1418031348
+"bovinos","principal","UF","50","Mato Grosso do Sul",46053,27544,56683,32.7,8214,19330,94001790,188003580,376007160
+"bovinos","principal","UF","51","Mato Grosso",80918,54935,105075,34.33,12190,42745,207868935,415737870,831475740
+"bovinos","principal","UF","52","Goiás",106188,67111,131336,33.82,14222,52889,257199207,514398414,1028796828
+"bovinos","principal","UF","53","Distrito Federal",876,478,1310,26.73,101,377,1833351,3666702,7333404
+"aves","principal","Brasil","1","Brasil",503902,446822,619197,41.92,165293,281529,1369075527,2738151054,5476302108
+"aves","principal","UF","11","Rondônia",5726,4976,7123,41.13,1497,3479,16918377,33836754,67673508
+"aves","principal","UF","12","Acre",4079,3619,5789,38.47,1286,2333,11345379,22690758,45381516
+"aves","principal","UF","13","Amazonas",2783,2834,4500,38.64,797,2037,9905931,19811862,39623724
+"aves","principal","UF","14","Roraima",2432,2459,3700,39.93,791,1668,8111484,16222968,32445936
+"aves","principal","UF","15","Pará",11651,11046,16260,40.45,3556,7490,36423870,72847740,145695480
+"aves","principal","UF","16","Amapá",377,332,534,38.34,127,205,996915,1993830,3987660
+"aves","principal","UF","17","Tocantins",6899,6141,9141,40.18,1679,4462,21698706,43397412,86794824
+"aves","principal","UF","21","Maranhão",11550,10122,16191,38.47,3582,6540,31804020,63608040,127216080
+"aves","principal","UF","22","Piauí",41786,40627,50552,44.56,15250,25377,123408351,246816702,493633404
+"aves","principal","UF","23","Ceará",56907,46612,66040,41.38,18791,27821,135293523,270587046,541174092
+"aves","principal","UF","24","Rio Grande do Norte",6758,5549,9938,35.83,1830,3719,18085497,36170994,72341988
+"aves","principal","UF","25","Paraíba",22173,19628,27750,41.43,8187,11441,55637583,111275166,222550332
+"aves","principal","UF","26","Pernambuco",33222,31516,40074,44.02,13681,17835,86731605,173463210,346926420
+"aves","principal","UF","27","Alagoas",5652,5446,7381,42.46,2050,3396,16514748,33029496,66058992
+"aves","principal","UF","28","Sergipe",8705,6977,10072,40.92,3387,3590,17458170,34916340,69832680
+"aves","principal","UF","29","Bahia",112899,110963,140711,44.09,45541,65422,318147186,636294372,1272588744
+"aves","principal","UF","31","Minas Gerais",61457,52726,74425,41.47,17406,35320,171761160,343522320,687044640
+"aves","principal","UF","32","Espírito Santo",3740,3012,4639,39.37,961,2051,9974013,19948026,39896052
+"aves","principal","UF","33","Rio de Janeiro",7186,4458,7476,37.36,2381,2077,10100451,20200902,40401804
+"aves","principal","UF","35","São Paulo",10859,6708,12876,34.25,2410,4298,20901174,41802348,83604696
+"aves","principal","UF","41","Paraná",21856,17117,25943,39.75,4844,12273,59683599,119367198,238734396
+"aves","principal","UF","42","Santa Catarina",12390,10793,15297,41.37,2033,8760,42599880,85199760,170399520
+"aves","principal","UF","43","Rio Grande do Sul",18157,15624,21432,42.16,4035,11589,56357307,112714614,225429228
+"aves","principal","UF","50","Mato Grosso do Sul",5365,4265,6168,40.88,1646,2619,12736197,25472394,50944788
+"aves","principal","UF","51","Mato Grosso",11982,9908,14565,40.49,3263,6645,32314635,64629270,129258540
+"aves","principal","UF","52","Goiás",16443,12729,19435,39.58,4069,8660,42113580,84227160,168454320
+"aves","principal","UF","53","Distrito Federal",868,635,1185,34.89,213,422,2052186,4104372,8208744
+"suinos","principal","Brasil","1","Brasil",109888,92096,148522,38.27,26051,66045,321176835,642353670,1284707340
+"suinos","principal","UF","11","Rondônia",892,796,1194,40,187,609,2961567,5923134,11846268
+"suinos","principal","UF","12","Acre",252,222,402,35.58,43,179,870477,1740954,3481908
+"suinos","principal","UF","13","Amazonas",584,556,964,36.58,110,446,2168898,4337796,8675592
+"suinos","principal","UF","14","Roraima",362,367,570,39.17,86,281,1366503,2733006,5466012
+"suinos","principal","UF","15","Pará",2654,2425,4230,36.44,629,1796,8733948,17467896,34935792
+"suinos","principal","UF","16","Amapá",139,106,220,32.52,29,77,374451,748902,1497804
+"suinos","principal","UF","17","Tocantins",1174,971,1596,37.83,242,729,3545127,7090254,14180508
+"suinos","principal","UF","21","Maranhão",7135,6023,10569,36.3,1834,4189,20371107,40742214,81484428
+"suinos","principal","UF","22","Piauí",13304,11501,17544,39.6,3334,8167,39716121,79432242,158864484
+"suinos","principal","UF","23","Ceará",13424,9604,17860,34.97,2885,6719,32674497,65348994,130697988
+"suinos","principal","UF","24","Rio Grande do Norte",1804,1422,2845,33.33,385,1037,5042931,10085862,20171724
+"suinos","principal","UF","25","Paraíba",4559,3876,6162,38.61,1344,2532,12313116,24626232,49252464
+"suinos","principal","UF","26","Pernambuco",6921,6473,9173,41.37,2373,4100,19938300,39876600,79753200
+"suinos","principal","UF","27","Alagoas",2144,1838,3004,37.96,648,1190,5786970,11573940,23147880
+"suinos","principal","UF","28","Sergipe",1750,1284,2356,35.27,415,869,4225947,8451894,16903788
+"suinos","principal","UF","29","Bahia",21409,19273,28150,40.64,6474,12799,62241537,124483074,248966148
+"suinos","principal","UF","31","Minas Gerais",9819,7990,12608,38.79,2030,5960,28983480,57966960,115933920
+"suinos","principal","UF","32","Espírito Santo",403,291,543,34.89,61,230,1118490,2236980,4473960
+"suinos","principal","UF","33","Rio de Janeiro",572,267,681,28.16,110,157,763491,1526982,3053964
+"suinos","principal","UF","35","São Paulo",1754,953,2244,29.81,279,674,3277662,6555324,13110648
+"suinos","principal","UF","41","Paraná",5090,3910,6642,37.05,803,3107,15109341,30218682,60437364
+"suinos","principal","UF","42","Santa Catarina",3936,4015,5976,40.19,222,3793,18445359,36890718,73781436
+"suinos","principal","UF","43","Rio Grande do Sul",4099,3816,5960,39.03,358,3458,16816254,33632508,67265016
+"suinos","principal","UF","50","Mato Grosso do Sul",697,514,892,36.56,171,343,1668009,3336018,6672036
+"suinos","principal","UF","51","Mato Grosso",1565,1296,1978,39.58,388,908,4415604,8831208,17662416
+"suinos","principal","UF","52","Goiás",3288,2206,3921,36,578,1628,7916964,15833928,31667856
+"suinos","principal","UF","53","Distrito Federal",158,,238,,33,,,,
+"ovinos-caprinos","principal","Brasil","1","Brasil",117812,92689,160970,36.54,25239,67450,328009350,656018700,1312037400
+"ovinos-caprinos","principal","UF","11","Rondônia",63,,78,,11,,,,
+"ovinos-caprinos","principal","UF","12","Acre",35,32,50,39.02,12,20,97260,194520,389040
+"ovinos-caprinos","principal","UF","13","Amazonas",94,81,158,33.89,19,62,301506,603012,1206024
+"ovinos-caprinos","principal","UF","14","Roraima",48,52,69,42.98,12,40,194520,389040,778080
+"ovinos-caprinos","principal","UF","15","Pará",217,152,309,32.97,35,117,568971,1137942,2275884
+"ovinos-caprinos","principal","UF","16","Amapá",10,,13,,1,,,,
+"ovinos-caprinos","principal","UF","17","Tocantins",45,24,54,30.77,6,18,87534,175068,350136
+"ovinos-caprinos","principal","UF","21","Maranhão",1370,1001,2135,31.92,245,756,3676428,7352856,14705712
+"ovinos-caprinos","principal","UF","22","Piauí",17142,14685,23003,38.96,3072,11613,56474019,112948038,225896076
+"ovinos-caprinos","principal","UF","23","Ceará",10358,7061,13798,33.85,1593,5468,26590884,53181768,106363536
+"ovinos-caprinos","principal","UF","24","Rio Grande do Norte",3270,2270,5173,30.5,568,1702,8276826,16553652,33107304
+"ovinos-caprinos","principal","UF","25","Paraíba",9315,7039,12665,35.72,2148,4891,23784933,47569866,95139732
+"ovinos-caprinos","principal","UF","26","Pernambuco",23064,20662,31419,39.67,6137,14525,70635075,141270150,282540300
+"ovinos-caprinos","principal","UF","27","Alagoas",3399,2760,4891,36.07,864,1896,9220248,18440496,36880992
+"ovinos-caprinos","principal","UF","28","Sergipe",2088,1473,2596,36.2,601,872,4240536,8481072,16962144
+"ovinos-caprinos","principal","UF","29","Bahia",39310,30617,55060,35.74,8584,22033,107146479,214292958,428585916
+"ovinos-caprinos","principal","UF","31","Minas Gerais",680,402,844,32.26,108,294,1429722,2859444,5718888
+"ovinos-caprinos","principal","UF","32","Espírito Santo",123,76,160,32.2,19,57,277191,554382,1108764
+"ovinos-caprinos","principal","UF","33","Rio de Janeiro",259,118,303,28.03,34,84,408492,816984,1633968
+"ovinos-caprinos","principal","UF","35","São Paulo",623,291,772,27.38,75,216,1050408,2100816,4201632
+"ovinos-caprinos","principal","UF","41","Paraná",1142,631,1342,31.98,179,452,2198076,4396152,8792304
+"ovinos-caprinos","principal","UF","42","Santa Catarina",541,350,663,34.55,72,278,1351914,2703828,5407656
+"ovinos-caprinos","principal","UF","43","Rio Grande do Sul",4159,2561,4873,34.45,767,1794,8724222,17448444,34896888
+"ovinos-caprinos","principal","UF","50","Mato Grosso do Sul",114,77,137,35.98,18,59,286917,573834,1147668
+"ovinos-caprinos","principal","UF","51","Mato Grosso",164,120,195,38.1,35,85,413355,826710,1653420
+"ovinos-caprinos","principal","UF","52","Goiás",144,81,166,32.79,18,63,306369,612738,1225476
+"ovinos-caprinos","principal","UF","53","Distrito Federal",35,21,44,32.31,6,15,72945,145890,291780
+"grande-porte","principal","Brasil","1","Brasil",18081,10323,26648,27.92,2051,8272,40226736,80453472,160906944
+"grande-porte","principal","UF","11","Rondônia",80,52,101,33.99,7,45,218835,437670,875340
+"grande-porte","principal","UF","12","Acre",36,,49,,6,,,,
+"grande-porte","principal","UF","13","Amazonas",635,544,1271,29.97,60,484,2353692,4707384,9414768
+"grande-porte","principal","UF","14","Roraima",23,,,,3,,,,
+"grande-porte","principal","UF","15","Pará",1920,1696,3659,31.67,240,1456,7080528,14161056,28322112
+"grande-porte","principal","UF","16","Amapá",565,376,1186,24.07,71,305,1483215,2966430,5932860
+"grande-porte","principal","UF","17","Tocantins",128,69,163,29.74,16,53,257739,515478,1030956
+"grande-porte","principal","UF","21","Maranhão",903,625,1547,28.78,91,534,2596842,5193684,10387368
+"grande-porte","principal","UF","22","Piauí",415,317,636,33.26,42,275,1337325,2674650,5349300
+"grande-porte","principal","UF","23","Ceará",723,377,1040,26.61,73,304,1478352,2956704,5913408
+"grande-porte","principal","UF","24","Rio Grande do Norte",331,171,524,24.6,40,131,637053,1274106,2548212
+"grande-porte","principal","UF","25","Paraíba",667,335,971,25.65,86,249,1210887,2421774,4843548
+"grande-porte","principal","UF","26","Pernambuco",943,569,1373,29.3,139,430,2091090,4182180,8364360
+"grande-porte","principal","UF","27","Alagoas",457,,674,,71,,,,
+"grande-porte","principal","UF","28","Sergipe",470,168,622,21.27,48,120,583560,1167120,2334240
+"grande-porte","principal","UF","29","Bahia",2255,1384,3133,30.64,307,1077,5237451,10474902,20949804
+"grande-porte","principal","UF","31","Minas Gerais",2613,1187,3407,25.84,265,922,4483686,8967372,17934744
+"grande-porte","principal","UF","32","Espírito Santo",139,,180,,14,,,,
+"grande-porte","principal","UF","33","Rio de Janeiro",509,125,614,16.91,38,87,423081,846162,1692324
+"grande-porte","principal","UF","35","São Paulo",1486,642,1941,24.85,149,493,2397459,4794918,9589836
+"grande-porte","principal","UF","41","Paraná",746,330,934,26.11,84,246,1196298,2392596,4785192
+"grande-porte","principal","UF","42","Santa Catarina",384,199,478,29.39,32,167,812121,1624242,3248484
+"grande-porte","principal","UF","43","Rio Grande do Sul",850,383,1049,26.75,66,317,1541571,3083142,6166284
+"grande-porte","principal","UF","50","Mato Grosso do Sul",116,60,151,28.44,11,49,238287,476574,953148
+"grande-porte","principal","UF","51","Mato Grosso",179,107,225,32.23,28,79,384177,768354,1536708
+"grande-porte","principal","UF","52","Goiás",434,216,570,27.48,55,161,782943,1565886,3131772
+"grande-porte","principal","UF","53","Distrito Federal",74,,107,,9,,,,
+"outros-animais","principal","Brasil","1","Brasil",15241,11912,24677,32.56,1557,10355,50356365,100712730,201425460
+"outros-animais","principal","UF","11","Rondônia",42,,58,,5,,,,
+"outros-animais","principal","UF","12","Acre",8,,13,,3,,,,
+"outros-animais","principal","UF","13","Amazonas",48,50,101,33.11,2,48,233424,466848,933696
+"outros-animais","principal","UF","14","Roraima",17,,,,5,,,,
+"outros-animais","principal","UF","15","Pará",180,134,318,29.65,30,104,505752,1011504,2023008
+"outros-animais","principal","UF","16","Amapá",7,,8,,1,,,,
+"outros-animais","principal","UF","17","Tocantins",44,34,75,31.19,7,27,131301,262602,525204
+"outros-animais","principal","UF","21","Maranhão",241,170,556,23.42,32,138,671094,1342188,2684376
+"outros-animais","principal","UF","22","Piauí",3534,3234,5147,38.59,399,2835,13786605,27573210,55146420
+"outros-animais","principal","UF","23","Ceará",1366,914,2203,29.32,70,844,4104372,8208744,16417488
+"outros-animais","principal","UF","24","Rio Grande do Norte",193,99,303,24.63,6,93,452259,904518,1809036
+"outros-animais","principal","UF","25","Paraíba",148,101,244,29.28,23,78,379314,758628,1517256
+"outros-animais","principal","UF","26","Pernambuco",198,159,312,33.76,25,134,651642,1303284,2606568
+"outros-animais","principal","UF","27","Alagoas",78,,128,,8,,,,
+"outros-animais","principal","UF","28","Sergipe",46,31,83,27.19,1,30,145890,291780,583560
+"outros-animais","principal","UF","29","Bahia",2467,2076,4137,33.41,328,1748,8500524,17001048,34002096
+"outros-animais","principal","UF","31","Minas Gerais",1053,651,1906,25.46,79,572,2781636,5563272,11126544
+"outros-animais","principal","UF","32","Espírito Santo",128,,219,,9,,,,
+"outros-animais","principal","UF","33","Rio de Janeiro",163,74,280,20.9,14,60,291780,583560,1167120
+"outros-animais","principal","UF","35","São Paulo",527,337,1055,24.21,61,276,1342188,2684376,5368752
+"outros-animais","principal","UF","41","Paraná",2095,1684,3074,35.39,198,1486,7226418,14452836,28905672
+"outros-animais","principal","UF","42","Santa Catarina",856,613,1465,29.5,75,538,2616294,5232588,10465176
+"outros-animais","principal","UF","43","Rio Grande do Sul",1421,939,2209,29.83,131,808,3929304,7858608,15717216
+"outros-animais","principal","UF","50","Mato Grosso do Sul",157,123,280,30.52,22,101,491163,982326,1964652
+"outros-animais","principal","UF","51","Mato Grosso",99,231,302,43.34,13,218,1060134,2120268,4240536
+"outros-animais","principal","UF","52","Goiás",116,67,160,29.52,9,58,282054,564108,1128216
+"outros-animais","principal","UF","53","Distrito Federal",9,5,17,22.73,1,4,19452,38904,77808
+"florestas-nativas","principal","Brasil","1","Brasil",118434,119661,193366,38.23,29725,89936,437358768,874717536,1749435072
+"florestas-nativas","principal","UF","11","Rondônia",296,453,748,37.72,55,398,1935474,3870948,7741896
+"florestas-nativas","principal","UF","12","Acre",1453,1445,2618,35.56,234,1211,5889093,11778186,23556372
+"florestas-nativas","principal","UF","13","Amazonas",5259,6815,10694,38.92,1000,5815,28278345,56556690,113113380
+"florestas-nativas","principal","UF","14","Roraima",598,899,1221,42.41,58,841,4089783,8179566,16359132
+"florestas-nativas","principal","UF","15","Pará",38535,36691,73800,33.21,8571,28120,136747560,273495120,546990240
+"florestas-nativas","principal","UF","16","Amapá",1597,1531,3338,31.44,392,1139,5538957,11077914,22155828
+"florestas-nativas","principal","UF","17","Tocantins",1022,1090,1891,36.56,239,851,4138413,8276826,16553652
+"florestas-nativas","principal","UF","21","Maranhão",8698,14443,14477,49.94,2985,11458,55720254,111440508,222881016
+"florestas-nativas","principal","UF","22","Piauí",10713,10657,15617,40.56,2483,8174,39750162,79500324,159000648
+"florestas-nativas","principal","UF","23","Ceará",12937,9984,17092,36.87,2863,7121,34629423,69258846,138517692
+"florestas-nativas","principal","UF","24","Rio Grande do Norte",277,233,532,30.46,40,193,938559,1877118,3754236
+"florestas-nativas","principal","UF","25","Paraíba",4154,3736,5599,40.02,1312,2424,11787912,23575824,47151648
+"florestas-nativas","principal","UF","26","Pernambuco",899,868,1247,41.04,309,559,2718417,5436834,10873668
+"florestas-nativas","principal","UF","27","Alagoas",98,144,173,45.43,27,117,568971,1137942,2275884
+"florestas-nativas","principal","UF","28","Sergipe",395,359,512,41.22,137,222,1079586,2159172,4318344
+"florestas-nativas","principal","UF","29","Bahia",18187,17187,24606,41.12,5822,11365,55267995,110535990,221071980
+"florestas-nativas","principal","UF","31","Minas Gerais",5743,6071,8068,42.94,1727,4344,21124872,42249744,84499488
+"florestas-nativas","principal","UF","32","Espírito Santo",49,,63,,7,,,,
+"florestas-nativas","principal","UF","33","Rio de Janeiro",78,189,229,45.22,10,179,870477,1740954,3481908
+"florestas-nativas","principal","UF","35","São Paulo",268,,359,,35,,,,
+"florestas-nativas","principal","UF","41","Paraná",3850,3157,4857,39.39,779,2378,11564214,23128428,46256856
+"florestas-nativas","principal","UF","42","Santa Catarina",1419,987,1697,36.77,222,765,3720195,7440390,14880780
+"florestas-nativas","principal","UF","43","Rio Grande do Sul",1049,955,1347,41.49,280,675,3282525,6565050,13130100
+"florestas-nativas","principal","UF","50","Mato Grosso do Sul",55,22,79,21.78,8,14,68082,136164,272328
+"florestas-nativas","principal","UF","51","Mato Grosso",525,1396,2124,39.66,78,1318,6409434,12818868,25637736
+"florestas-nativas","principal","UF","52","Goiás",273,200,371,35.03,51,149,724587,1449174,2898348
+"florestas-nativas","principal","UF","53","Distrito Federal",7,,,,1,,,,
+"florestas-plantadas","principal","Brasil","1","Brasil",62695,29526,71535,29.22,9053,20473,99560199,199120398,398240796
+"florestas-plantadas","principal","UF","11","Rondônia",89,44,98,30.99,10,34,165342,330684,661368
+"florestas-plantadas","principal","UF","12","Acre",21,,23,,3,,,,
+"florestas-plantadas","principal","UF","13","Amazonas",148,156,243,39.1,29,127,617601,1235202,2470404
+"florestas-plantadas","principal","UF","14","Roraima",32,,,,6,,,,
+"florestas-plantadas","principal","UF","15","Pará",751,596,1150,34.14,146,450,2188350,4376700,8753400
+"florestas-plantadas","principal","UF","16","Amapá",22,,23,,5,,,,
+"florestas-plantadas","principal","UF","17","Tocantins",222,122,261,31.85,35,87,423081,846162,1692324
+"florestas-plantadas","principal","UF","21","Maranhão",679,,827,,151,,,,
+"florestas-plantadas","principal","UF","22","Piauí",1399,744,1514,32.95,318,426,2071638,4143276,8286552
+"florestas-plantadas","principal","UF","23","Ceará",1439,926,1873,33.08,291,635,3088005,6176010,12352020
+"florestas-plantadas","principal","UF","24","Rio Grande do Norte",354,172,447,27.79,64,108,525204,1050408,2100816
+"florestas-plantadas","principal","UF","25","Paraíba",350,248,489,33.65,82,166,807258,1614516,3229032
+"florestas-plantadas","principal","UF","26","Pernambuco",2386,1886,3054,38.18,721,1165,5665395,11330790,22661580
+"florestas-plantadas","principal","UF","27","Alagoas",116,104,151,40.78,33,71,345273,690546,1381092
+"florestas-plantadas","principal","UF","28","Sergipe",145,,177,,19,,,,
+"florestas-plantadas","principal","UF","29","Bahia",4969,2684,6270,29.98,1109,1575,7659225,15318450,30636900
+"florestas-plantadas","principal","UF","31","Minas Gerais",9550,3655,11376,24.32,1107,2548,12390924,24781848,49563696
+"florestas-plantadas","principal","UF","32","Espírito Santo",1505,655,1760,27.12,195,460,2236980,4473960,8947920
+"florestas-plantadas","principal","UF","33","Rio de Janeiro",455,147,510,22.37,55,92,447396,894792,1789584
+"florestas-plantadas","principal","UF","35","São Paulo",5309,1675,5905,22.1,619,1056,5135328,10270656,20541312
+"florestas-plantadas","principal","UF","41","Paraná",7013,2805,7453,27.34,844,1961,9536343,19072686,38145372
+"florestas-plantadas","principal","UF","42","Santa Catarina",11699,5185,12542,29.25,1223,3962,19267206,38534412,77068824
+"florestas-plantadas","principal","UF","43","Rio Grande do Sul",12190,6366,13312,32.35,1734,4632,22525416,45050832,90101664
+"florestas-plantadas","principal","UF","50","Mato Grosso do Sul",486,184,474,27.96,61,123,598149,1196298,2392596
+"florestas-plantadas","principal","UF","51","Mato Grosso",494,305,589,34.12,83,222,1079586,2159172,4318344
+"florestas-plantadas","principal","UF","52","Goiás",829,323,930,25.78,106,217,1055271,2110542,4221084
+"florestas-plantadas","principal","UF","53","Distrito Federal",43,,48,,4,,,,
+"pesca","principal","Brasil","1","Brasil",8061,8238,13471,37.95,1738,6500,31609500,63219000,126438000
+"pesca","principal","UF","11","Rondônia",17,16,21,43.24,4,12,58356,116712,233424
+"pesca","principal","UF","12","Acre",33,32,72,30.77,15,17,82671,165342,330684
+"pesca","principal","UF","13","Amazonas",1985,2533,3832,39.8,385,2148,10445724,20891448,41782896
+"pesca","principal","UF","14","Roraima",35,30,43,41.1,7,23,111849,223698,447396
+"pesca","principal","UF","15","Pará",2592,2613,4391,37.31,600,2013,9789219,19578438,39156876
+"pesca","principal","UF","16","Amapá",95,72,208,25.71,24,48,233424,466848,933696
+"pesca","principal","UF","17","Tocantins",16,47,89,34.56,3,44,213972,427944,855888
+"pesca","principal","UF","21","Maranhão",643,593,1054,36,119,474,2305062,4610124,9220248
+"pesca","principal","UF","22","Piauí",316,234,458,33.82,44,190,923970,1847940,3695880
+"pesca","principal","UF","23","Ceará",392,329,546,37.6,62,267,1298421,2596842,5193684
+"pesca","principal","UF","24","Rio Grande do Norte",61,,86,,5,,,,
+"pesca","principal","UF","25","Paraíba",157,95,208,31.35,23,72,350136,700272,1400544
+"pesca","principal","UF","26","Pernambuco",50,,,,22,,,,
+"pesca","principal","UF","27","Alagoas",32,19,,,4,15,72945,145890,291780
+"pesca","principal","UF","28","Sergipe",132,181,173,51.13,70,111,539793,1079586,2159172
+"pesca","principal","UF","29","Bahia",822,869,1288,40.29,240,629,3058827,6117654,12235308
+"pesca","principal","UF","31","Minas Gerais",137,,,,18,,,,
+"pesca","principal","UF","32","Espírito Santo",11,,,,1,,,,
+"pesca","principal","UF","33","Rio de Janeiro",104,,151,,24,,,,
+"pesca","principal","UF","35","São Paulo",34,,77,,5,,,,
+"pesca","principal","UF","41","Paraná",148,96,179,34.91,22,74,359862,719724,1439448
+"pesca","principal","UF","42","Santa Catarina",97,,117,,11,,,,
+"pesca","principal","UF","43","Rio Grande do Sul",90,,106,,12,,,,
+"pesca","principal","UF","50","Mato Grosso do Sul",28,25,,,7,18,87534,175068,350136
+"pesca","principal","UF","51","Mato Grosso",27,,,,8,,,,
+"pesca","principal","UF","52","Goiás",6,5,,,3,2,9726,19452,38904
+"pesca","principal","UF","53","Distrito Federal",1,,,,0,,,,
+"aquicultura","principal","Brasil","1","Brasil",18712,11959,27236,30.51,1950,10009,48673767,97347534,194695068
+"aquicultura","principal","UF","11","Rondônia",645,490,944,34.17,76,414,2013282,4026564,8053128
+"aquicultura","principal","UF","12","Acre",451,323,,,66,257,1249791,2499582,4999164
+"aquicultura","principal","UF","13","Amazonas",461,,,,66,,,,
+"aquicultura","principal","UF","14","Roraima",229,184,393,31.89,35,149,724587,1449174,2898348
+"aquicultura","principal","UF","15","Pará",964,798,,,154,644,3131772,6263544,12527088
+"aquicultura","principal","UF","16","Amapá",69,,,,7,,,,
+"aquicultura","principal","UF","17","Tocantins",208,164,296,35.65,34,130,632190,1264380,2528760
+"aquicultura","principal","UF","21","Maranhão",3297,,5369,,412,,,,
+"aquicultura","principal","UF","22","Piauí",1155,,,,88,,,,
+"aquicultura","principal","UF","23","Ceará",890,,,,52,,,,
+"aquicultura","principal","UF","24","Rio Grande do Norte",324,67,,,24,43,209109,418218,836436
+"aquicultura","principal","UF","25","Paraíba",236,,363,,17,,,,
+"aquicultura","principal","UF","26","Pernambuco",419,,,,44,,,,
+"aquicultura","principal","UF","27","Alagoas",229,114,,,25,89,432807,865614,1731228
+"aquicultura","principal","UF","28","Sergipe",583,227,,,50,177,860751,1721502,3443004
+"aquicultura","principal","UF","29","Bahia",687,,,,58,,,,
+"aquicultura","principal","UF","31","Minas Gerais",1296,,,,126,,,,
+"aquicultura","principal","UF","32","Espírito Santo",190,,,,16,,,,
+"aquicultura","principal","UF","33","Rio de Janeiro",214,,256,,23,,,,
+"aquicultura","principal","UF","35","São Paulo",782,412,1133,26.67,60,352,1711776,3423552,6847104
+"aquicultura","principal","UF","41","Paraná",1422,1084,1914,36.16,133,951,4624713,9249426,18498852
+"aquicultura","principal","UF","42","Santa Catarina",1647,,2227,,121,,,,
+"aquicultura","principal","UF","43","Rio Grande do Sul",768,,925,,71,,,,
+"aquicultura","principal","UF","50","Mato Grosso do Sul",157,,,,18,,,,
+"aquicultura","principal","UF","51","Mato Grosso",717,,,,96,,,,
+"aquicultura","principal","UF","52","Goiás",592,389,,,68,321,1561023,3122046,6244092
+"aquicultura","principal","UF","53","Distrito Federal",80,,108,,10,,,,
