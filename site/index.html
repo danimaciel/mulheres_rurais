@@ -227,6 +227,47 @@ main.cp{display:flex;flex-direction:column;gap:44px;padding-block:28px 40px}
 .more{margin-top:14px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:8px 18px;cursor:pointer;font-size:14px}
 .more:hover{background:var(--surface-2)}
 
+/* mapa de organizações */
+:root{--org:#9C8A7E;--org-w2:#D592AD}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--org:#7D6C66;--org-w2:#8E4D69}}
+:root[data-theme="dark"]{--org:#7D6C66;--org-w2:#8E4D69}
+.ofil{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end}
+.ofil>div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ofil label.eyebrow{font-size:11px}
+.ofil input[type=search]{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:7px 12px;font:inherit;font-size:14px;color:inherit;width:200px;max-width:100%}
+.ofil .sel{max-width:220px}
+.chk{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 10px;border:1px solid var(--line);border-radius:99px;background:var(--surface);cursor:pointer;font-size:14px;font-weight:500;user-select:none;align-self:end}
+.chk input{width:18px;height:18px;accent-color:var(--wine-2);margin:0}
+.chk:has(input:checked){border-color:var(--wine-2);background:var(--wine-soft);color:var(--wine)}
+@media (max-width:640px){.ofil>div{flex:1 1 140px}.ofil .sel,.ofil input[type=search]{max-width:none;width:100%}}
+.omap-l{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:16px;align-items:start}
+@media (max-width:980px){.omap-l{grid-template-columns:minmax(0,1fr)}}
+.omap{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);position:relative;overflow:hidden;touch-action:none}
+.omap svg{display:block;width:100%;height:auto;cursor:grab}
+.omap svg:active{cursor:grabbing}
+.omap path.uf{fill:var(--surface-2);stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke;cursor:pointer}
+.omap path.uf:hover{fill:var(--nodata)}
+.omap path.uf.on{fill:var(--bg);stroke:var(--ink-2);stroke-width:1.5}
+.omap circle{stroke:var(--surface);stroke-width:.8;vector-effect:non-scaling-stroke;cursor:pointer;fill-opacity:.82}
+.omap circle:hover,.omap circle.on{stroke:var(--ink);stroke-width:2;fill-opacity:1}
+.zbt{position:absolute;right:10px;top:10px;display:flex;flex-direction:column;gap:4px}
+.zbt button{width:32px;height:32px;border-radius:8px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-size:17px;line-height:1;padding:0}
+.zbt button:hover{background:var(--surface-2)}
+.olg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);padding:10px 14px;border-top:1px solid var(--line)}
+.olg i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.olist{display:flex;flex-direction:column;gap:8px;max-height:640px;overflow:auto;padding-right:2px}
+@media (max-width:980px){.olist{max-height:none}}
+.olist .org{padding:12px 14px}
+.olist .org.w{border-left:4px solid var(--w)}
+.olist .org.w2{border-left:4px solid var(--org-w2)}
+.ohd{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:8px;font-size:13.5px;color:var(--ink-2)}
+.ohd button{border:0;background:none;color:var(--acc);cursor:pointer;font-size:13px;padding:0;text-decoration:underline}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--surface-2);color:var(--ink-2);margin:2px 4px 0 0}
+.tag.w{background:var(--wine-soft);color:var(--wine)}
+.okpi{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:14px 4px}
+@media (max-width:760px){.okpi{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}.okpi .kpi:nth-child(3){border-left:0}}
+.okpi .kpi .v{font-size:clamp(24px,2.6vw,32px)}
+@media (max-width:440px){.okpi .kpi{border-top:0;padding-top:4px}.okpi .kpi:nth-child(even){border-left:1px solid var(--line)}}
 .fine{background:var(--surface-2);border-radius:20px;padding:24px clamp(16px,3vw,30px)}
 .fine h2{font-size:22px;margin-bottom:12px}
 .fine ul{margin:0;padding-left:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 32px;font-size:14px;color:var(--ink-2)}
@@ -248,7 +289,7 @@ footer{border-top:1px solid var(--line);color:var(--ink-2);font-size:12.5px;padd
 </div></header>
 <div id="app"><div class="loading">Carregando os dados…</div></div>
 <footer><div class="in">
-  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau, de mandioca e outras lavouras temporárias, de cereais e de frutas: levantamento próprio.</p>
+  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau, de mandioca e outras lavouras temporárias, de cereais e de frutas: levantamento próprio. Mapa de organizações: também a base aberta de CNPJ da Receita Federal, com a sede dos municípios de kelvins/municipios-brasileiros.</p>
   <p style="margin:0">A página é montada a partir dos dados do <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>, onde estão a coleta, os indicadores e as notas de método. <span id="upd"></span> Parte do Atlas das Mulheres do Café. Versão em construção: partes marcadas "em preparo" entram à medida que os dados chegam.</p>
 </div></footer>
 
@@ -302,7 +343,8 @@ function atual(){const u=D.atualizado||{},f=x=>x?x.split('-').reverse().join('/'
 function chips(cur){
   const outra=FR[cur]&&!FR[cur].piloto;
   $('#chips').innerHTML=['cafe','amazonia'].map(k=>{const f=FR[k];return `<a class="chip ${f.cls}" href="#${k}" ${cur===k?'aria-current="page"':''}><i></i>${f.nome}</a>`}).join('')
-   +`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`;
+   +`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`
+   +`<a class="chip" href="#organizacoes" ${cur==='organizacoes'?'aria-current="page"':''}><i style="background:var(--gold)"></i>Organizações</a>`;
 }
 function route(){
   if(!D)return;
@@ -310,7 +352,7 @@ function route(){
   document.body.classList.toggle('amz',!!(FR[r]&&FR[r].cls==='amz'));
   document.body.style.setProperty('--acc-band',FR[r]?FR[r].band:'#541D35');
   chips(r);
-  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
+  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else if(r==='organizacoes'){vOrgs();window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
 }
 
 /* ---------- início ---------- */
@@ -326,7 +368,7 @@ function vHome(){
   </section>
   <div class="in"><section class="pick" aria-labelledby="pk">
     <h2 id="pk">Escolha uma cadeia</h2>
-    <p>Café e Amazônia são o piloto, com organizações mapeadas. Mandioca e outras lavouras temporárias, cereais e frutas já têm uma primeira rodada de organizações de mulheres. Todas as cadeias têm os dados do IBGE e os indicadores de trabalho invisível.</p>
+    <p>Café e Amazônia são o piloto, com organizações mapeadas. Mandioca e outras lavouras temporárias, cereais e frutas já têm uma primeira rodada de organizações de mulheres. Todas as cadeias têm os dados do IBGE e os indicadores de trabalho invisível. As organizações, com ou sem cadeia definida, também estão no <a href="#organizacoes">mapa de organizações</a>.</p>
     <div class="cads">
       <a class="cad" href="#cafe"><div class="sw"></div><span class="st ok">piloto</span><b>Café</b><span>${nf.format(D.orgs.cafe.length)} organizações de mulheres mapeadas</span><div class="big">${pc(100*c.est[2]/c.est[0])}</div><span>dos estabelecimentos de café são dirigidos por mulheres</span></a>
       <a class="cad amz" href="#amazonia"><div class="sw"></div><span class="st ok">piloto</span><b>Amazônia</b><span>sociobiodiversidade · ${D.orgs.amazonia.length} organizações</span><div class="big">${pc(100*a.est[2]/a.est[0])}</div><span>dos estabelecimentos de cacau do Pará são dirigidos por mulheres</span></a>
@@ -345,7 +387,7 @@ function vHome(){
     <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
       <h3>Dado da cadeia é dado da cadeia</h3><p>Quando o IBGE só publica o conjunto dos estabelecimentos, ele aparece em cinza, marcado como "todas as atividades", e nunca como número do café ou do cacau.</p></div>
     <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-      <h3>Organizações pelos canais delas</h3><p>Cada organização aparece com site ou rede institucional. Contatos pessoais de lideranças não são publicados.</p></div>
+      <h3>Organizações pelos canais delas</h3><p>Cada organização aparece com site ou rede institucional. Contatos pessoais de lideranças não são publicados. Todas estão no <a href="#organizacoes">mapa de organizações</a>, com as cooperativas e associações rurais do país.</p></div>
   </section></div></div>`;
 }
 
@@ -453,6 +495,7 @@ function vCadeia(key){
         <div><label class="eyebrow" for="ouf" style="display:block;margin-bottom:4px">Estado</label><select id="ouf" class="sel"><option value="">Todos</option>${[...new Set(orgs.map(o=>o.uf).filter(Boolean))].sort().map(u=>`<option>${esc(u)}</option>`).join('')}</select></div></div></div>
       <div class="orgs" id="orgs"></div>
       <button class="more" id="more" type="button">Ver mais</button>
+      ${CAD_MAPA[key]!=null?`<p class="note"><a href="#organizacoes" id="vermapa">Ver no mapa de organizações</a>, junto com as cooperativas e associações desta cadeia registradas na Receita.</p>`:''}
     </section>`:`<section aria-labelledby="s5"><div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p><span class="st prep">em preparo</span> A base de organizações desta cadeia ainda não foi levantada. Ela entra pelo formulário, com fila de validação antes da publicação.</p></div></div></section>`}
 
     <section class="fine" aria-labelledby="s6">
@@ -475,6 +518,7 @@ function vCadeia(key){
   ouf.onchange=()=>{ST.orgUF[key]=ouf.value;ST.orgN[key]=9;drawOrgs(key)};
   const obs=$('#obase'); if(obs)obs.onchange=()=>{ST.orgB[key]=obs.value;ST.orgUF[key]='';ST.orgN[key]=9;vCadeia(key)};
   $('#more').onclick=()=>{ST.orgN[key]=(ST.orgN[key]||9)+9;drawOrgs(key)};
+  const vm=$('#vermapa'); if(vm)vm.onclick=()=>{Object.assign(SO,{w:true,uf:'',mun:'',tipo:'',cad:CAD_MAPA[key],q:'',n:30})};
   drawOrgs(key);
 }
 
@@ -520,6 +564,160 @@ function drawOrgs(key){
     ${o.cad?`<div class="tg">${esc(o.cad)}</div>`:''}
     ${/^https?:/.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))} ↗</a>`:'<small style="margin-top:auto;padding-top:6px">Canal institucional não localizado</small>'}</div>`}).join('');
   $('#more').hidden=all.length<=n;
+}
+
+/* ---------- organizações no mapa ---------- */
+const SG={RO:11,AC:12,AM:13,RR:14,PA:15,AP:16,TO:17,MA:21,PI:22,CE:23,RN:24,PB:25,PE:26,AL:27,SE:28,BA:29,MG:31,ES:32,RJ:33,SP:35,PR:41,SC:42,RS:43,MS:50,MT:51,GO:52,DF:53};
+const SGi=Object.fromEntries(Object.entries(SG).map(([s,c])=>[c,s]));
+/* cadeia da página -> índice no filtro do mapa */
+const CAD_MAPA={cafe:0,amazonia:5,frutas:2,hortalicas:3,bovinos:4,'florestas-nativas':5,'outras-temporarias':6,cereais:7};
+let O=null, OL=null;
+const SO={w:false,uf:'',mun:'',tipo:'',cad:'',q:'',n:30};
+const semAc=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+function carregarOrgs(){
+  if(OL)return OL;
+  OL=fetch('organizacoes.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{
+    const R=[];
+    d.w.forEach(o=>R.push({n:o.n,s:o.s,t:o.t,m:o.m,uf:o.m==null?o.uf:d.mun[o.m][2],c:o.c,k:2,u:o.u,a:o.a,b:o.b,p:o.p,mt:o.mt,nf:o.nf}));
+    d.g.forEach(([n,m,c,f,cnpj,a])=>R.push({n,m,uf:d.mun[m][2],c,k:f&2?1:0,t:f&1?'Cooperativa':'Associação',cnpj,a,nm:!!(f&4)}));
+    R.forEach(o=>{o.q=semAc(o.n+' '+(o.s||''))});
+    O={...d,R};return O});
+  return OL;
+}
+function tipoDe(t){return /^cooperativa/i.test(t)?'coop':/^associa/i.test(t)?'assoc':'outro'}
+function filtrar(ign){
+  const q=SO.q?semAc(SO.q.trim()):'', ci=SO.cad===''?null:SO.cad;
+  return O.R.filter(o=>{
+    if(SO.w&&!o.k)return false;
+    if(SO.uf&&ign!=='uf'&&o.uf!==SO.uf)return false;
+    if(SO.mun!==''&&ign!=='mun'&&String(o.m)!==SO.mun)return false;
+    if(SO.tipo&&tipoDe(o.t)!==SO.tipo)return false;
+    if(ci!=null){if(ci==='sem'){if(o.c)return false}else if(!(o.c&(1<<ci)))return false}
+    if(q&&!o.q.includes(q))return false;
+    return true});
+}
+function vOrgs(){
+  app.innerHTML=`<div class="view">
+  <section class="band"><svg class="deco" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z" fill="#fff"/></svg>
+    <div class="in"><div class="crumb"><a href="#inicio">Mulheres Rurais</a> · Organizações</div>
+    <h1>Onde estão as organizações do campo</h1><p>Cooperativas, associações, grupos e redes rurais do Brasil, por município. O mapa mostra o conjunto, e a caixinha deixa só as organizações de mulheres e as mistas com grupo de mulheres. Quando dá para saber a cadeia, ela aparece no filtro; as que não têm cadeia definida continuam no mapa.</p></div>
+    <svg class="wv" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C200 0 380 6 600 26C820 46 1000 40 1200 12V46H0Z"/></svg>
+  </section>
+  <main class="in cp" id="ov"><div class="loading">Carregando as organizações…</div></main></div>`;
+  carregarOrgs().then(()=>{if(location.hash==='#organizacoes')montarOrgs()}).catch(()=>{$('#ov').innerHTML='<div class="loading">Não foi possível carregar as organizações. Recarregue a página.</div>'});
+}
+function montarOrgs(){
+  const ufs=[...new Set(O.R.map(o=>o.uf).filter(u=>SG[u]))].sort((a,b)=>UF[SG[a]].localeCompare(UF[SG[b]]));
+  const mes=(O.meta.mes_receita||'').split('-').reverse().join('/');
+  $('#ov').innerHTML=`
+    <section aria-label="Filtros"><div class="ofil">
+      <label class="chk"><input type="checkbox" id="ow" ${SO.w?'checked':''}> Só organizações de mulheres</label>
+      <div><label class="eyebrow" for="ouf2">Estado</label><select id="ouf2" class="sel"><option value="">Brasil</option>${ufs.map(u=>`<option value="${u}">${esc(UF[SG[u]])}</option>`).join('')}</select></div>
+      <div><label class="eyebrow" for="omun">Município</label><select id="omun" class="sel"></select></div>
+      <div><label class="eyebrow" for="otipo">Tipo</label><select id="otipo" class="sel"><option value="">Todos</option><option value="coop">Cooperativas</option><option value="assoc">Associações</option><option value="outro">Grupos, redes e coletivos</option></select></div>
+      <div><label class="eyebrow" for="ocad">Cadeia</label><select id="ocad" class="sel"><option value="">Todas</option>${O.cadeias.map((c,i)=>`<option value="${i}">${esc(c)}</option>`).join('')}<option value="sem">Sem cadeia definida</option></select></div>
+      <div><label class="eyebrow" for="oq">Nome</label><input type="search" id="oq" placeholder="Buscar pelo nome" value="${esc(SO.q)}"></div>
+    </div></section>
+    <section class="okpi" id="okpi" aria-live="polite"></section>
+    <section aria-label="Mapa e lista"><div class="omap-l">
+      <div class="omap"><div id="osvg"></div><div class="zbt"><button type="button" id="zin" aria-label="Aproximar">+</button><button type="button" id="zout" aria-label="Afastar">−</button><button type="button" id="z0" aria-label="Ver o Brasil todo" style="font-size:13px">⌂</button></div>
+        <div class="olg" id="olg"></div></div>
+      <div><div class="ohd" id="ohd"></div><div class="olist" id="olist"></div><button class="more" id="omore" type="button">Ver mais</button></div>
+    </div></section>
+    <section class="fine" aria-labelledby="os6"><h2 id="os6">Como ler este mapa</h2><ul>
+      <li>Cada círculo é um município, do tamanho do número de organizações que têm sede nele. Nenhuma das bases tem o endereço, então o ponto fica na sede do município e não no lugar da organização.</li>
+      <li>As organizações de mulheres vêm de dois lugares. Em vinho forte, as levantadas pela plataforma, uma a uma, com fonte e canal institucional (${nf.format(O.w.length)}). Em vinho claro, as da base da Receita cujo nome indica organização de mulheres, como "associação de mulheres" ou "trabalhadoras rurais" sem o masculino junto. Essas ainda não foram conferidas.</li>
+      <li>O conjunto vem da base aberta de CNPJ da Receita Federal (${esc(mes)}): cooperativas e associações rurais ativas, só a sede, sem filiais. Inaptas e suspensas ficam de fora. A maioria das associações rurais está registrada com atividade genérica e entrou pelo nome (produtores, agricultores, assentamento, rural).</li>
+      <li>Nomes que quase nunca são de organização do campo saíram do mapa: associação de pais e mestres, caixa escolar, catadores de material reciclável e, quando o nome não fala em atividade agropecuária, clube, igreja, condomínio, cultura ou esporte. Foram ${nf.format((O.meta.contagem.ruido_sempre||0)+(O.meta.contagem.ruido_sem_agro||0))} retiradas. Mesmo assim sobra algum ruído.</li>
+      <li>A cadeia vem da atividade registrada na Receita (CNAE) ou de um termo do nome, como "produtores de leite" ou "cafeicultores". Uma organização pode estar em mais de uma cadeia. As da base da Amazônia entram em extrativismo e sociobiodiversidade.</li>
+      <li>Só aparecem dados institucionais: nome, tipo, município, CNPJ e o site ou rede da própria organização. Contatos pessoais de lideranças não são publicados.</li>
+    </ul></section>`;
+  ['ouf2','otipo','ocad'].forEach(id=>{$('#'+id).value=SO[{ouf2:'uf',otipo:'tipo',ocad:'cad'}[id]]});
+  $('#ow').onchange=e=>{SO.w=e.target.checked;SO.n=30;atualizarOrgs()};
+  $('#ouf2').onchange=e=>{SO.uf=e.target.value;SO.mun='';SO.n=30;atualizarOrgs(true)};
+  $('#omun').onchange=e=>{SO.mun=e.target.value;SO.n=30;atualizarOrgs()};
+  $('#otipo').onchange=e=>{SO.tipo=e.target.value;SO.n=30;atualizarOrgs()};
+  $('#ocad').onchange=e=>{SO.cad=e.target.value===''?'':e.target.value==='sem'?'sem':+e.target.value;SO.n=30;atualizarOrgs()};
+  let tq;$('#oq').oninput=e=>{clearTimeout(tq);tq=setTimeout(()=>{SO.q=e.target.value;SO.n=30;atualizarOrgs()},180)};
+  $('#omore').onclick=()=>{SO.n+=30;desenharLista(filtrar())};
+  mapaOrgs();
+  atualizarOrgs(!!SO.uf);
+}
+let OM=null;
+function mapaOrgs(){
+  const fc=topojson.feature(TOPO,TOPO.objects.br_uf);
+  const W=720,H=680, proj=d3.geoMercator().fitExtent([[12,12],[W-12,H-12]],fc), path=d3.geoPath(proj);
+  const svg=d3.select('#osvg').append('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('role','img').attr('aria-label','Mapa do Brasil com as organizações por município');
+  const g=svg.append('g'), gu=g.append('g'), gc=g.append('g');
+  gu.selectAll('path').data(fc.features).join('path').attr('class','uf').attr('d',path)
+    .on('click',(ev,f)=>{const s=SGi[f.properties.uf];SO.uf=SO.uf===s?'':s;SO.mun='';SO.n=30;$('#ouf2').value=SO.uf;atualizarOrgs(true)})
+    .append('title').text(f=>UF[f.properties.uf]);
+  const xy=O.mun.map(m=>proj([m[4],m[3]]));
+  let k=1;
+  const raio=n=>Math.max(1.3,Math.sqrt(n)*.75)/Math.pow(k,.5);
+  const zoom=d3.zoom().scaleExtent([1,40]).translateExtent([[0,0],[W,H]]).on('zoom',ev=>{g.attr('transform',ev.transform);
+    if(ev.transform.k!==k){k=ev.transform.k;gc.selectAll('circle').attr('r',d=>raio(d.n))}});
+  svg.call(zoom).on('dblclick.zoom',null);
+  $('#zin').onclick=()=>svg.transition().duration(300).call(zoom.scaleBy,1.8);
+  $('#zout').onclick=()=>svg.transition().duration(300).call(zoom.scaleBy,1/1.8);
+  $('#z0').onclick=()=>{SO.uf='';SO.mun='';$('#ouf2').value='';atualizarOrgs(true)};
+  const irPara=uf=>{
+    if(!uf){svg.transition().duration(500).call(zoom.transform,d3.zoomIdentity);return}
+    const f=fc.features.find(x=>SGi[x.properties.uf]===uf); if(!f)return;
+    const [[x0,y0],[x1,y1]]=path.bounds(f), s=Math.min(14,.86/Math.max((x1-x0)/W,(y1-y0)/H));
+    svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(W/2,H/2).scale(s).translate(-(x0+x1)/2,-(y0+y1)/2));
+  };
+  OM={gu,gc,xy,raio,irPara};
+}
+function atualizarOrgs(mover){
+  const L=filtrar(), Lm=filtrar('mun');
+  // municípios do estado escolhido, com contagem nos outros filtros
+  const cm=new Map(); Lm.forEach(o=>{if(o.m!=null)cm.set(o.m,(cm.get(o.m)||0)+1)});
+  const sm=$('#omun');
+  if(SO.uf){const ms=[...cm.keys()].sort((a,b)=>O.mun[a][1].localeCompare(O.mun[b][1]));
+    if(SO.mun!==''&&!cm.has(+SO.mun))ms.push(+SO.mun);
+    sm.innerHTML=`<option value="">Todos (${nf.format(ms.length)})</option>`+ms.map(i=>`<option value="${i}">${esc(O.mun[i][1])} (${nf.format(cm.get(i)||0)})</option>`).join('');sm.disabled=false}
+  else{sm.innerHTML='<option value="">Escolha um estado</option>';sm.disabled=true}
+  sm.value=SO.mun;
+  // números
+  const nc=L.filter(o=>tipoDe(o.t)==='coop').length, na=L.filter(o=>tipoDe(o.t)==='assoc').length, nw=L.filter(o=>o.k).length, nw2=L.filter(o=>o.k===2).length;
+  const onde=SO.mun!==''?O.mun[+SO.mun][1]+' ('+SO.uf+')':SO.uf?UF[SG[SO.uf]]:'Brasil';
+  $('#okpi').innerHTML=`<div class="kpi"><div class="v">${nf.format(L.length)}</div><p>${SO.w?'organizações de mulheres':'organizações'} em ${esc(onde)} com os filtros escolhidos</p></div>
+    <div class="kpi"><div class="v">${nf.format(nc)}</div><p>cooperativas</p></div>
+    <div class="kpi"><div class="v">${nf.format(na)}</div><p>associações</p></div>
+    <div class="kpi"><div class="v" style="color:var(--w)">${nf.format(nw)}</div><p>de mulheres ou mistas com grupo de mulheres; ${nf.format(nw2)} levantadas pela plataforma</p></div>`;
+  // círculos: um por município, com o que passa nos filtros (o município escolhido só destaca)
+  const ag=new Map(); Lm.forEach(o=>{if(o.m==null)return;let a=ag.get(o.m);if(!a)ag.set(o.m,a={i:o.m,n:0,w:0,w2:0});a.n++;if(o.k===2)a.w2++;else if(o.k===1)a.w++});
+  const D2=[...ag.values()].sort((a,b)=>b.n-a.n);
+  const cor=d=>SO.w?(d.w2?'var(--w)':'var(--org-w2)'):(d.w2||d.w?'var(--org)':'var(--org)');
+  OM.gc.selectAll('circle').data(D2,d=>d.i).join('circle')
+    .attr('cx',d=>OM.xy[d.i][0]).attr('cy',d=>OM.xy[d.i][1]).attr('r',d=>OM.raio(d.n)).attr('fill',cor)
+    .classed('on',d=>String(d.i)===SO.mun)
+    .on('click',(ev,d)=>{const m=O.mun[d.i];if(SO.mun===String(d.i)){SO.mun=''}else{const mudouUF=SO.uf!==m[2];SO.uf=m[2];SO.mun=String(d.i);$('#ouf2').value=SO.uf;if(mudouUF){SO.n=30;atualizarOrgs(true);return}}SO.n=30;atualizarOrgs()})
+    .selectAll('title').data(d=>[d]).join('title').text(d=>`${O.mun[d.i][1]} (${O.mun[d.i][2]}): ${nf.format(d.n)} ${d.n===1?'organização':'organizações'}${d.w+d.w2?`, ${nf.format(d.w+d.w2)} de mulheres`:''}`);
+  OM.gu.selectAll('path').classed('on',f=>SGi[f.properties.uf]===SO.uf);
+  $('#olg').innerHTML=SO.w?`<span><i style="background:var(--w)"></i>Com organização levantada pela plataforma</span><span><i style="background:var(--org-w2)"></i>Só com organizações da Receita cujo nome indica mulheres</span><span>Tamanho: número de organizações no município</span>`
+    :`<span><i style="background:var(--org)"></i>Organizações por município</span><span>Tamanho: número de organizações. Marque "só organizações de mulheres" para ver as de mulheres.</span>`;
+  if(mover)OM.irPara(SO.uf);
+  desenharLista(L);
+}
+function desenharLista(L){
+  const S=L.slice().sort((a,b)=>b.k-a.k||a.n.localeCompare(b.n,'pt-BR'));
+  const V=S.slice(0,SO.n), cad=c=>O.cadeias.filter((x,i)=>c&(1<<i));
+  const onde=SO.mun!==''?O.mun[+SO.mun][1]:SO.uf?UF[SG[SO.uf]]:'Brasil';
+  $('#ohd').innerHTML=`<span>${nf.format(S.length)} ${S.length===1?'organização':'organizações'} · ${esc(onde)}${S.length>1?', as de mulheres primeiro':''}</span>${SO.mun!==''||SO.uf||SO.w||SO.tipo||SO.cad!==''||SO.q?'<button type="button" id="olimpa">Limpar filtros</button>':''}`;
+  const host=u=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return ''}};
+  $('#olist').innerHTML=V.length?V.map(o=>{
+    const lugar=o.m!=null?`${O.mun[o.m][1]}, ${O.mun[o.m][2]}`:[o.mt,o.uf].filter(Boolean).join(', ')||'Atuação nacional';
+    const cs=cad(o.c), cnpj=o.cnpj?o.cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/,'$1.$2.$3/$4-$5'):'';
+    return `<div class="org ${o.k===2?'w':o.k===1?'w2':''}"><small>${esc(o.t)}${/^\d{4}$/.test(o.a)?' · desde '+esc(o.a):''}</small>
+      <b>${esc(o.n)}${o.s&&o.s!==o.n?' ('+esc(o.s)+')':''}</b><small>${esc(lugar)}${o.m==null&&o.k===2?' · sem ponto no mapa':''}</small>
+      <div>${o.k===2?`<span class="tag w">levantada pela plataforma · ${esc(o.b.join(', '))}</span>`:o.k===1?'<span class="tag w">nome indica mulheres · não conferida</span>':''}${cs.map(c=>`<span class="tag">${esc(c)}</span>`).join('')}${!cs.length&&o.k!==2?'<span class="tag">sem cadeia definida</span>':''}</div>
+      ${o.k===2&&o.p?`<div class="tg">${esc(o.p)}</div>`:''}
+      ${o.u&&/^https?:/.test(o.u)?`<a href="${esc(o.u)}" target="_blank" rel="noopener">${esc(host(o.u))} ↗</a>`:cnpj?`<small style="margin-top:auto;padding-top:4px">CNPJ ${cnpj}</small>`:'<small style="margin-top:auto;padding-top:4px">Canal institucional não localizado</small>'}</div>`}).join('')
+    :'<p class="note">Nenhuma organização com esses filtros.</p>';
+  $('#omore').hidden=S.length<=SO.n;
+  const lp=$('#olimpa'); if(lp)lp.onclick=()=>{Object.assign(SO,{w:false,uf:'',mun:'',tipo:'',cad:'',q:'',n:30});$('#ow').checked=false;['ouf2','otipo','ocad','oq'].forEach(id=>$('#'+id).value='');atualizarOrgs(true)};
 }
 
 function drawMap(key,C,t){

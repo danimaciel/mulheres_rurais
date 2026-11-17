@@ -21,6 +21,8 @@ import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 
+import montar_organizacoes
+
 SAIDA = sys.argv[1] if len(sys.argv) > 1 else "_site"
 
 REGIOES = {"1": ("N", "Região Norte"), "2": ("NE", "Região Nordeste"),
@@ -293,6 +295,7 @@ def main():
         shutil.copytree("site", SAIDA, dirs_exist_ok=True)
     with open(os.path.join(SAIDA, "dados.json"), "w", encoding="utf-8") as f:
         json.dump(dados, f, ensure_ascii=False, separators=(",", ":"))
+    montar_organizacoes.montar(SAIDA)
     print(f"{len(dados['cad'])} cadeias, "
           f"{sum(len(x) for x in dados['orgs'].values())} organizações, "
           f"{len(dados['ind'])} cadeias com indicadores -> {SAIDA}/dados.json")

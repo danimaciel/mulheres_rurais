@@ -1,6 +1,6 @@
 # Levantamento geral de cooperativas e associações rurais
 
-Esta base é separada das bases de organizações de mulheres e não entra no site. Serve de inventário amplo do associativismo rural por cadeia, para uso em outras frentes e como ponto de partida para achar grupos de mulheres que ainda não estão nas bases da plataforma. Nada daqui vai automaticamente para `dados/organizacoes/`: uma organização só passa para lá depois de verificada pelo critério descrito em `docs/organizacoes.md`.
+Esta base é separada das bases de organizações de mulheres. No site ela só aparece no mapa de organizações (ver a seção no fim), nunca nas listas de organizações de mulheres das cadeias. Serve de inventário amplo do associativismo rural por cadeia, para uso em outras frentes e como ponto de partida para achar grupos de mulheres que ainda não estão nas bases da plataforma. Nada daqui vai automaticamente para `dados/organizacoes/`: uma organização só passa para lá depois de verificada pelo critério descrito em `docs/organizacoes.md`.
 
 ## De onde vem
 
@@ -42,3 +42,15 @@ Só campos institucionais: CNPJ, razão social, nome fantasia, natureza, matriz 
 `base_mulheres` traz o id da organização em `dados/organizacoes/` (café, cacau, Amazônia) quando o CNPJ é o mesmo. Como boa parte dessas bases ainda não tem CNPJ conferido, o cruzamento por enquanto é parcial. `nome_mulheres` marca nomes com termos como mulheres, feminino, agricultoras, produtoras ou trabalhadoras, para triagem de organizações que podem entrar nas bases da plataforma.
 
 Quando as bases de mulheres ganham CNPJ novo, dá para refazer só as duas colunas de cruzamento, sem baixar a Receita de novo: `python scripts/levantar_organizacoes_geral.py --refazer-marcas`. A marca `nome_mulheres` não conta o par "agricultores e agricultoras", que é o jeito comum de nomear organização mista.
+
+## No mapa de organizações do site
+
+A página `#organizacoes` mostra esta base junto com as bases de mulheres. Quem monta os dados é `scripts/montar_organizacoes.py`, chamado pelo `montar_site.py` na publicação, e a saída é `organizacoes.json`, carregado só quando alguém abre a página.
+
+O que entra da base geral: só a sede (matriz) e só situação ativa. Filiais, inaptas e suspensas ficam fora. Organizações que já estão nas bases de mulheres (mesmo CNPJ) aparecem uma vez só, com os dados da base de mulheres.
+
+Ruído das linhas que entraram só pelo nome: sai sempre o que é claramente de outro ramo (associação de pais e mestres, APM, caixa escolar, conselho escolar, catadores de material reciclável, coleta seletiva). Clube, igreja, condomínio, cultura, esporte, eventos, escola e parecidos saem quando o nome não traz também um termo agropecuário (agricultores, produtores, pecuária, extrativismo, pescadores, assentamento e afins), porque "associação dos agricultores do condomínio rural" é do campo e "condomínio rural Portal do Vale" não é. Na rodada de 2026-11 isso tirou cerca de 2,6 mil linhas. A regra está nas expressões `RUIDO_SEMPRE`, `RUIDO_SEM_AGRO` e `AGRO` do script.
+
+Organização de mulheres no mapa tem dois níveis. As das bases de mulheres da plataforma, conferidas uma a uma. E as da Receita cujo nome indica organização de mulheres, por uma marca mais estrita que a coluna `nome_mulheres`: palavra como mulheres ou feminino basta (desde que o nome não fale também em homens); atividade no feminino (agricultoras, pescadoras, marisqueiras, quebradeiras) só conta quando o masculino da mesma palavra não aparece no nome. Essas aparecem como não conferidas.
+
+Localização: sede do município, pela tabela `config/municipios.csv` (código IBGE, nome, UF, latitude e longitude, a partir de github.com/kelvins/municipios-brasileiros). Os nomes da Receita são casados pelo nome sem acento dentro da UF, com uma lista curta de grafias antigas no script (Assu, Parati, Eldorado dos Carajás e outras). Organizações de mulheres de atuação estadual, regional ou nacional, sem município, ficam na lista e não no mapa.
