@@ -126,7 +126,7 @@ a.mc:hover{border-color:var(--ink-2);box-shadow:var(--shadow)}
 .band .crumb{font-size:13px;opacity:.8;margin-bottom:10px}
 .band .crumb a{color:inherit}
 .band h1{font-size:clamp(30px,4vw,46px);line-height:1.06;color:#FBF3EE;max-width:22ch}
-.band p{max-width:62ch;opacity:.9;margin:12px 0 0}
+.band p{opacity:.9;margin:12px 0 0}
 .band .deco{position:absolute;right:-40px;top:-30px;width:340px;height:340px;opacity:.14;z-index:0}
 .bar-tools{position:sticky;top:calc(env(safe-area-inset-top,0px) + 53px);z-index:15;background:var(--bg);border-bottom:1px solid var(--line)}
 .bar-tools .in{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-block:10px}
@@ -147,7 +147,8 @@ main.cp{display:flex;flex-direction:column;gap:44px;padding-block:28px 40px}
 @media (max-width:440px){.kpis{grid-template-columns:minmax(0,1fr)}.kpi{border-left:0;border-top:1px solid var(--line);padding-top:14px}.kpi:first-child{border-top:0;padding-top:4px}}
 .sec-h{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:end;justify-content:space-between;margin-bottom:14px}
 .sec-h h2{font-size:clamp(22px,2.4vw,28px)}
-.sec-h p{margin:4px 0 0;color:var(--ink-2);max-width:66ch}
+.sec-h p{margin:4px 0 0;color:var(--ink-2)}
+.sec-h>div:first-child{flex:1 1 320px;min-width:0}
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media (max-width:860px){.g2{grid-template-columns:minmax(0,1fr)}}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
@@ -458,7 +459,7 @@ function vCadeia(key){
       <ul>
         <li>As tabelas 6883 e 6887 classificam o estabelecimento só pela atividade principal. Quem produz ${cn} como atividade secundária não aparece aqui, então o tamanho da cadeia está subestimado.${key==='cafe'?' Em Rondônia, onde o conilon divide espaço com outras atividades, o estado quase some.':''}</li>
         <li>O Censo registra um único produtor por estabelecimento. Quando o casal dirige junto, quase sempre o homem é o registrado.</li>
-        <li>Valores com poucos informantes ficam sob sigilo do IBGE e aparecem como X. Por isso a soma dos municípios não fecha com o estado.</li>
+        <li>Valores com poucos informantes ficam sob sigilo do IBGE e aparecem como X. Por isso a soma dos municípios não fecha com o estado. Os números das regiões são os que o IBGE publica para cada Grande Região, e não a soma dos estados.</li>
         <li>As barras em cinza são de todas as atividades no mesmo território. Servem para comparar e nunca são número da cadeia.</li>
       </ul>
     </section>

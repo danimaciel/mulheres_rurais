@@ -138,21 +138,26 @@ def geo_cadeia(v, codigos):
             continue
         b["nome"] = nome
         geo[cod] = b
-    # regiões: o dado publicado pelo IBGE para a Grande Região (n2); onde ele
-    # não existe, a soma dos estados, que fica nula se algum estado está em sigilo
+    # regiões: o dado publicado pelo IBGE para a Grande Região (n2); se a
+    # fonte ainda não tem o nível regional, a soma dos estados, que fica nula
+    # se algum estado está em sigilo
     for dig, (sig, nome) in REGIOES.items():
         membros = [geo[c] for c in UFS if c.startswith(dig) and c in geo]
         if not membros:
             continue
-        direto = bloco(sig)
+        # Com o dado regional na fonte, vale ele, inclusive o X: somar os
+        # estados onde o IBGE pôs sigilo na região revelaria o valor omitido.
+        tem_n2 = any((c, sig, "9587", SEXO[0]) in v for c in codigos)
         r = {"nome": nome, "inc": False}
-        for k in ["est", "area"] + list(PESSOAL):
-            n = len(membros[0][k])
-            r[k] = [direto[k][i] if direto[k][i] is not None
-                    else soma([m[k][i] for m in membros]) for i in range(n)]
-            if any(x is None for x in r[k]):
-                r["inc"] = True
-        r["pess"] = direto["pess"] if direto["pess"] is not None else soma([m["pess"] for m in membros])
+        if tem_n2:
+            r.update(bloco(sig))
+        else:
+            for k in ["est", "area"] + list(PESSOAL):
+                n = len(membros[0][k])
+                r[k] = [soma([m[k][i] for m in membros]) for i in range(n)]
+            r["pess"] = soma([m["pess"] for m in membros])
+        if any(x is None for k in ["est", "area"] + list(PESSOAL) for x in r[k]):
+            r["inc"] = True
         if not r["inc"]:
             del r["inc"]
         geo[sig] = r
