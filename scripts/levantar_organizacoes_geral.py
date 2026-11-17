@@ -37,38 +37,53 @@ SAIDA = "dados/organizacoes_geral"
 NATUREZAS = {"2143": "Cooperativa", "3999": "Associação"}
 
 # CNAE 2.3, subclasses sem pontuação.
+# Em cada cadeia, "forte" são termos que sozinhos já indicam a atividade
+# (cafeicultores, laticínio, quebradeiras). "fraco" é o nome do produto, que
+# também aparece em nome de lugar (Cafelândia, Laranjeiras, Buriti, Castanhal);
+# esse só conta se o nome também tiver um termo rural (NOME_RURAL abaixo).
 CADEIAS = {
     "cafe": {
         "cnae": {"0134200", "1081301", "1081302", "1082100", "4621400", "4637101"},
-        "nome": r"\bCAFE|CAFEICUL|CAFEEIR",
+        "forte": r"CAFEICUL|CAFEEIR|PRODUTORES DE CAFE|CAFES? ESPECIA",
+        "fraco": r"\bCAFES?\b",
     },
     "cacau": {
         "cnae": {"0135100", "1093701"},
-        "nome": r"CACAU|CHOCOLAT",
+        "forte": r"CACAUICUL|CACAUEIR|CACAUCUL|CHOCOLAT|PRODUTORES DE CACAU",
+        "fraco": r"\bCACAU\b",
     },
     "frutas": {
         "cnae": {"0131800", "0132600", "0133401", "0133402", "0133403", "0133404",
                  "0133405", "0133406", "0133407", "0133408", "0133409", "0133410",
                  "0133411", "0133499", "1031700", "1033301", "1033302"},
-        "nome": r"FRUT|POLPA|\bACAI|BANANA|LARANJ|CITRIC|MARACUJA|\bUVA|VITIVIN|\bCAJU|\bCOCO\b|MANGA\b",
+        "forte": r"FRUTICUL|FRUTICOL|HORTIFRUT|CITRICUL|VITICUL|VITIVIN|BANANICUL|"
+                 r"CAJUCUL|POLPAS? DE FRUTA|PRODUTORES DE FRUTA",
+        "fraco": r"\bFRUTAS?\b|\bPOLPAS?\b|\bACAI\b|\bBANANAS?\b|\bLARANJAS?\b|"
+                 r"\bCITRICOS?\b|\bMARACUJA\b|\bUVAS?\b|\bCAJU\b|\bCOCOS?\b|\bMANGAS?\b|"
+                 r"\bABACAXI\b|\bGOIABAS?\b|\bCUPUACU\b",
     },
     "hortalicas": {
         "cnae": {"0121101", "0121102"},
-        "nome": r"HORTI|HORTALI|OLERIC|VERDURA|LEGUME",
+        "forte": r"HORTICUL|HORTIFRUT|HORTIGRANJ|OLERIC|OLERICUL",
+        "fraco": r"\bHORTAS?\b|HORTALI|VERDURA|LEGUMES?\b",
     },
     "bovinos_leite": {
         "cnae": {"0151201", "0151202", "0151203", "1051100", "1052000", "4631100"},
-        "nome": r"LEITE|LATICIN|BOVIN|PECUARIST|GADO|QUEIJ",
+        "forte": r"LATICIN|BOVINOCUL|PECUARISTAS? DE LEITE|PRODUTORES DE LEITE|"
+                 r"LEITEIR|CRIADORES DE GADO|PECUARIA LEITEIRA",
+        "fraco": r"\bLEITE\b|\bBOVIN|\bGADO\b|\bQUEIJ|PECUARIST",
     },
     "extrativismo": {
         "cnae": {"0220901", "0220902", "0220903", "0220904", "0220905", "0220906",
                  "0220999", "0230600"},
-        "nome": r"EXTRATIV|CASTANH|BABACU|QUEBRADEIR|SERINGUEI|SOCIOBIO|ANDIROBA|"
-                r"COPAIBA|PEQUI|BURITI|\bACAI",
+        "forte": r"EXTRATIV|QUEBRADEIR|SERINGUEI|CASTANHEIR|SOCIOBIO|CATADORES DE|"
+                 r"COLETORES DE|PEQUIZEIR",
+        "fraco": r"\bCASTANHAS?\b|BABACU|ANDIROBA|COPAIBA|\bPEQUI\b|\bBURITI\b|\bACAI\b",
     },
 }
 for c in CADEIAS.values():
-    c["nome"] = re.compile(c["nome"])
+    c["forte"] = re.compile(c["forte"])
+    c["fraco"] = re.compile(c["fraco"])
 
 # O que conta como rural mesmo sem cadeia definida.
 CNAE_RURAL = re.compile(r"^(01|02|03)")
@@ -158,16 +173,17 @@ def main():
             todos = [principal] + secundarios
             nome = (razao + " " + c[4]).upper()
 
+            rural_cnae = any(CNAE_RURAL.match(x) or x in CNAE_RURAL_APOIO for x in todos)
+            rural_nome = bool(NOME_RURAL.search(nome))
+
             cadeias, criterio = [], set()
             for cadeia, regra in CADEIAS.items():
                 por_cnae = any(x in regra["cnae"] for x in todos)
-                por_nome = bool(regra["nome"].search(nome))
+                por_nome = bool(regra["forte"].search(nome)) or (
+                    (rural_nome or rural_cnae) and bool(regra["fraco"].search(nome)))
                 if por_cnae or por_nome:
                     cadeias.append(cadeia)
                     criterio.add("cnae" if por_cnae else "nome")
-
-            rural_cnae = any(CNAE_RURAL.match(x) or x in CNAE_RURAL_APOIO for x in todos)
-            rural_nome = bool(NOME_RURAL.search(nome))
             if not (cadeias or rural_cnae or rural_nome):
                 continue
             if rural_cnae:

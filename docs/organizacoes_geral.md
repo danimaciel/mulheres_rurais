@@ -10,16 +10,18 @@ Entram cooperativas (natureza jurídica 2143) e associações privadas (3999) co
 
 ## Como uma organização entra numa cadeia
 
-Pelo CNAE principal ou por qualquer CNAE secundário da cadeia, ou por um termo no nome. A coluna `criterio` diz se pesou o CNAE, o nome ou os dois. Casar só pelo nome traz mais ruído (por exemplo "Coco" ou "Manga" como nome de lugar), então vale olhar essas linhas com mais cuidado.
+Pelo CNAE principal ou por qualquer CNAE secundário da cadeia, ou por um termo no nome. A coluna `criterio` diz se pesou o CNAE, o nome ou os dois.
 
-| Cadeia | CNAEs | Termos no nome |
+Os termos do nome são de dois tipos. Os que já indicam a atividade (cafeicultores, cacauicultores, fruticultura, hortifrutigranjeiros, laticínio, produtores de leite, extrativistas, quebradeiras, seringueiros) bastam sozinhos. O nome do produto puro (café, cacau, laranja, buriti, leite) aparece muito em nome de lugar, como Cafelândia, Laranjeiras, Castanhal ou Santo Antônio do Leite, então só conta quando o nome também traz um termo rural (produtores, agricultores, assentamento, rural) ou o CNAE é agropecuário. Mesmo assim sobra algum ruído nas linhas que entraram só pelo nome.
+
+| Cadeia | CNAEs | Exemplos de termos no nome |
 |---|---|---|
-| café | 0134-2/00, 1081-3/01, 1081-3/02, 1082-1/00, 4621-4/00, 4637-1/01 | café, cafeicultura |
-| cacau | 0135-1/00, 1093-7/01 | cacau, chocolate |
-| frutas | 0131-8/00, 0132-6/00, 0133-4 (todas), 1031-7/00, 1033-3/01, 1033-3/02 | fruta, polpa, açaí, banana, laranja, uva, caju, coco, manga |
-| hortaliças | 0121-1/01, 0121-1/02 | horti, hortaliça, olericultura, verdura, legume |
-| bovinos e leite | 0151-2/01 a 03, 1051-1/00, 1052-0/00, 4631-1/00 | leite, laticínio, bovino, gado, queijo |
-| extrativismo | 0220-9 (todas), 0230-6/00 | extrativista, castanha, babaçu, quebradeira, seringueiro, andiroba, copaíba, pequi, buriti, açaí |
+| café | 0134-2/00, 1081-3/01, 1081-3/02, 1082-1/00, 4621-4/00, 4637-1/01 | cafeicultores, produtores de café, café |
+| cacau | 0135-1/00, 1093-7/01 | cacauicultores, cacaueira, chocolate, cacau |
+| frutas | 0131-8/00, 0132-6/00, 0133-4 (todas), 1031-7/00, 1033-3/01, 1033-3/02 | fruticultores, citricultores, vitivinicultores, polpa de fruta, açaí, banana, caju, cupuaçu |
+| hortaliças | 0121-1/01, 0121-1/02 | horticultores, hortifrutigranjeiros, olericultura, horta, verduras |
+| bovinos e leite | 0151-2/01 a 03, 1051-1/00, 1052-0/00, 4631-1/00 | laticínio, produtores de leite, criadores de gado, pecuaristas |
+| extrativismo | 0220-9 (todas), 0230-6/00 | extrativistas, quebradeiras, seringueiros, castanheiros, babaçu, andiroba, pequi |
 
 Uma organização pode estar em mais de uma cadeia. Além das cadeias, a base guarda as organizações rurais sem cadeia definida: CNAE das divisões 01 a 03 ou de comércio e beneficiamento de produto agropecuário, ou nome com termos como rural, agricultores, produtores, assentamento, agroecologia, pescadores, apicultores.
 
