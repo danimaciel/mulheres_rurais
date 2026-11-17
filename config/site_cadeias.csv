@@ -1,0 +1,26 @@
+cadeia,nome,grupo,codigos_12440
+cafe,Café,perm,112888
+cacau,Cacau,perm,112889
+total,Todas as atividades,,110016
+outras-temporarias,"Mandioca, feijão e outras lavouras temporárias",temp,112879
+cereais,Cereais,temp,112873
+soja,Soja,temp,112877
+fumo,Fumo,temp,112876
+cana,Cana-de-açúcar,temp,112875
+oleaginosas,"Oleaginosas, exceto soja",temp,112878
+algodao,Algodão e outras fibras,temp,112874
+hortalicas,Hortaliças,hort,112882
+flores,Flores e plantas ornamentais,hort,112883
+frutas,Frutas,perm,112885;112886;112887
+outras-permanentes,Outras lavouras permanentes,perm,112890
+sementes,Sementes e mudas certificadas,perm,114048
+bovinos,Bovinos (leite e corte),pec,112895
+aves,Aves,pec,112899
+suinos,Suínos,pec,112898
+ovinos-caprinos,Ovinos e caprinos,pec,112897
+grande-porte,Outros animais de grande porte,pec,112896
+outros-animais,Outros animais,pec,112900
+florestas-nativas,Florestas nativas (extrativismo),flo,112902
+florestas-plantadas,Florestas plantadas,flo,112901
+pesca,Pesca,flo,114050
+aquicultura,Aquicultura,flo,112903

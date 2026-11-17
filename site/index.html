@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mulheres Rurais</title>
+<meta name="description" content="Mulheres rurais no Brasil, cadeia por cadeia: quem dirige, quem trabalha e quem se organiza, com dados do IBGE e as organizações de mulheres de cada cadeia.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z' fill='%23285C3A'/%3E%3Ccircle cx='18' cy='11' r='5.5' fill='%23842E50'/%3E%3Ccircle cx='30' cy='9' r='5.5' fill='%23D6AB65'/%3E%3C/svg%3E">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: início com foto e onda bordô e escolha da cadeia → página da cadeia com faixa colorida, barra fixa de cadeia e território, blocos Direção / Trabalho / Mapa / Municípios / Indicadores / Organizações */
+:root{
+  --bg:#F7F1E8; --surface:#FFFDF9; --surface-2:#F0E8DC; --line:#E6D9C8;
+  --ink:#2A1720; --ink-2:#6B5560; --wine:#541D35; --wine-2:#842E50; --wine-soft:#F2E2E8;
+  --leaf:#285C3A; --leaf-2:#799B52; --leaf-soft:#E4ECD6; --gold:#D6AB65; --on-wine:#FBF3EE;
+  --w:#842E50; --m:#799B52; --ref:#B9AEA6; --nodata:#EAE2D7;
+  --acc:var(--wine); --acc-band:#541D35;
+  --shadow:0 1px 2px rgba(60,20,35,.06),0 6px 18px rgba(60,20,35,.06);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif; --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#181013; --surface:#22171B; --surface-2:#2C1F24; --line:#3A2A30; --ink:#F3E8E6; --ink-2:#BFA9B1;
+  --wine:#D98AAA; --wine-2:#E9A4C0; --wine-soft:#3A2230; --leaf:#8FC59A; --leaf-2:#A9C47E; --leaf-soft:#2A3325; --gold:#E0BA7A; --on-wine:#1B1014;
+  --w:#E58DAE; --m:#A9C47E; --ref:#6E5F66; --nodata:#2E2427;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#181013; --surface:#22171B; --surface-2:#2C1F24; --line:#3A2A30; --ink:#F3E8E6; --ink-2:#BFA9B1;
+  --wine:#D98AAA; --wine-2:#E9A4C0; --wine-soft:#3A2230; --leaf:#8FC59A; --leaf-2:#A9C47E; --leaf-soft:#2A3325; --gold:#E0BA7A; --on-wine:#1B1014;
+  --w:#E58DAE; --m:#A9C47E; --ref:#6E5F66; --nodata:#2E2427;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 18px rgba(0,0,0,.25); color-scheme:dark}
+body.amz{--acc:var(--leaf);--acc-band:#285C3A}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--acc)}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;text-wrap:balance;margin:0;letter-spacing:-.01em}
+button,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--wine-2);outline-offset:2px}
+.num{font-variant-numeric:tabular-nums}
+.in{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;color:var(--ink-2)}
+.note{font-size:12.5px;color:var(--ink-2);margin:12px 0 0;line-height:1.45}
+
+/* topo */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:16px;padding-block:9px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--wine);flex-shrink:0}
+.brand svg{width:34px;height:34px}
+.brand b{font-family:var(--f-display);font-size:18px;line-height:1;font-weight:600}
+.chips{display:flex;gap:6px;margin-left:auto;overflow-x:auto;scrollbar-width:none;min-width:0}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:99px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:13.5px;white-space:nowrap;background:var(--surface)}
+.chip:hover{background:var(--surface-2)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--wine)}
+.chip.amz i{background:var(--leaf)}
+.chip[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.off{color:var(--ink-2);border-style:dashed;cursor:default}
+.chip.off i{background:var(--ref)}
+@media (max-width:640px){.brand b{display:none}}
+
+/* início */
+.hero{position:relative;background:#541D35;color:#FBF3EE;overflow:hidden;min-height:clamp(400px,36vw,480px);isolation:isolate}
+.hero-photo{position:absolute;inset:0 0 0 auto;width:calc(100% - max(37%,calc(50% - 120px)));height:100%;object-fit:cover;object-position:40% 22%;z-index:0}
+.hero-wave{position:absolute;inset:0 auto 0 0;width:max(43%,calc(58% - 139px));height:100%;z-index:1;filter:drop-shadow(14px 0 18px rgba(30,8,18,.45))}
+.hero-wave path{fill:#541D35}
+.hw-m{display:none}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:56px 130px}
+.hero-in>div{max-width:min(440px,32vw)}
+.hero h1{font-size:clamp(34px,3.7vw,50px);line-height:1.04;color:#FBF3EE}
+.hero h1 em{font-style:italic;font-weight:400;color:#F7E2C0}
+.hero p{max-width:42ch;font-size:17px;opacity:.92;margin:18px 0 0}
+@media (max-width:1040px){
+ .hw-d{display:none}.hw-m{display:block}
+ .hero{min-height:0;display:flex;flex-direction:column}
+ .hero-photo{position:relative;inset:auto;width:100%;height:clamp(240px,42vw,400px);object-position:50% 25%}
+ .hero-wave{inset:auto;top:calc(clamp(240px,42vw,400px) - 50px);width:100%;height:70px;filter:none}
+ .hero-in{padding-block:4px 110px;background:#541D35;width:100%}
+ .hero-in>div{max-width:none}
+}
+.pick{position:relative;z-index:3;margin-top:-84px;background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:22px clamp(16px,3vw,28px)}
+.pick h2{font-size:21px;margin-bottom:4px}
+.pick>p{margin:0 0 18px;color:var(--ink-2);font-size:14.5px}
+.cads{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.cad{display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:14px;border:1px solid var(--line);text-decoration:none;color:var(--ink);min-width:0;background:var(--surface)}
+a.cad:hover{border-color:var(--acc);box-shadow:var(--shadow)}
+.cad .sw{height:6px;border-radius:3px;background:var(--wine);margin-bottom:6px}
+.cad.amz .sw{background:var(--leaf)}
+.cad b{font-family:var(--f-display);font-size:20px;font-weight:600;line-height:1.15}
+.cad span{font-size:13px;color:var(--ink-2)}
+.cad .big{font-family:var(--f-display);font-size:26px;color:var(--wine);font-variant-numeric:tabular-nums;margin-top:auto}
+.cad.amz .big{color:var(--leaf)}
+.cad.off{background:var(--surface-2);border-style:dashed}
+.cad.off .sw{background:var(--ref)}
+.st{display:inline-block;align-self:flex-start;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:99px;background:var(--surface-2);color:var(--ink-2)}
+.st.ok{background:var(--leaf-soft);color:var(--leaf)}
+.st.prep{background:var(--wine-soft);color:var(--wine)}
+@media (max-width:980px){.cads{grid-template-columns:repeat(2,minmax(0,1fr))}.cads .cad:first-child{grid-column:1/-1}}
+@media (max-width:440px){.cads{grid-template-columns:minmax(0,1fr)}}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding-block:44px 20px}
+.rules h3{font-size:19px;margin:6px 0 8px}
+.rules p{margin:0;color:var(--ink-2);font-size:14.5px}
+.rules svg{width:30px;height:30px;color:var(--wine)}
+@media (max-width:820px){.rules{grid-template-columns:minmax(0,1fr);gap:20px}}
+
+.todas{padding-block:36px 0;scroll-margin-top:72px}
+.grp{margin-top:22px}
+.grp h3{font-family:var(--f-body);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin-bottom:10px}
+.mini-cads{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.mc{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface);text-decoration:none;color:var(--ink);min-width:0}
+a.mc:hover{border-color:var(--ink-2);box-shadow:var(--shadow)}
+.mc b{font-size:14.5px;line-height:1.3}
+.mc span{font-size:12.5px;color:var(--ink-2)}
+.mc .mb{height:6px;border-radius:3px;background:var(--m);overflow:hidden;margin-top:4px}
+.mc .mb i{display:block;height:100%;background:var(--w)}
+.mc.off{background:transparent;border-style:dashed}
+.chip.all{font-weight:600}
+/* página da cadeia */
+.band{background:var(--acc-band);color:#FBF3EE;position:relative;overflow:hidden}
+.band .in{padding-block:34px 70px;position:relative;z-index:1}
+.band svg.wv{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:46px;z-index:1}
+.band svg.wv path{fill:var(--bg)}
+.band .crumb{font-size:13px;opacity:.8;margin-bottom:10px}
+.band .crumb a{color:inherit}
+.band h1{font-size:clamp(30px,4vw,46px);line-height:1.06;color:#FBF3EE;max-width:22ch}
+.band p{max-width:62ch;opacity:.9;margin:12px 0 0}
+.band .deco{position:absolute;right:-40px;top:-30px;width:340px;height:340px;opacity:.14;z-index:0}
+.bar-tools{position:sticky;top:calc(env(safe-area-inset-top,0px) + 53px);z-index:15;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar-tools .in{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-block:10px}
+.bar-tools label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.sel{appearance:none;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23866' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 10px center;border:1px solid var(--line);border-radius:9px;padding:7px 32px 7px 12px;font-size:14px;max-width:100%;min-width:0}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.bar-tools .legend{margin-left:auto}
+
+main.cp{display:flex;flex-direction:column;gap:44px;padding-block:28px 40px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:18px 4px}
+.kpi{padding:4px 18px;border-left:1px solid var(--line);min-width:0}
+.kpi:first-child{border-left:0}
+.kpi .v{font-family:var(--f-display);font-size:clamp(28px,3vw,38px);font-weight:600;line-height:1.05;color:var(--acc);font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:.5em}
+.kpi p{margin:6px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.4}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.kpi:nth-child(3){border-left:0}}
+@media (max-width:440px){.kpis{grid-template-columns:minmax(0,1fr)}.kpi{border-left:0;border-top:1px solid var(--line);padding-top:14px}.kpi:first-child{border-top:0;padding-top:4px}}
+.sec-h{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:end;justify-content:space-between;margin-bottom:14px}
+.sec-h h2{font-size:clamp(22px,2.4vw,28px)}
+.sec-h p{margin:4px 0 0;color:var(--ink-2);max-width:66ch}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.g2{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
+.panel h3{font-family:var(--f-body);font-size:15px;font-weight:600;margin-bottom:4px}
+.panel .sub{font-size:13px;color:var(--ink-2);margin:0 0 16px}
+
+/* barra dividida mulheres | homens */
+.split{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:center;font-size:14px;margin-bottom:10px}
+.split .t{display:flex;height:26px;border-radius:6px;overflow:hidden;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;background:var(--surface-2)}
+.split .t i{display:flex;align-items:center;font-style:normal;padding:0 8px;white-space:nowrap;min-width:0}
+.split .t .w{background:var(--w);color:#fff}
+.split .t .m{background:var(--m);color:#1D2A12;justify-content:flex-end;flex:1}
+.split.ref span{color:var(--ink-2)}
+.split.ref .t{height:18px;font-size:11.5px}
+.split.ref .t .w{background:var(--ref);color:var(--ink)}
+.split.ref .t .m{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line);border-left:0;border-radius:0 6px 6px 0}
+@media (max-width:480px){.split{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+/* pares */
+.pair{display:grid;grid-template-columns:140px minmax(0,1fr);gap:4px 12px;align-items:center;font-size:14px;margin-bottom:14px}
+.pair>span{grid-row:span 2;line-height:1.3}
+.pair .r{display:grid;grid-template-columns:minmax(0,1fr) 118px;gap:8px;align-items:center}
+.pair .t{height:12px;background:var(--surface-2);border-radius:0 4px 4px 0;overflow:hidden}
+.pair .t i{display:block;height:100%;border-radius:0 4px 4px 0}
+.pair .rw i{background:var(--w)}.pair .rm i{background:var(--m)}
+.pair b{font-variant-numeric:tabular-nums;text-align:right;font-size:12.5px;font-weight:500;color:var(--ink-2)}
+.pair .rw b{color:var(--ink);font-weight:600}
+@media (max-width:480px){.pair{grid-template-columns:minmax(0,1fr)}.pair>span{grid-row:auto}}
+
+/* mapa */
+.map-l{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;align-items:start}
+@media (max-width:860px){.map-l{grid-template-columns:minmax(0,1fr)}}
+.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:10px;position:relative}
+.mapbox svg{width:100%;height:auto;display:block}
+.mapbox path.uf{stroke:var(--surface);stroke-width:.8;cursor:pointer}
+.mapbox path.uf:hover{stroke:var(--ink);stroke-width:1.5}
+.mapbox path.uf.on{stroke:var(--ink);stroke-width:2}
+.scale{display:flex;gap:0;margin-top:8px;font-size:11.5px;color:var(--ink-2)}
+.scale div{flex:1;text-align:center}
+.scale i{display:block;height:10px}
+.rank{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;font-size:13.5px;max-height:440px;overflow:auto}
+.rank button{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;width:100%;border:0;background:none;padding:6px 8px;border-radius:7px;text-align:left;cursor:pointer}
+.rank button:hover{background:var(--surface-2)}
+.rank button.on{background:var(--surface-2);font-weight:600}
+.rank b{font-variant-numeric:tabular-nums}
+
+/* municípios */
+.mtab{width:100%;border-collapse:collapse;font-size:14px}
+.mtab th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+.mtab td{padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.mtab td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mtab .mini{display:flex;height:10px;border-radius:3px;overflow:hidden;min-width:90px;background:var(--surface-2)}
+.mtab .mini i{display:block}.mtab .mini .w{background:var(--w)}.mtab .mini .m{background:var(--m)}
+.scroll{overflow-x:auto}
+
+/* indicadores */
+.inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:980px){.inds{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.inds{grid-template-columns:minmax(0,1fr)}}
+.ind{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ind h3{font-size:18px}
+.ind p{margin:0;font-size:13.5px;color:var(--ink-2)}
+.ind .v{font-family:var(--f-display);font-size:30px;color:var(--acc);line-height:1.05;font-variant-numeric:tabular-nums}
+.ind.wait{background:transparent;border-style:dashed}
+.ind.wait .v{color:var(--ref)}
+
+/* organizações */
+.orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:980px){.orgs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.orgs{grid-template-columns:minmax(0,1fr)}}
+.org{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.org b{font-size:14.5px;line-height:1.3;overflow-wrap:anywhere}
+.org small{color:var(--ink-2);font-size:12.5px}
+.org .tg{font-size:12px;color:var(--ink-2);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.org a{font-size:13px;margin-top:auto;padding-top:6px;overflow-wrap:anywhere}
+.more{margin-top:14px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:8px 18px;cursor:pointer;font-size:14px}
+.more:hover{background:var(--surface-2)}
+
+.fine{background:var(--surface-2);border-radius:20px;padding:24px clamp(16px,3vw,30px)}
+.fine h2{font-size:22px;margin-bottom:12px}
+.fine ul{margin:0;padding-left:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 32px;font-size:14px;color:var(--ink-2)}
+@media (max-width:760px){.fine ul{grid-template-columns:minmax(0,1fr)}}
+.fine li{min-width:0}
+footer{border-top:1px solid var(--line);color:var(--ink-2);font-size:12.5px;padding-block:20px 32px}
+.loading{padding:80px 16px;text-align:center;color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){.view{animation:fd .25s ease-out}@keyframes fd{from{opacity:.5}to{opacity:1}}}
+</style>
+
+</head>
+<body>
+<header class="top"><div class="in top-in">
+  <a class="brand" href="#inicio" aria-label="Mulheres Rurais, início">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z" fill="var(--leaf)"/><path d="M24 44V30" stroke="var(--surface)" stroke-width="1.5"/><circle cx="18" cy="11" r="5.5" fill="var(--wine-2)"/><circle cx="30" cy="9" r="5.5" fill="var(--gold)"/></svg>
+    <b>Mulheres Rurais</b>
+  </a>
+  <nav class="chips" id="chips" aria-label="Cadeias produtivas"></nav>
+</div></header>
+<div id="app"><div class="loading">Carregando os dados…</div></div>
+<footer><div class="in">
+  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau: levantamento próprio.</p>
+  <p style="margin:0">A página é montada a partir dos dados do <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>, onde estão a coleta, os indicadores e as notas de método. <span id="upd"></span> Parte do Atlas das Mulheres do Café. Versão em construção: partes marcadas "em preparo" entram à medida que os dados chegam.</p>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+(()=>{
+const $=(s,e=document)=>e.querySelector(s), app=$('#app');
+const nf=new Intl.NumberFormat('pt-BR');
+const n0=v=>v==null?'X':nf.format(Math.round(v));
+const pc=(v,d=1)=>v==null||!isFinite(v)?'–':v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+const kfmt=v=>v==null?'X':v>=1e6?(v/1e6).toLocaleString('pt-BR',{maximumFractionDigits:1})+' mi':v>=1e4?Math.round(v/1e3)+' mil':nf.format(Math.round(v));
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const UF={11:'Rondônia',12:'Acre',13:'Amazonas',14:'Roraima',15:'Pará',16:'Amapá',17:'Tocantins',21:'Maranhão',22:'Piauí',23:'Ceará',24:'Rio Grande do Norte',25:'Paraíba',26:'Pernambuco',27:'Alagoas',28:'Sergipe',29:'Bahia',31:'Minas Gerais',32:'Espírito Santo',33:'Rio de Janeiro',35:'São Paulo',41:'Paraná',42:'Santa Catarina',43:'Rio Grande do Sul',50:'Mato Grosso do Sul',51:'Mato Grosso',52:'Goiás',53:'Distrito Federal'};
+
+/* Frentes da plataforma. "dados" aponta para a chave da cadeia na base. */
+const GR={temp:['Lavouras temporárias','#7A5520',''],perm:['Lavouras permanentes','#541D35',''],hort:['Horticultura e floricultura','#4E6B2F','amz'],pec:['Pecuária','#842E50',''],flo:['Florestas, pesca e aquicultura','#285C3A','amz']};
+const FR={
+ cafe:{nome:'Café',cn:'café',dados:'cafe',cls:'',band:'#541D35',terr:'1',orgs:'cafe',piloto:1,
+   titulo:'Mulheres no café',
+   lead:'Quem dirige, quem trabalha e quem se organiza nos estabelecimentos que têm o café como atividade principal. É a frente com mais caminho andado: os indicadores do Atlas das Mulheres do Café vêm para cá.',
+   sub:'cafeicultura'},
+ amazonia:{nome:'Amazônia',cn:'cacau',dados:'cacau',cls:'amz',band:'#285C3A',terr:'15',orgs:'amazonia',orgsAlt:[['amazonia','Amazônia'],['cacau','Cacau, todas as regiões']],piloto:1,
+   titulo:'Mulheres da sociobiodiversidade amazônica',
+   lead:'O Censo Agro não tem uma classe de atividade para a sociobiodiversidade. O primeiro recorte é o cacau, que tem classe própria; açaí, castanha e outros produtos do extrativismo entram com a PEVS. O Pará concentra quase todo o cacau da região, por isso a página abre nele.',
+   sub:'cacau como primeiro recorte'}
+};
+function montarFR(){
+  Object.entries(D.meta).forEach(([k,m])=>{const g=GR[m.grupo];
+    FR[k]={nome:m.nome,cn:m.nome.replace(/ \(.*\)$/,'').toLowerCase(),dados:k,grupo:m.grupo,cls:g[2],band:g[1],terr:'1',orgs:null,
+      titulo:m.nome,sub:g[0].toLowerCase(),
+      lead:k==='bovinos'?'A classe do Censo junta leite e corte. O leite com recorte por sexo espera uma tabela própria do Censo; até lá, este é o retrato mais próximo da pecuária bovina.'
+        :k==='frutas'?'Soma das três classes de frutas do Censo: laranja, uva e as demais frutas de lavoura permanente, como banana, manga e açaí plantado.'
+        :k==='florestas-nativas'?'Extrativismo em florestas nativas: açaí, castanha, babaçu, borracha. É um dos recortes possíveis da sociobiodiversidade, ao lado do cacau.'
+        :'Por enquanto só com os dados do IBGE: quem dirige e quem trabalha nos estabelecimentos que têm esta atividade como principal. Indicadores e organizações entram depois.'}});
+  FR.cafe.grupo='perm';FR.amazonia.grupo='perm';
+}
+
+let D=null, TOPO=null;
+const ST={terr:{cafe:'1',amazonia:'15'},orgUF:{},orgN:{},orgB:{}};
+try{Object.assign(ST.terr,JSON.parse(localStorage.getItem('mr-terr2')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('mr-terr2',JSON.stringify(ST.terr))}catch(e){}};
+
+Promise.all([fetch('dados.json',{cache:'no-cache'}).then(r=>r.json()),fetch('uf.topo.json').then(r=>r.json())]).then(([d,t])=>{D=d;TOPO=t;montarFR();atual();route()})
+ .catch(()=>{app.innerHTML='<div class="loading">Não foi possível carregar os dados. Recarregue a página.</div>'});
+window.addEventListener('hashchange',route);
+
+function atual(){const u=D.atualizado||{},f=x=>x?x.split('-').reverse().join('/'):null;
+  const e=$('#upd');if(e&&u.coleta)e.textContent=`Dados verificados na fonte em ${f(u.coleta)}.`;}
+function chips(cur){
+  const outra=FR[cur]&&!FR[cur].piloto;
+  $('#chips').innerHTML=['cafe','amazonia'].map(k=>{const f=FR[k];return `<a class="chip ${f.cls}" href="#${k}" ${cur===k?'aria-current="page"':''}><i></i>${f.nome}</a>`}).join('')
+   +`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`;
+}
+function route(){
+  if(!D)return;
+  const r=(location.hash||'#inicio').slice(1);
+  document.body.classList.toggle('amz',!!(FR[r]&&FR[r].cls==='amz'));
+  document.body.style.setProperty('--acc-band',FR[r]?FR[r].band:'#541D35');
+  chips(r);
+  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
+}
+
+/* ---------- início ---------- */
+function vHome(){
+  const c=D.cad.cafe.geo['1'], a=D.cad.cacau.geo['15'];
+  app.innerHTML=`<div class="view">
+  <section class="hero">
+    <img class="hero-photo" src="hero2.jpg" srcset="hero2-sm.jpg 900w, hero2.jpg 1672w" sizes="(max-width:1040px) 100vw, 63vw" alt="Cinco mulheres do campo, de idades e origens diferentes, sorrindo lado a lado numa lavoura ao pôr do sol">
+    <svg class="hero-wave hw-d" viewBox="0 0 600 600" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H560C470 90 610 200 520 300C430 400 600 470 500 600H0Z"/></svg>
+    <svg class="hero-wave hw-m" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40C120 0 230 10 330 34C430 58 520 50 600 18V70H0Z"/></svg>
+    <div class="hero-in"><div><h1>Mulheres rurais, <em>cadeia por cadeia</em></h1>
+    <p>Quem dirige, quem trabalha e quem se organiza em cada cadeia produtiva do campo brasileiro, com mulheres e homens sempre lado a lado.</p></div></div>
+  </section>
+  <div class="in"><section class="pick" aria-labelledby="pk">
+    <h2 id="pk">Escolha uma cadeia</h2>
+    <p>Café e Amazônia são o piloto, com indicadores e organizações. As demais cadeias já têm os dados do IBGE.</p>
+    <div class="cads">
+      <a class="cad" href="#cafe"><div class="sw"></div><span class="st ok">piloto</span><b>Café</b><span>${nf.format(D.orgs.cafe.length)} organizações de mulheres mapeadas</span><div class="big">${pc(100*c.est[2]/c.est[0])}</div><span>dos estabelecimentos de café são dirigidos por mulheres</span></a>
+      <a class="cad amz" href="#amazonia"><div class="sw"></div><span class="st ok">piloto</span><b>Amazônia</b><span>sociobiodiversidade · ${D.orgs.amazonia.length} organizações</span><div class="big">${pc(100*a.est[2]/a.est[0])}</div><span>dos estabelecimentos de cacau do Pará são dirigidos por mulheres</span></a>
+    </div>
+  </section>
+  <section class="todas" id="todas" aria-labelledby="tt">
+    <div class="sec-h"><div><h2 id="tt">Todas as cadeias</h2><p>As classes de atividade do Censo Agro 2017, agrupadas por tipo de produção e ordenadas pelo número de estabelecimentos dirigidos por mulheres. Cada uma abre com os dados do IBGE; indicadores e organizações entram cadeia por cadeia.</p></div></div>
+    ${Object.entries(GR).map(([gk,[gn]])=>{
+      const L=Object.entries(FR).filter(([k,f])=>f.grupo===gk).map(([k,f])=>[k,f,D.cad[f.dados].geo['1']]).sort((a,b)=>b[2].est[2]-a[2].est[2]);
+      return `<div class="grp"><h3>${gn}</h3><div class="mini-cads">${L.map(([k,f,g])=>{const p=share(g.est[2],g.est[1]);return `<a class="mc ${f.cls}" href="#${k}"><b>${esc(k==='amazonia'?'Cacau (Amazônia)':f.nome)}</b><span class="num">${n0(g.est[2])} dirigidos por mulheres</span><div class="mb"><i style="width:${p}%"></i></div><span class="num">${pc(p)} na direção${f.piloto?' · piloto':''}</span></a>`}).join('')}
+      ${gk==='pec'?'<div class="mc off"><b>Leite</b><span>Aguardando uma tabela do Censo só de leite, com recorte por sexo.</span></div>':''}</div></div>`}).join('')}
+  </section>
+  <section class="rules" aria-label="Como ler os dados">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 19c.6-3.4 2.8-5 5.5-5s4.9 1.6 5.5 5M11 19c.6-3.4 2.8-5 5.5-5s4.9 1.6 5.5 5"/></svg>
+      <h3>Mulheres e homens lado a lado</h3><p>Todo número aparece com a comparação. A cor vinho é sempre das mulheres, o verde é sempre dos homens.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+      <h3>Dado da cadeia é dado da cadeia</h3><p>Quando o IBGE só publica o conjunto dos estabelecimentos, ele aparece em cinza, marcado como "todas as atividades", e nunca como número do café ou do cacau.</p></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <h3>Organizações pelos canais delas</h3><p>Cada organização aparece com site ou rede institucional. Contatos pessoais de lideranças não são publicados.</p></div>
+  </section></div></div>`;
+}
+
+/* ---------- componentes ---------- */
+const sm=(...a)=>a.some(x=>x==null)?null:a.reduce((s,x)=>s+x,0);
+const share=(m,h)=>m==null||h==null||m+h===0?null:100*m/(m+h);
+function split(lbl,m,h,ref){
+  const p=share(m,h); if(p==null)return `<div class="split ${ref?'ref':''}"><span>${esc(lbl)}</span><div class="t"><i>sem dado (sigilo)</i></div></div>`;
+  return `<div class="split ${ref?'ref':''}" title="${n0(m)} mulheres e ${n0(h)} homens"><span>${esc(lbl)}</span><div class="t"><i class="w" style="width:${Math.max(p,10)}%">${pc(p)}</i><i class="m">${pc(100-p)}</i></div></div>`;
+}
+function pair(lbl,m,h,max,unit){
+  const w=v=>v==null?0:Math.max(.5,100*v/max);
+  return `<div class="pair"><span>${esc(lbl)}</span>
+   <div class="r rw"><div class="t"><i style="width:${w(m)}%"></i></div><b>${n0(m)}${unit||''} · ${pc(share(m,h),0)}</b></div>
+   <div class="r rm"><div class="t"><i style="width:${w(h)}%"></i></div><b>${n0(h)}${unit||''}</b></div></div>`;
+}
+function terrOpts(G,cur){
+  const ufs=Object.entries(G).filter(([k,v])=>/^\d\d$/.test(k)&&(v.est?.[0]||0)>0).sort((a,b)=>b[1].est[0]-a[1].est[0]);
+  const regs=['N','NE','SE','S','CO'].filter(k=>G[k]&&G[k].est);
+  return `<option value="1">Brasil</option><optgroup label="Regiões">${regs.map(k=>`<option value="${k}">${esc(G[k].nome.replace('Região ',''))} (${n0(G[k].est[0])})</option>`).join('')}</optgroup><optgroup label="Estados (por nº de estabelecimentos)">${ufs.map(([k,v])=>`<option value="${k}">${esc(v.nome)} (${n0(v.est[0])})</option>`).join('')}</optgroup>`;
+}
+
+/* ---------- página da cadeia ---------- */
+function vCadeia(key){
+  const f=FR[key], C=D.cad[f.dados], T=D.cad.total;
+  let t=ST.terr[key]; if(!C.geo[t])t=f.terr;
+  const g=C.geo[t], r=T.geo[t], cn=f.cn, hasW=!!(g.fam&&g.perm);
+  const pm=share(g.est[2],g.est[1]), pr=share(r.est[2],r.est[1]);
+  const amH=g.area[1]&&g.est[1]?g.area[1]/g.est[1]:null, amM=g.area[2]&&g.est[2]?g.area[2]/g.est[2]:null;
+  const famP=hasW?share(g.fam[1],g.fam[0]):null;
+  const contr=hasW?sm(g.perm[1],g.temp[1],g.parc[1]):null;
+  const few=(g.est[0]||0)<50;
+  const work=[['Familiares, 14 anos ou mais','fam'],['Permanentes','perm'],['Temporárias e temporários','temp'],['Parceiras e parceiros','parc']];
+  const wmax=hasW?Math.max(1,...work.flatMap(([,k])=>g[k].map(x=>x||0))):1;
+  const ob=ST.orgB[key]||f.orgs, orgs=(D.orgs[ob]||[]);
+
+  app.innerHTML=`<div class="view">
+  <section class="band"><svg class="deco" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z" fill="#fff"/></svg>
+    <div class="in"><div class="crumb"><a href="#inicio">Mulheres Rurais</a> · ${f.nome} · ${f.sub}</div>
+    <h1>${f.titulo}</h1><p>${f.lead}</p></div>
+    <svg class="wv" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C200 0 380 6 600 26C820 46 1000 40 1200 12V46H0Z"/></svg>
+  </section>
+  <div class="bar-tools"><div class="in">
+    <label for="terr">Território</label><select id="terr" class="sel">${terrOpts(C.geo,t)}</select>
+    <div class="legend"><span><i style="background:var(--w)"></i>Mulheres</span><span><i style="background:var(--m)"></i>Homens</span><span><i style="background:var(--ref)"></i>Todas as atividades (referência)</span></div>
+  </div></div>
+  <main class="in cp">
+    <section class="kpis" aria-label="Números principais">
+      <div class="kpi"><div class="v">${kfmt(g.est[0])}</div><p>estabelecimentos com ${cn} como atividade principal em ${esc(g.nome)}</p></div>
+      <div class="kpi"><div class="v">${pc(pm)}</div><p>são dirigidos por mulheres: ${n0(g.est[2])}, ao lado de ${n0(g.est[1])} dirigidos por homens</p></div>
+      <div class="kpi"><div class="v">${pc(famP,0)}</div><p>${hasW?`da mão de obra familiar de 14 anos ou mais é feminina: ${n0(g.fam[1])} mulheres`:'mão de obra familiar: dado em preparo'}</p></div>
+      <div class="kpi"><div class="v">${amM&&amH?pc(100*amM/amH,0):'–'}</div><p>${amM&&amH?'é a área média dos estabelecimentos dirigidos por mulheres em relação à dos dirigidos por homens':'área média por sexo: valor sob sigilo do IBGE em parte do território'}</p></div>
+    </section>
+    ${few?`<p class="note" style="margin-top:-30px">${esc(g.nome)} tem poucos estabelecimentos com ${cn} como atividade principal. Os percentuais oscilam muito com números pequenos.</p>`:''}
+    ${g.inc?`<p class="note" style="margin-top:-30px">A região é a soma dos estados. Alguns estados têm valores sob sigilo do IBGE (X); onde falta um estado, aquele total da região fica sem número em vez de aparecer incompleto.</p>`:''}
+
+    <section aria-labelledby="s1">
+      <div class="sec-h"><div><span class="eyebrow">Na direção</span><h2 id="s1">Quem dirige os estabelecimentos</h2><p>Proporção de mulheres e homens registrados como produtores. Embaixo, em cinza, o mesmo número para todas as atividades no mesmo território, só como referência.</p></div></div>
+      <div class="g2">
+        <div class="panel"><h3>Estabelecimentos</h3><p class="sub">Tabela 6883, atividade principal</p>
+          ${split(cn[0].toUpperCase()+cn.slice(1),g.est[2],g.est[1])}
+          ${split('Todas as atividades',r.est[2],r.est[1],1)}
+          <h3 style="margin-top:20px">Área dos estabelecimentos</h3><p class="sub">Hectares, área total do estabelecimento</p>
+          ${split(cn[0].toUpperCase()+cn.slice(1),g.area[2],g.area[1])}
+          ${split('Todas as atividades',r.area[2],r.area[1],1)}
+          <p class="note">Estabelecimentos sem produtor individual (governo, instituições) ficam fora da comparação: ${n0(g.est[3])} em ${esc(g.nome)}.</p></div>
+        <div class="panel"><h3>Por estado</h3><p class="sub">Participação das mulheres na direção dos estabelecimentos com ${cn} como atividade principal. Clique para trocar o território.</p>
+          <div class="map-l" style="grid-template-columns:minmax(0,1fr)"><div class="mapbox" id="map"></div></div>
+          <div class="scale" id="scale"></div>
+          <p class="note">Estados com menos de 50 estabelecimentos aparecem sem cor.</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="s2">
+      <div class="sec-h"><div><span class="eyebrow">No trabalho</span><h2 id="s2">Quem trabalha</h2><p>Pessoal ocupado nos estabelecimentos com ${cn} como atividade principal, por tipo de vínculo (tabela 6887). A mão de obra familiar inclui o próprio produtor ou produtora.</p></div></div>
+      ${hasW?`<div class="g2">
+        <div class="panel"><h3>Pessoas ocupadas, por vínculo</h3><p class="sub">${esc(g.nome)} · 14 anos ou mais</p>
+          ${work.map(([l,k])=>pair(l,g[k][1],g[k][0],wmax)).join('')}
+          <p class="note">${n0(g.fam14[1])} meninas e ${n0(g.fam14[0])} meninos com menos de 14 anos aparecem como mão de obra familiar.</p></div>
+        <div class="panel"><h3>Mulheres no trabalho familiar e contratado</h3><p class="sub">Participação feminina em cada grupo, comparada a todas as atividades</p>
+          ${split('Familiar · '+cn,g.fam[1],g.fam[0])}
+          ${split('Familiar · todas',r.fam[1],r.fam[0],1)}
+          ${split('Contratado · '+cn,contr,sm(g.perm[0],g.temp[0],g.parc[0]))}
+          ${split('Contratado · todas',sm(r.perm[1],r.temp[1],r.parc[1]),sm(r.perm[0],r.temp[0],r.parc[0]),1)}
+          <p class="note">Há ${n0(g.fam[1])} mulheres no trabalho familiar e ${contr==null?'um número sob sigilo de':n0(contr)} contratadas ou parceiras. É no trabalho da família que elas estão, e é ali que o registro de produtor costuma ficar com o homem.</p></div>
+      </div>`:'<div class="panel"><p class="note" style="margin:0">Os dados de pessoal ocupado desta cadeia entram com a próxima coleta.</p></div>'}
+    </section>
+
+    ${C.mun.length?(()=>{const L=munDe(C.mun,t),top=L.slice(0,12);return `<section aria-labelledby="s3">
+      <div class="sec-h"><div><span class="eyebrow">Nos municípios</span><h2 id="s3">Onde há mais mulheres na direção</h2><p>${top.length?`Os ${top.length===12?'doze ':''}municípios ${t==='1'?'do Brasil':'de '+esc(g.nome)} com mais estabelecimentos de ${cn} dirigidos por mulheres, entre os que têm pelo menos 30 estabelecimentos com ${cn} como atividade principal.`:`Nenhum município ${t==='1'?'do Brasil':'de '+esc(g.nome)} tem 30 estabelecimentos ou mais com ${cn} como atividade principal e os números por sexo publicados.`}</p></div></div>
+      ${top.length?`<div class="panel scroll"><table class="mtab"><thead><tr><th>Município</th><th class="n" style="text-align:right">Estab.</th><th class="n" style="text-align:right">Mulheres</th><th class="n" style="text-align:right">Homens</th><th style="width:34%">Mulheres | Homens</th></tr></thead><tbody>
+        ${top.map(([cod,nm,tt,m,h])=>{const p=share(m,h);return `<tr><td>${esc(nm)}</td><td class="n">${n0(tt)}</td><td class="n"><b>${n0(m)}</b></td><td class="n">${n0(h)}</td><td><div class="mini" title="${pc(p)} mulheres"><i class="w" style="width:${p}%"></i><i class="m" style="flex:1"></i></div></td></tr>`}).join('')}
+      </tbody></table>
+      <p class="note">Tabela 6883. Municípios com valores sob sigilo do IBGE ficam fora da lista.${key==='amazonia'&&t==='1'?' No Brasil, o cacau se concentra no sul da Bahia e no Pará, por isso a lista nacional tem municípios baianos.':''}</p></div>`:''}
+    </section>`})():''}
+
+    <section aria-labelledby="s4">
+      <div class="sec-h"><div><span class="eyebrow">Indicadores</span><h2 id="s4">O que as estatísticas não mostram</h2><p>Os quatro indicadores de trabalho invisível do Atlas das Mulheres do Café, recalculados para cada cadeia a cada coleta. ${D.ind&&D.ind[f.dados]?'Números do Brasil.':'Para esta cadeia eles ainda vão ser calculados; os cartões mostram onde vão ficar.'}</p></div></div>
+      ${indicadores(key,f)}
+    </section>
+
+    ${f.orgs?`<section aria-labelledby="s5">
+      <div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p>${orgs.length} organizações mapeadas${ob==='amazonia'?' na Amazônia, de várias cadeias da sociobiodiversidade':ob==='cacau'?' no cacau, em todas as regiões produtoras':' no café'}. Cada uma aparece com seu canal institucional. Nenhuma ainda foi validada com a própria organização.</p></div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">${f.orgsAlt?`<div><label class="eyebrow" for="obase" style="display:block;margin-bottom:4px">Base</label><select id="obase" class="sel">${f.orgsAlt.map(([k,l])=>`<option value="${k}" ${k===ob?'selected':''}>${esc(l)} (${(D.orgs[k]||[]).length})</option>`).join('')}</select></div>`:''}
+        <div><label class="eyebrow" for="ouf" style="display:block;margin-bottom:4px">Estado</label><select id="ouf" class="sel"><option value="">Todos</option>${[...new Set(orgs.map(o=>o.uf).filter(Boolean))].sort().map(u=>`<option>${esc(u)}</option>`).join('')}</select></div></div></div>
+      <div class="orgs" id="orgs"></div>
+      <button class="more" id="more" type="button">Ver mais</button>
+    </section>`:`<section aria-labelledby="s5"><div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p><span class="st prep">em preparo</span> A base de organizações desta cadeia ainda não foi levantada. Ela entra pelo formulário, com fila de validação antes da publicação.</p></div></div></section>`}
+
+    <section class="fine" aria-labelledby="s6">
+      <h2 id="s6">Como ler estes números</h2>
+      <ul>
+        <li>As tabelas 6883 e 6887 classificam o estabelecimento só pela atividade principal. Quem produz ${cn} como atividade secundária não aparece aqui, então o tamanho da cadeia está subestimado.${key==='cafe'?' Em Rondônia, onde o conilon divide espaço com outras atividades, o estado quase some.':''}</li>
+        <li>O Censo registra um único produtor por estabelecimento. Quando o casal dirige junto, quase sempre o homem é o registrado.</li>
+        <li>Valores com poucos informantes ficam sob sigilo do IBGE e aparecem como X. Por isso a soma dos municípios não fecha com o estado.</li>
+        <li>As barras em cinza são de todas as atividades no mesmo território. Servem para comparar e nunca são número da cadeia.</li>
+      </ul>
+    </section>
+  </main></div>`;
+
+  $('#terr').value=t;
+  $('#terr').onchange=e=>{ST.terr[key]=e.target.value;save();vCadeia(key)};
+  drawMap(key,C,t);
+  const ouf=$('#ouf'); if(!ouf)return; ouf.value=ST.orgUF[key]||'';
+  if(!orgs.some(o=>o.uf===ST.orgUF[key]))ST.orgUF[key]='';
+  ouf.value=ST.orgUF[key]||'';
+  ouf.onchange=()=>{ST.orgUF[key]=ouf.value;ST.orgN[key]=9;drawOrgs(key)};
+  const obs=$('#obase'); if(obs)obs.onchange=()=>{ST.orgB[key]=obs.value;ST.orgUF[key]='';ST.orgN[key]=9;vCadeia(key)};
+  $('#more').onclick=()=>{ST.orgN[key]=(ST.orgN[key]||9)+9;drawOrgs(key)};
+  drawOrgs(key);
+}
+
+function munDe(L,t){
+  if(t==='1')return L;
+  const R={N:'1',NE:'2',SE:'3',S:'4',CO:'5'};
+  return L.filter(([cod])=>R[t]?String(cod)[0]===R[t]:String(cod).slice(0,2)===t);
+}
+const reais=v=>v==null||!isFinite(v)?null:v>=1e9?'R$ '+(v/1e9).toLocaleString('pt-BR',{maximumFractionDigits:v<1e10?2:1})+' bi':v>=1e6?'R$ '+Math.round(v/1e6)+' mi':'R$ '+nf.format(Math.round(v));
+function indicadores(key,f){
+  const cn=f.cn, I=D.ind&&D.ind[f.dados];
+  const base=[['Trabalho familiar não reconhecido','mulheres da família trabalham no estabelecimento sem serem registradas como produtoras'],
+    ['Direção invisível','das mulheres que dirigem junto com o cônjuge ficam fora das estatísticas por sexo'],
+    ['Dupla jornada','valor anual das horas de afazeres domésticos e cuidados das mulheres da família'],
+    ['Valor da produção ligado às mulheres','parte do valor da produção que corresponde à participação das mulheres']];
+  const espera=(h,p)=>`<div class="ind wait"><span class="st prep">em preparo</span><h3>${h}</h3><div class="v">—</div><p>${p}</p></div>`;
+  if(!I)return `<div class="inds">${base.map(([h,p])=>espera(h,p)).join('')}</div>`;
+  const tf=I['trabalho_familiar.onde_ha']||{}, tp=I['trabalho_familiar.principal']||{}, di=I['direcao_invisivel.grupo_nos_municipios']||{},
+    dj=I['dupla_jornada.onde_ha']||{}, hr=I['dupla_jornada.horas']||{}, vp=I['valor_producao.principal']||{};
+  const card=(i,v,p,tag)=>v==null?espera(...base[i]):`<div class="ind"><span class="st ok">${tag||'calculado'}</span><h3>${base[i][0]}</h3><div class="v">${v}</div><p>${p}</p></div>`;
+  const ano=x=>x==null?'':Math.round(x);
+  const cards=[
+    card(0,tf.mulheres_nao_dirigentes==null?null:kfmt(tf.mulheres_nao_dirigentes),`mulheres da família trabalham onde há ${cn} e não aparecem como produtoras. Onde o ${cn} é a atividade principal, o dado direto do Censo é de ${n0(tp.mulheres_nao_dirigentes)}.`,'estimativa'),
+    card(1,di.pct_invisivel==null?null:pc(di.pct_invisivel),`das mulheres que dirigem estabelecimentos de lavoura permanente nos municípios do ${cn} ficam fora das estatísticas por sexo: o casal dirige junto e só o homem é registrado. Isso acontece em ${pc(di.pct_casal_homem_registrado,0)} dos casais.`),
+    card(2,reais(dj.valor),`por ano, a salário mínimo, em afazeres domésticos e cuidados das mulheres da família onde há ${cn}.${hr.horas_m?` São ${String(hr.horas_m).replace('.',',')} horas por semana, contra ${String(hr.horas_h).replace('.',',')} dos homens.`:''}`,'estimativa'),
+    card(3,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção de ${cn} em ${ano(vp.ano_pam)} corresponde à participação das mulheres na área dos estabelecimentos. Pela participação no trabalho, seriam ${reais(vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação')];
+  return `<div class="inds">${cards.join('')}</div>
+    <p class="note">Censo Agro 2017, PNAD Contínua ${ano(hr.ano_pnad)||''} (tabela 7015) e PAM ${ano(vp.ano_pam)}, com o salário mínimo de 2026. "Onde há ${cn}" inclui quem tem o produto como atividade secundária e é estimado município a município.${key==='cafe'?' As dirigentes estimadas seguem o método do painel Café em Números, da Embrapa Café e Embrapa Territorial.':''}${key==='amazonia'?' Os indicadores são do cacau no Brasil todo, não só da Amazônia; o sul da Bahia pesa bastante nesses números.':''} Método completo em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/docs/indicadores.md">docs/indicadores.md</a>.</p>`;
+}
+function drawOrgs(key){
+  const f=FR[key], all=(D.orgs[ST.orgB[key]||f.orgs]||[]).filter(o=>!ST.orgUF[key]||o.uf===ST.orgUF[key]);
+  const n=ST.orgN[key]||9, L=all.slice(0,n);
+  const host=u=>{try{return new URL(u.split(/[;\s]/)[0]).hostname.replace(/^www\./,'')}catch(e){return ''}};
+  $('#orgs').innerHTML=L.map(o=>{const u=(o.site||'').split(/[;\s]/)[0];return `<div class="org"><small>${esc(o.tipo||'Organização')}${/^\d{4}$/.test(o.ano)?' · desde '+esc(o.ano):''}</small><b>${esc(o.nome)}${o.sigla&&o.sigla!==o.nome?' ('+esc(o.sigla)+')':''}</b>
+    <small>${esc([o.mun,o.uf].filter(Boolean).join(', ')||'Atuação nacional')}</small>
+    ${o.cad?`<div class="tg">${esc(o.cad)}</div>`:''}
+    ${/^https?:/.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))} ↗</a>`:'<small style="margin-top:auto;padding-top:6px">Canal institucional não localizado</small>'}</div>`}).join('');
+  $('#more').hidden=all.length<=n;
+}
+
+function drawMap(key,C,t){
+  const box=$('#map'); if(!box||!window.d3||!window.topojson){if(box)box.innerHTML='<p class="note">Mapa indisponível.</p>';return}
+  const fc=topojson.feature(TOPO,TOPO.objects.br_uf);
+  const W=560,H=520, proj=d3.geoMercator().fitSize([W,H],fc), path=d3.geoPath(proj);
+  const br=[10,15,20,25,30], cs=getComputedStyle(document.documentElement);
+  const cols=['#F6E3EA','#E9BFCF','#D592AD','#B8638A','#962F5E','#5E1636'];
+  const colsD=['#3A2230','#5A2F45','#7E3F5E','#A8577D','#D27BA0','#F1A9C6'];
+  const dark=matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement.dataset.theme!=='light'||document.documentElement.dataset.theme==='dark';
+  const P=dark?colsD:cols;
+  const val=u=>{const g=C.geo[String(u)];if(!g||!g.est||(g.est[0]||0)<50)return null;return share(g.est[2],g.est[1])};
+  const col=v=>{if(v==null)return 'var(--nodata)';let i=0;while(i<br.length&&v>=br[i])i++;return P[i]};
+  box.innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Mapa do Brasil por estado, participação das mulheres na direção">${fc.features.map(ft=>{const u=ft.properties.uf,v=val(u);return `<path class="uf ${String(u)===t?'on':''}" data-u="${u}" d="${path(ft)}" fill="${col(v)}"><title>${UF[u]}: ${v==null?'menos de 50 estabelecimentos':pc(v)+' dirigidos por mulheres'}</title></path>`}).join('')}</svg>`;
+  box.querySelectorAll('path.uf').forEach(p=>p.onclick=()=>{const u=p.dataset.u;if(!C.geo[u]||!(C.geo[u].est[0]>0))return;ST.terr[key]=u;save();vCadeia(key)});
+  $('#scale').innerHTML=['< 10%','10–15','15–20','20–25','25–30','30% +'].map((l,i)=>`<div><i style="background:${P[i]}"></i>${l}</div>`).join('');
+}
+})();
+</script>
+
+</body></html>

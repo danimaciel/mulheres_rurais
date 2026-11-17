@@ -1,0 +1,61 @@
+name: Publicar site
+
+# Monta a página a partir dos dados do repositório e publica no GitHub Pages.
+# Roda a cada mudança na main e também no fim das coletas, porque o commit
+# feito pelo próprio workflow de coleta não dispara um push novo.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - "dados/**"
+      - "config/**"
+      - "scripts/montar_site.py"
+      - ".github/workflows/publicar_site.yml"
+  workflow_run:
+    workflows:
+      - Atualizar dados
+      - Levantar classes de atividade
+      - Buscar CNPJ das organizações
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  montar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Montar a página com os dados atuais
+        run: python scripts/montar_site.py _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  publicar:
+    needs: montar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

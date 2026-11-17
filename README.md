@@ -4,12 +4,14 @@ Plataforma de dados sobre mulheres rurais no Brasil, organizada por cadeia produ
 
 O piloto começa com duas frentes: café, que já tem o trabalho acumulado do Atlas das Mulheres do Café, e Amazônia, pela sociobiodiversidade, com cacau como primeira cadeia de recorte. Leite, horticultura e fruticultura entram depois, num primeiro momento só com dados do IBGE. As organizações são incorporadas cadeia por cadeia, à medida que cada base é levantada e validada.
 
-Este repositório ainda não tem a interface. Por enquanto ele guarda a coleta dos dados e a configuração que define o que é coletado.
+A página da plataforma fica em https://danimaciel.github.io/mulheres_rurais/ e é montada a partir dos dados deste repositório, então se atualiza sozinha a cada coleta. Partes ainda sem dado aparecem como "em preparo".
 
 ## Como está organizado
 
 ```
 config/        o que coletar: cadeias e tabelas do SIDRA
+site/          a página da plataforma (HTML, mapa e fotos)
+scripts/       montagem dos dados da página e busca de CNPJ
 R/             scripts de coleta e de indicadores
 dados/sidra/   tabelas do Censo Agro 2017, uma por arquivo (.csv.gz)
 dados/indicadores/ indicadores de trabalho invisível por cadeia
@@ -49,6 +51,21 @@ Rscript R/importar_organizacoes.R
 Rscript R/coletar_insumos_indicadores.R
 Rscript R/indicadores_trabalho_invisivel.R
 ```
+
+## Página
+
+A página é um arquivo HTML estático em `site/`, que lê um único `dados.json`. Esse JSON não fica no repositório: o script `scripts/montar_site.py` o monta a partir das tabelas do SIDRA, dos indicadores e das bases de organizações, e o workflow `publicar_site.yml` publica o resultado no GitHub Pages. O workflow roda quando algo muda na main e também no fim de cada coleta, de modo que dado novo chega ao site sem ninguém precisar mexer na página.
+
+As cadeias que aparecem na página, com os códigos da classe de atividade e o grupo em que cada uma fica, estão em `config/site_cadeias.csv`. Frutas soma as três classes de frutas do Censo (laranja, uva e as demais de lavoura permanente).
+
+Para ver a página no computador, a partir da raiz do repositório:
+
+```
+python scripts/montar_site.py _site
+python -m http.server -d _site
+```
+
+e abra http://localhost:8000. A base de organizações do café (`dados/organizacoes/cafe.csv`) é a do Atlas das Mulheres do Café; a página mostra só as organizações do Brasil.
 
 ## Indicadores de trabalho invisível
 
