@@ -44,6 +44,9 @@ jobs:
       - name: Montar a página com os dados atuais
         run: python scripts/montar_site.py _site
 
+      - name: Conferir os números da página contra as tabelas do SIDRA
+        run: python scripts/conferir_site.py _site/dados.json
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
