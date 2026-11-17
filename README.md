@@ -93,7 +93,7 @@ Na contagem de pessoal ocupado, a categoria "com laço de parentesco com o produ
 
 ## Próximos passos
 
-Está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. A base do cacau ainda precisa de uma segunda rodada na Bahia e da conferência dos CNPJs. As organizações das próximas cadeias vão entrar por um formulário com fila de validação antes da publicação.
+Está prevista a aplicação, para cacau e para as próximas cadeias, dos indicadores já calculados para o café: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção feminina. Na base do cacau, falta encontrar fonte para as organizações que só apareceram na busca de CNPJ e localizar o CNPJ das seis que ficaram sem cadastro. As organizações das próximas cadeias vão entrar por um formulário com fila de validação antes da publicação.
 
 ## Fontes
 
