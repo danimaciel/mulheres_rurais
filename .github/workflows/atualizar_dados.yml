@@ -3,10 +3,16 @@ name: Atualizar dados
 # Roda todo dia 5, de madrugada no horário de Brasília, e também pode ser
 # disparado à mão pela aba Actions. Se uma fonte falhar, o script mantém o
 # arquivo anterior e o aviso aparece no resumo da execução.
+# No disparo manual dá para pedir só algumas tabelas do Censo Agro; nesse
+# caso as outras etapas são puladas.
 on:
   schedule:
     - cron: "0 6 5 * *"
   workflow_dispatch:
+    inputs:
+      tabelas_censo:
+        description: Opcional. Só estas tabelas do Censo Agro, separadas por espaço (ex. 8943)
+        required: false
 
 permissions:
   contents: write
@@ -39,18 +45,24 @@ jobs:
           curl -4 -sS -o /dev/null --connect-timeout 30 -w "%{http_code} %{time_total}s $url\n" "$url" || true
 
       - name: Censo Agropecuário 2017 (SIDRA)
-        run: Rscript R/coletar_censo_agro.R
+        env:
+          TABELAS: ${{ inputs.tabelas_censo }}
+        run: Rscript R/coletar_censo_agro.R $TABELAS
 
       - name: PAM, PEVS, PPM e PNAD Contínua (SIDRA)
+        if: ${{ !inputs.tabelas_censo }}
         run: Rscript R/coletar_series.R
 
       - name: Organizações da Amazônia
+        if: ${{ !inputs.tabelas_censo }}
         run: Rscript R/importar_organizacoes.R
 
       - name: Insumos dos indicadores (6768 e 6955)
+        if: ${{ !inputs.tabelas_censo }}
         run: Rscript R/coletar_insumos_indicadores.R
 
       - name: Indicadores de trabalho invisível
+        if: ${{ !inputs.tabelas_censo }}
         run: Rscript R/indicadores_trabalho_invisivel.R
 
       - name: Resumo
@@ -71,4 +83,5 @@ jobs:
             exit 0
           fi
           git commit -m "Atualiza dados ($(date +%Y-%m))"
+          git pull --rebase
           git push
