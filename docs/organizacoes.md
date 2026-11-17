@@ -1,6 +1,6 @@
 # Organizações de mulheres por cadeia
 
-A plataforma mostra, em cada cadeia, as organizações de mulheres que atuam nela. Entram dois tipos: organizações formadas por mulheres (associações, cooperativas, grupos produtivos, coletivos e redes) e organizações mistas que têm um grupo, núcleo ou coletivo de mulheres reconhecido dentro delas. Cooperativas e associações mistas sem estrutura própria das mulheres ficam de fora, mesmo quando têm mulheres na diretoria. O quadro geral de quem é associado a cooperativas e entidades de classe vem do Censo Agro, não desta base.
+A plataforma mostra, em cada cadeia, as organizações de mulheres que atuam nela. Entram dois tipos: organizações formadas por mulheres (associações, cooperativas, grupos produtivos, coletivos e redes) e organizações mistas que têm um grupo, núcleo ou coletivo de mulheres reconhecido dentro delas. Cooperativas e associações mistas sem estrutura própria das mulheres ficam de fora, mesmo quando têm mulheres na diretoria. O quadro geral de quem é associado a cooperativas e entidades de classe vem do Censo Agro (tabela 8943, por sexo de quem dirige o estabelecimento), não desta base.
 
 Marcas de chocolate ou empresas de uma pessoa ou de uma família também não entram. Um grupo de empresárias só entra se for uma associação formal ligada à produção rural.
 

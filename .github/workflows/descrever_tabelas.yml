@@ -13,6 +13,9 @@ on:
       faixa:
         description: Opcional. Faixa de códigos de classificação para sondar na primeira tabela (ex. 12500 12700)
         required: false
+      procura:
+        description: Opcional. Faixa de tabelas e classificações que devem aparecer juntas (ex. 6700 6960 c12598/all c12440/110016)
+        required: false
 
 permissions:
   contents: write
@@ -41,7 +44,7 @@ jobs:
       - name: Descrever tabelas
         env:
           TABELAS: ${{ inputs.tabelas }}
-        run: Rscript R/descrever_tabelas.R $TABELAS
+        run: Rscript R/descrever_tabelas.R $TABELAS || true
 
       - name: Sondar classificações
         if: ${{ inputs.faixa != '' }}
@@ -49,6 +52,12 @@ jobs:
           TABELAS: ${{ inputs.tabelas }}
           FAIXA: ${{ inputs.faixa }}
         run: Rscript R/sondar_classificacoes.R ${TABELAS%% *} $FAIXA
+
+      - name: Procurar tabelas com um cruzamento
+        if: ${{ inputs.procura != '' }}
+        env:
+          PROCURA: ${{ inputs.procura }}
+        run: Rscript R/procurar_tabelas.R $PROCURA
 
       - name: Gravar alterações
         run: |

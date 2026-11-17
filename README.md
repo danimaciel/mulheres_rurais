@@ -60,7 +60,9 @@ Algumas coisas do Censo Agro 2017 precisam estar claras para quem for usar ou ap
 
 As tabelas 6883 e 6887 classificam o estabelecimento só pela atividade principal. Um estabelecimento que produz café como atividade secundária não aparece como café, então essas tabelas subestimam o tamanho real da cadeia.
 
-Das tabelas coletadas hoje, só a 6883 e a 6887 têm recorte por classe de atividade. As demais (6768, 6779, 6851, 6869, 6776, 6955 e 6957) a API só entrega para o conjunto dos estabelecimentos.
+Das tabelas coletadas hoje, só a 6883 e a 6887 têm recorte por classe de atividade. As demais (6768, 6779, 6851, 6869, 6776, 6955, 6957 e 8943) a API só entrega para o conjunto dos estabelecimentos.
+
+A 8943 é a que mostra quantos estabelecimentos dirigidos por mulheres e por homens têm o produtor associado a cooperativa, sindicato ou entidade de classe, associação ou movimento de produtores e associação de moradores. É o panorama geral do associativismo, e vale para todas as atividades juntas: nenhuma tabela do Censo 2017 cruza a associação com a cadeia produtiva.
 
 O total de todas as atividades é referência, nunca dado de uma cadeia. Quando uma tabela não tem recorte por atividade, as linhas recebem a marca "Todas as atividades (tabela sem recorte por atividade)" e não podem ser apresentadas como dado de café, cacau ou qualquer outra cadeia.
 
