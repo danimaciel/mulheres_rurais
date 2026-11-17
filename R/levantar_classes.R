@@ -1,5 +1,5 @@
 # Levanta as tabelas 6883 e 6887 do Censo Agro 2017 para todas as classes de
-# atividade (classificação 12440), no Brasil e nas UFs. A 6883 traz
+# atividade (classificação 12440), no Brasil, nas Grandes Regiões e nas UFs. A 6883 traz
 # estabelecimentos e área por sexo de quem dirige; a 6887, o pessoal ocupado
 # por tipo de vínculo e sexo. Serve para comparar as cadeias candidatas e
 # alimentar as páginas das cadeias que ainda não têm coleta municipal.
@@ -20,7 +20,7 @@ for (tabela in names(tabelas)) {
   arquivo <- sprintf("dados/sidra/censo_agro_%s_classes.csv.gz", tabela)
   message(sprintf("Tabela %s", tabela))
   coleta <- tryCatch({
-    partes <- lapply(c("n1", "n3"), function(nivel) {
+    partes <- lapply(c("n1", "n2", "n3"), function(nivel) {
       message(sprintf("  nível %s", nivel))
       consultar_nivel(tabela, nivel, tabelas[[tabela]], codigos_recorte = "all")
     })

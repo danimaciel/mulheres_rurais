@@ -109,7 +109,9 @@ def ler_censo():
                 continue
             if r.get("tipologia_codigo", "46302") != "46302":
                 continue
-            v[(r["cod_atividade"], r["cod_territorio"], r["variavel_codigo"], r[col])] = num(r["valor"])
+            # Grandes Regiões (n2) usam códigos 1 a 5, que colidem com o Brasil
+            terr = REGIOES[r["cod_territorio"]][0] if nivel == "2" else r["cod_territorio"]
+            v[(r["cod_atividade"], terr, r["variavel_codigo"], r[col])] = num(r["valor"])
     return v, mun
 
 
@@ -136,18 +138,21 @@ def geo_cadeia(v, codigos):
             continue
         b["nome"] = nome
         geo[cod] = b
-    # regiões: soma dos estados; fica nula onde algum estado está em sigilo
+    # regiões: o dado publicado pelo IBGE para a Grande Região (n2); onde ele
+    # não existe, a soma dos estados, que fica nula se algum estado está em sigilo
     for dig, (sig, nome) in REGIOES.items():
         membros = [geo[c] for c in UFS if c.startswith(dig) and c in geo]
         if not membros:
             continue
+        direto = bloco(sig)
         r = {"nome": nome, "inc": False}
         for k in ["est", "area"] + list(PESSOAL):
             n = len(membros[0][k])
-            r[k] = [soma([m[k][i] for m in membros]) for i in range(n)]
+            r[k] = [direto[k][i] if direto[k][i] is not None
+                    else soma([m[k][i] for m in membros]) for i in range(n)]
             if any(x is None for x in r[k]):
                 r["inc"] = True
-        r["pess"] = soma([m["pess"] for m in membros])
+        r["pess"] = direto["pess"] if direto["pess"] is not None else soma([m["pess"] for m in membros])
         if not r["inc"]:
             del r["inc"]
         geo[sig] = r

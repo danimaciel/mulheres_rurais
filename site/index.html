@@ -351,7 +351,7 @@ function vHome(){
 const sm=(...a)=>a.some(x=>x==null)?null:a.reduce((s,x)=>s+x,0);
 const share=(m,h)=>m==null||h==null||m+h===0?null:100*m/(m+h);
 function split(lbl,m,h,ref){
-  const p=share(m,h); if(p==null)return `<div class="split ${ref?'ref':''}"><span>${esc(lbl)}</span><div class="t"><i>sem dado (sigilo)</i></div></div>`;
+  const p=share(m,h); if(p==null)return `<div class="split ${ref?'ref':''}"><span>${esc(lbl)}</span><div class="t"><i>X: sob sigilo do IBGE</i></div></div>`;
   return `<div class="split ${ref?'ref':''}" title="${n0(m)} mulheres e ${n0(h)} homens"><span>${esc(lbl)}</span><div class="t"><i class="w" style="width:${Math.max(p,10)}%">${pc(p)}</i><i class="m">${pc(100-p)}</i></div></div>`;
 }
 function pair(lbl,m,h,max,unit){
@@ -393,12 +393,12 @@ function vCadeia(key){
   <main class="in cp">
     <section class="kpis" aria-label="Números principais">
       <div class="kpi"><div class="v">${kfmt(g.est[0])}</div><p>estabelecimentos com ${cn} como atividade principal em ${esc(g.nome)}</p></div>
-      <div class="kpi"><div class="v">${pc(pm)}</div><p>são dirigidos por mulheres: ${n0(g.est[2])}, ao lado de ${n0(g.est[1])} dirigidos por homens</p></div>
-      <div class="kpi"><div class="v">${pc(famP,0)}</div><p>${hasW?`da mão de obra familiar de 14 anos ou mais é feminina: ${n0(g.fam[1])} mulheres`:'mão de obra familiar: dado em preparo'}</p></div>
-      <div class="kpi"><div class="v">${amM&&amH?pc(100*amM/amH,0):'–'}</div><p>${amM&&amH?'é a área média dos estabelecimentos dirigidos por mulheres em relação à dos dirigidos por homens':'área média por sexo: valor sob sigilo do IBGE em parte do território'}</p></div>
+      <div class="kpi"><div class="v">${pm==null?'X':pc(pm)}</div><p>são dirigidos por mulheres: ${n0(g.est[2])}, ao lado de ${n0(g.est[1])} dirigidos por homens</p></div>
+      <div class="kpi"><div class="v">${famP==null?'X':pc(famP,0)}</div><p>${!hasW?'mão de obra familiar: dado em preparo':famP==null?`mão de obra familiar por sexo: sob sigilo do IBGE em ${esc(g.nome)}`:`da mão de obra familiar de 14 anos ou mais é feminina: ${n0(g.fam[1])} mulheres`}</p></div>
+      <div class="kpi"><div class="v">${amM&&amH?pc(100*amM/amH,0):'X'}</div><p>${amM&&amH?'é a área média dos estabelecimentos dirigidos por mulheres em relação à dos dirigidos por homens':`área média por sexo: sob sigilo do IBGE em ${esc(g.nome)}`}</p></div>
     </section>
     ${few?`<p class="note" style="margin-top:-30px">${esc(g.nome)} tem poucos estabelecimentos com ${cn} como atividade principal. Os percentuais oscilam muito com números pequenos.</p>`:''}
-    ${g.inc?`<p class="note" style="margin-top:-30px">A região é a soma dos estados. Alguns estados têm valores sob sigilo do IBGE (X); onde falta um estado, aquele total da região fica sem número em vez de aparecer incompleto.</p>`:''}
+    ${g.inc?`<p class="note" style="margin-top:-30px">Parte dos números desta região está sob sigilo do IBGE e aparece como X.</p>`:''}
 
     <section aria-labelledby="s1">
       <div class="sec-h"><div><span class="eyebrow">Na direção</span><h2 id="s1">Quem dirige os estabelecimentos</h2><p>Proporção de mulheres e homens registrados como produtores. Embaixo, em cinza, o mesmo número para todas as atividades no mesmo território, só como referência.</p></div></div>
