@@ -283,7 +283,7 @@ function montarFR(){
       lead:k==='bovinos'?'A classe do Censo junta leite e corte. O leite com recorte por sexo espera uma tabela própria do Censo; até lá, este é o retrato mais próximo da pecuária bovina.'
         :k==='frutas'?'Soma das três classes de frutas do Censo: laranja, uva e as demais frutas de lavoura permanente, como banana, manga e açaí plantado.'
         :k==='florestas-nativas'?'Extrativismo em florestas nativas: açaí, castanha, babaçu, borracha. É um dos recortes possíveis da sociobiodiversidade, ao lado do cacau.'
-        :'Por enquanto só com os dados do IBGE: quem dirige e quem trabalha nos estabelecimentos que têm esta atividade como principal. Indicadores e organizações entram depois.'}});
+        :'Quem dirige e quem trabalha nos estabelecimentos que têm esta atividade como principal, com os indicadores de trabalho invisível. As organizações entram depois.'}});
   FR.cafe.grupo='perm';FR.amazonia.grupo='perm';
 }
 
@@ -325,14 +325,14 @@ function vHome(){
   </section>
   <div class="in"><section class="pick" aria-labelledby="pk">
     <h2 id="pk">Escolha uma cadeia</h2>
-    <p>Café e Amazônia são o piloto, com indicadores e organizações. As demais cadeias já têm os dados do IBGE.</p>
+    <p>Café e Amazônia são o piloto, com organizações mapeadas. Todas as cadeias têm os dados do IBGE e os indicadores de trabalho invisível.</p>
     <div class="cads">
       <a class="cad" href="#cafe"><div class="sw"></div><span class="st ok">piloto</span><b>Café</b><span>${nf.format(D.orgs.cafe.length)} organizações de mulheres mapeadas</span><div class="big">${pc(100*c.est[2]/c.est[0])}</div><span>dos estabelecimentos de café são dirigidos por mulheres</span></a>
       <a class="cad amz" href="#amazonia"><div class="sw"></div><span class="st ok">piloto</span><b>Amazônia</b><span>sociobiodiversidade · ${D.orgs.amazonia.length} organizações</span><div class="big">${pc(100*a.est[2]/a.est[0])}</div><span>dos estabelecimentos de cacau do Pará são dirigidos por mulheres</span></a>
     </div>
   </section>
   <section class="todas" id="todas" aria-labelledby="tt">
-    <div class="sec-h"><div><h2 id="tt">Todas as cadeias</h2><p>As classes de atividade do Censo Agro 2017, agrupadas por tipo de produção e ordenadas pelo número de estabelecimentos dirigidos por mulheres. Cada uma abre com os dados do IBGE; indicadores e organizações entram cadeia por cadeia.</p></div></div>
+    <div class="sec-h"><div><h2 id="tt">Todas as cadeias</h2><p>As classes de atividade do Censo Agro 2017, agrupadas por tipo de produção e ordenadas pelo número de estabelecimentos dirigidos por mulheres. Cada uma abre com os dados do IBGE e os indicadores; as organizações entram cadeia por cadeia.</p></div></div>
     ${Object.entries(GR).map(([gk,[gn]])=>{
       const L=Object.entries(FR).filter(([k,f])=>f.grupo===gk).map(([k,f])=>[k,f,D.cad[f.dados].geo['1']]).sort((a,b)=>b[2].est[2]-a[2].est[2]);
       return `<div class="grp"><h3>${gn}</h3><div class="mini-cads">${L.map(([k,f,g])=>{const p=share(g.est[2],g.est[1]);return `<a class="mc ${f.cls}" href="#${k}"><b>${esc(k==='amazonia'?'Cacau (Amazônia)':f.nome)}</b><span class="num">${n0(g.est[2])} dirigidos por mulheres</span><div class="mb"><i style="width:${p}%"></i></div><span class="num">${pc(p)} na direção${f.piloto?' · piloto':''}</span></a>`}).join('')}
@@ -491,17 +491,24 @@ function indicadores(key,f){
     ['Valor da produção ligado às mulheres','parte do valor da produção que corresponde à participação das mulheres']];
   const espera=(h,p)=>`<div class="ind wait"><span class="st prep">em preparo</span><h3>${h}</h3><div class="v">—</div><p>${p}</p></div>`;
   if(!I)return `<div class="inds">${base.map(([h,p])=>espera(h,p)).join('')}</div>`;
-  const tf=I['trabalho_familiar.onde_ha']||{}, tp=I['trabalho_familiar.principal']||{}, di=I['direcao_invisivel.grupo_nos_municipios']||{},
-    dj=I['dupla_jornada.onde_ha']||{}, hr=I['dupla_jornada.horas']||{}, vp=I['valor_producao.principal']||{};
-  const card=(i,v,p,tag)=>v==null?espera(...base[i]):`<div class="ind"><span class="st ok">${tag||'calculado'}</span><h3>${base[i][0]}</h3><div class="v">${v}</div><p>${p}</p></div>`;
+  const tf=I['trabalho_familiar.onde_ha'], tp=I['trabalho_familiar.principal']||{}, di=I['direcao_invisivel.grupo_nos_municipios']||{},
+    dj=I['dupla_jornada.onde_ha']||I['dupla_jornada.principal']||{}, djOnde=!!I['dupla_jornada.onde_ha'], hr=I['dupla_jornada.horas']||{},
+    vp=I['valor_producao.principal']||{}, grupo=I.grupo||'';
+  const naoCalc=(i,p)=>`<div class="ind wait"><span class="st">não calculável</span><h3>${base[i][0]}</h3><div class="v">—</div><p>${p}</p></div>`;
+  const card=(i,v,p,tag,falta)=>v==null?naoCalc(i,falta):`<div class="ind"><span class="st ok">${tag||'calculado'}</span><h3>${base[i][0]}</h3><div class="v">${v}</div><p>${p}</p></div>`;
   const ano=x=>x==null?'':Math.round(x);
-  const cards=[
-    card(0,tf.mulheres_nao_dirigentes==null?null:kfmt(tf.mulheres_nao_dirigentes),`mulheres da família trabalham onde há ${cn} e não aparecem como produtoras. Onde o ${cn} é a atividade principal, o dado direto do Censo é de ${n0(tp.mulheres_nao_dirigentes)}.`,'estimativa'),
-    card(1,di.pct_invisivel==null?null:pc(di.pct_invisivel),`das mulheres que dirigem estabelecimentos de lavoura permanente nos municípios do ${cn} ficam fora das estatísticas por sexo: o casal dirige junto e só o homem é registrado. Isso acontece em ${pc(di.pct_casal_homem_registrado,0)} dos casais.`),
-    card(2,reais(dj.valor),`por ano, a salário mínimo, em afazeres domésticos e cuidados das mulheres da família onde há ${cn}.${hr.horas_m?` São ${String(hr.horas_m).replace('.',',')} horas por semana, contra ${String(hr.horas_h).replace('.',',')} dos homens.`:''}`,'estimativa'),
-    card(3,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção de ${cn} em ${ano(vp.ano_pam)} corresponde à participação das mulheres na área dos estabelecimentos. Pela participação no trabalho, seriam ${reais(vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação')];
-  return `<div class="inds">${cards.join('')}</div>
-    <p class="note">Censo Agro 2017, PNAD Contínua ${ano(hr.ano_pnad)||''} (tabela 7015) e PAM ${ano(vp.ano_pam)}, com o salário mínimo de 2026. "Onde há ${cn}" inclui quem tem o produto como atividade secundária e é estimado município a município.${key==='cafe'?' As dirigentes estimadas seguem o método do painel Café em Números, da Embrapa Café e Embrapa Territorial.':''}${key==='amazonia'?' Os indicadores são do cacau no Brasil todo, não só da Amazônia; o sul da Bahia pesa bastante nesses números.':''} Método completo em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/docs/indicadores.md">docs/indicadores.md</a>.</p>`;
+  const sigilo=`O dado está sob sigilo do IBGE para ${cn}.`;
+  const ufFora=x=>x?` ${x===1?'Um estado fica':x+' estados ficam'} fora da soma por sigilo do IBGE, então o valor é um piso.`:'';
+  const fonteV=vp.fonte||'PAM';
+  const c0=tf
+    ?card(0,tf.mulheres_nao_dirigentes==null?null:kfmt(tf.mulheres_nao_dirigentes),`mulheres da família trabalham onde há ${cn} e não aparecem como produtoras. Onde o ${cn} é a atividade principal, o dado direto do Censo é de ${n0(tp.mulheres_nao_dirigentes)}.`,'estimativa',sigilo)
+    :card(0,tp.mulheres_nao_dirigentes==null?null:kfmt(tp.mulheres_nao_dirigentes),`mulheres da família trabalham nos estabelecimentos que têm ${cn} como atividade principal e não aparecem como produtoras. A salário mínimo, meio período, esse trabalho valeria ${reais(tp.valor_medio)||'–'} por ano.`,'calculado',sigilo);
+  const c1=card(1,di.pct_invisivel==null?null:pc(di.pct_invisivel),`das mulheres que dirigem estabelecimentos de ${grupo} nos municípios onde há ${cn} ficam fora das estatísticas por sexo: o casal dirige junto e só o homem é registrado. Isso acontece em ${pc(di.pct_casal_homem_registrado,0)} dos casais. O Censo só publica esse dado por grupo de atividade, mais largo que a cadeia.`,'calculado',`O Censo não permite separar a direção do casal para ${cn}.`);
+  const c2=card(2,reais(dj.valor),`por ano, a salário mínimo, em afazeres domésticos e cuidados das mulheres da família ${djOnde?'onde há '+cn:'nos estabelecimentos de '+cn}.${hr.horas_m?` São ${String(hr.horas_m).replace('.',',')} horas por semana, contra ${String(hr.horas_h).replace('.',',')} dos homens.`:''}${ufFora(dj.ufs_em_sigilo)}`,'estimativa',sigilo);
+  const c3=card(3,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção ${fonteV==='PEVS'?'da extração vegetal':'de '+cn} em ${ano(vp.ano)} corresponde à participação das mulheres na área dos estabelecimentos. Pela participação no trabalho, seriam ${reais(vp.valor_b_mil_reais==null?null:vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação',
+    `O IBGE não publica todo ano um valor da produção que corresponda a ${cn}: a PAM cobre lavouras e a PEVS o extrativismo, mas não ${grupo==='pecuária e criação de outros animais'?'a produção de carne e animais':'esta cadeia'}.`);
+  return `<div class="inds">${[c0,c1,c2,c3].join('')}</div>
+    <p class="note">Censo Agro 2017, PNAD Contínua ${ano(hr.ano_pnad)||''} (tabela 7015)${vp.ano?` e ${fonteV==='PEVS'?'PEVS (extração vegetal)':'PAM'} ${ano(vp.ano)}`:''}, com o salário mínimo de 2026.${tf?` "Onde há ${cn}" inclui quem tem o produto como atividade secundária e é estimado município a município.`:` Os números são dos estabelecimentos que têm ${cn} como atividade principal; quem tem ${cn} como atividade secundária fica de fora.`}${key==='cafe'?' As dirigentes estimadas seguem o método do painel Café em Números, da Embrapa Café e Embrapa Territorial.':''}${key==='amazonia'?' Os indicadores são do cacau no Brasil todo, não só da Amazônia; o sul da Bahia pesa bastante nesses números.':''}${I.produtos&&vp.fonte==='PAM'&&f.dados!=='cafe'&&f.dados!=='cacau'?` Produtos considerados no valor da produção: ${esc(I.produtos)}.`:''} Método completo em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/docs/indicadores.md">docs/indicadores.md</a>.</p>`;
 }
 function drawOrgs(key){
   const f=FR[key], all=(D.orgs[ST.orgB[key]||f.orgs]||[]).filter(o=>!ST.orgUF[key]||o.uf===ST.orgUF[key]);

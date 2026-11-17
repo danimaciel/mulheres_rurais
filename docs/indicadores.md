@@ -1,6 +1,6 @@
 # Indicadores de trabalho invisível
 
-Os quatro indicadores vieram do Atlas das Mulheres do Café e foram reescritos para rodar em qualquer cadeia listada em `config/indicadores.csv`. O script é `R/indicadores_trabalho_invisivel.R`, que lê só os arquivos de `dados/sidra/` e grava os resultados em `dados/indicadores/`. Ele roda no fim da coleta mensal, então os números acompanham os dados.
+Os quatro indicadores vieram do Atlas das Mulheres do Café e foram reescritos para rodar em qualquer cadeia listada em `config/indicadores.csv`, que hoje tem as 24 cadeias da página. O script é `R/indicadores_trabalho_invisivel.R`, que lê só os arquivos de `dados/sidra/` e grava os resultados em `dados/indicadores/`. Ele roda no fim da coleta mensal, então os números acompanham os dados.
 
 Todos usam dados públicos do IBGE. O Censo Agropecuário é de 2017, o mais recente com esse detalhe. Os valores em reais usam o salário mínimo de 2026 (R$ 1.621), o último ano da PAM e o último ano da PNAD Contínua disponíveis na coleta. Isso mistura anos, e é bom que quem for apresentar os números diga isso.
 
@@ -14,6 +14,10 @@ Quase tudo sai em dois recortes, e eles não devem ser confundidos.
 
 A direção invisível usa um terceiro recorte, explicado abaixo.
 
+Brasil e UFs vêm do levantamento das tabelas 6883 e 6887 por classe de atividade. Frutas soma três classes (laranja, uva e as demais frutas de lavoura permanente); como na página, a soma fica vazia se qualquer uma delas estiver em sigilo. Nenhum indicador usa o total de todas as atividades como se fosse dado de uma cadeia. O total entra só como média por estabelecimento na estimativa do recorte `onde_ha`, e isso está dito na página.
+
+`disponibilidade.csv` diz, para cada cadeia e indicador, se ele foi calculado e, quando não foi, por quê. Hoje o recorte `onde_ha` só existe para café e cacau, porque a tabela 6955 só tem lavoura permanente e, nas frutas, um mesmo estabelecimento com várias frutas seria contado várias vezes. O valor da produção não é calculável para pecuária, sementes, flores, florestas plantadas, pesca e aquicultura: a PAM cobre lavouras e a PEVS o extrativismo, e nenhuma das duas tem a produção dessas cadeias.
+
 ## 1. Trabalho familiar não reconhecido
 
 Mulheres de 14 anos ou mais que trabalham no estabelecimento por terem laço de parentesco com quem o dirige (6887), menos as mulheres que aparecem como produtoras (6883). A diferença é o número de mulheres da família que trabalham e não aparecem como produtoras. O valor desse trabalho é calculado em três cenários de dedicação: três meses por ano, meio período e tempo integral, sempre a salário mínimo.
@@ -26,7 +30,7 @@ Arquivo: `trabalho_familiar.csv`, com Brasil, UF e município.
 
 A tabela 6768 diz quem dirige os trabalhos do estabelecimento e, quando é o casal, registra o sexo de quem respondeu. O Censo registra um só produtor por estabelecimento, e todas as tabelas por sexo usam esse registro. Quando o casal dirige junto e quem respondeu foi o homem, supomos que a mulher divide a direção, mas ela não aparece nas estatísticas por sexo.
 
-A 6768 não tem a classe de atividade, só o grupo de atividade (classificação 12517). Por isso o recorte é o grupo da cadeia (lavoura permanente para café e cacau) somado nos municípios da cadeia. Um município entra quando tem pelo menos 20 estabelecimentos com a cadeia como atividade principal, ou 50 com o produto, ou 100 toneladas na PAM; esses limites ficam em `config/indicadores.csv`. É um recorte mais largo que a cadeia, e o texto que acompanhar o número precisa dizer isso.
+A 6768 não tem a classe de atividade, só o grupo de atividade (classificação 12517). Por isso o recorte é o grupo da cadeia somado nos municípios da cadeia: lavoura permanente para café, cacau, frutas e outras permanentes; lavoura temporária para soja, cereais, cana, fumo, algodão, oleaginosas e outras temporárias; horticultura e floricultura para hortaliças e flores; pecuária para todas as criações; e os grupos próprios de sementes, florestas plantadas, florestas nativas, pesca e aquicultura. Um município entra quando tem pelo menos 20 estabelecimentos com a cadeia como atividade principal (6883 municipal por classe); no café e no cacau, também quando tem 50 estabelecimentos com o produto (6955) ou 100 toneladas na PAM. É um recorte mais largo que a cadeia, e a página diz isso. Nas criações, quase todo município do país entra, e os números de bovinos, aves, suínos e das outras criações ficam parecidos porque medem o mesmo grupo em territórios que se sobrepõem.
 
 As medidas são a participação das mulheres como dirigentes principais, a participação ampliada (somando o casal declarado pelo homem), a parcela invisível (casal declarado pelo homem dividido pelo total de mulheres na direção) e, entre os casais, a parcela em que só o homem ficou registrado. Percentuais ficam vazios em municípios com menos de 10 estabelecimentos e em UFs com menos de 500.
 
@@ -42,18 +46,20 @@ Arquivo: `dupla_jornada.csv`.
 
 ## 4. Valor da produção ligado às mulheres
 
-O IBGE não publica o valor da produção por sexo de quem produz. Há duas leituras aproximadas sobre o valor da PAM:
+O IBGE não publica o valor da produção por sexo de quem produz. Há duas leituras aproximadas sobre o valor da produção do último ano da PAM (lavouras) ou, nas florestas nativas, da PEVS (toda a extração vegetal). Os produtos de cada cadeia ficam em `config/indicadores.csv` e são listados na página; eles seguem a classificação de atividades do Censo, e produtos que caem em mais de uma classe ficaram de fora (o tomate, por exemplo, é dividido entre hortaliças e outras lavouras temporárias). Para hortaliças, a PAM cobre só parte dos produtos, então o valor é um piso.
 
 - A: participação das mulheres na área dos estabelecimentos da cadeia (6883), contando só homens e mulheres no denominador. Supõe produtividade igual por hectare e usa a área total do estabelecimento, não só a da lavoura.
 - B: participação das mulheres no pessoal ocupado da cadeia (6887: família, permanentes, temporárias e parceiras). Supõe a mesma contribuição por pessoa ocupada, uma simplificação forte. Serve como ordem de grandeza.
 
-Arquivo: `valor_producao.csv`, Brasil e UF.
+Arquivo: `valor_producao.csv`, Brasil e UF, com a lista de produtos somados.
 
 ## Resumo
 
 `resumo.csv` junta os números do Brasil de cada indicador, por cadeia e recorte, em formato longo. É o arquivo mais prático para a plataforma.
 
 ## Conferência com o Atlas do café
+
+A cada publicação da página, `scripts/conferir_indicadores.py` refaz em Python, a partir dos arquivos brutos do SIDRA, as contas do Brasil de todas as cadeias (trabalho familiar, direção invisível, dupla jornada e valor da produção) e compara com `resumo.csv`. Qualquer diferença impede a publicação. Um indicador vazio só passa se o dado de origem for sigilo ou não existir.
 
 Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do Atlas. As tabelas 6883 e 6887 do café batem célula a célula no Brasil, nas UFs e nos 5.563 municípios, assim como o valor da produção da PAM por município e as horas da PNAD por UF. Com os mesmos insumos, o script reproduz os números da nota de método do Atlas:
 
@@ -74,4 +80,4 @@ A direção invisível e o recorte `onde_ha` dependem de duas coletas próprias,
 
 ## Limites
 
-O Censo não mede horas nem dias trabalhados no estabelecimento, então os cenários de dedicação do indicador 1 são suposições. O salário mínimo é um piso; a diária de colheita costuma ser mais alta. Meninas com menos de 14 anos não entram nos valores dos indicadores 1 e 3. Municípios em sigilo ("X") ficam vazios nos arquivos municipais e, para totais, vale o número do Brasil ou da UF.
+O Censo não mede horas nem dias trabalhados no estabelecimento, então os cenários de dedicação do indicador 1 são suposições. O salário mínimo é um piso; a diária de colheita costuma ser mais alta. Meninas com menos de 14 anos não entram nos valores dos indicadores 1 e 3. Na dupla jornada, UFs em sigilo ficam fora da soma, e o valor do Brasil vira um piso; o número de UFs fora fica no resumo e na página. Na direção invisível, municípios em sigilo na 6768 contam como zero. Municípios em sigilo ("X") ficam vazios nos arquivos municipais e, para totais, vale o número do Brasil ou da UF.

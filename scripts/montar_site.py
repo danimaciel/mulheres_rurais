@@ -203,6 +203,21 @@ def ler_indicadores():
             if w > 0:
                 ind[cad]["dupla_jornada.horas"] = {
                     "horas_m": round(sm / w, 1), "horas_h": round(sh / w, 1), "ano_pnad": num(ano)}
+    # grupo de atividade da direção invisível e produtos do valor da produção
+    grupos = {"111519": "lavoura temporária", "111520": "horticultura e floricultura",
+              "111521": "lavoura permanente", "111522": "produção de sementes e mudas",
+              "111523": "pecuária e criação de outros animais", "111524": "florestas plantadas",
+              "111525": "florestas nativas", "114349": "pesca", "111526": "aquicultura"}
+    if os.path.exists("config/indicadores.csv"):
+        for r in ler_csv("config/indicadores.csv"):
+            if r["cadeia"] in ind:
+                ind[r["cadeia"]]["grupo"] = grupos.get(r["grupo_6768"], "")
+    caminho = "dados/indicadores/valor_producao.csv"
+    if os.path.exists(caminho):
+        for r in ler_csv(caminho):
+            if r["nivel"] == "Brasil" and r["cadeia"] in ind:
+                ind[r["cadeia"]]["valor_producao.principal"]["fonte"] = r["fonte"]
+                ind[r["cadeia"]]["produtos"] = r["produtos"]
     return {k: dict(x) for k, x in ind.items()}
 
 
