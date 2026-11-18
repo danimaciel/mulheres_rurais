@@ -343,7 +343,8 @@ function atual(){const u=D.atualizado||{},f=x=>x?x.split('-').reverse().join('/'
 function chips(cur){
   const outra=!!FR[cur];
   $('#chips').innerHTML=`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`
-   +`<a class="chip" href="#organizacoes" ${cur==='organizacoes'?'aria-current="page"':''}><i style="background:var(--gold)"></i>Organizações</a>`;
+   +`<a class="chip" href="#organizacoes" ${cur==='organizacoes'?'aria-current="page"':''}><i style="background:var(--gold)"></i>Organizações</a>`
+   +`<a class="chip" href="#sobre" ${cur==='sobre'?'aria-current="page"':''}>Sobre</a>`;
 }
 function route(){
   if(!D)return;
@@ -351,7 +352,7 @@ function route(){
   document.body.classList.toggle('amz',!!(FR[r]&&FR[r].cls==='amz'));
   document.body.style.setProperty('--acc-band',FR[r]?FR[r].band:'#541D35');
   chips(r);
-  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else if(r==='organizacoes'){vOrgs();window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
+  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else if(r==='organizacoes'){vOrgs();window.scrollTo(0,0)} else if(r==='sobre'){vSobre();window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
 }
 
 /* ---------- início ---------- */
@@ -589,6 +590,36 @@ function filtrar(ign){
     if(ci!=null){if(ci==='sem'){if(o.c)return false}else if(!(o.c&(1<<ci)))return false}
     if(q&&!o.q.includes(q))return false;
     return true});
+}
+/* ---------- sobre ---------- */
+function vSobre(){
+  const nOrg=new Set(Object.values(D.orgs).flat().map(o=>o.nome.toLowerCase().replace(/polpas/g,'polpa')+'|'+o.uf)).size, nCad=Object.keys(D.cad).filter(k=>k!=='total').length;
+  app.innerHTML=`<div class="view">
+  <section class="band"><svg class="deco" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z" fill="#fff"/></svg>
+    <div class="in"><div class="crumb"><a href="#inicio">Mulheres Rurais</a> · Sobre</div>
+    <h1>Sobre a plataforma</h1><p>Para que serve, o que já tem aqui e como falar com a gente.</p></div>
+    <svg class="wv" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C200 0 380 6 600 26C820 46 1000 40 1200 12V46H0Z"/></svg>
+  </section>
+  <main class="in cp sobre">
+    <section aria-labelledby="sb1"><div class="sec-h"><div><span class="eyebrow">Objetivo</span><h2 id="sb1">Por que esta plataforma existe</h2>
+      <p>As mulheres estão em todas as cadeias do campo brasileiro, mas aparecem pouco nas estatísticas. O Censo registra um único produtor por estabelecimento, e quando o casal dirige junto quase sempre fica o nome do homem. O trabalho da família, os cuidados e a parte da produção que passa pelas mãos delas somem dos números. A plataforma junta, cadeia por cadeia, o que os dados públicos já mostram sobre essas mulheres, o que eles deixam de mostrar e onde elas estão organizadas.</p>
+      <p>Ela nasce do Atlas das Mulheres do Café e leva o mesmo caminho para as outras cadeias produtivas.</p></div></div></section>
+    <section aria-labelledby="sb2"><div class="sec-h"><div><span class="eyebrow">O que foi feito</span><h2 id="sb2">O que já está aqui</h2></div></div>
+      <div class="inds">
+        <div class="ind"><h3>Dados do IBGE</h3><div class="v">${nf.format(nCad)}</div><p>cadeias do Censo Agropecuário 2017, com quem dirige e quem trabalha nos estabelecimentos, sempre mulheres e homens lado a lado, do Brasil aos estados e municípios.</p></div>
+        <div class="ind"><h3>Trabalho invisível</h3><div class="v">4</div><p>indicadores do Atlas recalculados para cada cadeia: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres.</p></div>
+        <div class="ind"><h3>Organizações de mulheres</h3><div class="v">${nf.format(nOrg)}</div><p>organizações levantadas uma a uma, com fonte e canal institucional, no café, na Amazônia, no cacau, em mandioca e outras lavouras temporárias, em cereais e em frutas.</p></div>
+        <div class="ind"><h3>Mapa de organizações</h3><div class="v">62 mil</div><p>cooperativas e associações rurais da base da Receita Federal, por município, com um filtro para ver só as de mulheres.</p></div>
+      </div></section>
+    <section aria-labelledby="sb3"><div class="sec-h"><div><span class="eyebrow">Como funciona</span><h2 id="sb3">Dados abertos e atualizados</h2>
+      <p>Os números vêm direto das tabelas do IBGE (SIDRA) e são baixados por rotinas automáticas que rodam todo mês. Antes de a página ser publicada, cada número é conferido contra a tabela de origem; quando a fonte não responde, a página mantém a última versão boa. As organizações vêm de levantamento próprio, das bases do Atlas e da Amazônia e da base aberta de CNPJ. Os scripts, os dados e as notas de método ficam no <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>.</p>
+      <p>A plataforma está em construção. Partes marcadas "em preparo" entram à medida que os dados chegam, e as organizações passam a entrar também por formulário, com validação antes de aparecerem aqui.</p></div></div></section>
+    <section class="fine" aria-labelledby="sb4"><h2 id="sb4">Contato</h2>
+      <p style="margin:0 0 10px;color:var(--ink-2);font-size:14.5px">Sugestões, correções e organizações que ainda não estão aqui são bem-vindas. O caminho mais direto é pelo GitHub.</p>
+      <p style="margin:0;display:flex;flex-wrap:wrap;gap:10px"><a class="chip" href="https://github.com/danimaciel" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>github.com/danimaciel</a>
+      <a class="chip" href="https://github.com/danimaciel/mulheres_rurais/issues" target="_blank" rel="noopener">Abrir uma sugestão no repositório</a></p>
+    </section>
+  </main></div>`;
 }
 function vOrgs(){
   app.innerHTML=`<div class="view">
