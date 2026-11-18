@@ -341,9 +341,8 @@ window.addEventListener('hashchange',route);
 function atual(){const u=D.atualizado||{},f=x=>x?x.split('-').reverse().join('/'):null;
   const e=$('#upd');if(e&&u.coleta)e.textContent=`Dados verificados na fonte em ${f(u.coleta)}.`;}
 function chips(cur){
-  const outra=FR[cur]&&!FR[cur].piloto;
-  $('#chips').innerHTML=['cafe','amazonia'].map(k=>{const f=FR[k];return `<a class="chip ${f.cls}" href="#${k}" ${cur===k?'aria-current="page"':''}><i></i>${f.nome}</a>`}).join('')
-   +`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`
+  const outra=!!FR[cur];
+  $('#chips').innerHTML=`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`
    +`<a class="chip" href="#organizacoes" ${cur==='organizacoes'?'aria-current="page"':''}><i style="background:var(--gold)"></i>Organizações</a>`;
 }
 function route(){
@@ -357,7 +356,6 @@ function route(){
 
 /* ---------- início ---------- */
 function vHome(){
-  const c=D.cad.cafe.geo['1'], a=D.cad.cacau.geo['15'];
   app.innerHTML=`<div class="view">
   <section class="hero">
     <img class="hero-photo" src="hero2.jpg" srcset="hero2-sm.jpg 900w, hero2.jpg 1672w" sizes="(max-width:1040px) 100vw, 63vw" alt="Cinco mulheres do campo, de idades e origens diferentes, sorrindo lado a lado numa lavoura ao pôr do sol">
@@ -367,18 +365,14 @@ function vHome(){
     <p>Quem dirige, quem trabalha e quem se organiza em cada cadeia produtiva do campo brasileiro, com mulheres e homens sempre lado a lado.</p></div></div>
   </section>
   <div class="in"><section class="pick" aria-labelledby="pk">
-    <h2 id="pk">Escolha uma cadeia</h2>
-    <p>Café e Amazônia são o piloto, com organizações mapeadas. Mandioca e outras lavouras temporárias, cereais e frutas já têm uma primeira rodada de organizações de mulheres. Todas as cadeias têm os dados do IBGE e os indicadores de trabalho invisível. As organizações, com ou sem cadeia definida, também estão no <a href="#organizacoes">mapa de organizações</a>.</p>
-    <div class="cads">
-      <a class="cad" href="#cafe"><div class="sw"></div><span class="st ok">piloto</span><b>Café</b><span>${nf.format(D.orgs.cafe.length)} organizações de mulheres mapeadas</span><div class="big">${pc(100*c.est[2]/c.est[0])}</div><span>dos estabelecimentos de café são dirigidos por mulheres</span></a>
-      <a class="cad amz" href="#amazonia"><div class="sw"></div><span class="st ok">piloto</span><b>Amazônia</b><span>sociobiodiversidade · ${D.orgs.amazonia.length} organizações</span><div class="big">${pc(100*a.est[2]/a.est[0])}</div><span>dos estabelecimentos de cacau do Pará são dirigidos por mulheres</span></a>
-    </div>
+    <h2 id="pk">Por onde começar</h2>
+    <p>Cada cadeia do Censo Agro tem sua página, logo abaixo. Café, cacau, mandioca e outras lavouras temporárias, cereais e frutas já têm organizações de mulheres levantadas, e a Amazônia tem uma página própria para a sociobiodiversidade, no grupo das lavouras permanentes. Todas as cadeias têm os dados do IBGE e os indicadores de trabalho invisível. As organizações, com ou sem cadeia definida, também estão no <a href="#organizacoes">mapa de organizações</a>.</p>
   </section>
   <section class="todas" id="todas" aria-labelledby="tt">
     <div class="sec-h"><div><h2 id="tt">Todas as cadeias</h2><p>As classes de atividade do Censo Agro 2017, agrupadas por tipo de produção e ordenadas pelo número de estabelecimentos dirigidos por mulheres. Cada uma abre com os dados do IBGE e os indicadores; as organizações entram cadeia por cadeia.</p></div></div>
     ${Object.entries(GR).map(([gk,[gn]])=>{
       const L=Object.entries(FR).filter(([k,f])=>f.grupo===gk).map(([k,f])=>[k,f,D.cad[f.dados].geo['1']]).sort((a,b)=>b[2].est[2]-a[2].est[2]);
-      return `<div class="grp"><h3>${gn}</h3><div class="mini-cads">${L.map(([k,f,g])=>{const p=share(g.est[2],g.est[1]);return `<a class="mc ${f.cls}" href="#${k}"><b>${esc(k==='amazonia'?'Cacau (Amazônia)':f.nome)}</b><span class="num">${n0(g.est[2])} dirigidos por mulheres</span><div class="mb"><i style="width:${p}%"></i></div><span class="num">${pc(p)} na direção${f.piloto?' · piloto':''}</span></a>`}).join('')}
+      return `<div class="grp"><h3>${gn}</h3><div class="mini-cads">${L.map(([k,f,g])=>{const p=share(g.est[2],g.est[1]);return `<a class="mc ${f.cls}" href="#${k}"><b>${esc(k==='amazonia'?'Cacau (Amazônia)':f.nome)}</b><span class="num">${n0(g.est[2])} dirigidos por mulheres</span><div class="mb"><i style="width:${p}%"></i></div><span class="num">${pc(p)} na direção</span></a>`}).join('')}
       ${gk==='pec'?'<div class="mc off"><b>Leite</b><span>Aguardando uma tabela do Censo só de leite, com recorte por sexo.</span></div>':''}</div></div>`}).join('')}
   </section>
   <section class="rules" aria-label="Como ler os dados">
