@@ -2,7 +2,7 @@
 
 Plataforma de dados sobre mulheres rurais no Brasil, organizada por cadeia produtiva. A ideia é que quem acessa escolha uma cadeia e veja, para ela, os números do Censo Agropecuário sobre quem dirige, quem trabalha e quem gera valor nos estabelecimentos, sempre com mulheres e homens lado a lado, junto com as organizações de mulheres que atuam naquela cadeia.
 
-O piloto começa com duas frentes: café, que já tem o trabalho acumulado do Atlas das Mulheres do Café, e Amazônia, pela sociobiodiversidade, com cacau como primeira cadeia de recorte. Leite, horticultura e fruticultura entram depois, num primeiro momento só com dados do IBGE. As organizações são incorporadas cadeia por cadeia, à medida que cada base é levantada e validada.
+O piloto começa com duas frentes: café, que já tem um levantamento anterior de organizações e indicadores, e Amazônia, pela sociobiodiversidade, com cacau como primeira cadeia de recorte. Leite, horticultura e fruticultura entram depois, num primeiro momento só com dados do IBGE. As organizações são incorporadas cadeia por cadeia, à medida que cada base é levantada e validada.
 
 A página da plataforma fica em https://danimaciel.github.io/mulheres_rurais/ e é montada a partir dos dados deste repositório, então se atualiza sozinha a cada coleta. Partes ainda sem dado aparecem como "em preparo".
 
@@ -65,11 +65,11 @@ python scripts/montar_site.py _site
 python -m http.server -d _site
 ```
 
-e abra http://localhost:8000. A base de organizações do café (`dados/organizacoes/cafe.csv`) é a do Atlas das Mulheres do Café; a página mostra só as organizações do Brasil.
+e abra http://localhost:8000. A base de organizações do café (`dados/organizacoes/cafe.csv`) vem de um levantamento anterior do café; a página mostra só as organizações do Brasil.
 
 ## Indicadores de trabalho invisível
 
-Os quatro indicadores do Atlas das Mulheres do Café (trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres) são recalculados para cada cadeia de `config/indicadores.csv` ao fim de cada coleta. Para incluir uma cadeia, basta uma linha nesse arquivo com a classe de atividade, o grupo de atividade da tabela 6768 e os filtros de produto da 6955 e da PAM. O método, as premissas e a conferência com os números do Atlas estão em [docs/indicadores.md](docs/indicadores.md).
+Os quatro indicadores de trabalho invisível (trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres) são recalculados para cada cadeia de `config/indicadores.csv` ao fim de cada coleta. Para incluir uma cadeia, basta uma linha nesse arquivo com a classe de atividade, o grupo de atividade da tabela 6768 e os filtros de produto da 6955 e da PAM. O método, as premissas e a conferência com os números do levantamento anterior do café estão em [docs/indicadores.md](docs/indicadores.md).
 
 ## Cuidados na leitura dos dados
 

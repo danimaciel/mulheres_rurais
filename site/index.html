@@ -289,8 +289,8 @@ footer{border-top:1px solid var(--line);color:var(--ink-2);font-size:12.5px;padd
 </div></header>
 <div id="app"><div class="loading">Carregando os dados…</div></div>
 <footer><div class="in">
-  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações do café: base do Atlas das Mulheres do Café. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do cacau, de mandioca e outras lavouras temporárias, de cereais e de frutas: levantamento próprio. Mapa de organizações: também a base aberta de CNPJ da Receita Federal, com a sede dos municípios de kelvins/municipios-brasileiros.</p>
-  <p style="margin:0">A página é montada a partir dos dados do <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>, onde estão a coleta, os indicadores e as notas de método. <span id="upd"></span> Parte do Atlas das Mulheres do Café. Versão em construção: partes marcadas "em preparo" entram à medida que os dados chegam.</p>
+  <p style="margin:0 0 6px">Fontes: IBGE, Censo Agropecuário 2017 (SIDRA, tabelas 6883, 6887, 6768 e 6955), PAM e PNAD Contínua. Organizações da Amazônia: base organizacoes_mulheres_amazonia. Organizações do café, do cacau, de mandioca e outras lavouras temporárias, de cereais e de frutas: levantamento próprio. Mapa de organizações: também a base aberta de CNPJ da Receita Federal, com a sede dos municípios de kelvins/municipios-brasileiros.</p>
+  <p style="margin:0">A página é montada a partir dos dados do <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>, onde estão a coleta, os indicadores e as notas de método. <span id="upd"></span> Versão em construção: partes marcadas "em preparo" entram à medida que os dados chegam.</p>
 </div></footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
@@ -310,7 +310,7 @@ const GR={temp:['Lavouras temporárias','#7A5520',''],perm:['Lavouras permanente
 const FR={
  cafe:{nome:'Café',cn:'café',dados:'cafe',cls:'',band:'#541D35',terr:'1',orgs:'cafe',piloto:1,
    titulo:'Mulheres no café',
-   lead:'Quem dirige, quem trabalha e quem se organiza nos estabelecimentos que têm o café como atividade principal. É a frente com mais caminho andado: os indicadores do Atlas das Mulheres do Café vêm para cá.',
+   lead:'Quem dirige, quem trabalha e quem se organiza nos estabelecimentos que têm o café como atividade principal. É a cadeia com o levantamento de organizações mais avançado.',
    sub:'cafeicultura'},
  amazonia:{nome:'Amazônia',cn:'cacau',dados:'cacau',cls:'amz',band:'#285C3A',terr:'15',orgs:'amazonia',orgsAlt:[['amazonia','Amazônia'],['cacau','Cacau, todas as regiões']],piloto:1,
    titulo:'Mulheres da sociobiodiversidade amazônica',
@@ -480,7 +480,7 @@ function vCadeia(key){
     </section>`})():''}
 
     <section aria-labelledby="s4">
-      <div class="sec-h"><div><span class="eyebrow">Indicadores</span><h2 id="s4">O que as estatísticas não mostram</h2><p>Os quatro indicadores de trabalho invisível do Atlas das Mulheres do Café, recalculados para cada cadeia a cada coleta. ${D.ind&&D.ind[f.dados]?'Números do Brasil.':'Para esta cadeia eles ainda vão ser calculados; os cartões mostram onde vão ficar.'}</p></div></div>
+      <div class="sec-h"><div><span class="eyebrow">Indicadores</span><h2 id="s4">O que as estatísticas não mostram</h2><p>Quatro indicadores de trabalho invisível, recalculados para cada cadeia a cada coleta. ${D.ind&&D.ind[f.dados]?'Números do Brasil.':'Para esta cadeia eles ainda vão ser calculados; os cartões mostram onde vão ficar.'}</p></div></div>
       ${indicadores(key,f)}
     </section>
 
@@ -602,17 +602,16 @@ function vSobre(){
   </section>
   <main class="in cp sobre">
     <section aria-labelledby="sb1"><div class="sec-h"><div><span class="eyebrow">Objetivo</span><h2 id="sb1">Por que esta plataforma existe</h2>
-      <p>As mulheres estão em todas as cadeias do campo brasileiro, mas aparecem pouco nas estatísticas. O Censo registra um único produtor por estabelecimento, e quando o casal dirige junto quase sempre fica o nome do homem. O trabalho da família, os cuidados e a parte da produção que passa pelas mãos delas somem dos números. A plataforma junta, cadeia por cadeia, o que os dados públicos já mostram sobre essas mulheres, o que eles deixam de mostrar e onde elas estão organizadas.</p>
-      <p>Ela nasce do Atlas das Mulheres do Café e leva o mesmo caminho para as outras cadeias produtivas.</p></div></div></section>
+      <p>As mulheres estão em todas as cadeias do campo brasileiro, mas aparecem pouco nas estatísticas. O Censo registra um único produtor por estabelecimento, e quando o casal dirige junto quase sempre fica o nome do homem. O trabalho da família, os cuidados e a parte da produção que passa pelas mãos delas somem dos números. A plataforma junta, cadeia por cadeia, o que os dados públicos já mostram sobre essas mulheres, o que eles deixam de mostrar e onde elas estão organizadas.</p></div></div></section>
     <section aria-labelledby="sb2"><div class="sec-h"><div><span class="eyebrow">O que foi feito</span><h2 id="sb2">O que já está aqui</h2></div></div>
       <div class="inds">
         <div class="ind"><h3>Dados do IBGE</h3><div class="v">${nf.format(nCad)}</div><p>cadeias do Censo Agropecuário 2017, com quem dirige e quem trabalha nos estabelecimentos, sempre mulheres e homens lado a lado, do Brasil aos estados e municípios.</p></div>
-        <div class="ind"><h3>Trabalho invisível</h3><div class="v">4</div><p>indicadores do Atlas recalculados para cada cadeia: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres.</p></div>
+        <div class="ind"><h3>Trabalho invisível</h3><div class="v">4</div><p>indicadores recalculados para cada cadeia: trabalho familiar não reconhecido, direção invisível, dupla jornada e valor da produção ligado às mulheres.</p></div>
         <div class="ind"><h3>Organizações de mulheres</h3><div class="v">${nf.format(nOrg)}</div><p>organizações levantadas uma a uma, com fonte e canal institucional, no café, na Amazônia, no cacau, em mandioca e outras lavouras temporárias, em cereais e em frutas.</p></div>
         <div class="ind"><h3>Mapa de organizações</h3><div class="v">62 mil</div><p>cooperativas e associações rurais da base da Receita Federal, por município, com um filtro para ver só as de mulheres.</p></div>
       </div></section>
     <section aria-labelledby="sb3"><div class="sec-h"><div><span class="eyebrow">Como funciona</span><h2 id="sb3">Dados abertos e atualizados</h2>
-      <p>Os números vêm direto das tabelas do IBGE (SIDRA) e são baixados por rotinas automáticas que rodam todo mês. Antes de a página ser publicada, cada número é conferido contra a tabela de origem; quando a fonte não responde, a página mantém a última versão boa. As organizações vêm de levantamento próprio, das bases do Atlas e da Amazônia e da base aberta de CNPJ. Os scripts, os dados e as notas de método ficam no <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>.</p>
+      <p>Os números vêm direto das tabelas do IBGE (SIDRA) e são baixados por rotinas automáticas que rodam todo mês. Antes de a página ser publicada, cada número é conferido contra a tabela de origem; quando a fonte não responde, a página mantém a última versão boa. As organizações vêm de levantamento próprio, da base da Amazônia e da base aberta de CNPJ. Os scripts, os dados e as notas de método ficam no <a href="https://github.com/danimaciel/mulheres_rurais">repositório do projeto</a>.</p>
       <p>A plataforma está em construção. Partes marcadas "em preparo" entram à medida que os dados chegam, e as organizações passam a entrar também por formulário, com validação antes de aparecerem aqui.</p></div></div></section>
     <section class="fine" aria-labelledby="sb4"><h2 id="sb4">Contato</h2>
       <p style="margin:0 0 10px;color:var(--ink-2);font-size:14.5px">Sugestões, correções e organizações que ainda não estão aqui são bem-vindas. O caminho mais direto é pelo GitHub.</p>

@@ -17,7 +17,7 @@ atividades (110016) e que um indicador vazio no resumo corresponde a um
 sigilo ou a um dado que não existe na fonte.
 
 O recorte "onde há" é uma estimativa municipal e não entra aqui; ele foi
-conferido com os números do Atlas do café (docs/indicadores.md).
+conferido com os números do levantamento anterior do café (docs/indicadores.md).
 
 Uso: python scripts/conferir_indicadores.py
 Sai com erro se encontrar qualquer diferença.

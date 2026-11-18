@@ -6,7 +6,7 @@ Marcas de chocolate ou empresas de uma pessoa ou de uma família também não en
 
 ## Esquema
 
-Todas as bases usam o mesmo esquema das organizações do Atlas das Mulheres do Café e da base da Amazônia, para que possam ser lidas juntas: nome, sigla, tipo, município, estado, bioma, ano de fundação, cadeia, número de associadas, público, produtos, existência de núcleo feminino, CNPJ, site institucional, fonte, endereço da fonte, trecho que resume o que a fonte diz, data da coleta, observações, grau de verificação, situação do CNPJ, data da fonte e localização.
+Todas as bases usam o mesmo esquema da base de organizações do café e da base da Amazônia, para que possam ser lidas juntas: nome, sigla, tipo, município, estado, bioma, ano de fundação, cadeia, número de associadas, público, produtos, existência de núcleo feminino, CNPJ, site institucional, fonte, endereço da fonte, trecho que resume o que a fonte diz, data da coleta, observações, grau de verificação, situação do CNPJ, data da fonte e localização.
 
 Os registros são montados só com informação institucional: o que a própria organização publica e o que sai em órgãos públicos, institutos de pesquisa, organizações parceiras e imprensa. Nomes, telefones e contatos pessoais de lideranças não entram em nenhum campo. O campo `site` guarda apenas o endereço da organização (página ou perfil institucional).
 

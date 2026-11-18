@@ -1,6 +1,6 @@
 # Indicadores de trabalho invisível
 
-Os quatro indicadores vieram do Atlas das Mulheres do Café e foram reescritos para rodar em qualquer cadeia listada em `config/indicadores.csv`, que hoje tem as 24 cadeias da página. O script é `R/indicadores_trabalho_invisivel.R`, que lê só os arquivos de `dados/sidra/` e grava os resultados em `dados/indicadores/`. Ele roda no fim da coleta mensal, então os números acompanham os dados.
+Os quatro indicadores vieram de um estudo anterior sobre o café e foram reescritos para rodar em qualquer cadeia listada em `config/indicadores.csv`, que hoje tem as 24 cadeias da página. O script é `R/indicadores_trabalho_invisivel.R`, que lê só os arquivos de `dados/sidra/` e grava os resultados em `dados/indicadores/`. Ele roda no fim da coleta mensal, então os números acompanham os dados.
 
 Todos usam dados públicos do IBGE. O Censo Agropecuário é de 2017, o mais recente com esse detalhe. Os valores em reais usam o salário mínimo de 2026 (R$ 1.621), o último ano da PAM e o último ano da PNAD Contínua disponíveis na coleta. Isso mistura anos, e é bom que quem for apresentar os números diga isso.
 
@@ -57,13 +57,13 @@ Arquivo: `valor_producao.csv`, Brasil e UF, com a lista de produtos somados.
 
 `resumo.csv` junta os números do Brasil de cada indicador, por cadeia e recorte, em formato longo. É o arquivo mais prático para a plataforma.
 
-## Conferência com o Atlas do café
+## Conferência com o estudo do café
 
 A cada publicação da página, `scripts/conferir_indicadores.py` refaz em Python, a partir dos arquivos brutos do SIDRA, as contas do Brasil de todas as cadeias (trabalho familiar, direção invisível, dupla jornada e valor da produção) e compara com `resumo.csv`. Qualquer diferença impede a publicação. Um indicador vazio só passa se o dado de origem for sigilo ou não existir.
 
-Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do Atlas. As tabelas 6883 e 6887 do café batem célula a célula no Brasil, nas UFs e nos 5.563 municípios, assim como o valor da produção da PAM por município e as horas da PNAD por UF. Com os mesmos insumos, o script reproduz os números da nota de método do Atlas:
+Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do estudo do café. As tabelas 6883 e 6887 do café batem célula a célula no Brasil, nas UFs e nos 5.563 municípios, assim como o valor da produção da PAM por município e as horas da PNAD por UF. Com os mesmos insumos, o script reproduz os números da nota de método desse estudo:
 
-| | Atlas | Script |
+| | Estudo do café | Script |
 |---|---|---|
 | Mulheres 14+ na mão de obra familiar (principal) | 82.158 (29,3%) | 82.158 (29,3%) |
 | Mulheres da família que não aparecem como produtoras (principal) | 67.861 | 67.861 |
