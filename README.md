@@ -58,7 +58,7 @@ A página é um arquivo HTML estático em `site/`, que lê um único `dados.json
 
 As cadeias que aparecem na página, com os códigos da classe de atividade e o grupo em que cada uma fica, estão em `config/site_cadeias.csv`. Frutas soma as três classes de frutas do Censo (laranja, uva e as demais de lavoura permanente).
 
-A seção de estudos de cafeicultura da Embrapa lê `estudos_cafe.json`, montado por `scripts/montar_estudos_cafe.py` a partir de `dados/estudos_cafe/`: a base de estudos (publicações, projetos e soluções tecnológicas do Redape, tratados pelo Observatório de Pesquisa da Embrapa) e os totais de autoria por gênero, só agregados. O recorte e as regras estão em `dados/estudos_cafe/metodo.md`. Esses arquivos não vêm de coleta automática: são atualizados quando o recorte é refeito.
+A seção de estudos da Embrapa lê `estudos.json`, montado por `scripts/montar_estudos.py` a partir de `dados/estudos/` (ou só do café, em `dados/estudos_cafe/`, enquanto o recorte por cadeia não existe): a base de estudos (publicações, projetos e soluções tecnológicas do Redape, tratados pelo Observatório de Pesquisa da Embrapa) e os totais de autoria por gênero, só agregados. O recorte e as regras estão no `metodo.md` de cada pasta. Esses arquivos não vêm de coleta automática: são atualizados quando o recorte é refeito.
 
 Para ver a página no computador, a partir da raiz do repositório:
 
