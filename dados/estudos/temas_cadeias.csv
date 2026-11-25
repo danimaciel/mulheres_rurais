@@ -1,0 +1,2555 @@
+cadeia,tema_id,tema,n,usado_como_via
+cafe,T002,Café,2543,TRUE
+cafe,T070,Nematoide-das-galhas,65,FALSE
+cafe,T043,Sensoriamento remoto e índices de vegetação,39,FALSE
+cafe,T090,Uso e cobertura da terra,37,FALSE
+cafe,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",32,FALSE
+cafe,T058,Cultura de tecidos e micropropagação,27,FALSE
+cafe,T100,Ácaros,25,FALSE
+cafe,T125,Inteligência artificial e visão computacional,23,FALSE
+cafe,T026,Controle biológico de doenças (Trichoderma),22,FALSE
+cafe,T097,Fungos micorrízicos,20,FALSE
+cafe,T085,Bioinformática e genômica,18,FALSE
+cafe,T003,"Gestão, inovação e informática",18,FALSE
+cafe,T103,Mosca-branca,17,FALSE
+cafe,T054,Geotecnologias e sistemas de informação geográfica,15,FALSE
+cafe,T118,Tolerância à seca,15,FALSE
+cafe,T079,Espectroscopia e métodos analíticos,14,FALSE
+cafe,T005,Lagarta-do-cartucho e outras lagartas,13,FALSE
+cafe,T045,Bancos de germoplasma,13,FALSE
+cafe,T034,Moscas-das-frutas,12,FALSE
+cafe,T019,Óleos essenciais e plantas aromáticas,11,FALSE
+cafe,T074,"Chuvas, clima e evapotranspiração",11,FALSE
+cafe,T124,Adubação nitrogenada,10,FALSE
+cafe,T091,"Química do solo, calagem e plantas de cobertura",10,FALSE
+cafe,T080,Gestão ambiental e planejamento institucional,10,FALSE
+cafe,T114,"Calagem, gessagem e remineralizadores",9,FALSE
+cafe,T075,Adubação fosfatada,9,FALSE
+cafe,T031,Seringueira,8,FALSE
+cafe,T011,Carbono e qualidade física do solo,8,FALSE
+cafe,T033,Plantas daninhas e herbicidas,7,FALSE
+cafe,T023,Sementes: germinação e dormência,7,FALSE
+cafe,T077,Genômica animal,7,FALSE
+cafe,T069,Sistemas agroflorestais,6,FALSE
+cafe,T115,Emissões de gases de efeito estufa,5,FALSE
+cafe,T022,"Abelhas, apicultura e meliponicultura",5,FALSE
+cafe,T032,Feijão-comum: doenças,5,FALSE
+cafe,T098,Agrometeorologia e monitoramento,4,FALSE
+cafe,T012,Pecuária de leite e de corte: cadeias produtivas,4,FALSE
+cafe,T116,Compostos bioativos e antioxidantes,4,FALSE
+cafe,T052,Bioprocessos: hidrólise enzimática e biogás,4,FALSE
+cafe,T128,Pínus,4,FALSE
+cafe,T095,Adubos verdes e compostagem,4,FALSE
+cafe,T008,Banana,3,FALSE
+cafe,T137,Irrigação,3,FALSE
+cafe,T105,Manga: doenças,3,FALSE
+cafe,T136,Evapotranspiração por satélite,3,FALSE
+cafe,T027,Cana-de-açúcar,3,FALSE
+cafe,T093,Feijão-comum: cultivares,3,FALSE
+cafe,T143,Levantamento e classificação de solos,2,FALSE
+cafe,T139,Viroses de plantas,2,FALSE
+cafe,T123,Lodo de esgoto e metais pesados,2,FALSE
+cafe,T057,Cupuaçu,2,FALSE
+cafe,T122,"Consumo alimentar, metano e eficiência",2,FALSE
+cafe,T140,Microbiologia do solo e coleções de microrganismos,2,FALSE
+cafe,T041,Ferrugem-asiática da soja,2,FALSE
+cafe,T131,Serviços ecossistêmicos,2,FALSE
+cafe,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",2,FALSE
+cafe,T112,Nanotecnologia,2,FALSE
+cafe,T053,Açaí,2,FALSE
+cafe,T015,Milho: cultivares e melhoramento,1,FALSE
+cafe,T144,Suplementação mineral,1,FALSE
+cafe,T055,Caju,1,FALSE
+cafe,T042,Amendoim forrageiro,1,FALSE
+cafe,T102,Bacias hidrográficas,1,FALSE
+cafe,T111,Cigarrinhas,1,FALSE
+cafe,T141,Cenoura,1,FALSE
+cafe,T024,Castanha-da-amazônia,1,FALSE
+cafe,T065,Doenças da videira,1,FALSE
+cafe,T056,"Biomateriais: filmes, nanocelulose e compósitos",1,FALSE
+cafe,T133,Trópico Semiárido: pesquisa e mecanização,1,FALSE
+cafe,T073,Zoneamento agroecológico e aptidão agrícola,1,FALSE
+cafe,T051,Abacaxi,1,FALSE
+cafe,T030,Florística e estrutura de florestas nativas,1,FALSE
+cafe,T113,Pinhão-manso,1,FALSE
+cafe,T142,Tolerância ao alumínio,1,FALSE
+cafe,T108,Feijão-comum: manejo e adubação,1,FALSE
+cafe,T109,Frangos e suínos: nutrição,1,FALSE
+cafe,T066,Captação de água de chuva e barragens subterrâneas,1,FALSE
+cafe,T013,Feijão-comum: melhoramento,1,FALSE
+cafe,T039,Brusone do arroz,1,FALSE
+cafe,T081,Arroz: manejo e adubação,1,FALSE
+cafe,T062,Serapilheira e fauna do solo,1,FALSE
+cacau,T100,Ácaros,30,FALSE
+cacau,T117,Coqueiro,23,FALSE
+cacau,T057,Cupuaçu,21,FALSE
+cacau,T069,Sistemas agroflorestais,9,FALSE
+cacau,T026,Controle biológico de doenças (Trichoderma),8,FALSE
+cacau,T058,Cultura de tecidos e micropropagação,8,FALSE
+cacau,T002,Café,7,FALSE
+cacau,T062,Serapilheira e fauna do solo,7,FALSE
+cacau,T045,Bancos de germoplasma,6,FALSE
+cacau,T116,Compostos bioativos e antioxidantes,6,FALSE
+cacau,T085,Bioinformática e genômica,6,FALSE
+cacau,T055,Caju,6,FALSE
+cacau,T031,Seringueira,5,FALSE
+cacau,T024,Castanha-da-amazônia,5,FALSE
+cacau,T023,Sementes: germinação e dormência,4,FALSE
+cacau,T130,"Florestas tropicais, desmatamento e LiDAR",4,FALSE
+cacau,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",4,FALSE
+cacau,T077,Genômica animal,4,FALSE
+cacau,T032,Feijão-comum: doenças,4,FALSE
+cacau,T056,"Biomateriais: filmes, nanocelulose e compósitos",4,FALSE
+cacau,T030,Florística e estrutura de florestas nativas,3,FALSE
+cacau,T087,Iniciação científica e formação,3,FALSE
+cacau,T090,Uso e cobertura da terra,3,FALSE
+cacau,T006,Mandioca,3,FALSE
+cacau,T053,Açaí,3,FALSE
+cacau,T050,"Palmito, pupunha e frutos amazônicos",3,FALSE
+cacau,T011,Carbono e qualidade física do solo,2,FALSE
+cacau,T012,Pecuária de leite e de corte: cadeias produtivas,2,FALSE
+cacau,T051,Abacaxi,2,FALSE
+cacau,T076,Espécies nativas: nomenclatura e descrição,2,FALSE
+cacau,T118,Tolerância à seca,2,FALSE
+cacau,T124,Adubação nitrogenada,2,FALSE
+cacau,T066,Captação de água de chuva e barragens subterrâneas,2,FALSE
+cacau,T139,Viroses de plantas,2,FALSE
+cacau,T049,Batata e batata-doce,2,FALSE
+cacau,T141,Cenoura,2,FALSE
+cacau,T008,Banana,2,FALSE
+cacau,T074,"Chuvas, clima e evapotranspiração",2,FALSE
+cacau,T140,Microbiologia do solo e coleções de microrganismos,1,FALSE
+cacau,T061,Guaraná,1,FALSE
+cacau,T128,Pínus,1,FALSE
+cacau,T105,Manga: doenças,1,FALSE
+cacau,T119,Pimentas e pimenta-do-reino,1,FALSE
+cacau,T005,Lagarta-do-cartucho e outras lagartas,1,FALSE
+cacau,T097,Fungos micorrízicos,1,FALSE
+cacau,T083,Enraizamento de estacas,1,FALSE
+cacau,T110,Acerola,1,FALSE
+cacau,T034,Moscas-das-frutas,1,FALSE
+cacau,T137,Irrigação,1,FALSE
+cacau,T022,"Abelhas, apicultura e meliponicultura",1,FALSE
+cacau,T091,"Química do solo, calagem e plantas de cobertura",1,FALSE
+cacau,T029,Maçã,1,FALSE
+cacau,T054,Geotecnologias e sistemas de informação geográfica,1,FALSE
+cacau,T080,Gestão ambiental e planejamento institucional,1,FALSE
+cacau,T086,Caprinos e ovinos,1,FALSE
+cacau,T143,Levantamento e classificação de solos,1,FALSE
+cacau,T003,"Gestão, inovação e informática",1,FALSE
+cacau,T052,Bioprocessos: hidrólise enzimática e biogás,1,FALSE
+amazonia,T057,Cupuaçu,875,TRUE
+amazonia,T031,Seringueira,809,FALSE
+amazonia,T053,Açaí,793,TRUE
+amazonia,T024,Castanha-da-amazônia,701,TRUE
+amazonia,T061,Guaraná,546,TRUE
+amazonia,T050,"Palmito, pupunha e frutos amazônicos",542,TRUE
+amazonia,T116,Compostos bioativos e antioxidantes,192,FALSE
+amazonia,T030,Florística e estrutura de florestas nativas,142,FALSE
+amazonia,T023,Sementes: germinação e dormência,140,FALSE
+amazonia,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",128,FALSE
+amazonia,T045,Bancos de germoplasma,125,FALSE
+amazonia,T099,Manejo florestal,124,FALSE
+amazonia,T076,Espécies nativas: nomenclatura e descrição,120,FALSE
+amazonia,T019,Óleos essenciais e plantas aromáticas,112,FALSE
+amazonia,T100,Ácaros,106,FALSE
+amazonia,T062,Serapilheira e fauna do solo,89,FALSE
+amazonia,T058,Cultura de tecidos e micropropagação,83,FALSE
+amazonia,T083,Enraizamento de estacas,77,FALSE
+amazonia,T026,Controle biológico de doenças (Trichoderma),61,FALSE
+amazonia,T005,Lagarta-do-cartucho e outras lagartas,55,FALSE
+amazonia,T130,"Florestas tropicais, desmatamento e LiDAR",54,FALSE
+amazonia,T092,Farinhas e panificação,53,FALSE
+amazonia,T069,Sistemas agroflorestais,45,FALSE
+amazonia,T022,"Abelhas, apicultura e meliponicultura",41,FALSE
+amazonia,T128,Pínus,40,FALSE
+amazonia,T052,Bioprocessos: hidrólise enzimática e biogás,35,FALSE
+amazonia,T131,Serviços ecossistêmicos,33,FALSE
+amazonia,T105,Manga: doenças,33,FALSE
+amazonia,T034,Moscas-das-frutas,31,FALSE
+amazonia,T048,Manga: produção,29,FALSE
+amazonia,T016,Maracujá,29,FALSE
+amazonia,T002,Café,29,FALSE
+amazonia,T078,Umbu,28,FALSE
+amazonia,T006,Mandioca,28,FALSE
+amazonia,T056,"Biomateriais: filmes, nanocelulose e compósitos",26,FALSE
+amazonia,T055,Caju,26,FALSE
+amazonia,T051,Abacaxi,24,FALSE
+amazonia,T102,Bacias hidrográficas,20,FALSE
+amazonia,T032,Feijão-comum: doenças,20,FALSE
+amazonia,T041,Ferrugem-asiática da soja,19,FALSE
+amazonia,T095,Adubos verdes e compostagem,19,FALSE
+amazonia,T036,Alimentação de ruminantes e digestibilidade,19,FALSE
+amazonia,T097,Fungos micorrízicos,18,FALSE
+amazonia,T080,Gestão ambiental e planejamento institucional,17,FALSE
+amazonia,T124,Adubação nitrogenada,16,FALSE
+amazonia,T033,Plantas daninhas e herbicidas,16,FALSE
+amazonia,T038,Hortaliças: consumo e conservação,15,FALSE
+amazonia,T001,Piscicultura e pesca,15,FALSE
+amazonia,T068,Queijos e derivados lácteos,14,FALSE
+amazonia,T008,Banana,14,FALSE
+amazonia,T064,Dendê (palma de óleo),14,FALSE
+amazonia,T085,Bioinformática e genômica,14,FALSE
+amazonia,T139,Viroses de plantas,13,FALSE
+amazonia,T090,Uso e cobertura da terra,13,FALSE
+amazonia,T079,Espectroscopia e métodos analíticos,12,FALSE
+amazonia,T020,Integração lavoura-pecuária-floresta (ILPF),12,FALSE
+amazonia,T003,"Gestão, inovação e informática",12,FALSE
+amazonia,T143,Levantamento e classificação de solos,11,FALSE
+amazonia,T011,Carbono e qualidade física do solo,11,FALSE
+amazonia,T122,"Consumo alimentar, metano e eficiência",11,FALSE
+amazonia,T073,Zoneamento agroecológico e aptidão agrícola,11,FALSE
+amazonia,T072,Silagem,10,FALSE
+amazonia,T087,Iniciação científica e formação,9,FALSE
+amazonia,T091,"Química do solo, calagem e plantas de cobertura",9,FALSE
+amazonia,T103,Mosca-branca,8,FALSE
+amazonia,T060,Mastite,8,FALSE
+amazonia,T101,Eucalipto,8,FALSE
+amazonia,T010,Feijão-caupi,8,FALSE
+amazonia,T117,Coqueiro,8,FALSE
+amazonia,T074,"Chuvas, clima e evapotranspiração",8,FALSE
+amazonia,T098,Agrometeorologia e monitoramento,7,FALSE
+amazonia,T112,Nanotecnologia,7,FALSE
+amazonia,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",7,FALSE
+amazonia,T125,Inteligência artificial e visão computacional,7,FALSE
+amazonia,T134,Terra preta de índio,7,FALSE
+amazonia,T094,Andropogon e forrageiras do Cerrado,7,FALSE
+amazonia,T111,Cigarrinhas,6,FALSE
+amazonia,T132,Abóbora,6,FALSE
+amazonia,T075,Adubação fosfatada,6,FALSE
+amazonia,T029,Maçã,6,FALSE
+amazonia,T140,Microbiologia do solo e coleções de microrganismos,6,FALSE
+amazonia,T086,Caprinos e ovinos,6,FALSE
+amazonia,T114,"Calagem, gessagem e remineralizadores",6,FALSE
+amazonia,T044,Rizosfera e inoculantes,5,FALSE
+amazonia,T009,Soja: cultivares e sementes,5,FALSE
+amazonia,T084,Carcaça e terminação de animais,5,FALSE
+amazonia,T012,Pecuária de leite e de corte: cadeias produtivas,5,FALSE
+amazonia,T110,Acerola,5,FALSE
+amazonia,T028,Algodão,5,FALSE
+amazonia,T065,Doenças da videira,5,FALSE
+amazonia,T066,Captação de água de chuva e barragens subterrâneas,5,FALSE
+amazonia,T054,Geotecnologias e sistemas de informação geográfica,5,FALSE
+amazonia,T133,Trópico Semiárido: pesquisa e mecanização,5,FALSE
+amazonia,T118,Tolerância à seca,5,FALSE
+amazonia,T077,Genômica animal,5,FALSE
+amazonia,T049,Batata e batata-doce,4,FALSE
+amazonia,T004,Arroz: cultivares,4,FALSE
+amazonia,T081,Arroz: manejo e adubação,4,FALSE
+amazonia,T000,Uva e vinho,4,FALSE
+amazonia,T127,Mamão e mamona,4,FALSE
+amazonia,T021,Reprodução animal e inseminação,4,FALSE
+amazonia,T070,Nematoide-das-galhas,4,FALSE
+amazonia,T141,Cenoura,4,FALSE
+amazonia,T144,Suplementação mineral,4,FALSE
+amazonia,T113,Pinhão-manso,3,FALSE
+amazonia,T046,Verminose de pequenos ruminantes,3,FALSE
+amazonia,T120,Braquiárias: melhoramento e apomixia,3,FALSE
+amazonia,T109,Frangos e suínos: nutrição,3,FALSE
+amazonia,T119,Pimentas e pimenta-do-reino,3,FALSE
+amazonia,T137,Irrigação,3,FALSE
+amazonia,T014,Citros,3,FALSE
+amazonia,T121,Alface,3,FALSE
+amazonia,T067,Manejo de pastagens e sementes forrageiras,3,FALSE
+amazonia,T108,Feijão-comum: manejo e adubação,3,FALSE
+amazonia,T082,Agrotóxicos no ambiente,2,FALSE
+amazonia,T013,Feijão-comum: melhoramento,2,FALSE
+amazonia,T037,Doenças de caprinos e ovinos,2,FALSE
+amazonia,T104,Erva-mate,2,FALSE
+amazonia,T107,Paspalum,2,FALSE
+amazonia,T035,Carrapato bovino,2,FALSE
+amazonia,T042,Amendoim forrageiro,2,FALSE
+amazonia,T096,Gênese e mineralogia de solos,2,FALSE
+amazonia,T043,Sensoriamento remoto e índices de vegetação,2,FALSE
+amazonia,T115,Emissões de gases de efeito estufa,2,FALSE
+amazonia,T129,Pêssego e amora-preta,1,FALSE
+amazonia,T047,Trigo e triticale: cultivares,1,FALSE
+amazonia,T039,Brusone do arroz,1,FALSE
+amazonia,T142,Tolerância ao alumínio,1,FALSE
+amazonia,T089,Girassol,1,FALSE
+amazonia,T025,Gado de corte: raças e desempenho,1,FALSE
+amazonia,T138,Rizóbios e fixação biológica de nitrogênio,1,FALSE
+outras-temporarias,T006,Mandioca,2273,TRUE
+outras-temporarias,T010,Feijão-caupi,2016,TRUE
+outras-temporarias,T013,Feijão-comum: melhoramento,1803,TRUE
+outras-temporarias,T017,Melão e melancia,1175,TRUE
+outras-temporarias,T032,Feijão-comum: doenças,973,TRUE
+outras-temporarias,T049,Batata e batata-doce,888,TRUE
+outras-temporarias,T108,Feijão-comum: manejo e adubação,673,TRUE
+outras-temporarias,T051,Abacaxi,670,TRUE
+outras-temporarias,T040,Cebola e alho,602,TRUE
+outras-temporarias,T093,Feijão-comum: cultivares,384,TRUE
+outras-temporarias,T138,Rizóbios e fixação biológica de nitrogênio,300,FALSE
+outras-temporarias,T045,Bancos de germoplasma,212,FALSE
+outras-temporarias,T103,Mosca-branca,192,FALSE
+outras-temporarias,T139,Viroses de plantas,165,FALSE
+outras-temporarias,T092,Farinhas e panificação,139,FALSE
+outras-temporarias,T118,Tolerância à seca,130,FALSE
+outras-temporarias,T026,Controle biológico de doenças (Trichoderma),117,FALSE
+outras-temporarias,T005,Lagarta-do-cartucho e outras lagartas,106,FALSE
+outras-temporarias,T070,Nematoide-das-galhas,98,FALSE
+outras-temporarias,T004,Arroz: cultivares,83,FALSE
+outras-temporarias,T044,Rizosfera e inoculantes,81,FALSE
+outras-temporarias,T100,Ácaros,79,FALSE
+outras-temporarias,T075,Adubação fosfatada,76,FALSE
+outras-temporarias,T058,Cultura de tecidos e micropropagação,71,FALSE
+outras-temporarias,T088,Consórcio milho-braquiária e milho safrinha,71,FALSE
+outras-temporarias,T091,"Química do solo, calagem e plantas de cobertura",70,FALSE
+outras-temporarias,T033,Plantas daninhas e herbicidas,68,FALSE
+outras-temporarias,T124,Adubação nitrogenada,67,FALSE
+outras-temporarias,T022,"Abelhas, apicultura e meliponicultura",67,FALSE
+outras-temporarias,T038,Hortaliças: consumo e conservação,65,FALSE
+outras-temporarias,T116,Compostos bioativos e antioxidantes,60,FALSE
+outras-temporarias,T019,Óleos essenciais e plantas aromáticas,56,FALSE
+outras-temporarias,T011,Carbono e qualidade física do solo,51,FALSE
+outras-temporarias,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",48,FALSE
+outras-temporarias,T041,Ferrugem-asiática da soja,44,FALSE
+outras-temporarias,T056,"Biomateriais: filmes, nanocelulose e compósitos",43,FALSE
+outras-temporarias,T023,Sementes: germinação e dormência,42,FALSE
+outras-temporarias,T105,Manga: doenças,38,FALSE
+outras-temporarias,T015,Milho: cultivares e melhoramento,34,FALSE
+outras-temporarias,T095,Adubos verdes e compostagem,31,FALSE
+outras-temporarias,T097,Fungos micorrízicos,30,FALSE
+outras-temporarias,T132,Abóbora,29,FALSE
+outras-temporarias,T016,Maracujá,28,FALSE
+outras-temporarias,T080,Gestão ambiental e planejamento institucional,26,FALSE
+outras-temporarias,T114,"Calagem, gessagem e remineralizadores",26,FALSE
+outras-temporarias,T081,Arroz: manejo e adubação,26,FALSE
+outras-temporarias,T028,Algodão,25,FALSE
+outras-temporarias,T076,Espécies nativas: nomenclatura e descrição,22,FALSE
+outras-temporarias,T137,Irrigação,22,FALSE
+outras-temporarias,T145,Nematoides das lesões e de cisto,20,FALSE
+outras-temporarias,T098,Agrometeorologia e monitoramento,17,FALSE
+outras-temporarias,T085,Bioinformática e genômica,16,FALSE
+outras-temporarias,T048,Manga: produção,15,FALSE
+outras-temporarias,T034,Moscas-das-frutas,15,FALSE
+outras-temporarias,T067,Manejo de pastagens e sementes forrageiras,15,FALSE
+outras-temporarias,T059,Sorgo,14,FALSE
+outras-temporarias,T089,Girassol,14,FALSE
+outras-temporarias,T119,Pimentas e pimenta-do-reino,13,FALSE
+outras-temporarias,T030,Florística e estrutura de florestas nativas,13,FALSE
+outras-temporarias,T073,Zoneamento agroecológico e aptidão agrícola,13,FALSE
+outras-temporarias,T052,Bioprocessos: hidrólise enzimática e biogás,12,FALSE
+outras-temporarias,T050,"Palmito, pupunha e frutos amazônicos",12,FALSE
+outras-temporarias,T140,Microbiologia do solo e coleções de microrganismos,12,FALSE
+outras-temporarias,T086,Caprinos e ovinos,12,FALSE
+outras-temporarias,T087,Iniciação científica e formação,12,FALSE
+outras-temporarias,T014,Citros,12,FALSE
+outras-temporarias,T074,"Chuvas, clima e evapotranspiração",11,FALSE
+outras-temporarias,T012,Pecuária de leite e de corte: cadeias produtivas,11,FALSE
+outras-temporarias,T066,Captação de água de chuva e barragens subterrâneas,11,FALSE
+outras-temporarias,T126,Biossegurança e transgênicos,11,FALSE
+outras-temporarias,T068,Queijos e derivados lácteos,11,FALSE
+outras-temporarias,T127,Mamão e mamona,11,FALSE
+outras-temporarias,T039,Brusone do arroz,10,FALSE
+outras-temporarias,T002,Café,10,FALSE
+outras-temporarias,T062,Serapilheira e fauna do solo,10,FALSE
+outras-temporarias,T065,Doenças da videira,10,FALSE
+outras-temporarias,T077,Genômica animal,10,FALSE
+outras-temporarias,T001,Piscicultura e pesca,10,FALSE
+outras-temporarias,T069,Sistemas agroflorestais,9,FALSE
+outras-temporarias,T099,Manejo florestal,9,FALSE
+outras-temporarias,T128,Pínus,9,FALSE
+outras-temporarias,T083,Enraizamento de estacas,9,FALSE
+outras-temporarias,T046,Verminose de pequenos ruminantes,9,FALSE
+outras-temporarias,T121,Alface,9,FALSE
+outras-temporarias,T055,Caju,9,FALSE
+outras-temporarias,T020,Integração lavoura-pecuária-floresta (ILPF),9,FALSE
+outras-temporarias,T123,Lodo de esgoto e metais pesados,8,FALSE
+outras-temporarias,T053,Açaí,8,FALSE
+outras-temporarias,T112,Nanotecnologia,8,FALSE
+outras-temporarias,T134,Terra preta de índio,8,FALSE
+outras-temporarias,T111,Cigarrinhas,8,FALSE
+outras-temporarias,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",8,FALSE
+outras-temporarias,T142,Tolerância ao alumínio,8,FALSE
+outras-temporarias,T141,Cenoura,7,FALSE
+outras-temporarias,T136,Evapotranspiração por satélite,7,FALSE
+outras-temporarias,T110,Acerola,7,FALSE
+outras-temporarias,T079,Espectroscopia e métodos analíticos,7,FALSE
+outras-temporarias,T063,Tomate,7,FALSE
+outras-temporarias,T082,Agrotóxicos no ambiente,7,FALSE
+outras-temporarias,T003,"Gestão, inovação e informática",7,FALSE
+outras-temporarias,T104,Erva-mate,7,FALSE
+outras-temporarias,T133,Trópico Semiárido: pesquisa e mecanização,7,FALSE
+outras-temporarias,T008,Banana,6,FALSE
+outras-temporarias,T009,Soja: cultivares e sementes,6,FALSE
+outras-temporarias,T027,Cana-de-açúcar,6,FALSE
+outras-temporarias,T061,Guaraná,6,FALSE
+outras-temporarias,T102,Bacias hidrográficas,6,FALSE
+outras-temporarias,T029,Maçã,6,FALSE
+outras-temporarias,T115,Emissões de gases de efeito estufa,6,FALSE
+outras-temporarias,T054,Geotecnologias e sistemas de informação geográfica,6,FALSE
+outras-temporarias,T117,Coqueiro,6,FALSE
+outras-temporarias,T125,Inteligência artificial e visão computacional,6,FALSE
+outras-temporarias,T043,Sensoriamento remoto e índices de vegetação,5,FALSE
+outras-temporarias,T031,Seringueira,5,FALSE
+outras-temporarias,T064,Dendê (palma de óleo),5,FALSE
+outras-temporarias,T042,Amendoim forrageiro,5,FALSE
+outras-temporarias,T057,Cupuaçu,4,FALSE
+outras-temporarias,T024,Castanha-da-amazônia,4,FALSE
+outras-temporarias,T000,Uva e vinho,4,FALSE
+outras-temporarias,T047,Trigo e triticale: cultivares,4,FALSE
+outras-temporarias,T078,Umbu,3,FALSE
+outras-temporarias,T101,Eucalipto,3,FALSE
+outras-temporarias,T094,Andropogon e forrageiras do Cerrado,2,FALSE
+outras-temporarias,T131,Serviços ecossistêmicos,2,FALSE
+outras-temporarias,T025,Gado de corte: raças e desempenho,2,FALSE
+outras-temporarias,T129,Pêssego e amora-preta,2,FALSE
+outras-temporarias,T113,Pinhão-manso,2,FALSE
+outras-temporarias,T090,Uso e cobertura da terra,2,FALSE
+outras-temporarias,T035,Carrapato bovino,2,FALSE
+outras-temporarias,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+outras-temporarias,T107,Paspalum,1,FALSE
+outras-temporarias,T060,Mastite,1,FALSE
+outras-temporarias,T143,Levantamento e classificação de solos,1,FALSE
+outras-temporarias,T037,Doenças de caprinos e ovinos,1,FALSE
+outras-temporarias,T135,"Doenças do trigo (giberela, brusone)",1,FALSE
+outras-temporarias,T106,Avicultura e suinocultura,1,FALSE
+cereais,T015,Milho: cultivares e melhoramento,3583,TRUE
+cereais,T004,Arroz: cultivares,2378,TRUE
+cereais,T047,Trigo e triticale: cultivares,1734,TRUE
+cereais,T059,Sorgo,1498,TRUE
+cereais,T005,Lagarta-do-cartucho e outras lagartas,1137,FALSE
+cereais,T039,Brusone do arroz,943,TRUE
+cereais,T135,"Doenças do trigo (giberela, brusone)",874,TRUE
+cereais,T081,Arroz: manejo e adubação,812,TRUE
+cereais,T124,Adubação nitrogenada,739,FALSE
+cereais,T088,Consórcio milho-braquiária e milho safrinha,596,TRUE
+cereais,T092,Farinhas e panificação,418,FALSE
+cereais,T033,Plantas daninhas e herbicidas,323,FALSE
+cereais,T142,Tolerância ao alumínio,319,FALSE
+cereais,T075,Adubação fosfatada,299,FALSE
+cereais,T044,Rizosfera e inoculantes,279,FALSE
+cereais,T067,Manejo de pastagens e sementes forrageiras,217,FALSE
+cereais,T045,Bancos de germoplasma,204,FALSE
+cereais,T041,Ferrugem-asiática da soja,194,FALSE
+cereais,T032,Feijão-comum: doenças,190,FALSE
+cereais,T011,Carbono e qualidade física do solo,182,FALSE
+cereais,T091,"Química do solo, calagem e plantas de cobertura",173,FALSE
+cereais,T009,Soja: cultivares e sementes,151,FALSE
+cereais,T118,Tolerância à seca,150,FALSE
+cereais,T103,Mosca-branca,145,FALSE
+cereais,T013,Feijão-comum: melhoramento,144,FALSE
+cereais,T020,Integração lavoura-pecuária-floresta (ILPF),143,FALSE
+cereais,T026,Controle biológico de doenças (Trichoderma),133,FALSE
+cereais,T114,"Calagem, gessagem e remineralizadores",114,FALSE
+cereais,T093,Feijão-comum: cultivares,107,FALSE
+cereais,T097,Fungos micorrízicos,100,FALSE
+cereais,T010,Feijão-caupi,94,FALSE
+cereais,T095,Adubos verdes e compostagem,91,FALSE
+cereais,T111,Cigarrinhas,89,FALSE
+cereais,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",85,FALSE
+cereais,T139,Viroses de plantas,76,FALSE
+cereais,T106,Avicultura e suinocultura,69,FALSE
+cereais,T108,Feijão-comum: manejo e adubação,69,FALSE
+cereais,T080,Gestão ambiental e planejamento institucional,66,FALSE
+cereais,T098,Agrometeorologia e monitoramento,64,FALSE
+cereais,T140,Microbiologia do solo e coleções de microrganismos,63,FALSE
+cereais,T123,Lodo de esgoto e metais pesados,60,FALSE
+cereais,T012,Pecuária de leite e de corte: cadeias produtivas,59,FALSE
+cereais,T125,Inteligência artificial e visão computacional,56,FALSE
+cereais,T100,Ácaros,55,FALSE
+cereais,T085,Bioinformática e genômica,51,FALSE
+cereais,T082,Agrotóxicos no ambiente,51,FALSE
+cereais,T070,Nematoide-das-galhas,51,FALSE
+cereais,T079,Espectroscopia e métodos analíticos,51,FALSE
+cereais,T115,Emissões de gases de efeito estufa,50,FALSE
+cereais,T052,Bioprocessos: hidrólise enzimática e biogás,46,FALSE
+cereais,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",45,FALSE
+cereais,T105,Manga: doenças,44,FALSE
+cereais,T023,Sementes: germinação e dormência,43,FALSE
+cereais,T034,Moscas-das-frutas,43,FALSE
+cereais,T006,Mandioca,42,FALSE
+cereais,T138,Rizóbios e fixação biológica de nitrogênio,42,FALSE
+cereais,T056,"Biomateriais: filmes, nanocelulose e compósitos",41,FALSE
+cereais,T087,Iniciação científica e formação,40,FALSE
+cereais,T141,Cenoura,39,FALSE
+cereais,T073,Zoneamento agroecológico e aptidão agrícola,36,FALSE
+cereais,T136,Evapotranspiração por satélite,35,FALSE
+cereais,T027,Cana-de-açúcar,35,FALSE
+cereais,T043,Sensoriamento remoto e índices de vegetação,33,FALSE
+cereais,T066,Captação de água de chuva e barragens subterrâneas,32,FALSE
+cereais,T000,Uva e vinho,31,FALSE
+cereais,T074,"Chuvas, clima e evapotranspiração",31,FALSE
+cereais,T003,"Gestão, inovação e informática",31,FALSE
+cereais,T094,Andropogon e forrageiras do Cerrado,29,FALSE
+cereais,T145,Nematoides das lesões e de cisto,28,FALSE
+cereais,T028,Algodão,27,FALSE
+cereais,T037,Doenças de caprinos e ovinos,27,FALSE
+cereais,T065,Doenças da videira,26,FALSE
+cereais,T126,Biossegurança e transgênicos,26,FALSE
+cereais,T077,Genômica animal,26,FALSE
+cereais,T133,Trópico Semiárido: pesquisa e mecanização,25,FALSE
+cereais,T089,Girassol,25,FALSE
+cereais,T137,Irrigação,23,FALSE
+cereais,T019,Óleos essenciais e plantas aromáticas,23,FALSE
+cereais,T022,"Abelhas, apicultura e meliponicultura",23,FALSE
+cereais,T058,Cultura de tecidos e micropropagação,21,FALSE
+cereais,T086,Caprinos e ovinos,21,FALSE
+cereais,T069,Sistemas agroflorestais,19,FALSE
+cereais,T002,Café,19,FALSE
+cereais,T076,Espécies nativas: nomenclatura e descrição,18,FALSE
+cereais,T116,Compostos bioativos e antioxidantes,18,FALSE
+cereais,T060,Mastite,18,FALSE
+cereais,T038,Hortaliças: consumo e conservação,17,FALSE
+cereais,T101,Eucalipto,16,FALSE
+cereais,T040,Cebola e alho,16,FALSE
+cereais,T121,Alface,15,FALSE
+cereais,T068,Queijos e derivados lácteos,15,FALSE
+cereais,T054,Geotecnologias e sistemas de informação geográfica,13,FALSE
+cereais,T107,Paspalum,12,FALSE
+cereais,T112,Nanotecnologia,12,FALSE
+cereais,T062,Serapilheira e fauna do solo,12,FALSE
+cereais,T143,Levantamento e classificação de solos,12,FALSE
+cereais,T001,Piscicultura e pesca,11,FALSE
+cereais,T071,Gado leiteiro: Gir e Girolando,9,FALSE
+cereais,T053,Açaí,9,FALSE
+cereais,T051,Abacaxi,9,FALSE
+cereais,T035,Carrapato bovino,7,FALSE
+cereais,T049,Batata e batata-doce,7,FALSE
+cereais,T120,Braquiárias: melhoramento e apomixia,7,FALSE
+cereais,T048,Manga: produção,7,FALSE
+cereais,T017,Melão e melancia,7,FALSE
+cereais,T134,Terra preta de índio,7,FALSE
+cereais,T099,Manejo florestal,6,FALSE
+cereais,T131,Serviços ecossistêmicos,6,FALSE
+cereais,T102,Bacias hidrográficas,6,FALSE
+cereais,T063,Tomate,5,FALSE
+cereais,T117,Coqueiro,4,FALSE
+cereais,T030,Florística e estrutura de florestas nativas,4,FALSE
+cereais,T104,Erva-mate,4,FALSE
+cereais,T042,Amendoim forrageiro,4,FALSE
+cereais,T127,Mamão e mamona,4,FALSE
+cereais,T021,Reprodução animal e inseminação,4,FALSE
+cereais,T025,Gado de corte: raças e desempenho,3,FALSE
+cereais,T031,Seringueira,3,FALSE
+cereais,T083,Enraizamento de estacas,3,FALSE
+cereais,T096,Gênese e mineralogia de solos,3,FALSE
+cereais,T128,Pínus,3,FALSE
+cereais,T078,Umbu,3,FALSE
+cereais,T008,Banana,3,FALSE
+cereais,T119,Pimentas e pimenta-do-reino,3,FALSE
+cereais,T090,Uso e cobertura da terra,3,FALSE
+cereais,T129,Pêssego e amora-preta,3,FALSE
+cereais,T132,Abóbora,2,FALSE
+cereais,T055,Caju,2,FALSE
+cereais,T113,Pinhão-manso,2,FALSE
+cereais,T046,Verminose de pequenos ruminantes,2,FALSE
+cereais,T024,Castanha-da-amazônia,2,FALSE
+cereais,T064,Dendê (palma de óleo),1,FALSE
+cereais,T029,Maçã,1,FALSE
+cereais,T014,Citros,1,FALSE
+cereais,T016,Maracujá,1,FALSE
+cereais,T061,Guaraná,1,FALSE
+cereais,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+cereais,T057,Cupuaçu,1,FALSE
+cereais,T050,"Palmito, pupunha e frutos amazônicos",1,FALSE
+soja,T009,Soja: cultivares e sementes,3457,TRUE
+soja,T041,Ferrugem-asiática da soja,854,TRUE
+soja,T005,Lagarta-do-cartucho e outras lagartas,626,FALSE
+soja,T033,Plantas daninhas e herbicidas,385,FALSE
+soja,T145,Nematoides das lesões e de cisto,294,FALSE
+soja,T075,Adubação fosfatada,245,FALSE
+soja,T044,Rizosfera e inoculantes,224,FALSE
+soja,T088,Consórcio milho-braquiária e milho safrinha,180,FALSE
+soja,T103,Mosca-branca,178,FALSE
+soja,T011,Carbono e qualidade física do solo,166,FALSE
+soja,T118,Tolerância à seca,102,FALSE
+soja,T124,Adubação nitrogenada,100,FALSE
+soja,T020,Integração lavoura-pecuária-floresta (ILPF),90,FALSE
+soja,T139,Viroses de plantas,77,FALSE
+soja,T138,Rizóbios e fixação biológica de nitrogênio,74,FALSE
+soja,T114,"Calagem, gessagem e remineralizadores",72,FALSE
+soja,T070,Nematoide-das-galhas,67,FALSE
+soja,T043,Sensoriamento remoto e índices de vegetação,67,FALSE
+soja,T091,"Química do solo, calagem e plantas de cobertura",66,FALSE
+soja,T092,Farinhas e panificação,65,FALSE
+soja,T125,Inteligência artificial e visão computacional,59,FALSE
+soja,T032,Feijão-comum: doenças,52,FALSE
+soja,T004,Arroz: cultivares,52,FALSE
+soja,T026,Controle biológico de doenças (Trichoderma),51,FALSE
+soja,T081,Arroz: manejo e adubação,46,FALSE
+soja,T098,Agrometeorologia e monitoramento,46,FALSE
+soja,T126,Biossegurança e transgênicos,44,FALSE
+soja,T052,Bioprocessos: hidrólise enzimática e biogás,40,FALSE
+soja,T015,Milho: cultivares e melhoramento,38,FALSE
+soja,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",36,FALSE
+soja,T047,Trigo e triticale: cultivares,36,FALSE
+soja,T080,Gestão ambiental e planejamento institucional,35,FALSE
+soja,T079,Espectroscopia e métodos analíticos,32,FALSE
+soja,T115,Emissões de gases de efeito estufa,31,FALSE
+soja,T085,Bioinformática e genômica,31,FALSE
+soja,T074,"Chuvas, clima e evapotranspiração",28,FALSE
+soja,T087,Iniciação científica e formação,26,FALSE
+soja,T136,Evapotranspiração por satélite,25,FALSE
+soja,T067,Manejo de pastagens e sementes forrageiras,25,FALSE
+soja,T028,Algodão,24,FALSE
+soja,T039,Brusone do arroz,23,FALSE
+soja,T012,Pecuária de leite e de corte: cadeias produtivas,23,FALSE
+soja,T068,Queijos e derivados lácteos,23,FALSE
+soja,T100,Ácaros,23,FALSE
+soja,T023,Sementes: germinação e dormência,23,FALSE
+soja,T059,Sorgo,22,FALSE
+soja,T082,Agrotóxicos no ambiente,22,FALSE
+soja,T022,"Abelhas, apicultura e meliponicultura",21,FALSE
+soja,T089,Girassol,20,FALSE
+soja,T003,"Gestão, inovação e informática",19,FALSE
+soja,T073,Zoneamento agroecológico e aptidão agrícola,19,FALSE
+soja,T056,"Biomateriais: filmes, nanocelulose e compósitos",18,FALSE
+soja,T038,Hortaliças: consumo e conservação,17,FALSE
+soja,T093,Feijão-comum: cultivares,17,FALSE
+soja,T140,Microbiologia do solo e coleções de microrganismos,17,FALSE
+soja,T045,Bancos de germoplasma,17,FALSE
+soja,T108,Feijão-comum: manejo e adubação,17,FALSE
+soja,T142,Tolerância ao alumínio,16,FALSE
+soja,T027,Cana-de-açúcar,15,FALSE
+soja,T097,Fungos micorrízicos,13,FALSE
+soja,T135,"Doenças do trigo (giberela, brusone)",12,FALSE
+soja,T010,Feijão-caupi,11,FALSE
+soja,T002,Café,11,FALSE
+soja,T101,Eucalipto,11,FALSE
+soja,T116,Compostos bioativos e antioxidantes,11,FALSE
+soja,T133,Trópico Semiárido: pesquisa e mecanização,11,FALSE
+soja,T054,Geotecnologias e sistemas de informação geográfica,11,FALSE
+soja,T013,Feijão-comum: melhoramento,9,FALSE
+soja,T131,Serviços ecossistêmicos,8,FALSE
+soja,T095,Adubos verdes e compostagem,7,FALSE
+soja,T076,Espécies nativas: nomenclatura e descrição,6,FALSE
+soja,T001,Piscicultura e pesca,6,FALSE
+soja,T105,Manga: doenças,6,FALSE
+soja,T123,Lodo de esgoto e metais pesados,6,FALSE
+soja,T112,Nanotecnologia,6,FALSE
+soja,T019,Óleos essenciais e plantas aromáticas,6,FALSE
+soja,T060,Mastite,5,FALSE
+soja,T077,Genômica animal,5,FALSE
+soja,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",5,FALSE
+soja,T042,Amendoim forrageiro,5,FALSE
+soja,T090,Uso e cobertura da terra,5,FALSE
+soja,T066,Captação de água de chuva e barragens subterrâneas,5,FALSE
+soja,T102,Bacias hidrográficas,5,FALSE
+soja,T137,Irrigação,4,FALSE
+soja,T058,Cultura de tecidos e micropropagação,4,FALSE
+soja,T069,Sistemas agroflorestais,4,FALSE
+soja,T035,Carrapato bovino,4,FALSE
+soja,T104,Erva-mate,4,FALSE
+soja,T099,Manejo florestal,4,FALSE
+soja,T106,Avicultura e suinocultura,3,FALSE
+soja,T111,Cigarrinhas,3,FALSE
+soja,T086,Caprinos e ovinos,3,FALSE
+soja,T053,Açaí,2,FALSE
+soja,T055,Caju,2,FALSE
+soja,T049,Batata e batata-doce,2,FALSE
+soja,T030,Florística e estrutura de florestas nativas,2,FALSE
+soja,T021,Reprodução animal e inseminação,2,FALSE
+soja,T025,Gado de corte: raças e desempenho,2,FALSE
+soja,T040,Cebola e alho,2,FALSE
+soja,T062,Serapilheira e fauna do solo,2,FALSE
+soja,T051,Abacaxi,2,FALSE
+soja,T143,Levantamento e classificação de solos,2,FALSE
+soja,T094,Andropogon e forrageiras do Cerrado,2,FALSE
+soja,T034,Moscas-das-frutas,2,FALSE
+soja,T063,Tomate,2,FALSE
+soja,T121,Alface,1,FALSE
+soja,T134,Terra preta de índio,1,FALSE
+soja,T127,Mamão e mamona,1,FALSE
+soja,T113,Pinhão-manso,1,FALSE
+soja,T061,Guaraná,1,FALSE
+soja,T017,Melão e melancia,1,FALSE
+soja,T120,Braquiárias: melhoramento e apomixia,1,FALSE
+soja,T031,Seringueira,1,FALSE
+soja,T046,Verminose de pequenos ruminantes,1,FALSE
+soja,T048,Manga: produção,1,FALSE
+soja,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+soja,T065,Doenças da videira,1,FALSE
+soja,T141,Cenoura,1,FALSE
+soja,T129,Pêssego e amora-preta,1,FALSE
+soja,T006,Mandioca,1,FALSE
+fumo,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",4,FALSE
+fumo,T070,Nematoide-das-galhas,3,FALSE
+fumo,T052,Bioprocessos: hidrólise enzimática e biogás,3,FALSE
+fumo,T080,Gestão ambiental e planejamento institucional,2,FALSE
+fumo,T005,Lagarta-do-cartucho e outras lagartas,2,FALSE
+fumo,T082,Agrotóxicos no ambiente,2,FALSE
+fumo,T126,Biossegurança e transgênicos,2,FALSE
+fumo,T032,Feijão-comum: doenças,1,FALSE
+fumo,T115,Emissões de gases de efeito estufa,1,FALSE
+fumo,T074,"Chuvas, clima e evapotranspiração",1,FALSE
+fumo,T091,"Química do solo, calagem e plantas de cobertura",1,FALSE
+fumo,T038,Hortaliças: consumo e conservação,1,FALSE
+fumo,T103,Mosca-branca,1,FALSE
+fumo,T011,Carbono e qualidade física do solo,1,FALSE
+fumo,T019,Óleos essenciais e plantas aromáticas,1,FALSE
+fumo,T056,"Biomateriais: filmes, nanocelulose e compósitos",1,FALSE
+fumo,T035,Carrapato bovino,1,FALSE
+fumo,T101,Eucalipto,1,FALSE
+fumo,T088,Consórcio milho-braquiária e milho safrinha,1,FALSE
+fumo,T079,Espectroscopia e métodos analíticos,1,FALSE
+fumo,T131,Serviços ecossistêmicos,1,FALSE
+fumo,T009,Soja: cultivares e sementes,1,FALSE
+fumo,T139,Viroses de plantas,1,FALSE
+fumo,T112,Nanotecnologia,1,FALSE
+fumo,T128,Pínus,1,FALSE
+cana,T027,Cana-de-açúcar,1235,TRUE
+cana,T052,Bioprocessos: hidrólise enzimática e biogás,93,FALSE
+cana,T005,Lagarta-do-cartucho e outras lagartas,77,FALSE
+cana,T044,Rizosfera e inoculantes,60,FALSE
+cana,T082,Agrotóxicos no ambiente,45,FALSE
+cana,T100,Ácaros,41,FALSE
+cana,T043,Sensoriamento remoto e índices de vegetação,40,FALSE
+cana,T034,Moscas-das-frutas,37,FALSE
+cana,T033,Plantas daninhas e herbicidas,36,FALSE
+cana,T091,"Química do solo, calagem e plantas de cobertura",29,FALSE
+cana,T115,Emissões de gases de efeito estufa,28,FALSE
+cana,T059,Sorgo,26,FALSE
+cana,T070,Nematoide-das-galhas,26,FALSE
+cana,T118,Tolerância à seca,26,FALSE
+cana,T125,Inteligência artificial e visão computacional,21,FALSE
+cana,T073,Zoneamento agroecológico e aptidão agrícola,19,FALSE
+cana,T111,Cigarrinhas,19,FALSE
+cana,T045,Bancos de germoplasma,19,FALSE
+cana,T136,Evapotranspiração por satélite,18,FALSE
+cana,T140,Microbiologia do solo e coleções de microrganismos,18,FALSE
+cana,T039,Brusone do arroz,17,FALSE
+cana,T085,Bioinformática e genômica,16,FALSE
+cana,T026,Controle biológico de doenças (Trichoderma),16,FALSE
+cana,T011,Carbono e qualidade física do solo,16,FALSE
+cana,T142,Tolerância ao alumínio,15,FALSE
+cana,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",14,FALSE
+cana,T056,"Biomateriais: filmes, nanocelulose e compósitos",14,FALSE
+cana,T003,"Gestão, inovação e informática",13,FALSE
+cana,T090,Uso e cobertura da terra,13,FALSE
+cana,T058,Cultura de tecidos e micropropagação,12,FALSE
+cana,T138,Rizóbios e fixação biológica de nitrogênio,11,FALSE
+cana,T095,Adubos verdes e compostagem,10,FALSE
+cana,T139,Viroses de plantas,9,FALSE
+cana,T077,Genômica animal,9,FALSE
+cana,T079,Espectroscopia e métodos analíticos,8,FALSE
+cana,T075,Adubação fosfatada,8,FALSE
+cana,T032,Feijão-comum: doenças,8,FALSE
+cana,T054,Geotecnologias e sistemas de informação geográfica,8,FALSE
+cana,T012,Pecuária de leite e de corte: cadeias produtivas,7,FALSE
+cana,T103,Mosca-branca,7,FALSE
+cana,T080,Gestão ambiental e planejamento institucional,7,FALSE
+cana,T030,Florística e estrutura de florestas nativas,7,FALSE
+cana,T124,Adubação nitrogenada,7,FALSE
+cana,T097,Fungos micorrízicos,7,FALSE
+cana,T114,"Calagem, gessagem e remineralizadores",6,FALSE
+cana,T102,Bacias hidrográficas,6,FALSE
+cana,T143,Levantamento e classificação de solos,5,FALSE
+cana,T123,Lodo de esgoto e metais pesados,5,FALSE
+cana,T060,Mastite,5,FALSE
+cana,T131,Serviços ecossistêmicos,5,FALSE
+cana,T069,Sistemas agroflorestais,5,FALSE
+cana,T009,Soja: cultivares e sementes,5,FALSE
+cana,T065,Doenças da videira,4,FALSE
+cana,T004,Arroz: cultivares,4,FALSE
+cana,T051,Abacaxi,4,FALSE
+cana,T074,"Chuvas, clima e evapotranspiração",4,FALSE
+cana,T105,Manga: doenças,4,FALSE
+cana,T112,Nanotecnologia,4,FALSE
+cana,T066,Captação de água de chuva e barragens subterrâneas,4,FALSE
+cana,T035,Carrapato bovino,4,FALSE
+cana,T067,Manejo de pastagens e sementes forrageiras,4,FALSE
+cana,T008,Banana,4,FALSE
+cana,T089,Girassol,3,FALSE
+cana,T137,Irrigação,3,FALSE
+cana,T010,Feijão-caupi,3,FALSE
+cana,T041,Ferrugem-asiática da soja,3,FALSE
+cana,T086,Caprinos e ovinos,3,FALSE
+cana,T015,Milho: cultivares e melhoramento,3,FALSE
+cana,T098,Agrometeorologia e monitoramento,3,FALSE
+cana,T126,Biossegurança e transgênicos,3,FALSE
+cana,T113,Pinhão-manso,2,FALSE
+cana,T068,Queijos e derivados lácteos,2,FALSE
+cana,T108,Feijão-comum: manejo e adubação,2,FALSE
+cana,T076,Espécies nativas: nomenclatura e descrição,2,FALSE
+cana,T006,Mandioca,2,FALSE
+cana,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",2,FALSE
+cana,T042,Amendoim forrageiro,2,FALSE
+cana,T081,Arroz: manejo e adubação,2,FALSE
+cana,T025,Gado de corte: raças e desempenho,2,FALSE
+cana,T046,Verminose de pequenos ruminantes,2,FALSE
+cana,T145,Nematoides das lesões e de cisto,2,FALSE
+cana,T093,Feijão-comum: cultivares,2,FALSE
+cana,T038,Hortaliças: consumo e conservação,2,FALSE
+cana,T120,Braquiárias: melhoramento e apomixia,2,FALSE
+cana,T127,Mamão e mamona,1,FALSE
+cana,T092,Farinhas e panificação,1,FALSE
+cana,T022,"Abelhas, apicultura e meliponicultura",1,FALSE
+cana,T014,Citros,1,FALSE
+cana,T028,Algodão,1,FALSE
+cana,T134,Terra preta de índio,1,FALSE
+cana,T019,Óleos essenciais e plantas aromáticas,1,FALSE
+cana,T002,Café,1,FALSE
+cana,T119,Pimentas e pimenta-do-reino,1,FALSE
+cana,T037,Doenças de caprinos e ovinos,1,FALSE
+cana,T087,Iniciação científica e formação,1,FALSE
+cana,T047,Trigo e triticale: cultivares,1,FALSE
+cana,T121,Alface,1,FALSE
+cana,T017,Melão e melancia,1,FALSE
+cana,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+cana,T106,Avicultura e suinocultura,1,FALSE
+cana,T096,Gênese e mineralogia de solos,1,FALSE
+cana,T135,"Doenças do trigo (giberela, brusone)",1,FALSE
+cana,T061,Guaraná,1,FALSE
+cana,T110,Acerola,1,FALSE
+cana,T064,Dendê (palma de óleo),1,FALSE
+cana,T013,Feijão-comum: melhoramento,1,FALSE
+cana,T055,Caju,1,FALSE
+cana,T000,Uva e vinho,1,FALSE
+cana,T001,Piscicultura e pesca,1,FALSE
+oleaginosas,T089,Girassol,697,TRUE
+oleaginosas,T113,Pinhão-manso,612,TRUE
+oleaginosas,T042,Amendoim forrageiro,427,FALSE
+oleaginosas,T127,Mamão e mamona,366,FALSE
+oleaginosas,T033,Plantas daninhas e herbicidas,95,FALSE
+oleaginosas,T045,Bancos de germoplasma,64,FALSE
+oleaginosas,T023,Sementes: germinação e dormência,60,FALSE
+oleaginosas,T027,Cana-de-açúcar,53,FALSE
+oleaginosas,T005,Lagarta-do-cartucho e outras lagartas,52,FALSE
+oleaginosas,T118,Tolerância à seca,48,FALSE
+oleaginosas,T093,Feijão-comum: cultivares,46,FALSE
+oleaginosas,T092,Farinhas e panificação,40,FALSE
+oleaginosas,T095,Adubos verdes e compostagem,39,FALSE
+oleaginosas,T052,Bioprocessos: hidrólise enzimática e biogás,38,FALSE
+oleaginosas,T070,Nematoide-das-galhas,37,FALSE
+oleaginosas,T141,Cenoura,35,FALSE
+oleaginosas,T124,Adubação nitrogenada,35,FALSE
+oleaginosas,T098,Agrometeorologia e monitoramento,33,FALSE
+oleaginosas,T010,Feijão-caupi,32,FALSE
+oleaginosas,T107,Paspalum,27,FALSE
+oleaginosas,T032,Feijão-comum: doenças,26,FALSE
+oleaginosas,T009,Soja: cultivares e sementes,24,FALSE
+oleaginosas,T079,Espectroscopia e métodos analíticos,23,FALSE
+oleaginosas,T100,Ácaros,23,FALSE
+oleaginosas,T019,Óleos essenciais e plantas aromáticas,22,FALSE
+oleaginosas,T058,Cultura de tecidos e micropropagação,22,FALSE
+oleaginosas,T026,Controle biológico de doenças (Trichoderma),21,FALSE
+oleaginosas,T085,Bioinformática e genômica,20,FALSE
+oleaginosas,T056,"Biomateriais: filmes, nanocelulose e compósitos",20,FALSE
+oleaginosas,T080,Gestão ambiental e planejamento institucional,19,FALSE
+oleaginosas,T137,Irrigação,19,FALSE
+oleaginosas,T138,Rizóbios e fixação biológica de nitrogênio,19,FALSE
+oleaginosas,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",17,FALSE
+oleaginosas,T028,Algodão,16,FALSE
+oleaginosas,T038,Hortaliças: consumo e conservação,16,FALSE
+oleaginosas,T073,Zoneamento agroecológico e aptidão agrícola,16,FALSE
+oleaginosas,T029,Maçã,15,FALSE
+oleaginosas,T068,Queijos e derivados lácteos,15,FALSE
+oleaginosas,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",15,FALSE
+oleaginosas,T116,Compostos bioativos e antioxidantes,15,FALSE
+oleaginosas,T022,"Abelhas, apicultura e meliponicultura",15,FALSE
+oleaginosas,T091,"Química do solo, calagem e plantas de cobertura",15,FALSE
+oleaginosas,T142,Tolerância ao alumínio,14,FALSE
+oleaginosas,T125,Inteligência artificial e visão computacional,14,FALSE
+oleaginosas,T114,"Calagem, gessagem e remineralizadores",14,FALSE
+oleaginosas,T075,Adubação fosfatada,13,FALSE
+oleaginosas,T088,Consórcio milho-braquiária e milho safrinha,13,FALSE
+oleaginosas,T044,Rizosfera e inoculantes,12,FALSE
+oleaginosas,T060,Mastite,12,FALSE
+oleaginosas,T076,Espécies nativas: nomenclatura e descrição,11,FALSE
+oleaginosas,T108,Feijão-comum: manejo e adubação,11,FALSE
+oleaginosas,T103,Mosca-branca,10,FALSE
+oleaginosas,T047,Trigo e triticale: cultivares,10,FALSE
+oleaginosas,T003,"Gestão, inovação e informática",10,FALSE
+oleaginosas,T081,Arroz: manejo e adubação,10,FALSE
+oleaginosas,T059,Sorgo,10,FALSE
+oleaginosas,T011,Carbono e qualidade física do solo,10,FALSE
+oleaginosas,T129,Pêssego e amora-preta,9,FALSE
+oleaginosas,T077,Genômica animal,9,FALSE
+oleaginosas,T064,Dendê (palma de óleo),9,FALSE
+oleaginosas,T086,Caprinos e ovinos,8,FALSE
+oleaginosas,T097,Fungos micorrízicos,8,FALSE
+oleaginosas,T043,Sensoriamento remoto e índices de vegetação,8,FALSE
+oleaginosas,T001,Piscicultura e pesca,8,FALSE
+oleaginosas,T040,Cebola e alho,8,FALSE
+oleaginosas,T115,Emissões de gases de efeito estufa,7,FALSE
+oleaginosas,T050,"Palmito, pupunha e frutos amazônicos",7,FALSE
+oleaginosas,T112,Nanotecnologia,7,FALSE
+oleaginosas,T087,Iniciação científica e formação,7,FALSE
+oleaginosas,T105,Manga: doenças,7,FALSE
+oleaginosas,T123,Lodo de esgoto e metais pesados,7,FALSE
+oleaginosas,T121,Alface,7,FALSE
+oleaginosas,T111,Cigarrinhas,6,FALSE
+oleaginosas,T061,Guaraná,6,FALSE
+oleaginosas,T066,Captação de água de chuva e barragens subterrâneas,6,FALSE
+oleaginosas,T074,"Chuvas, clima e evapotranspiração",6,FALSE
+oleaginosas,T041,Ferrugem-asiática da soja,6,FALSE
+oleaginosas,T039,Brusone do arroz,6,FALSE
+oleaginosas,T139,Viroses de plantas,6,FALSE
+oleaginosas,T013,Feijão-comum: melhoramento,6,FALSE
+oleaginosas,T034,Moscas-das-frutas,5,FALSE
+oleaginosas,T119,Pimentas e pimenta-do-reino,5,FALSE
+oleaginosas,T020,Integração lavoura-pecuária-floresta (ILPF),5,FALSE
+oleaginosas,T067,Manejo de pastagens e sementes forrageiras,5,FALSE
+oleaginosas,T021,Reprodução animal e inseminação,5,FALSE
+oleaginosas,T140,Microbiologia do solo e coleções de microrganismos,5,FALSE
+oleaginosas,T015,Milho: cultivares e melhoramento,5,FALSE
+oleaginosas,T082,Agrotóxicos no ambiente,4,FALSE
+oleaginosas,T145,Nematoides das lesões e de cisto,4,FALSE
+oleaginosas,T031,Seringueira,4,FALSE
+oleaginosas,T030,Florística e estrutura de florestas nativas,4,FALSE
+oleaginosas,T078,Umbu,4,FALSE
+oleaginosas,T004,Arroz: cultivares,4,FALSE
+oleaginosas,T135,"Doenças do trigo (giberela, brusone)",4,FALSE
+oleaginosas,T006,Mandioca,4,FALSE
+oleaginosas,T046,Verminose de pequenos ruminantes,3,FALSE
+oleaginosas,T048,Manga: produção,3,FALSE
+oleaginosas,T136,Evapotranspiração por satélite,3,FALSE
+oleaginosas,T128,Pínus,3,FALSE
+oleaginosas,T035,Carrapato bovino,3,FALSE
+oleaginosas,T096,Gênese e mineralogia de solos,2,FALSE
+oleaginosas,T132,Abóbora,2,FALSE
+oleaginosas,T120,Braquiárias: melhoramento e apomixia,2,FALSE
+oleaginosas,T051,Abacaxi,2,FALSE
+oleaginosas,T008,Banana,2,FALSE
+oleaginosas,T102,Bacias hidrográficas,2,FALSE
+oleaginosas,T055,Caju,2,FALSE
+oleaginosas,T024,Castanha-da-amazônia,2,FALSE
+oleaginosas,T134,Terra preta de índio,2,FALSE
+oleaginosas,T131,Serviços ecossistêmicos,2,FALSE
+oleaginosas,T012,Pecuária de leite e de corte: cadeias produtivas,2,FALSE
+oleaginosas,T094,Andropogon e forrageiras do Cerrado,2,FALSE
+oleaginosas,T049,Batata e batata-doce,2,FALSE
+oleaginosas,T099,Manejo florestal,2,FALSE
+oleaginosas,T110,Acerola,2,FALSE
+oleaginosas,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+oleaginosas,T014,Citros,1,FALSE
+oleaginosas,T063,Tomate,1,FALSE
+oleaginosas,T016,Maracujá,1,FALSE
+oleaginosas,T143,Levantamento e classificação de solos,1,FALSE
+oleaginosas,T106,Avicultura e suinocultura,1,FALSE
+oleaginosas,T083,Enraizamento de estacas,1,FALSE
+oleaginosas,T062,Serapilheira e fauna do solo,1,FALSE
+oleaginosas,T017,Melão e melancia,1,FALSE
+oleaginosas,T025,Gado de corte: raças e desempenho,1,FALSE
+oleaginosas,T117,Coqueiro,1,FALSE
+oleaginosas,T069,Sistemas agroflorestais,1,FALSE
+oleaginosas,T101,Eucalipto,1,FALSE
+oleaginosas,T133,Trópico Semiárido: pesquisa e mecanização,1,FALSE
+oleaginosas,T126,Biossegurança e transgênicos,1,FALSE
+algodao,T028,Algodão,1758,TRUE
+algodao,T005,Lagarta-do-cartucho e outras lagartas,182,FALSE
+algodao,T033,Plantas daninhas e herbicidas,81,FALSE
+algodao,T124,Adubação nitrogenada,76,FALSE
+algodao,T103,Mosca-branca,63,FALSE
+algodao,T041,Ferrugem-asiática da soja,56,FALSE
+algodao,T100,Ácaros,49,FALSE
+algodao,T070,Nematoide-das-galhas,44,FALSE
+algodao,T023,Sementes: germinação e dormência,39,FALSE
+algodao,T085,Bioinformática e genômica,38,FALSE
+algodao,T026,Controle biológico de doenças (Trichoderma),31,FALSE
+algodao,T088,Consórcio milho-braquiária e milho safrinha,29,FALSE
+algodao,T139,Viroses de plantas,25,FALSE
+algodao,T022,"Abelhas, apicultura e meliponicultura",25,FALSE
+algodao,T011,Carbono e qualidade física do solo,24,FALSE
+algodao,T105,Manga: doenças,23,FALSE
+algodao,T056,"Biomateriais: filmes, nanocelulose e compósitos",23,FALSE
+algodao,T118,Tolerância à seca,22,FALSE
+algodao,T075,Adubação fosfatada,21,FALSE
+algodao,T114,"Calagem, gessagem e remineralizadores",21,FALSE
+algodao,T043,Sensoriamento remoto e índices de vegetação,20,FALSE
+algodao,T145,Nematoides das lesões e de cisto,18,FALSE
+algodao,T045,Bancos de germoplasma,17,FALSE
+algodao,T079,Espectroscopia e métodos analíticos,15,FALSE
+algodao,T112,Nanotecnologia,14,FALSE
+algodao,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",13,FALSE
+algodao,T032,Feijão-comum: doenças,12,FALSE
+algodao,T076,Espécies nativas: nomenclatura e descrição,11,FALSE
+algodao,T058,Cultura de tecidos e micropropagação,11,FALSE
+algodao,T136,Evapotranspiração por satélite,11,FALSE
+algodao,T091,"Química do solo, calagem e plantas de cobertura",10,FALSE
+algodao,T080,Gestão ambiental e planejamento institucional,10,FALSE
+algodao,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",9,FALSE
+algodao,T010,Feijão-caupi,9,FALSE
+algodao,T052,Bioprocessos: hidrólise enzimática e biogás,9,FALSE
+algodao,T012,Pecuária de leite e de corte: cadeias produtivas,8,FALSE
+algodao,T077,Genômica animal,8,FALSE
+algodao,T093,Feijão-comum: cultivares,8,FALSE
+algodao,T137,Irrigação,8,FALSE
+algodao,T125,Inteligência artificial e visão computacional,8,FALSE
+algodao,T087,Iniciação científica e formação,7,FALSE
+algodao,T019,Óleos essenciais e plantas aromáticas,7,FALSE
+algodao,T035,Carrapato bovino,7,FALSE
+algodao,T098,Agrometeorologia e monitoramento,6,FALSE
+algodao,T009,Soja: cultivares e sementes,6,FALSE
+algodao,T095,Adubos verdes e compostagem,5,FALSE
+algodao,T029,Maçã,5,FALSE
+algodao,T097,Fungos micorrízicos,5,FALSE
+algodao,T039,Brusone do arroz,5,FALSE
+algodao,T020,Integração lavoura-pecuária-floresta (ILPF),4,FALSE
+algodao,T082,Agrotóxicos no ambiente,4,FALSE
+algodao,T044,Rizosfera e inoculantes,4,FALSE
+algodao,T034,Moscas-das-frutas,4,FALSE
+algodao,T126,Biossegurança e transgênicos,4,FALSE
+algodao,T140,Microbiologia do solo e coleções de microrganismos,4,FALSE
+algodao,T086,Caprinos e ovinos,4,FALSE
+algodao,T048,Manga: produção,4,FALSE
+algodao,T054,Geotecnologias e sistemas de informação geográfica,3,FALSE
+algodao,T038,Hortaliças: consumo e conservação,3,FALSE
+algodao,T089,Girassol,3,FALSE
+algodao,T051,Abacaxi,3,FALSE
+algodao,T057,Cupuaçu,3,FALSE
+algodao,T074,"Chuvas, clima e evapotranspiração",3,FALSE
+algodao,T065,Doenças da videira,3,FALSE
+algodao,T030,Florística e estrutura de florestas nativas,3,FALSE
+algodao,T024,Castanha-da-amazônia,3,FALSE
+algodao,T013,Feijão-comum: melhoramento,3,FALSE
+algodao,T042,Amendoim forrageiro,3,FALSE
+algodao,T055,Caju,3,FALSE
+algodao,T015,Milho: cultivares e melhoramento,3,FALSE
+algodao,T130,"Florestas tropicais, desmatamento e LiDAR",3,FALSE
+algodao,T003,"Gestão, inovação e informática",2,FALSE
+algodao,T141,Cenoura,2,FALSE
+algodao,T116,Compostos bioativos e antioxidantes,2,FALSE
+algodao,T081,Arroz: manejo e adubação,2,FALSE
+algodao,T123,Lodo de esgoto e metais pesados,2,FALSE
+algodao,T068,Queijos e derivados lácteos,2,FALSE
+algodao,T101,Eucalipto,2,FALSE
+algodao,T083,Enraizamento de estacas,2,FALSE
+algodao,T037,Doenças de caprinos e ovinos,2,FALSE
+algodao,T001,Piscicultura e pesca,2,FALSE
+algodao,T090,Uso e cobertura da terra,2,FALSE
+algodao,T049,Batata e batata-doce,2,FALSE
+algodao,T017,Melão e melancia,2,FALSE
+algodao,T113,Pinhão-manso,2,FALSE
+algodao,T031,Seringueira,2,FALSE
+algodao,T047,Trigo e triticale: cultivares,2,FALSE
+algodao,T107,Paspalum,2,FALSE
+algodao,T067,Manejo de pastagens e sementes forrageiras,2,FALSE
+algodao,T027,Cana-de-açúcar,1,FALSE
+algodao,T069,Sistemas agroflorestais,1,FALSE
+algodao,T046,Verminose de pequenos ruminantes,1,FALSE
+algodao,T071,Gado leiteiro: Gir e Girolando,1,FALSE
+algodao,T053,Açaí,1,FALSE
+algodao,T064,Dendê (palma de óleo),1,FALSE
+algodao,T138,Rizóbios e fixação biológica de nitrogênio,1,FALSE
+algodao,T135,"Doenças do trigo (giberela, brusone)",1,FALSE
+algodao,T062,Serapilheira e fauna do solo,1,FALSE
+algodao,T133,Trópico Semiárido: pesquisa e mecanização,1,FALSE
+algodao,T014,Citros,1,FALSE
+algodao,T108,Feijão-comum: manejo e adubação,1,FALSE
+algodao,T073,Zoneamento agroecológico e aptidão agrícola,1,FALSE
+algodao,T066,Captação de água de chuva e barragens subterrâneas,1,FALSE
+algodao,T099,Manejo florestal,1,FALSE
+algodao,T115,Emissões de gases de efeito estufa,1,FALSE
+algodao,T016,Maracujá,1,FALSE
+algodao,T134,Terra preta de índio,1,FALSE
+algodao,T111,Cigarrinhas,1,FALSE
+algodao,T004,Arroz: cultivares,1,FALSE
+algodao,T050,"Palmito, pupunha e frutos amazônicos",1,FALSE
+algodao,T092,Farinhas e panificação,1,FALSE
+algodao,T006,Mandioca,1,FALSE
+algodao,T142,Tolerância ao alumínio,1,FALSE
+algodao,T061,Guaraná,1,FALSE
+hortalicas,T063,Tomate,860,TRUE
+hortalicas,T038,Hortaliças: consumo e conservação,780,TRUE
+hortalicas,T119,Pimentas e pimenta-do-reino,507,FALSE
+hortalicas,T121,Alface,429,TRUE
+hortalicas,T139,Viroses de plantas,346,FALSE
+hortalicas,T132,Abóbora,328,TRUE
+hortalicas,T141,Cenoura,304,TRUE
+hortalicas,T070,Nematoide-das-galhas,137,FALSE
+hortalicas,T103,Mosca-branca,106,FALSE
+hortalicas,T095,Adubos verdes e compostagem,99,FALSE
+hortalicas,T017,Melão e melancia,95,FALSE
+hortalicas,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",95,FALSE
+hortalicas,T116,Compostos bioativos e antioxidantes,84,FALSE
+hortalicas,T005,Lagarta-do-cartucho e outras lagartas,80,FALSE
+hortalicas,T026,Controle biológico de doenças (Trichoderma),75,FALSE
+hortalicas,T129,Pêssego e amora-preta,74,FALSE
+hortalicas,T034,Moscas-das-frutas,72,FALSE
+hortalicas,T100,Ácaros,71,FALSE
+hortalicas,T023,Sementes: germinação e dormência,66,FALSE
+hortalicas,T045,Bancos de germoplasma,62,FALSE
+hortalicas,T105,Manga: doenças,59,FALSE
+hortalicas,T040,Cebola e alho,51,FALSE
+hortalicas,T019,Óleos essenciais e plantas aromáticas,50,FALSE
+hortalicas,T137,Irrigação,49,FALSE
+hortalicas,T058,Cultura de tecidos e micropropagação,43,FALSE
+hortalicas,T049,Batata e batata-doce,41,FALSE
+hortalicas,T048,Manga: produção,38,FALSE
+hortalicas,T091,"Química do solo, calagem e plantas de cobertura",36,FALSE
+hortalicas,T080,Gestão ambiental e planejamento institucional,34,FALSE
+hortalicas,T041,Ferrugem-asiática da soja,28,FALSE
+hortalicas,T124,Adubação nitrogenada,28,FALSE
+hortalicas,T051,Abacaxi,26,FALSE
+hortalicas,T029,Maçã,24,FALSE
+hortalicas,T076,Espécies nativas: nomenclatura e descrição,22,FALSE
+hortalicas,T032,Feijão-comum: doenças,22,FALSE
+hortalicas,T118,Tolerância à seca,21,FALSE
+hortalicas,T075,Adubação fosfatada,21,FALSE
+hortalicas,T056,"Biomateriais: filmes, nanocelulose e compósitos",21,FALSE
+hortalicas,T044,Rizosfera e inoculantes,20,FALSE
+hortalicas,T009,Soja: cultivares e sementes,20,FALSE
+hortalicas,T022,"Abelhas, apicultura e meliponicultura",19,FALSE
+hortalicas,T050,"Palmito, pupunha e frutos amazônicos",19,FALSE
+hortalicas,T033,Plantas daninhas e herbicidas,19,FALSE
+hortalicas,T093,Feijão-comum: cultivares,18,FALSE
+hortalicas,T082,Agrotóxicos no ambiente,17,FALSE
+hortalicas,T108,Feijão-comum: manejo e adubação,17,FALSE
+hortalicas,T088,Consórcio milho-braquiária e milho safrinha,16,FALSE
+hortalicas,T011,Carbono e qualidade física do solo,16,FALSE
+hortalicas,T006,Mandioca,16,FALSE
+hortalicas,T057,Cupuaçu,16,FALSE
+hortalicas,T112,Nanotecnologia,16,FALSE
+hortalicas,T068,Queijos e derivados lácteos,14,FALSE
+hortalicas,T065,Doenças da videira,13,FALSE
+hortalicas,T092,Farinhas e panificação,13,FALSE
+hortalicas,T097,Fungos micorrízicos,13,FALSE
+hortalicas,T001,Piscicultura e pesca,13,FALSE
+hortalicas,T066,Captação de água de chuva e barragens subterrâneas,12,FALSE
+hortalicas,T114,"Calagem, gessagem e remineralizadores",12,FALSE
+hortalicas,T117,Coqueiro,12,FALSE
+hortalicas,T069,Sistemas agroflorestais,11,FALSE
+hortalicas,T140,Microbiologia do solo e coleções de microrganismos,10,FALSE
+hortalicas,T010,Feijão-caupi,10,FALSE
+hortalicas,T085,Bioinformática e genômica,10,FALSE
+hortalicas,T003,"Gestão, inovação e informática",10,FALSE
+hortalicas,T014,Citros,9,FALSE
+hortalicas,T073,Zoneamento agroecológico e aptidão agrícola,9,FALSE
+hortalicas,T002,Café,9,FALSE
+hortalicas,T053,Açaí,8,FALSE
+hortalicas,T015,Milho: cultivares e melhoramento,8,FALSE
+hortalicas,T087,Iniciação científica e formação,7,FALSE
+hortalicas,T081,Arroz: manejo e adubação,7,FALSE
+hortalicas,T067,Manejo de pastagens e sementes forrageiras,7,FALSE
+hortalicas,T059,Sorgo,7,FALSE
+hortalicas,T123,Lodo de esgoto e metais pesados,7,FALSE
+hortalicas,T125,Inteligência artificial e visão computacional,6,FALSE
+hortalicas,T099,Manejo florestal,6,FALSE
+hortalicas,T131,Serviços ecossistêmicos,6,FALSE
+hortalicas,T135,"Doenças do trigo (giberela, brusone)",6,FALSE
+hortalicas,T098,Agrometeorologia e monitoramento,6,FALSE
+hortalicas,T115,Emissões de gases de efeito estufa,5,FALSE
+hortalicas,T138,Rizóbios e fixação biológica de nitrogênio,5,FALSE
+hortalicas,T079,Espectroscopia e métodos analíticos,5,FALSE
+hortalicas,T133,Trópico Semiárido: pesquisa e mecanização,5,FALSE
+hortalicas,T060,Mastite,5,FALSE
+hortalicas,T046,Verminose de pequenos ruminantes,5,FALSE
+hortalicas,T013,Feijão-comum: melhoramento,5,FALSE
+hortalicas,T113,Pinhão-manso,5,FALSE
+hortalicas,T110,Acerola,5,FALSE
+hortalicas,T089,Girassol,5,FALSE
+hortalicas,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",5,FALSE
+hortalicas,T030,Florística e estrutura de florestas nativas,5,FALSE
+hortalicas,T128,Pínus,5,FALSE
+hortalicas,T083,Enraizamento de estacas,5,FALSE
+hortalicas,T031,Seringueira,5,FALSE
+hortalicas,T004,Arroz: cultivares,4,FALSE
+hortalicas,T106,Avicultura e suinocultura,4,FALSE
+hortalicas,T000,Uva e vinho,4,FALSE
+hortalicas,T134,Terra preta de índio,3,FALSE
+hortalicas,T102,Bacias hidrográficas,3,FALSE
+hortalicas,T052,Bioprocessos: hidrólise enzimática e biogás,3,FALSE
+hortalicas,T101,Eucalipto,3,FALSE
+hortalicas,T047,Trigo e triticale: cultivares,3,FALSE
+hortalicas,T120,Braquiárias: melhoramento e apomixia,3,FALSE
+hortalicas,T008,Banana,3,FALSE
+hortalicas,T062,Serapilheira e fauna do solo,3,FALSE
+hortalicas,T042,Amendoim forrageiro,3,FALSE
+hortalicas,T126,Biossegurança e transgênicos,3,FALSE
+hortalicas,T086,Caprinos e ovinos,2,FALSE
+hortalicas,T077,Genômica animal,2,FALSE
+hortalicas,T090,Uso e cobertura da terra,2,FALSE
+hortalicas,T094,Andropogon e forrageiras do Cerrado,2,FALSE
+hortalicas,T021,Reprodução animal e inseminação,2,FALSE
+hortalicas,T143,Levantamento e classificação de solos,2,FALSE
+hortalicas,T078,Umbu,2,FALSE
+hortalicas,T061,Guaraná,2,FALSE
+hortalicas,T142,Tolerância ao alumínio,2,FALSE
+hortalicas,T111,Cigarrinhas,2,FALSE
+hortalicas,T039,Brusone do arroz,2,FALSE
+hortalicas,T136,Evapotranspiração por satélite,2,FALSE
+hortalicas,T012,Pecuária de leite e de corte: cadeias produtivas,2,FALSE
+hortalicas,T127,Mamão e mamona,2,FALSE
+hortalicas,T020,Integração lavoura-pecuária-floresta (ILPF),1,FALSE
+hortalicas,T016,Maracujá,1,FALSE
+hortalicas,T028,Algodão,1,FALSE
+hortalicas,T064,Dendê (palma de óleo),1,FALSE
+hortalicas,T055,Caju,1,FALSE
+hortalicas,T054,Geotecnologias e sistemas de informação geográfica,1,FALSE
+hortalicas,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+hortalicas,T037,Doenças de caprinos e ovinos,1,FALSE
+flores,T058,Cultura de tecidos e micropropagação,107,FALSE
+flores,T051,Abacaxi,63,FALSE
+flores,T023,Sementes: germinação e dormência,53,FALSE
+flores,T083,Enraizamento de estacas,42,FALSE
+flores,T107,Paspalum,40,FALSE
+flores,T030,Florística e estrutura de florestas nativas,39,FALSE
+flores,T016,Maracujá,37,FALSE
+flores,T076,Espécies nativas: nomenclatura e descrição,34,FALSE
+flores,T026,Controle biológico de doenças (Trichoderma),28,FALSE
+flores,T045,Bancos de germoplasma,27,FALSE
+flores,T008,Banana,24,FALSE
+flores,T038,Hortaliças: consumo e conservação,24,FALSE
+flores,T005,Lagarta-do-cartucho e outras lagartas,20,FALSE
+flores,T022,"Abelhas, apicultura e meliponicultura",18,FALSE
+flores,T100,Ácaros,18,FALSE
+flores,T139,Viroses de plantas,16,FALSE
+flores,T014,Citros,13,FALSE
+flores,T105,Manga: doenças,13,FALSE
+flores,T097,Fungos micorrízicos,13,FALSE
+flores,T137,Irrigação,11,FALSE
+flores,T095,Adubos verdes e compostagem,9,FALSE
+flores,T129,Pêssego e amora-preta,9,FALSE
+flores,T019,Óleos essenciais e plantas aromáticas,9,FALSE
+flores,T032,Feijão-comum: doenças,8,FALSE
+flores,T099,Manejo florestal,8,FALSE
+flores,T063,Tomate,7,FALSE
+flores,T114,"Calagem, gessagem e remineralizadores",7,FALSE
+flores,T098,Agrometeorologia e monitoramento,6,FALSE
+flores,T050,"Palmito, pupunha e frutos amazônicos",6,FALSE
+flores,T074,"Chuvas, clima e evapotranspiração",6,FALSE
+flores,T056,"Biomateriais: filmes, nanocelulose e compósitos",6,FALSE
+flores,T061,Guaraná,5,FALSE
+flores,T069,Sistemas agroflorestais,5,FALSE
+flores,T017,Melão e melancia,5,FALSE
+flores,T103,Mosca-branca,5,FALSE
+flores,T003,"Gestão, inovação e informática",5,FALSE
+flores,T085,Bioinformática e genômica,5,FALSE
+flores,T033,Plantas daninhas e herbicidas,5,FALSE
+flores,T089,Girassol,5,FALSE
+flores,T001,Piscicultura e pesca,5,FALSE
+flores,T065,Doenças da videira,4,FALSE
+flores,T081,Arroz: manejo e adubação,4,FALSE
+flores,T130,"Florestas tropicais, desmatamento e LiDAR",4,FALSE
+flores,T111,Cigarrinhas,4,FALSE
+flores,T112,Nanotecnologia,4,FALSE
+flores,T108,Feijão-comum: manejo e adubação,4,FALSE
+flores,T131,Serviços ecossistêmicos,4,FALSE
+flores,T090,Uso e cobertura da terra,4,FALSE
+flores,T091,"Química do solo, calagem e plantas de cobertura",4,FALSE
+flores,T132,Abóbora,4,FALSE
+flores,T136,Evapotranspiração por satélite,4,FALSE
+flores,T117,Coqueiro,3,FALSE
+flores,T039,Brusone do arroz,3,FALSE
+flores,T087,Iniciação científica e formação,3,FALSE
+flores,T041,Ferrugem-asiática da soja,3,FALSE
+flores,T141,Cenoura,3,FALSE
+flores,T080,Gestão ambiental e planejamento institucional,3,FALSE
+flores,T067,Manejo de pastagens e sementes forrageiras,3,FALSE
+flores,T055,Caju,2,FALSE
+flores,T140,Microbiologia do solo e coleções de microrganismos,2,FALSE
+flores,T101,Eucalipto,2,FALSE
+flores,T120,Braquiárias: melhoramento e apomixia,2,FALSE
+flores,T119,Pimentas e pimenta-do-reino,2,FALSE
+flores,T118,Tolerância à seca,2,FALSE
+flores,T052,Bioprocessos: hidrólise enzimática e biogás,2,FALSE
+flores,T057,Cupuaçu,2,FALSE
+flores,T040,Cebola e alho,2,FALSE
+flores,T028,Algodão,2,FALSE
+flores,T123,Lodo de esgoto e metais pesados,2,FALSE
+flores,T126,Biossegurança e transgênicos,2,FALSE
+flores,T049,Batata e batata-doce,2,FALSE
+flores,T110,Acerola,2,FALSE
+flores,T024,Castanha-da-amazônia,2,FALSE
+flores,T002,Café,1,FALSE
+flores,T106,Avicultura e suinocultura,1,FALSE
+flores,T078,Umbu,1,FALSE
+flores,T066,Captação de água de chuva e barragens subterrâneas,1,FALSE
+flores,T077,Genômica animal,1,FALSE
+flores,T054,Geotecnologias e sistemas de informação geográfica,1,FALSE
+flores,T079,Espectroscopia e métodos analíticos,1,FALSE
+flores,T013,Feijão-comum: melhoramento,1,FALSE
+flores,T109,Frangos e suínos: nutrição,1,FALSE
+flores,T029,Maçã,1,FALSE
+flores,T046,Verminose de pequenos ruminantes,1,FALSE
+flores,T037,Doenças de caprinos e ovinos,1,FALSE
+flores,T128,Pínus,1,FALSE
+flores,T116,Compostos bioativos e antioxidantes,1,FALSE
+flores,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",1,FALSE
+flores,T064,Dendê (palma de óleo),1,FALSE
+flores,T034,Moscas-das-frutas,1,FALSE
+flores,T096,Gênese e mineralogia de solos,1,FALSE
+flores,T070,Nematoide-das-galhas,1,FALSE
+flores,T134,Terra preta de índio,1,FALSE
+flores,T115,Emissões de gases de efeito estufa,1,FALSE
+flores,T124,Adubação nitrogenada,1,FALSE
+flores,T133,Trópico Semiárido: pesquisa e mecanização,1,FALSE
+flores,T011,Carbono e qualidade física do solo,1,FALSE
+flores,T075,Adubação fosfatada,1,FALSE
+frutas,T000,Uva e vinho,2662,TRUE
+frutas,T008,Banana,1986,TRUE
+frutas,T014,Citros,1550,TRUE
+frutas,T016,Maracujá,1303,TRUE
+frutas,T034,Moscas-das-frutas,1002,FALSE
+frutas,T029,Maçã,911,TRUE
+frutas,T065,Doenças da videira,888,TRUE
+frutas,T057,Cupuaçu,838,FALSE
+frutas,T053,Açaí,799,FALSE
+frutas,T048,Manga: produção,798,TRUE
+frutas,T116,Compostos bioativos e antioxidantes,724,FALSE
+frutas,T055,Caju,723,TRUE
+frutas,T129,Pêssego e amora-preta,486,TRUE
+frutas,T127,Mamão e mamona,438,FALSE
+frutas,T105,Manga: doenças,434,TRUE
+frutas,T050,"Palmito, pupunha e frutos amazônicos",348,FALSE
+frutas,T110,Acerola,328,TRUE
+frutas,T045,Bancos de germoplasma,320,FALSE
+frutas,T100,Ácaros,300,FALSE
+frutas,T005,Lagarta-do-cartucho e outras lagartas,239,FALSE
+frutas,T070,Nematoide-das-galhas,208,FALSE
+frutas,T137,Irrigação,164,FALSE
+frutas,T058,Cultura de tecidos e micropropagação,156,FALSE
+frutas,T026,Controle biológico de doenças (Trichoderma),156,FALSE
+frutas,T051,Abacaxi,156,FALSE
+frutas,T124,Adubação nitrogenada,155,FALSE
+frutas,T038,Hortaliças: consumo e conservação,151,FALSE
+frutas,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",141,FALSE
+frutas,T125,Inteligência artificial e visão computacional,126,FALSE
+frutas,T023,Sementes: germinação e dormência,125,FALSE
+frutas,T056,"Biomateriais: filmes, nanocelulose e compósitos",109,FALSE
+frutas,T019,Óleos essenciais e plantas aromáticas,101,FALSE
+frutas,T139,Viroses de plantas,97,FALSE
+frutas,T095,Adubos verdes e compostagem,97,FALSE
+frutas,T091,"Química do solo, calagem e plantas de cobertura",90,FALSE
+frutas,T022,"Abelhas, apicultura e meliponicultura",88,FALSE
+frutas,T011,Carbono e qualidade física do solo,87,FALSE
+frutas,T098,Agrometeorologia e monitoramento,87,FALSE
+frutas,T083,Enraizamento de estacas,87,FALSE
+frutas,T062,Serapilheira e fauna do solo,82,FALSE
+frutas,T092,Farinhas e panificação,77,FALSE
+frutas,T080,Gestão ambiental e planejamento institucional,69,FALSE
+frutas,T069,Sistemas agroflorestais,68,FALSE
+frutas,T068,Queijos e derivados lácteos,67,FALSE
+frutas,T103,Mosca-branca,65,FALSE
+frutas,T041,Ferrugem-asiática da soja,65,FALSE
+frutas,T043,Sensoriamento remoto e índices de vegetação,63,FALSE
+frutas,T075,Adubação fosfatada,62,FALSE
+frutas,T079,Espectroscopia e métodos analíticos,62,FALSE
+frutas,T097,Fungos micorrízicos,62,FALSE
+frutas,T061,Guaraná,57,FALSE
+frutas,T114,"Calagem, gessagem e remineralizadores",57,FALSE
+frutas,T076,Espécies nativas: nomenclatura e descrição,56,FALSE
+frutas,T017,Melão e melancia,51,FALSE
+frutas,T032,Feijão-comum: doenças,49,FALSE
+frutas,T085,Bioinformática e genômica,49,FALSE
+frutas,T030,Florística e estrutura de florestas nativas,47,FALSE
+frutas,T054,Geotecnologias e sistemas de informação geográfica,45,FALSE
+frutas,T082,Agrotóxicos no ambiente,44,FALSE
+frutas,T033,Plantas daninhas e herbicidas,44,FALSE
+frutas,T117,Coqueiro,43,FALSE
+frutas,T118,Tolerância à seca,43,FALSE
+frutas,T078,Umbu,43,FALSE
+frutas,T006,Mandioca,40,FALSE
+frutas,T087,Iniciação científica e formação,40,FALSE
+frutas,T136,Evapotranspiração por satélite,39,FALSE
+frutas,T052,Bioprocessos: hidrólise enzimática e biogás,39,FALSE
+frutas,T074,"Chuvas, clima e evapotranspiração",37,FALSE
+frutas,T111,Cigarrinhas,36,FALSE
+frutas,T073,Zoneamento agroecológico e aptidão agrícola,35,FALSE
+frutas,T066,Captação de água de chuva e barragens subterrâneas,32,FALSE
+frutas,T108,Feijão-comum: manejo e adubação,29,FALSE
+frutas,T003,"Gestão, inovação e informática",29,FALSE
+frutas,T024,Castanha-da-amazônia,29,FALSE
+frutas,T123,Lodo de esgoto e metais pesados,27,FALSE
+frutas,T113,Pinhão-manso,25,FALSE
+frutas,T112,Nanotecnologia,24,FALSE
+frutas,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",22,FALSE
+frutas,T090,Uso e cobertura da terra,22,FALSE
+frutas,T128,Pínus,21,FALSE
+frutas,T012,Pecuária de leite e de corte: cadeias produtivas,20,FALSE
+frutas,T099,Manejo florestal,20,FALSE
+frutas,T140,Microbiologia do solo e coleções de microrganismos,20,FALSE
+frutas,T130,"Florestas tropicais, desmatamento e LiDAR",19,FALSE
+frutas,T133,Trópico Semiárido: pesquisa e mecanização,18,FALSE
+frutas,T086,Caprinos e ovinos,18,FALSE
+frutas,T115,Emissões de gases de efeito estufa,17,FALSE
+frutas,T002,Café,17,FALSE
+frutas,T049,Batata e batata-doce,17,FALSE
+frutas,T093,Feijão-comum: cultivares,15,FALSE
+frutas,T107,Paspalum,15,FALSE
+frutas,T060,Mastite,15,FALSE
+frutas,T142,Tolerância ao alumínio,14,FALSE
+frutas,T046,Verminose de pequenos ruminantes,13,FALSE
+frutas,T077,Genômica animal,13,FALSE
+frutas,T081,Arroz: manejo e adubação,13,FALSE
+frutas,T101,Eucalipto,13,FALSE
+frutas,T126,Biossegurança e transgênicos,12,FALSE
+frutas,T020,Integração lavoura-pecuária-floresta (ILPF),12,FALSE
+frutas,T096,Gênese e mineralogia de solos,12,FALSE
+frutas,T102,Bacias hidrográficas,12,FALSE
+frutas,T044,Rizosfera e inoculantes,12,FALSE
+frutas,T089,Girassol,10,FALSE
+frutas,T131,Serviços ecossistêmicos,10,FALSE
+frutas,T134,Terra preta de índio,9,FALSE
+frutas,T027,Cana-de-açúcar,9,FALSE
+frutas,T021,Reprodução animal e inseminação,9,FALSE
+frutas,T143,Levantamento e classificação de solos,9,FALSE
+frutas,T132,Abóbora,9,FALSE
+frutas,T119,Pimentas e pimenta-do-reino,9,FALSE
+frutas,T037,Doenças de caprinos e ovinos,9,FALSE
+frutas,T001,Piscicultura e pesca,9,FALSE
+frutas,T104,Erva-mate,8,FALSE
+frutas,T067,Manejo de pastagens e sementes forrageiras,8,FALSE
+frutas,T135,"Doenças do trigo (giberela, brusone)",8,FALSE
+frutas,T040,Cebola e alho,7,FALSE
+frutas,T141,Cenoura,7,FALSE
+frutas,T088,Consórcio milho-braquiária e milho safrinha,7,FALSE
+frutas,T063,Tomate,7,FALSE
+frutas,T042,Amendoim forrageiro,6,FALSE
+frutas,T106,Avicultura e suinocultura,6,FALSE
+frutas,T064,Dendê (palma de óleo),6,FALSE
+frutas,T145,Nematoides das lesões e de cisto,5,FALSE
+frutas,T120,Braquiárias: melhoramento e apomixia,5,FALSE
+frutas,T028,Algodão,5,FALSE
+frutas,T035,Carrapato bovino,5,FALSE
+frutas,T121,Alface,5,FALSE
+frutas,T047,Trigo e triticale: cultivares,5,FALSE
+frutas,T094,Andropogon e forrageiras do Cerrado,4,FALSE
+frutas,T138,Rizóbios e fixação biológica de nitrogênio,4,FALSE
+frutas,T013,Feijão-comum: melhoramento,4,FALSE
+frutas,T009,Soja: cultivares e sementes,4,FALSE
+frutas,T031,Seringueira,4,FALSE
+frutas,T004,Arroz: cultivares,4,FALSE
+frutas,T039,Brusone do arroz,3,FALSE
+frutas,T010,Feijão-caupi,3,FALSE
+frutas,T071,Gado leiteiro: Gir e Girolando,3,FALSE
+frutas,T015,Milho: cultivares e melhoramento,3,FALSE
+frutas,T059,Sorgo,2,FALSE
+outras-permanentes,T031,Seringueira,948,TRUE
+outras-permanentes,T064,Dendê (palma de óleo),655,TRUE
+outras-permanentes,T117,Coqueiro,599,TRUE
+outras-permanentes,T104,Erva-mate,571,TRUE
+outras-permanentes,T061,Guaraná,524,FALSE
+outras-permanentes,T119,Pimentas e pimenta-do-reino,305,FALSE
+outras-permanentes,T100,Ácaros,295,FALSE
+outras-permanentes,T050,"Palmito, pupunha e frutos amazônicos",150,FALSE
+outras-permanentes,T058,Cultura de tecidos e micropropagação,91,FALSE
+outras-permanentes,T056,"Biomateriais: filmes, nanocelulose e compósitos",81,FALSE
+outras-permanentes,T062,Serapilheira e fauna do solo,75,FALSE
+outras-permanentes,T005,Lagarta-do-cartucho e outras lagartas,65,FALSE
+outras-permanentes,T045,Bancos de germoplasma,57,FALSE
+outras-permanentes,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",56,FALSE
+outras-permanentes,T053,Açaí,54,FALSE
+outras-permanentes,T026,Controle biológico de doenças (Trichoderma),54,FALSE
+outras-permanentes,T116,Compostos bioativos e antioxidantes,54,FALSE
+outras-permanentes,T019,Óleos essenciais e plantas aromáticas,46,FALSE
+outras-permanentes,T041,Ferrugem-asiática da soja,42,FALSE
+outras-permanentes,T139,Viroses de plantas,36,FALSE
+outras-permanentes,T076,Espécies nativas: nomenclatura e descrição,34,FALSE
+outras-permanentes,T052,Bioprocessos: hidrólise enzimática e biogás,33,FALSE
+outras-permanentes,T024,Castanha-da-amazônia,32,FALSE
+outras-permanentes,T069,Sistemas agroflorestais,31,FALSE
+outras-permanentes,T002,Café,27,FALSE
+outras-permanentes,T097,Fungos micorrízicos,26,FALSE
+outras-permanentes,T083,Enraizamento de estacas,25,FALSE
+outras-permanentes,T030,Florística e estrutura de florestas nativas,25,FALSE
+outras-permanentes,T099,Manejo florestal,24,FALSE
+outras-permanentes,T057,Cupuaçu,23,FALSE
+outras-permanentes,T124,Adubação nitrogenada,23,FALSE
+outras-permanentes,T105,Manga: doenças,22,FALSE
+outras-permanentes,T080,Gestão ambiental e planejamento institucional,22,FALSE
+outras-permanentes,T023,Sementes: germinação e dormência,22,FALSE
+outras-permanentes,T073,Zoneamento agroecológico e aptidão agrícola,21,FALSE
+outras-permanentes,T118,Tolerância à seca,21,FALSE
+outras-permanentes,T011,Carbono e qualidade física do solo,20,FALSE
+outras-permanentes,T033,Plantas daninhas e herbicidas,19,FALSE
+outras-permanentes,T128,Pínus,19,FALSE
+outras-permanentes,T051,Abacaxi,18,FALSE
+outras-permanentes,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",17,FALSE
+outras-permanentes,T003,"Gestão, inovação e informática",17,FALSE
+outras-permanentes,T022,"Abelhas, apicultura e meliponicultura",16,FALSE
+outras-permanentes,T032,Feijão-comum: doenças,15,FALSE
+outras-permanentes,T103,Mosca-branca,15,FALSE
+outras-permanentes,T095,Adubos verdes e compostagem,15,FALSE
+outras-permanentes,T085,Bioinformática e genômica,14,FALSE
+outras-permanentes,T021,Reprodução animal e inseminação,14,FALSE
+outras-permanentes,T079,Espectroscopia e métodos analíticos,13,FALSE
+outras-permanentes,T091,"Química do solo, calagem e plantas de cobertura",13,FALSE
+outras-permanentes,T006,Mandioca,13,FALSE
+outras-permanentes,T115,Emissões de gases de efeito estufa,12,FALSE
+outras-permanentes,T087,Iniciação científica e formação,11,FALSE
+outras-permanentes,T130,"Florestas tropicais, desmatamento e LiDAR",11,FALSE
+outras-permanentes,T114,"Calagem, gessagem e remineralizadores",11,FALSE
+outras-permanentes,T101,Eucalipto,11,FALSE
+outras-permanentes,T074,"Chuvas, clima e evapotranspiração",10,FALSE
+outras-permanentes,T142,Tolerância ao alumínio,10,FALSE
+outras-permanentes,T133,Trópico Semiárido: pesquisa e mecanização,10,FALSE
+outras-permanentes,T143,Levantamento e classificação de solos,10,FALSE
+outras-permanentes,T063,Tomate,9,FALSE
+outras-permanentes,T112,Nanotecnologia,9,FALSE
+outras-permanentes,T008,Banana,8,FALSE
+outras-permanentes,T075,Adubação fosfatada,8,FALSE
+outras-permanentes,T108,Feijão-comum: manejo e adubação,8,FALSE
+outras-permanentes,T131,Serviços ecossistêmicos,8,FALSE
+outras-permanentes,T070,Nematoide-das-galhas,8,FALSE
+outras-permanentes,T137,Irrigação,8,FALSE
+outras-permanentes,T048,Manga: produção,7,FALSE
+outras-permanentes,T136,Evapotranspiração por satélite,7,FALSE
+outras-permanentes,T094,Andropogon e forrageiras do Cerrado,7,FALSE
+outras-permanentes,T092,Farinhas e panificação,7,FALSE
+outras-permanentes,T098,Agrometeorologia e monitoramento,7,FALSE
+outras-permanentes,T043,Sensoriamento remoto e índices de vegetação,7,FALSE
+outras-permanentes,T001,Piscicultura e pesca,7,FALSE
+outras-permanentes,T065,Doenças da videira,7,FALSE
+outras-permanentes,T068,Queijos e derivados lácteos,7,FALSE
+outras-permanentes,T086,Caprinos e ovinos,7,FALSE
+outras-permanentes,T054,Geotecnologias e sistemas de informação geográfica,6,FALSE
+outras-permanentes,T090,Uso e cobertura da terra,6,FALSE
+outras-permanentes,T134,Terra preta de índio,6,FALSE
+outras-permanentes,T034,Moscas-das-frutas,6,FALSE
+outras-permanentes,T037,Doenças de caprinos e ovinos,6,FALSE
+outras-permanentes,T028,Algodão,6,FALSE
+outras-permanentes,T016,Maracujá,6,FALSE
+outras-permanentes,T096,Gênese e mineralogia de solos,6,FALSE
+outras-permanentes,T078,Umbu,6,FALSE
+outras-permanentes,T066,Captação de água de chuva e barragens subterrâneas,6,FALSE
+outras-permanentes,T042,Amendoim forrageiro,6,FALSE
+outras-permanentes,T125,Inteligência artificial e visão computacional,6,FALSE
+outras-permanentes,T046,Verminose de pequenos ruminantes,5,FALSE
+outras-permanentes,T140,Microbiologia do solo e coleções de microrganismos,5,FALSE
+outras-permanentes,T017,Melão e melancia,5,FALSE
+outras-permanentes,T138,Rizóbios e fixação biológica de nitrogênio,5,FALSE
+outras-permanentes,T081,Arroz: manejo e adubação,5,FALSE
+outras-permanentes,T012,Pecuária de leite e de corte: cadeias produtivas,5,FALSE
+outras-permanentes,T020,Integração lavoura-pecuária-floresta (ILPF),5,FALSE
+outras-permanentes,T038,Hortaliças: consumo e conservação,5,FALSE
+outras-permanentes,T004,Arroz: cultivares,4,FALSE
+outras-permanentes,T082,Agrotóxicos no ambiente,4,FALSE
+outras-permanentes,T135,"Doenças do trigo (giberela, brusone)",4,FALSE
+outras-permanentes,T010,Feijão-caupi,4,FALSE
+outras-permanentes,T027,Cana-de-açúcar,4,FALSE
+outras-permanentes,T111,Cigarrinhas,4,FALSE
+outras-permanentes,T121,Alface,3,FALSE
+outras-permanentes,T067,Manejo de pastagens e sementes forrageiras,3,FALSE
+outras-permanentes,T102,Bacias hidrográficas,3,FALSE
+outras-permanentes,T055,Caju,3,FALSE
+outras-permanentes,T039,Brusone do arroz,3,FALSE
+outras-permanentes,T014,Citros,3,FALSE
+outras-permanentes,T035,Carrapato bovino,3,FALSE
+outras-permanentes,T077,Genômica animal,3,FALSE
+outras-permanentes,T044,Rizosfera e inoculantes,2,FALSE
+outras-permanentes,T015,Milho: cultivares e melhoramento,2,FALSE
+outras-permanentes,T009,Soja: cultivares e sementes,2,FALSE
+outras-permanentes,T107,Paspalum,2,FALSE
+outras-permanentes,T123,Lodo de esgoto e metais pesados,2,FALSE
+outras-permanentes,T049,Batata e batata-doce,2,FALSE
+outras-permanentes,T106,Avicultura e suinocultura,2,FALSE
+outras-permanentes,T088,Consórcio milho-braquiária e milho safrinha,2,FALSE
+outras-permanentes,T060,Mastite,1,FALSE
+outras-permanentes,T093,Feijão-comum: cultivares,1,FALSE
+outras-permanentes,T059,Sorgo,1,FALSE
+outras-permanentes,T089,Girassol,1,FALSE
+outras-permanentes,T141,Cenoura,1,FALSE
+outras-permanentes,T029,Maçã,1,FALSE
+outras-permanentes,T040,Cebola e alho,1,FALSE
+outras-permanentes,T126,Biossegurança e transgênicos,1,FALSE
+outras-permanentes,T025,Gado de corte: raças e desempenho,1,FALSE
+outras-permanentes,T113,Pinhão-manso,1,FALSE
+sementes,T023,Sementes: germinação e dormência,141,FALSE
+sementes,T009,Soja: cultivares e sementes,114,FALSE
+sementes,T067,Manejo de pastagens e sementes forrageiras,67,FALSE
+sementes,T120,Braquiárias: melhoramento e apomixia,51,FALSE
+sementes,T015,Milho: cultivares e melhoramento,51,FALSE
+sementes,T013,Feijão-comum: melhoramento,38,FALSE
+sementes,T010,Feijão-caupi,37,FALSE
+sementes,T119,Pimentas e pimenta-do-reino,33,FALSE
+sementes,T042,Amendoim forrageiro,31,FALSE
+sementes,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",31,FALSE
+sementes,T038,Hortaliças: consumo e conservação,29,FALSE
+sementes,T004,Arroz: cultivares,29,FALSE
+sementes,T047,Trigo e triticale: cultivares,26,FALSE
+sementes,T107,Paspalum,24,FALSE
+sementes,T002,Café,22,FALSE
+sementes,T028,Algodão,19,FALSE
+sementes,T024,Castanha-da-amazônia,17,FALSE
+sementes,T064,Dendê (palma de óleo),17,FALSE
+sementes,T124,Adubação nitrogenada,16,FALSE
+sementes,T017,Melão e melancia,15,FALSE
+sementes,T059,Sorgo,14,FALSE
+sementes,T099,Manejo florestal,13,FALSE
+sementes,T061,Guaraná,13,FALSE
+sementes,T041,Ferrugem-asiática da soja,13,FALSE
+sementes,T014,Citros,13,FALSE
+sementes,T127,Mamão e mamona,13,FALSE
+sementes,T141,Cenoura,12,FALSE
+sementes,T040,Cebola e alho,12,FALSE
+sementes,T128,Pínus,12,FALSE
+sementes,T132,Abóbora,12,FALSE
+sementes,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",12,FALSE
+sementes,T113,Pinhão-manso,11,FALSE
+sementes,T089,Girassol,11,FALSE
+sementes,T093,Feijão-comum: cultivares,11,FALSE
+sementes,T126,Biossegurança e transgênicos,11,FALSE
+sementes,T063,Tomate,11,FALSE
+sementes,T094,Andropogon e forrageiras do Cerrado,11,FALSE
+sementes,T095,Adubos verdes e compostagem,11,FALSE
+sementes,T033,Plantas daninhas e herbicidas,10,FALSE
+sementes,T080,Gestão ambiental e planejamento institucional,9,FALSE
+sementes,T081,Arroz: manejo e adubação,9,FALSE
+sementes,T049,Batata e batata-doce,8,FALSE
+sementes,T091,"Química do solo, calagem e plantas de cobertura",8,FALSE
+sementes,T130,"Florestas tropicais, desmatamento e LiDAR",7,FALSE
+sementes,T053,Açaí,7,FALSE
+sementes,T069,Sistemas agroflorestais,6,FALSE
+sementes,T101,Eucalipto,6,FALSE
+sementes,T121,Alface,6,FALSE
+sementes,T088,Consórcio milho-braquiária e milho safrinha,6,FALSE
+sementes,T030,Florística e estrutura de florestas nativas,6,FALSE
+sementes,T104,Erva-mate,5,FALSE
+sementes,T133,Trópico Semiárido: pesquisa e mecanização,4,FALSE
+sementes,T058,Cultura de tecidos e micropropagação,4,FALSE
+sementes,T050,"Palmito, pupunha e frutos amazônicos",4,FALSE
+sementes,T016,Maracujá,4,FALSE
+sementes,T083,Enraizamento de estacas,4,FALSE
+sementes,T045,Bancos de germoplasma,3,FALSE
+sementes,T108,Feijão-comum: manejo e adubação,3,FALSE
+sementes,T066,Captação de água de chuva e barragens subterrâneas,3,FALSE
+sementes,T032,Feijão-comum: doenças,3,FALSE
+sementes,T020,Integração lavoura-pecuária-floresta (ILPF),3,FALSE
+sementes,T118,Tolerância à seca,3,FALSE
+sementes,T139,Viroses de plantas,3,FALSE
+sementes,T026,Controle biológico de doenças (Trichoderma),3,FALSE
+sementes,T048,Manga: produção,2,FALSE
+sementes,T019,Óleos essenciais e plantas aromáticas,2,FALSE
+sementes,T022,"Abelhas, apicultura e meliponicultura",2,FALSE
+sementes,T137,Irrigação,2,FALSE
+sementes,T117,Coqueiro,2,FALSE
+sementes,T125,Inteligência artificial e visão computacional,2,FALSE
+sementes,T138,Rizóbios e fixação biológica de nitrogênio,2,FALSE
+sementes,T056,"Biomateriais: filmes, nanocelulose e compósitos",2,FALSE
+sementes,T135,"Doenças do trigo (giberela, brusone)",2,FALSE
+sementes,T005,Lagarta-do-cartucho e outras lagartas,2,FALSE
+sementes,T029,Maçã,2,FALSE
+sementes,T072,Silagem,2,FALSE
+sementes,T062,Serapilheira e fauna do solo,2,FALSE
+sementes,T129,Pêssego e amora-preta,2,FALSE
+sementes,T144,Suplementação mineral,2,FALSE
+sementes,T003,"Gestão, inovação e informática",2,FALSE
+sementes,T105,Manga: doenças,1,FALSE
+sementes,T031,Seringueira,1,FALSE
+sementes,T034,Moscas-das-frutas,1,FALSE
+sementes,T098,Agrometeorologia e monitoramento,1,FALSE
+sementes,T079,Espectroscopia e métodos analíticos,1,FALSE
+sementes,T110,Acerola,1,FALSE
+sementes,T044,Rizosfera e inoculantes,1,FALSE
+sementes,T140,Microbiologia do solo e coleções de microrganismos,1,FALSE
+sementes,T057,Cupuaçu,1,FALSE
+sementes,T092,Farinhas e panificação,1,FALSE
+sementes,T102,Bacias hidrográficas,1,FALSE
+sementes,T052,Bioprocessos: hidrólise enzimática e biogás,1,FALSE
+sementes,T074,"Chuvas, clima e evapotranspiração",1,FALSE
+sementes,T086,Caprinos e ovinos,1,FALSE
+sementes,T070,Nematoide-das-galhas,1,FALSE
+sementes,T060,Mastite,1,FALSE
+sementes,T115,Emissões de gases de efeito estufa,1,FALSE
+sementes,T075,Adubação fosfatada,1,FALSE
+sementes,T055,Caju,1,FALSE
+sementes,T006,Mandioca,1,FALSE
+sementes,T111,Cigarrinhas,1,FALSE
+sementes,T051,Abacaxi,1,FALSE
+bovinos,T012,Pecuária de leite e de corte: cadeias produtivas,2183,TRUE
+bovinos,T025,Gado de corte: raças e desempenho,1355,TRUE
+bovinos,T021,Reprodução animal e inseminação,1157,FALSE
+bovinos,T071,Gado leiteiro: Gir e Girolando,1018,TRUE
+bovinos,T077,Genômica animal,860,FALSE
+bovinos,T060,Mastite,809,TRUE
+bovinos,T035,Carrapato bovino,672,TRUE
+bovinos,T144,Suplementação mineral,588,FALSE
+bovinos,T084,Carcaça e terminação de animais,527,FALSE
+bovinos,T036,Alimentação de ruminantes e digestibilidade,476,FALSE
+bovinos,T037,Doenças de caprinos e ovinos,392,FALSE
+bovinos,T122,"Consumo alimentar, metano e eficiência",306,FALSE
+bovinos,T067,Manejo de pastagens e sementes forrageiras,298,FALSE
+bovinos,T086,Caprinos e ovinos,239,FALSE
+bovinos,T068,Queijos e derivados lácteos,221,FALSE
+bovinos,T020,Integração lavoura-pecuária-floresta (ILPF),189,FALSE
+bovinos,T115,Emissões de gases de efeito estufa,169,FALSE
+bovinos,T046,Verminose de pequenos ruminantes,155,FALSE
+bovinos,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",142,FALSE
+bovinos,T109,Frangos e suínos: nutrição,74,FALSE
+bovinos,T085,Bioinformática e genômica,61,FALSE
+bovinos,T080,Gestão ambiental e planejamento institucional,59,FALSE
+bovinos,T072,Silagem,49,FALSE
+bovinos,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",47,FALSE
+bovinos,T094,Andropogon e forrageiras do Cerrado,45,FALSE
+bovinos,T003,"Gestão, inovação e informática",44,FALSE
+bovinos,T079,Espectroscopia e métodos analíticos,42,FALSE
+bovinos,T125,Inteligência artificial e visão computacional,30,FALSE
+bovinos,T027,Cana-de-açúcar,28,FALSE
+bovinos,T052,Bioprocessos: hidrólise enzimática e biogás,24,FALSE
+bovinos,T054,Geotecnologias e sistemas de informação geográfica,24,FALSE
+bovinos,T095,Adubos verdes e compostagem,23,FALSE
+bovinos,T076,Espécies nativas: nomenclatura e descrição,23,FALSE
+bovinos,T112,Nanotecnologia,22,FALSE
+bovinos,T087,Iniciação científica e formação,22,FALSE
+bovinos,T043,Sensoriamento remoto e índices de vegetação,20,FALSE
+bovinos,T106,Avicultura e suinocultura,19,FALSE
+bovinos,T140,Microbiologia do solo e coleções de microrganismos,18,FALSE
+bovinos,T102,Bacias hidrográficas,18,FALSE
+bovinos,T019,Óleos essenciais e plantas aromáticas,18,FALSE
+bovinos,T120,Braquiárias: melhoramento e apomixia,17,FALSE
+bovinos,T042,Amendoim forrageiro,15,FALSE
+bovinos,T030,Florística e estrutura de florestas nativas,14,FALSE
+bovinos,T028,Algodão,14,FALSE
+bovinos,T101,Eucalipto,13,FALSE
+bovinos,T126,Biossegurança e transgênicos,13,FALSE
+bovinos,T011,Carbono e qualidade física do solo,12,FALSE
+bovinos,T033,Plantas daninhas e herbicidas,12,FALSE
+bovinos,T090,Uso e cobertura da terra,11,FALSE
+bovinos,T075,Adubação fosfatada,11,FALSE
+bovinos,T006,Mandioca,11,FALSE
+bovinos,T088,Consórcio milho-braquiária e milho safrinha,10,FALSE
+bovinos,T066,Captação de água de chuva e barragens subterrâneas,10,FALSE
+bovinos,T131,Serviços ecossistêmicos,9,FALSE
+bovinos,T023,Sementes: germinação e dormência,9,FALSE
+bovinos,T124,Adubação nitrogenada,9,FALSE
+bovinos,T092,Farinhas e panificação,9,FALSE
+bovinos,T004,Arroz: cultivares,8,FALSE
+bovinos,T056,"Biomateriais: filmes, nanocelulose e compósitos",8,FALSE
+bovinos,T069,Sistemas agroflorestais,8,FALSE
+bovinos,T083,Enraizamento de estacas,8,FALSE
+bovinos,T073,Zoneamento agroecológico e aptidão agrícola,8,FALSE
+bovinos,T045,Bancos de germoplasma,8,FALSE
+bovinos,T015,Milho: cultivares e melhoramento,7,FALSE
+bovinos,T116,Compostos bioativos e antioxidantes,7,FALSE
+bovinos,T091,"Química do solo, calagem e plantas de cobertura",7,FALSE
+bovinos,T111,Cigarrinhas,7,FALSE
+bovinos,T038,Hortaliças: consumo e conservação,7,FALSE
+bovinos,T099,Manejo florestal,7,FALSE
+bovinos,T121,Alface,6,FALSE
+bovinos,T024,Castanha-da-amazônia,5,FALSE
+bovinos,T058,Cultura de tecidos e micropropagação,5,FALSE
+bovinos,T108,Feijão-comum: manejo e adubação,5,FALSE
+bovinos,T133,Trópico Semiárido: pesquisa e mecanização,5,FALSE
+bovinos,T098,Agrometeorologia e monitoramento,5,FALSE
+bovinos,T009,Soja: cultivares e sementes,5,FALSE
+bovinos,T059,Sorgo,5,FALSE
+bovinos,T123,Lodo de esgoto e metais pesados,5,FALSE
+bovinos,T103,Mosca-branca,5,FALSE
+bovinos,T110,Acerola,5,FALSE
+bovinos,T070,Nematoide-das-galhas,5,FALSE
+bovinos,T137,Irrigação,4,FALSE
+bovinos,T113,Pinhão-manso,4,FALSE
+bovinos,T082,Agrotóxicos no ambiente,4,FALSE
+bovinos,T055,Caju,4,FALSE
+bovinos,T051,Abacaxi,4,FALSE
+bovinos,T100,Ácaros,4,FALSE
+bovinos,T143,Levantamento e classificação de solos,4,FALSE
+bovinos,T089,Girassol,3,FALSE
+bovinos,T130,"Florestas tropicais, desmatamento e LiDAR",3,FALSE
+bovinos,T093,Feijão-comum: cultivares,3,FALSE
+bovinos,T107,Paspalum,3,FALSE
+bovinos,T114,"Calagem, gessagem e remineralizadores",3,FALSE
+bovinos,T001,Piscicultura e pesca,3,FALSE
+bovinos,T026,Controle biológico de doenças (Trichoderma),2,FALSE
+bovinos,T065,Doenças da videira,2,FALSE
+bovinos,T062,Serapilheira e fauna do solo,2,FALSE
+bovinos,T097,Fungos micorrízicos,2,FALSE
+bovinos,T050,"Palmito, pupunha e frutos amazônicos",2,FALSE
+bovinos,T138,Rizóbios e fixação biológica de nitrogênio,2,FALSE
+bovinos,T074,"Chuvas, clima e evapotranspiração",2,FALSE
+bovinos,T117,Coqueiro,2,FALSE
+bovinos,T104,Erva-mate,2,FALSE
+bovinos,T002,Café,2,FALSE
+bovinos,T005,Lagarta-do-cartucho e outras lagartas,2,FALSE
+bovinos,T134,Terra preta de índio,2,FALSE
+bovinos,T135,"Doenças do trigo (giberela, brusone)",2,FALSE
+bovinos,T081,Arroz: manejo e adubação,1,FALSE
+bovinos,T040,Cebola e alho,1,FALSE
+bovinos,T000,Uva e vinho,1,FALSE
+bovinos,T031,Seringueira,1,FALSE
+bovinos,T145,Nematoides das lesões e de cisto,1,FALSE
+bovinos,T022,"Abelhas, apicultura e meliponicultura",1,FALSE
+bovinos,T044,Rizosfera e inoculantes,1,FALSE
+bovinos,T010,Feijão-caupi,1,FALSE
+bovinos,T053,Açaí,1,FALSE
+bovinos,T029,Maçã,1,FALSE
+bovinos,T142,Tolerância ao alumínio,1,FALSE
+bovinos,T118,Tolerância à seca,1,FALSE
+bovinos,T016,Maracujá,1,FALSE
+bovinos,T032,Feijão-comum: doenças,1,FALSE
+bovinos,T008,Banana,1,FALSE
+bovinos,T136,Evapotranspiração por satélite,1,FALSE
+bovinos,T119,Pimentas e pimenta-do-reino,1,FALSE
+aves,T109,Frangos e suínos: nutrição,515,TRUE
+aves,T106,Avicultura e suinocultura,444,TRUE
+aves,T077,Genômica animal,67,FALSE
+aves,T037,Doenças de caprinos e ovinos,55,FALSE
+aves,T060,Mastite,46,FALSE
+aves,T036,Alimentação de ruminantes e digestibilidade,38,FALSE
+aves,T033,Plantas daninhas e herbicidas,26,FALSE
+aves,T122,"Consumo alimentar, metano e eficiência",25,FALSE
+aves,T087,Iniciação científica e formação,20,FALSE
+aves,T085,Bioinformática e genômica,17,FALSE
+aves,T025,Gado de corte: raças e desempenho,15,FALSE
+aves,T012,Pecuária de leite e de corte: cadeias produtivas,15,FALSE
+aves,T084,Carcaça e terminação de animais,14,FALSE
+aves,T003,"Gestão, inovação e informática",12,FALSE
+aves,T080,Gestão ambiental e planejamento institucional,11,FALSE
+aves,T112,Nanotecnologia,10,FALSE
+aves,T086,Caprinos e ovinos,9,FALSE
+aves,T046,Verminose de pequenos ruminantes,9,FALSE
+aves,T021,Reprodução animal e inseminação,6,FALSE
+aves,T038,Hortaliças: consumo e conservação,6,FALSE
+aves,T022,"Abelhas, apicultura e meliponicultura",6,FALSE
+aves,T095,Adubos verdes e compostagem,6,FALSE
+aves,T019,Óleos essenciais e plantas aromáticas,5,FALSE
+aves,T091,"Química do solo, calagem e plantas de cobertura",5,FALSE
+aves,T114,"Calagem, gessagem e remineralizadores",5,FALSE
+aves,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",5,FALSE
+aves,T079,Espectroscopia e métodos analíticos,4,FALSE
+aves,T115,Emissões de gases de efeito estufa,4,FALSE
+aves,T006,Mandioca,4,FALSE
+aves,T140,Microbiologia do solo e coleções de microrganismos,4,FALSE
+aves,T068,Queijos e derivados lácteos,4,FALSE
+aves,T009,Soja: cultivares e sementes,4,FALSE
+aves,T035,Carrapato bovino,3,FALSE
+aves,T066,Captação de água de chuva e barragens subterrâneas,3,FALSE
+aves,T076,Espécies nativas: nomenclatura e descrição,3,FALSE
+aves,T100,Ácaros,3,FALSE
+aves,T103,Mosca-branca,3,FALSE
+aves,T049,Batata e batata-doce,3,FALSE
+aves,T121,Alface,3,FALSE
+aves,T116,Compostos bioativos e antioxidantes,3,FALSE
+aves,T072,Silagem,3,FALSE
+aves,T074,"Chuvas, clima e evapotranspiração",3,FALSE
+aves,T005,Lagarta-do-cartucho e outras lagartas,3,FALSE
+aves,T001,Piscicultura e pesca,2,FALSE
+aves,T056,"Biomateriais: filmes, nanocelulose e compósitos",2,FALSE
+aves,T026,Controle biológico de doenças (Trichoderma),2,FALSE
+aves,T126,Biossegurança e transgênicos,2,FALSE
+aves,T123,Lodo de esgoto e metais pesados,2,FALSE
+aves,T065,Doenças da videira,2,FALSE
+aves,T131,Serviços ecossistêmicos,2,FALSE
+aves,T050,"Palmito, pupunha e frutos amazônicos",2,FALSE
+aves,T092,Farinhas e panificação,2,FALSE
+aves,T144,Suplementação mineral,2,FALSE
+aves,T135,"Doenças do trigo (giberela, brusone)",1,FALSE
+aves,T125,Inteligência artificial e visão computacional,1,FALSE
+aves,T083,Enraizamento de estacas,1,FALSE
+aves,T030,Florística e estrutura de florestas nativas,1,FALSE
+aves,T011,Carbono e qualidade física do solo,1,FALSE
+aves,T031,Seringueira,1,FALSE
+aves,T093,Feijão-comum: cultivares,1,FALSE
+aves,T141,Cenoura,1,FALSE
+aves,T124,Adubação nitrogenada,1,FALSE
+aves,T039,Brusone do arroz,1,FALSE
+aves,T105,Manga: doenças,1,FALSE
+aves,T139,Viroses de plantas,1,FALSE
+aves,T016,Maracujá,1,FALSE
+aves,T052,Bioprocessos: hidrólise enzimática e biogás,1,FALSE
+aves,T059,Sorgo,1,FALSE
+aves,T108,Feijão-comum: manejo e adubação,1,FALSE
+aves,T024,Castanha-da-amazônia,1,FALSE
+aves,T034,Moscas-das-frutas,1,FALSE
+aves,T044,Rizosfera e inoculantes,1,FALSE
+aves,T107,Paspalum,1,FALSE
+aves,T113,Pinhão-manso,1,FALSE
+aves,T020,Integração lavoura-pecuária-floresta (ILPF),1,FALSE
+aves,T053,Açaí,1,FALSE
+aves,T010,Feijão-caupi,1,FALSE
+aves,T014,Citros,1,FALSE
+suinos,T109,Frangos e suínos: nutrição,601,TRUE
+suinos,T106,Avicultura e suinocultura,279,TRUE
+suinos,T037,Doenças de caprinos e ovinos,248,FALSE
+suinos,T060,Mastite,163,FALSE
+suinos,T021,Reprodução animal e inseminação,111,FALSE
+suinos,T077,Genômica animal,91,FALSE
+suinos,T095,Adubos verdes e compostagem,57,FALSE
+suinos,T084,Carcaça e terminação de animais,47,FALSE
+suinos,T052,Bioprocessos: hidrólise enzimática e biogás,41,FALSE
+suinos,T036,Alimentação de ruminantes e digestibilidade,35,FALSE
+suinos,T071,Gado leiteiro: Gir e Girolando,32,FALSE
+suinos,T087,Iniciação científica e formação,31,FALSE
+suinos,T115,Emissões de gases de efeito estufa,29,FALSE
+suinos,T012,Pecuária de leite e de corte: cadeias produtivas,28,FALSE
+suinos,T140,Microbiologia do solo e coleções de microrganismos,26,FALSE
+suinos,T086,Caprinos e ovinos,26,FALSE
+suinos,T091,"Química do solo, calagem e plantas de cobertura",23,FALSE
+suinos,T123,Lodo de esgoto e metais pesados,22,FALSE
+suinos,T080,Gestão ambiental e planejamento institucional,21,FALSE
+suinos,T122,"Consumo alimentar, metano e eficiência",20,FALSE
+suinos,T066,Captação de água de chuva e barragens subterrâneas,19,FALSE
+suinos,T072,Silagem,18,FALSE
+suinos,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",16,FALSE
+suinos,T124,Adubação nitrogenada,16,FALSE
+suinos,T003,"Gestão, inovação e informática",16,FALSE
+suinos,T102,Bacias hidrográficas,15,FALSE
+suinos,T011,Carbono e qualidade física do solo,14,FALSE
+suinos,T046,Verminose de pequenos ruminantes,13,FALSE
+suinos,T025,Gado de corte: raças e desempenho,13,FALSE
+suinos,T114,"Calagem, gessagem e remineralizadores",12,FALSE
+suinos,T085,Bioinformática e genômica,12,FALSE
+suinos,T075,Adubação fosfatada,11,FALSE
+suinos,T001,Piscicultura e pesca,11,FALSE
+suinos,T015,Milho: cultivares e melhoramento,8,FALSE
+suinos,T005,Lagarta-do-cartucho e outras lagartas,7,FALSE
+suinos,T131,Serviços ecossistêmicos,7,FALSE
+suinos,T065,Doenças da videira,7,FALSE
+suinos,T137,Irrigação,7,FALSE
+suinos,T144,Suplementação mineral,6,FALSE
+suinos,T112,Nanotecnologia,6,FALSE
+suinos,T056,"Biomateriais: filmes, nanocelulose e compósitos",5,FALSE
+suinos,T101,Eucalipto,5,FALSE
+suinos,T035,Carrapato bovino,5,FALSE
+suinos,T076,Espécies nativas: nomenclatura e descrição,5,FALSE
+suinos,T009,Soja: cultivares e sementes,4,FALSE
+suinos,T133,Trópico Semiárido: pesquisa e mecanização,4,FALSE
+suinos,T068,Queijos e derivados lácteos,4,FALSE
+suinos,T055,Caju,4,FALSE
+suinos,T006,Mandioca,3,FALSE
+suinos,T059,Sorgo,3,FALSE
+suinos,T047,Trigo e triticale: cultivares,3,FALSE
+suinos,T029,Maçã,3,FALSE
+suinos,T082,Agrotóxicos no ambiente,3,FALSE
+suinos,T030,Florística e estrutura de florestas nativas,3,FALSE
+suinos,T125,Inteligência artificial e visão computacional,3,FALSE
+suinos,T038,Hortaliças: consumo e conservação,3,FALSE
+suinos,T067,Manejo de pastagens e sementes forrageiras,3,FALSE
+suinos,T044,Rizosfera e inoculantes,3,FALSE
+suinos,T027,Cana-de-açúcar,2,FALSE
+suinos,T098,Agrometeorologia e monitoramento,2,FALSE
+suinos,T032,Feijão-comum: doenças,2,FALSE
+suinos,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",2,FALSE
+suinos,T103,Mosca-branca,2,FALSE
+suinos,T020,Integração lavoura-pecuária-floresta (ILPF),2,FALSE
+suinos,T083,Enraizamento de estacas,2,FALSE
+suinos,T117,Coqueiro,2,FALSE
+suinos,T054,Geotecnologias e sistemas de informação geográfica,2,FALSE
+suinos,T104,Erva-mate,2,FALSE
+suinos,T090,Uso e cobertura da terra,2,FALSE
+suinos,T022,"Abelhas, apicultura e meliponicultura",2,FALSE
+suinos,T139,Viroses de plantas,2,FALSE
+suinos,T089,Girassol,1,FALSE
+suinos,T002,Café,1,FALSE
+suinos,T026,Controle biológico de doenças (Trichoderma),1,FALSE
+suinos,T135,"Doenças do trigo (giberela, brusone)",1,FALSE
+suinos,T126,Biossegurança e transgênicos,1,FALSE
+suinos,T074,"Chuvas, clima e evapotranspiração",1,FALSE
+suinos,T136,Evapotranspiração por satélite,1,FALSE
+suinos,T141,Cenoura,1,FALSE
+suinos,T088,Consórcio milho-braquiária e milho safrinha,1,FALSE
+suinos,T079,Espectroscopia e métodos analíticos,1,FALSE
+suinos,T034,Moscas-das-frutas,1,FALSE
+suinos,T118,Tolerância à seca,1,FALSE
+suinos,T081,Arroz: manejo e adubação,1,FALSE
+suinos,T092,Farinhas e panificação,1,FALSE
+suinos,T048,Manga: produção,1,FALSE
+suinos,T096,Gênese e mineralogia de solos,1,FALSE
+suinos,T134,Terra preta de índio,1,FALSE
+suinos,T024,Castanha-da-amazônia,1,FALSE
+suinos,T014,Citros,1,FALSE
+suinos,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+suinos,T053,Açaí,1,FALSE
+suinos,T017,Melão e melancia,1,FALSE
+suinos,T093,Feijão-comum: cultivares,1,FALSE
+suinos,T100,Ácaros,1,FALSE
+suinos,T116,Compostos bioativos e antioxidantes,1,FALSE
+suinos,T023,Sementes: germinação e dormência,1,FALSE
+suinos,T108,Feijão-comum: manejo e adubação,1,FALSE
+ovinos-caprinos,T086,Caprinos e ovinos,965,TRUE
+ovinos-caprinos,T021,Reprodução animal e inseminação,895,FALSE
+ovinos-caprinos,T037,Doenças de caprinos e ovinos,701,TRUE
+ovinos-caprinos,T046,Verminose de pequenos ruminantes,686,TRUE
+ovinos-caprinos,T036,Alimentação de ruminantes e digestibilidade,528,FALSE
+ovinos-caprinos,T084,Carcaça e terminação de animais,411,FALSE
+ovinos-caprinos,T068,Queijos e derivados lácteos,216,FALSE
+ovinos-caprinos,T077,Genômica animal,171,FALSE
+ovinos-caprinos,T025,Gado de corte: raças e desempenho,168,FALSE
+ovinos-caprinos,T060,Mastite,155,FALSE
+ovinos-caprinos,T122,"Consumo alimentar, metano e eficiência",149,FALSE
+ovinos-caprinos,T071,Gado leiteiro: Gir e Girolando,141,FALSE
+ovinos-caprinos,T144,Suplementação mineral,126,FALSE
+ovinos-caprinos,T067,Manejo de pastagens e sementes forrageiras,73,FALSE
+ovinos-caprinos,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",69,FALSE
+ovinos-caprinos,T072,Silagem,57,FALSE
+ovinos-caprinos,T106,Avicultura e suinocultura,56,FALSE
+ovinos-caprinos,T012,Pecuária de leite e de corte: cadeias produtivas,30,FALSE
+ovinos-caprinos,T109,Frangos e suínos: nutrição,29,FALSE
+ovinos-caprinos,T079,Espectroscopia e métodos analíticos,23,FALSE
+ovinos-caprinos,T095,Adubos verdes e compostagem,21,FALSE
+ovinos-caprinos,T020,Integração lavoura-pecuária-floresta (ILPF),16,FALSE
+ovinos-caprinos,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",15,FALSE
+ovinos-caprinos,T115,Emissões de gases de efeito estufa,15,FALSE
+ovinos-caprinos,T094,Andropogon e forrageiras do Cerrado,12,FALSE
+ovinos-caprinos,T085,Bioinformática e genômica,12,FALSE
+ovinos-caprinos,T080,Gestão ambiental e planejamento institucional,11,FALSE
+ovinos-caprinos,T052,Bioprocessos: hidrólise enzimática e biogás,10,FALSE
+ovinos-caprinos,T035,Carrapato bovino,10,FALSE
+ovinos-caprinos,T045,Bancos de germoplasma,10,FALSE
+ovinos-caprinos,T140,Microbiologia do solo e coleções de microrganismos,9,FALSE
+ovinos-caprinos,T059,Sorgo,8,FALSE
+ovinos-caprinos,T075,Adubação fosfatada,8,FALSE
+ovinos-caprinos,T019,Óleos essenciais e plantas aromáticas,8,FALSE
+ovinos-caprinos,T078,Umbu,7,FALSE
+ovinos-caprinos,T066,Captação de água de chuva e barragens subterrâneas,7,FALSE
+ovinos-caprinos,T088,Consórcio milho-braquiária e milho safrinha,6,FALSE
+ovinos-caprinos,T076,Espécies nativas: nomenclatura e descrição,6,FALSE
+ovinos-caprinos,T117,Coqueiro,6,FALSE
+ovinos-caprinos,T003,"Gestão, inovação e informática",6,FALSE
+ovinos-caprinos,T055,Caju,6,FALSE
+ovinos-caprinos,T011,Carbono e qualidade física do solo,5,FALSE
+ovinos-caprinos,T002,Café,5,FALSE
+ovinos-caprinos,T133,Trópico Semiárido: pesquisa e mecanização,5,FALSE
+ovinos-caprinos,T124,Adubação nitrogenada,5,FALSE
+ovinos-caprinos,T069,Sistemas agroflorestais,5,FALSE
+ovinos-caprinos,T087,Iniciação científica e formação,5,FALSE
+ovinos-caprinos,T006,Mandioca,4,FALSE
+ovinos-caprinos,T116,Compostos bioativos e antioxidantes,4,FALSE
+ovinos-caprinos,T123,Lodo de esgoto e metais pesados,4,FALSE
+ovinos-caprinos,T056,"Biomateriais: filmes, nanocelulose e compósitos",4,FALSE
+ovinos-caprinos,T017,Melão e melancia,4,FALSE
+ovinos-caprinos,T121,Alface,3,FALSE
+ovinos-caprinos,T030,Florística e estrutura de florestas nativas,3,FALSE
+ovinos-caprinos,T143,Levantamento e classificação de solos,3,FALSE
+ovinos-caprinos,T091,"Química do solo, calagem e plantas de cobertura",3,FALSE
+ovinos-caprinos,T023,Sementes: germinação e dormência,3,FALSE
+ovinos-caprinos,T101,Eucalipto,3,FALSE
+ovinos-caprinos,T097,Fungos micorrízicos,3,FALSE
+ovinos-caprinos,T034,Moscas-das-frutas,2,FALSE
+ovinos-caprinos,T031,Seringueira,2,FALSE
+ovinos-caprinos,T054,Geotecnologias e sistemas de informação geográfica,2,FALSE
+ovinos-caprinos,T089,Girassol,2,FALSE
+ovinos-caprinos,T104,Erva-mate,2,FALSE
+ovinos-caprinos,T048,Manga: produção,2,FALSE
+ovinos-caprinos,T033,Plantas daninhas e herbicidas,2,FALSE
+ovinos-caprinos,T130,"Florestas tropicais, desmatamento e LiDAR",2,FALSE
+ovinos-caprinos,T014,Citros,2,FALSE
+ovinos-caprinos,T015,Milho: cultivares e melhoramento,2,FALSE
+ovinos-caprinos,T004,Arroz: cultivares,1,FALSE
+ovinos-caprinos,T145,Nematoides das lesões e de cisto,1,FALSE
+ovinos-caprinos,T038,Hortaliças: consumo e conservação,1,FALSE
+ovinos-caprinos,T082,Agrotóxicos no ambiente,1,FALSE
+ovinos-caprinos,T050,"Palmito, pupunha e frutos amazônicos",1,FALSE
+ovinos-caprinos,T010,Feijão-caupi,1,FALSE
+ovinos-caprinos,T043,Sensoriamento remoto e índices de vegetação,1,FALSE
+ovinos-caprinos,T113,Pinhão-manso,1,FALSE
+ovinos-caprinos,T064,Dendê (palma de óleo),1,FALSE
+ovinos-caprinos,T112,Nanotecnologia,1,FALSE
+ovinos-caprinos,T051,Abacaxi,1,FALSE
+ovinos-caprinos,T008,Banana,1,FALSE
+ovinos-caprinos,T090,Uso e cobertura da terra,1,FALSE
+ovinos-caprinos,T053,Açaí,1,FALSE
+ovinos-caprinos,T126,Biossegurança e transgênicos,1,FALSE
+ovinos-caprinos,T111,Cigarrinhas,1,FALSE
+ovinos-caprinos,T029,Maçã,1,FALSE
+ovinos-caprinos,T001,Piscicultura e pesca,1,FALSE
+ovinos-caprinos,T092,Farinhas e panificação,1,FALSE
+ovinos-caprinos,T107,Paspalum,1,FALSE
+ovinos-caprinos,T083,Enraizamento de estacas,1,FALSE
+ovinos-caprinos,T028,Algodão,1,FALSE
+ovinos-caprinos,T065,Doenças da videira,1,FALSE
+ovinos-caprinos,T127,Mamão e mamona,1,FALSE
+ovinos-caprinos,T119,Pimentas e pimenta-do-reino,1,FALSE
+ovinos-caprinos,T120,Braquiárias: melhoramento e apomixia,1,FALSE
+ovinos-caprinos,T047,Trigo e triticale: cultivares,1,FALSE
+ovinos-caprinos,T042,Amendoim forrageiro,1,FALSE
+ovinos-caprinos,T114,"Calagem, gessagem e remineralizadores",1,FALSE
+ovinos-caprinos,T026,Controle biológico de doenças (Trichoderma),1,FALSE
+ovinos-caprinos,T024,Castanha-da-amazônia,1,FALSE
+ovinos-caprinos,T032,Feijão-comum: doenças,1,FALSE
+grande-porte,T021,Reprodução animal e inseminação,121,FALSE
+grande-porte,T071,Gado leiteiro: Gir e Girolando,103,FALSE
+grande-porte,T037,Doenças de caprinos e ovinos,95,FALSE
+grande-porte,T068,Queijos e derivados lácteos,70,FALSE
+grande-porte,T144,Suplementação mineral,68,FALSE
+grande-porte,T086,Caprinos e ovinos,62,FALSE
+grande-porte,T077,Genômica animal,57,FALSE
+grande-porte,T025,Gado de corte: raças e desempenho,55,FALSE
+grande-porte,T036,Alimentação de ruminantes e digestibilidade,52,FALSE
+grande-porte,T035,Carrapato bovino,45,FALSE
+grande-porte,T012,Pecuária de leite e de corte: cadeias produtivas,36,FALSE
+grande-porte,T060,Mastite,28,FALSE
+grande-porte,T084,Carcaça e terminação de animais,26,FALSE
+grande-porte,T046,Verminose de pequenos ruminantes,25,FALSE
+grande-porte,T106,Avicultura e suinocultura,21,FALSE
+grande-porte,T045,Bancos de germoplasma,20,FALSE
+grande-porte,T067,Manejo de pastagens e sementes forrageiras,14,FALSE
+grande-porte,T122,"Consumo alimentar, metano e eficiência",12,FALSE
+grande-porte,T109,Frangos e suínos: nutrição,8,FALSE
+grande-porte,T080,Gestão ambiental e planejamento institucional,7,FALSE
+grande-porte,T001,Piscicultura e pesca,6,FALSE
+grande-porte,T053,Açaí,5,FALSE
+grande-porte,T098,Agrometeorologia e monitoramento,5,FALSE
+grande-porte,T020,Integração lavoura-pecuária-floresta (ILPF),5,FALSE
+grande-porte,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",5,FALSE
+grande-porte,T017,Melão e melancia,4,FALSE
+grande-porte,T076,Espécies nativas: nomenclatura e descrição,4,FALSE
+grande-porte,T085,Bioinformática e genômica,4,FALSE
+grande-porte,T016,Maracujá,4,FALSE
+grande-porte,T125,Inteligência artificial e visão computacional,4,FALSE
+grande-porte,T094,Andropogon e forrageiras do Cerrado,3,FALSE
+grande-porte,T006,Mandioca,3,FALSE
+grande-porte,T126,Biossegurança e transgênicos,3,FALSE
+grande-porte,T087,Iniciação científica e formação,3,FALSE
+grande-porte,T052,Bioprocessos: hidrólise enzimática e biogás,3,FALSE
+grande-porte,T120,Braquiárias: melhoramento e apomixia,3,FALSE
+grande-porte,T111,Cigarrinhas,3,FALSE
+grande-porte,T079,Espectroscopia e métodos analíticos,3,FALSE
+grande-porte,T019,Óleos essenciais e plantas aromáticas,3,FALSE
+grande-porte,T003,"Gestão, inovação e informática",2,FALSE
+grande-porte,T099,Manejo florestal,2,FALSE
+grande-porte,T095,Adubos verdes e compostagem,2,FALSE
+grande-porte,T028,Algodão,2,FALSE
+grande-porte,T117,Coqueiro,2,FALSE
+grande-porte,T038,Hortaliças: consumo e conservação,2,FALSE
+grande-porte,T069,Sistemas agroflorestais,2,FALSE
+grande-porte,T107,Paspalum,2,FALSE
+grande-porte,T139,Viroses de plantas,1,FALSE
+grande-porte,T103,Mosca-branca,1,FALSE
+grande-porte,T072,Silagem,1,FALSE
+grande-porte,T110,Acerola,1,FALSE
+grande-porte,T064,Dendê (palma de óleo),1,FALSE
+grande-porte,T138,Rizóbios e fixação biológica de nitrogênio,1,FALSE
+grande-porte,T123,Lodo de esgoto e metais pesados,1,FALSE
+grande-porte,T032,Feijão-comum: doenças,1,FALSE
+grande-porte,T027,Cana-de-açúcar,1,FALSE
+grande-porte,T115,Emissões de gases de efeito estufa,1,FALSE
+grande-porte,T102,Bacias hidrográficas,1,FALSE
+grande-porte,T042,Amendoim forrageiro,1,FALSE
+grande-porte,T074,"Chuvas, clima e evapotranspiração",1,FALSE
+grande-porte,T014,Citros,1,FALSE
+grande-porte,T030,Florística e estrutura de florestas nativas,1,FALSE
+grande-porte,T092,Farinhas e panificação,1,FALSE
+grande-porte,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",1,FALSE
+grande-porte,T119,Pimentas e pimenta-do-reino,1,FALSE
+grande-porte,T100,Ácaros,1,FALSE
+grande-porte,T131,Serviços ecossistêmicos,1,FALSE
+grande-porte,T005,Lagarta-do-cartucho e outras lagartas,1,FALSE
+grande-porte,T054,Geotecnologias e sistemas de informação geográfica,1,FALSE
+grande-porte,T136,Evapotranspiração por satélite,1,FALSE
+outros-animais,T022,"Abelhas, apicultura e meliponicultura",1061,TRUE
+outros-animais,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",18,FALSE
+outros-animais,T103,Mosca-branca,12,FALSE
+outros-animais,T034,Moscas-das-frutas,9,FALSE
+outros-animais,T005,Lagarta-do-cartucho e outras lagartas,9,FALSE
+outros-animais,T060,Mastite,8,FALSE
+outros-animais,T116,Compostos bioativos e antioxidantes,7,FALSE
+outros-animais,T100,Ácaros,6,FALSE
+outros-animais,T030,Florística e estrutura de florestas nativas,6,FALSE
+outros-animais,T069,Sistemas agroflorestais,5,FALSE
+outros-animais,T139,Viroses de plantas,5,FALSE
+outros-animais,T095,Adubos verdes e compostagem,5,FALSE
+outros-animais,T073,Zoneamento agroecológico e aptidão agrícola,4,FALSE
+outros-animais,T080,Gestão ambiental e planejamento institucional,4,FALSE
+outros-animais,T068,Queijos e derivados lácteos,3,FALSE
+outros-animais,T106,Avicultura e suinocultura,3,FALSE
+outros-animais,T053,Açaí,3,FALSE
+outros-animais,T086,Caprinos e ovinos,3,FALSE
+outros-animais,T079,Espectroscopia e métodos analíticos,3,FALSE
+outros-animais,T006,Mandioca,3,FALSE
+outros-animais,T026,Controle biológico de doenças (Trichoderma),2,FALSE
+outros-animais,T082,Agrotóxicos no ambiente,2,FALSE
+outros-animais,T010,Feijão-caupi,2,FALSE
+outros-animais,T009,Soja: cultivares e sementes,2,FALSE
+outros-animais,T057,Cupuaçu,2,FALSE
+outros-animais,T016,Maracujá,2,FALSE
+outros-animais,T131,Serviços ecossistêmicos,2,FALSE
+outros-animais,T111,Cigarrinhas,2,FALSE
+outros-animais,T063,Tomate,2,FALSE
+outros-animais,T020,Integração lavoura-pecuária-floresta (ILPF),2,FALSE
+outros-animais,T056,"Biomateriais: filmes, nanocelulose e compósitos",2,FALSE
+outros-animais,T089,Girassol,2,FALSE
+outros-animais,T117,Coqueiro,2,FALSE
+outros-animais,T087,Iniciação científica e formação,1,FALSE
+outros-animais,T084,Carcaça e terminação de animais,1,FALSE
+outros-animais,T011,Carbono e qualidade física do solo,1,FALSE
+outros-animais,T090,Uso e cobertura da terra,1,FALSE
+outros-animais,T092,Farinhas e panificação,1,FALSE
+outros-animais,T012,Pecuária de leite e de corte: cadeias produtivas,1,FALSE
+outros-animais,T065,Doenças da videira,1,FALSE
+outros-animais,T043,Sensoriamento remoto e índices de vegetação,1,FALSE
+outros-animais,T019,Óleos essenciais e plantas aromáticas,1,FALSE
+outros-animais,T058,Cultura de tecidos e micropropagação,1,FALSE
+outros-animais,T048,Manga: produção,1,FALSE
+outros-animais,T144,Suplementação mineral,1,FALSE
+outros-animais,T003,"Gestão, inovação e informática",1,FALSE
+outros-animais,T038,Hortaliças: consumo e conservação,1,FALSE
+outros-animais,T140,Microbiologia do solo e coleções de microrganismos,1,FALSE
+outros-animais,T067,Manejo de pastagens e sementes forrageiras,1,FALSE
+outros-animais,T088,Consórcio milho-braquiária e milho safrinha,1,FALSE
+outros-animais,T052,Bioprocessos: hidrólise enzimática e biogás,1,FALSE
+outros-animais,T085,Bioinformática e genômica,1,FALSE
+outros-animais,T017,Melão e melancia,1,FALSE
+outros-animais,T002,Café,1,FALSE
+outros-animais,T064,Dendê (palma de óleo),1,FALSE
+outros-animais,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+outros-animais,T046,Verminose de pequenos ruminantes,1,FALSE
+outros-animais,T074,"Chuvas, clima e evapotranspiração",1,FALSE
+outros-animais,T083,Enraizamento de estacas,1,FALSE
+outros-animais,T055,Caju,1,FALSE
+outros-animais,T133,Trópico Semiárido: pesquisa e mecanização,1,FALSE
+outros-animais,T036,Alimentação de ruminantes e digestibilidade,1,FALSE
+outros-animais,T037,Doenças de caprinos e ovinos,1,FALSE
+outros-animais,T031,Seringueira,1,FALSE
+outros-animais,T129,Pêssego e amora-preta,1,FALSE
+florestas-nativas,T024,Castanha-da-amazônia,731,TRUE
+florestas-nativas,T099,Manejo florestal,705,TRUE
+florestas-nativas,T030,Florística e estrutura de florestas nativas,390,FALSE
+florestas-nativas,T078,Umbu,338,FALSE
+florestas-nativas,T116,Compostos bioativos e antioxidantes,196,FALSE
+florestas-nativas,T050,"Palmito, pupunha e frutos amazônicos",174,FALSE
+florestas-nativas,T130,"Florestas tropicais, desmatamento e LiDAR",158,FALSE
+florestas-nativas,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",154,FALSE
+florestas-nativas,T023,Sementes: germinação e dormência,121,FALSE
+florestas-nativas,T048,Manga: produção,120,FALSE
+florestas-nativas,T076,Espécies nativas: nomenclatura e descrição,119,FALSE
+florestas-nativas,T045,Bancos de germoplasma,111,FALSE
+florestas-nativas,T019,Óleos essenciais e plantas aromáticas,100,FALSE
+florestas-nativas,T113,Pinhão-manso,93,FALSE
+florestas-nativas,T128,Pínus,88,FALSE
+florestas-nativas,T083,Enraizamento de estacas,86,FALSE
+florestas-nativas,T092,Farinhas e panificação,75,FALSE
+florestas-nativas,T131,Serviços ecossistêmicos,70,FALSE
+florestas-nativas,T062,Serapilheira e fauna do solo,63,FALSE
+florestas-nativas,T058,Cultura de tecidos e micropropagação,57,FALSE
+florestas-nativas,T069,Sistemas agroflorestais,49,FALSE
+florestas-nativas,T055,Caju,48,FALSE
+florestas-nativas,T056,"Biomateriais: filmes, nanocelulose e compósitos",44,FALSE
+florestas-nativas,T100,Ácaros,43,FALSE
+florestas-nativas,T020,Integração lavoura-pecuária-floresta (ILPF),39,FALSE
+florestas-nativas,T052,Bioprocessos: hidrólise enzimática e biogás,37,FALSE
+florestas-nativas,T022,"Abelhas, apicultura e meliponicultura",35,FALSE
+florestas-nativas,T080,Gestão ambiental e planejamento institucional,34,FALSE
+florestas-nativas,T026,Controle biológico de doenças (Trichoderma),32,FALSE
+florestas-nativas,T101,Eucalipto,29,FALSE
+florestas-nativas,T036,Alimentação de ruminantes e digestibilidade,29,FALSE
+florestas-nativas,T053,Açaí,28,FALSE
+florestas-nativas,T006,Mandioca,27,FALSE
+florestas-nativas,T090,Uso e cobertura da terra,26,FALSE
+florestas-nativas,T061,Guaraná,24,FALSE
+florestas-nativas,T105,Manga: doenças,23,FALSE
+florestas-nativas,T057,Cupuaçu,23,FALSE
+florestas-nativas,T064,Dendê (palma de óleo),22,FALSE
+florestas-nativas,T068,Queijos e derivados lácteos,22,FALSE
+florestas-nativas,T034,Moscas-das-frutas,21,FALSE
+florestas-nativas,T054,Geotecnologias e sistemas de informação geográfica,21,FALSE
+florestas-nativas,T043,Sensoriamento remoto e índices de vegetação,21,FALSE
+florestas-nativas,T038,Hortaliças: consumo e conservação,20,FALSE
+florestas-nativas,T011,Carbono e qualidade física do solo,20,FALSE
+florestas-nativas,T104,Erva-mate,19,FALSE
+florestas-nativas,T016,Maracujá,17,FALSE
+florestas-nativas,T085,Bioinformática e genômica,17,FALSE
+florestas-nativas,T051,Abacaxi,17,FALSE
+florestas-nativas,T005,Lagarta-do-cartucho e outras lagartas,17,FALSE
+florestas-nativas,T029,Maçã,16,FALSE
+florestas-nativas,T087,Iniciação científica e formação,15,FALSE
+florestas-nativas,T110,Acerola,15,FALSE
+florestas-nativas,T097,Fungos micorrízicos,14,FALSE
+florestas-nativas,T001,Piscicultura e pesca,14,FALSE
+florestas-nativas,T079,Espectroscopia e métodos analíticos,13,FALSE
+florestas-nativas,T129,Pêssego e amora-preta,13,FALSE
+florestas-nativas,T074,"Chuvas, clima e evapotranspiração",12,FALSE
+florestas-nativas,T077,Genômica animal,12,FALSE
+florestas-nativas,T073,Zoneamento agroecológico e aptidão agrícola,12,FALSE
+florestas-nativas,T084,Carcaça e terminação de animais,12,FALSE
+florestas-nativas,T009,Soja: cultivares e sementes,11,FALSE
+florestas-nativas,T086,Caprinos e ovinos,11,FALSE
+florestas-nativas,T075,Adubação fosfatada,10,FALSE
+florestas-nativas,T091,"Química do solo, calagem e plantas de cobertura",10,FALSE
+florestas-nativas,T133,Trópico Semiárido: pesquisa e mecanização,10,FALSE
+florestas-nativas,T008,Banana,9,FALSE
+florestas-nativas,T002,Café,9,FALSE
+florestas-nativas,T028,Algodão,9,FALSE
+florestas-nativas,T127,Mamão e mamona,8,FALSE
+florestas-nativas,T115,Emissões de gases de efeito estufa,8,FALSE
+florestas-nativas,T118,Tolerância à seca,8,FALSE
+florestas-nativas,T003,"Gestão, inovação e informática",8,FALSE
+florestas-nativas,T125,Inteligência artificial e visão computacional,7,FALSE
+florestas-nativas,T042,Amendoim forrageiro,7,FALSE
+florestas-nativas,T117,Coqueiro,7,FALSE
+florestas-nativas,T010,Feijão-caupi,7,FALSE
+florestas-nativas,T132,Abóbora,7,FALSE
+florestas-nativas,T112,Nanotecnologia,7,FALSE
+florestas-nativas,T124,Adubação nitrogenada,6,FALSE
+florestas-nativas,T098,Agrometeorologia e monitoramento,6,FALSE
+florestas-nativas,T060,Mastite,6,FALSE
+florestas-nativas,T122,"Consumo alimentar, metano e eficiência",6,FALSE
+florestas-nativas,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",6,FALSE
+florestas-nativas,T046,Verminose de pequenos ruminantes,6,FALSE
+florestas-nativas,T031,Seringueira,6,FALSE
+florestas-nativas,T102,Bacias hidrográficas,6,FALSE
+florestas-nativas,T120,Braquiárias: melhoramento e apomixia,6,FALSE
+florestas-nativas,T096,Gênese e mineralogia de solos,5,FALSE
+florestas-nativas,T141,Cenoura,5,FALSE
+florestas-nativas,T095,Adubos verdes e compostagem,5,FALSE
+florestas-nativas,T032,Feijão-comum: doenças,5,FALSE
+florestas-nativas,T143,Levantamento e classificação de solos,5,FALSE
+florestas-nativas,T066,Captação de água de chuva e barragens subterrâneas,5,FALSE
+florestas-nativas,T033,Plantas daninhas e herbicidas,4,FALSE
+florestas-nativas,T067,Manejo de pastagens e sementes forrageiras,4,FALSE
+florestas-nativas,T013,Feijão-comum: melhoramento,4,FALSE
+florestas-nativas,T012,Pecuária de leite e de corte: cadeias produtivas,4,FALSE
+florestas-nativas,T021,Reprodução animal e inseminação,4,FALSE
+florestas-nativas,T134,Terra preta de índio,4,FALSE
+florestas-nativas,T140,Microbiologia do solo e coleções de microrganismos,4,FALSE
+florestas-nativas,T041,Ferrugem-asiática da soja,4,FALSE
+florestas-nativas,T121,Alface,3,FALSE
+florestas-nativas,T094,Andropogon e forrageiras do Cerrado,3,FALSE
+florestas-nativas,T119,Pimentas e pimenta-do-reino,3,FALSE
+florestas-nativas,T014,Citros,3,FALSE
+florestas-nativas,T114,"Calagem, gessagem e remineralizadores",3,FALSE
+florestas-nativas,T144,Suplementação mineral,3,FALSE
+florestas-nativas,T103,Mosca-branca,2,FALSE
+florestas-nativas,T065,Doenças da videira,2,FALSE
+florestas-nativas,T111,Cigarrinhas,2,FALSE
+florestas-nativas,T047,Trigo e triticale: cultivares,2,FALSE
+florestas-nativas,T142,Tolerância ao alumínio,2,FALSE
+florestas-nativas,T109,Frangos e suínos: nutrição,2,FALSE
+florestas-nativas,T017,Melão e melancia,2,FALSE
+florestas-nativas,T107,Paspalum,2,FALSE
+florestas-nativas,T081,Arroz: manejo e adubação,2,FALSE
+florestas-nativas,T082,Agrotóxicos no ambiente,2,FALSE
+florestas-nativas,T035,Carrapato bovino,2,FALSE
+florestas-nativas,T070,Nematoide-das-galhas,1,FALSE
+florestas-nativas,T139,Viroses de plantas,1,FALSE
+florestas-nativas,T137,Irrigação,1,FALSE
+florestas-nativas,T004,Arroz: cultivares,1,FALSE
+florestas-nativas,T072,Silagem,1,FALSE
+florestas-nativas,T088,Consórcio milho-braquiária e milho safrinha,1,FALSE
+florestas-nativas,T000,Uva e vinho,1,FALSE
+florestas-nativas,T106,Avicultura e suinocultura,1,FALSE
+florestas-nativas,T063,Tomate,1,FALSE
+florestas-nativas,T040,Cebola e alho,1,FALSE
+florestas-nativas,T059,Sorgo,1,FALSE
+florestas-nativas,T123,Lodo de esgoto e metais pesados,1,FALSE
+florestas-nativas,T138,Rizóbios e fixação biológica de nitrogênio,1,FALSE
+florestas-nativas,T093,Feijão-comum: cultivares,1,FALSE
+florestas-nativas,T108,Feijão-comum: manejo e adubação,1,FALSE
+florestas-plantadas,T101,Eucalipto,1111,TRUE
+florestas-plantadas,T128,Pínus,403,TRUE
+florestas-plantadas,T020,Integração lavoura-pecuária-floresta (ILPF),256,FALSE
+florestas-plantadas,T099,Manejo florestal,254,FALSE
+florestas-plantadas,T005,Lagarta-do-cartucho e outras lagartas,188,FALSE
+florestas-plantadas,T030,Florística e estrutura de florestas nativas,120,FALSE
+florestas-plantadas,T011,Carbono e qualidade física do solo,80,FALSE
+florestas-plantadas,T100,Ácaros,80,FALSE
+florestas-plantadas,T115,Emissões de gases de efeito estufa,71,FALSE
+florestas-plantadas,T130,"Florestas tropicais, desmatamento e LiDAR",70,FALSE
+florestas-plantadas,T076,Espécies nativas: nomenclatura e descrição,69,FALSE
+florestas-plantadas,T023,Sementes: germinação e dormência,64,FALSE
+florestas-plantadas,T069,Sistemas agroflorestais,62,FALSE
+florestas-plantadas,T058,Cultura de tecidos e micropropagação,55,FALSE
+florestas-plantadas,T024,Castanha-da-amazônia,53,FALSE
+florestas-plantadas,T026,Controle biológico de doenças (Trichoderma),51,FALSE
+florestas-plantadas,T062,Serapilheira e fauna do solo,49,FALSE
+florestas-plantadas,T052,Bioprocessos: hidrólise enzimática e biogás,48,FALSE
+florestas-plantadas,T131,Serviços ecossistêmicos,41,FALSE
+florestas-plantadas,T083,Enraizamento de estacas,36,FALSE
+florestas-plantadas,T056,"Biomateriais: filmes, nanocelulose e compósitos",35,FALSE
+florestas-plantadas,T103,Mosca-branca,32,FALSE
+florestas-plantadas,T073,Zoneamento agroecológico e aptidão agrícola,31,FALSE
+florestas-plantadas,T114,"Calagem, gessagem e remineralizadores",27,FALSE
+florestas-plantadas,T090,Uso e cobertura da terra,26,FALSE
+florestas-plantadas,T113,Pinhão-manso,26,FALSE
+florestas-plantadas,T123,Lodo de esgoto e metais pesados,26,FALSE
+florestas-plantadas,T105,Manga: doenças,26,FALSE
+florestas-plantadas,T104,Erva-mate,26,FALSE
+florestas-plantadas,T088,Consórcio milho-braquiária e milho safrinha,25,FALSE
+florestas-plantadas,T075,Adubação fosfatada,25,FALSE
+florestas-plantadas,T095,Adubos verdes e compostagem,25,FALSE
+florestas-plantadas,T134,Terra preta de índio,24,FALSE
+florestas-plantadas,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",24,FALSE
+florestas-plantadas,T054,Geotecnologias e sistemas de informação geográfica,22,FALSE
+florestas-plantadas,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",21,FALSE
+florestas-plantadas,T080,Gestão ambiental e planejamento institucional,21,FALSE
+florestas-plantadas,T043,Sensoriamento remoto e índices de vegetação,19,FALSE
+florestas-plantadas,T097,Fungos micorrízicos,19,FALSE
+florestas-plantadas,T041,Ferrugem-asiática da soja,18,FALSE
+florestas-plantadas,T111,Cigarrinhas,17,FALSE
+florestas-plantadas,T079,Espectroscopia e métodos analíticos,17,FALSE
+florestas-plantadas,T125,Inteligência artificial e visão computacional,17,FALSE
+florestas-plantadas,T091,"Química do solo, calagem e plantas de cobertura",16,FALSE
+florestas-plantadas,T140,Microbiologia do solo e coleções de microrganismos,16,FALSE
+florestas-plantadas,T094,Andropogon e forrageiras do Cerrado,16,FALSE
+florestas-plantadas,T139,Viroses de plantas,16,FALSE
+florestas-plantadas,T034,Moscas-das-frutas,14,FALSE
+florestas-plantadas,T067,Manejo de pastagens e sementes forrageiras,14,FALSE
+florestas-plantadas,T045,Bancos de germoplasma,14,FALSE
+florestas-plantadas,T143,Levantamento e classificação de solos,13,FALSE
+florestas-plantadas,T119,Pimentas e pimenta-do-reino,13,FALSE
+florestas-plantadas,T096,Gênese e mineralogia de solos,12,FALSE
+florestas-plantadas,T124,Adubação nitrogenada,12,FALSE
+florestas-plantadas,T002,Café,11,FALSE
+florestas-plantadas,T046,Verminose de pequenos ruminantes,11,FALSE
+florestas-plantadas,T102,Bacias hidrográficas,11,FALSE
+florestas-plantadas,T031,Seringueira,10,FALSE
+florestas-plantadas,T070,Nematoide-das-galhas,10,FALSE
+florestas-plantadas,T051,Abacaxi,10,FALSE
+florestas-plantadas,T032,Feijão-comum: doenças,10,FALSE
+florestas-plantadas,T085,Bioinformática e genômica,9,FALSE
+florestas-plantadas,T141,Cenoura,9,FALSE
+florestas-plantadas,T074,"Chuvas, clima e evapotranspiração",9,FALSE
+florestas-plantadas,T087,Iniciação científica e formação,9,FALSE
+florestas-plantadas,T061,Guaraná,9,FALSE
+florestas-plantadas,T057,Cupuaçu,8,FALSE
+florestas-plantadas,T006,Mandioca,8,FALSE
+florestas-plantadas,T053,Açaí,8,FALSE
+florestas-plantadas,T077,Genômica animal,7,FALSE
+florestas-plantadas,T033,Plantas daninhas e herbicidas,7,FALSE
+florestas-plantadas,T050,"Palmito, pupunha e frutos amazônicos",7,FALSE
+florestas-plantadas,T014,Citros,7,FALSE
+florestas-plantadas,T120,Braquiárias: melhoramento e apomixia,7,FALSE
+florestas-plantadas,T019,Óleos essenciais e plantas aromáticas,7,FALSE
+florestas-plantadas,T044,Rizosfera e inoculantes,7,FALSE
+florestas-plantadas,T012,Pecuária de leite e de corte: cadeias produtivas,6,FALSE
+florestas-plantadas,T065,Doenças da videira,6,FALSE
+florestas-plantadas,T039,Brusone do arroz,6,FALSE
+florestas-plantadas,T133,Trópico Semiárido: pesquisa e mecanização,6,FALSE
+florestas-plantadas,T022,"Abelhas, apicultura e meliponicultura",6,FALSE
+florestas-plantadas,T122,"Consumo alimentar, metano e eficiência",6,FALSE
+florestas-plantadas,T136,Evapotranspiração por satélite,5,FALSE
+florestas-plantadas,T082,Agrotóxicos no ambiente,5,FALSE
+florestas-plantadas,T098,Agrometeorologia e monitoramento,5,FALSE
+florestas-plantadas,T025,Gado de corte: raças e desempenho,5,FALSE
+florestas-plantadas,T118,Tolerância à seca,5,FALSE
+florestas-plantadas,T138,Rizóbios e fixação biológica de nitrogênio,5,FALSE
+florestas-plantadas,T038,Hortaliças: consumo e conservação,5,FALSE
+florestas-plantadas,T109,Frangos e suínos: nutrição,5,FALSE
+florestas-plantadas,T059,Sorgo,5,FALSE
+florestas-plantadas,T009,Soja: cultivares e sementes,5,FALSE
+florestas-plantadas,T017,Melão e melancia,5,FALSE
+florestas-plantadas,T066,Captação de água de chuva e barragens subterrâneas,4,FALSE
+florestas-plantadas,T015,Milho: cultivares e melhoramento,4,FALSE
+florestas-plantadas,T003,"Gestão, inovação e informática",4,FALSE
+florestas-plantadas,T112,Nanotecnologia,3,FALSE
+florestas-plantadas,T144,Suplementação mineral,3,FALSE
+florestas-plantadas,T116,Compostos bioativos e antioxidantes,3,FALSE
+florestas-plantadas,T135,"Doenças do trigo (giberela, brusone)",2,FALSE
+florestas-plantadas,T092,Farinhas e panificação,2,FALSE
+florestas-plantadas,T108,Feijão-comum: manejo e adubação,2,FALSE
+florestas-plantadas,T126,Biossegurança e transgênicos,2,FALSE
+florestas-plantadas,T107,Paspalum,2,FALSE
+florestas-plantadas,T028,Algodão,2,FALSE
+florestas-plantadas,T064,Dendê (palma de óleo),2,FALSE
+florestas-plantadas,T001,Piscicultura e pesca,2,FALSE
+florestas-plantadas,T063,Tomate,2,FALSE
+florestas-plantadas,T008,Banana,2,FALSE
+florestas-plantadas,T071,Gado leiteiro: Gir e Girolando,2,FALSE
+florestas-plantadas,T048,Manga: produção,2,FALSE
+florestas-plantadas,T129,Pêssego e amora-preta,2,FALSE
+florestas-plantadas,T081,Arroz: manejo e adubação,2,FALSE
+florestas-plantadas,T055,Caju,1,FALSE
+florestas-plantadas,T042,Amendoim forrageiro,1,FALSE
+florestas-plantadas,T072,Silagem,1,FALSE
+florestas-plantadas,T106,Avicultura e suinocultura,1,FALSE
+florestas-plantadas,T089,Girassol,1,FALSE
+florestas-plantadas,T013,Feijão-comum: melhoramento,1,FALSE
+florestas-plantadas,T142,Tolerância ao alumínio,1,FALSE
+florestas-plantadas,T127,Mamão e mamona,1,FALSE
+florestas-plantadas,T035,Carrapato bovino,1,FALSE
+florestas-plantadas,T145,Nematoides das lesões e de cisto,1,FALSE
+florestas-plantadas,T027,Cana-de-açúcar,1,FALSE
+florestas-plantadas,T010,Feijão-caupi,1,FALSE
+florestas-plantadas,T049,Batata e batata-doce,1,FALSE
+pesca,T001,Piscicultura e pesca,346,TRUE
+pesca,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",25,FALSE
+pesca,T131,Serviços ecossistêmicos,14,FALSE
+pesca,T080,Gestão ambiental e planejamento institucional,11,FALSE
+pesca,T003,"Gestão, inovação e informática",6,FALSE
+pesca,T121,Alface,3,FALSE
+pesca,T102,Bacias hidrográficas,2,FALSE
+pesca,T090,Uso e cobertura da terra,2,FALSE
+pesca,T054,Geotecnologias e sistemas de informação geográfica,2,FALSE
+pesca,T004,Arroz: cultivares,1,FALSE
+pesca,T005,Lagarta-do-cartucho e outras lagartas,1,FALSE
+pesca,T115,Emissões de gases de efeito estufa,1,FALSE
+pesca,T114,"Calagem, gessagem e remineralizadores",1,FALSE
+pesca,T072,Silagem,1,FALSE
+pesca,T099,Manejo florestal,1,FALSE
+pesca,T030,Florística e estrutura de florestas nativas,1,FALSE
+pesca,T127,Mamão e mamona,1,FALSE
+pesca,T085,Bioinformática e genômica,1,FALSE
+pesca,T012,Pecuária de leite e de corte: cadeias produtivas,1,FALSE
+pesca,T122,"Consumo alimentar, metano e eficiência",1,FALSE
+pesca,T056,"Biomateriais: filmes, nanocelulose e compósitos",1,FALSE
+pesca,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+pesca,T019,Óleos essenciais e plantas aromáticas,1,FALSE
+aquicultura,T001,Piscicultura e pesca,2292,TRUE
+aquicultura,T019,Óleos essenciais e plantas aromáticas,97,FALSE
+aquicultura,T036,Alimentação de ruminantes e digestibilidade,52,FALSE
+aquicultura,T112,Nanotecnologia,38,FALSE
+aquicultura,T080,Gestão ambiental e planejamento institucional,33,FALSE
+aquicultura,T007,"Agricultura familiar, transição agroecológica e desenvolvimento rural",32,FALSE
+aquicultura,T046,Verminose de pequenos ruminantes,28,FALSE
+aquicultura,T085,Bioinformática e genômica,27,FALSE
+aquicultura,T082,Agrotóxicos no ambiente,25,FALSE
+aquicultura,T102,Bacias hidrográficas,22,FALSE
+aquicultura,T003,"Gestão, inovação e informática",20,FALSE
+aquicultura,T084,Carcaça e terminação de animais,19,FALSE
+aquicultura,T131,Serviços ecossistêmicos,17,FALSE
+aquicultura,T066,Captação de água de chuva e barragens subterrâneas,15,FALSE
+aquicultura,T122,"Consumo alimentar, metano e eficiência",14,FALSE
+aquicultura,T021,Reprodução animal e inseminação,12,FALSE
+aquicultura,T026,Controle biológico de doenças (Trichoderma),12,FALSE
+aquicultura,T008,Banana,12,FALSE
+aquicultura,T052,Bioprocessos: hidrólise enzimática e biogás,11,FALSE
+aquicultura,T056,"Biomateriais: filmes, nanocelulose e compósitos",11,FALSE
+aquicultura,T035,Carrapato bovino,10,FALSE
+aquicultura,T115,Emissões de gases de efeito estufa,10,FALSE
+aquicultura,T100,Ácaros,10,FALSE
+aquicultura,T121,Alface,10,FALSE
+aquicultura,T025,Gado de corte: raças e desempenho,10,FALSE
+aquicultura,T106,Avicultura e suinocultura,10,FALSE
+aquicultura,T006,Mandioca,10,FALSE
+aquicultura,T079,Espectroscopia e métodos analíticos,9,FALSE
+aquicultura,T054,Geotecnologias e sistemas de informação geográfica,9,FALSE
+aquicultura,T114,"Calagem, gessagem e remineralizadores",8,FALSE
+aquicultura,T109,Frangos e suínos: nutrição,8,FALSE
+aquicultura,T092,Farinhas e panificação,8,FALSE
+aquicultura,T086,Caprinos e ovinos,7,FALSE
+aquicultura,T095,Adubos verdes e compostagem,7,FALSE
+aquicultura,T037,Doenças de caprinos e ovinos,7,FALSE
+aquicultura,T059,Sorgo,7,FALSE
+aquicultura,T090,Uso e cobertura da terra,7,FALSE
+aquicultura,T043,Sensoriamento remoto e índices de vegetação,6,FALSE
+aquicultura,T060,Mastite,6,FALSE
+aquicultura,T077,Genômica animal,6,FALSE
+aquicultura,T076,Espécies nativas: nomenclatura e descrição,6,FALSE
+aquicultura,T012,Pecuária de leite e de corte: cadeias produtivas,5,FALSE
+aquicultura,T024,Castanha-da-amazônia,5,FALSE
+aquicultura,T033,Plantas daninhas e herbicidas,5,FALSE
+aquicultura,T113,Pinhão-manso,5,FALSE
+aquicultura,T116,Compostos bioativos e antioxidantes,5,FALSE
+aquicultura,T140,Microbiologia do solo e coleções de microrganismos,5,FALSE
+aquicultura,T073,Zoneamento agroecológico e aptidão agrícola,4,FALSE
+aquicultura,T005,Lagarta-do-cartucho e outras lagartas,4,FALSE
+aquicultura,T038,Hortaliças: consumo e conservação,4,FALSE
+aquicultura,T047,Trigo e triticale: cultivares,3,FALSE
+aquicultura,T125,Inteligência artificial e visão computacional,3,FALSE
+aquicultura,T010,Feijão-caupi,3,FALSE
+aquicultura,T017,Melão e melancia,3,FALSE
+aquicultura,T137,Irrigação,3,FALSE
+aquicultura,T091,"Química do solo, calagem e plantas de cobertura",3,FALSE
+aquicultura,T124,Adubação nitrogenada,2,FALSE
+aquicultura,T096,Gênese e mineralogia de solos,2,FALSE
+aquicultura,T144,Suplementação mineral,2,FALSE
+aquicultura,T020,Integração lavoura-pecuária-floresta (ILPF),2,FALSE
+aquicultura,T045,Bancos de germoplasma,2,FALSE
+aquicultura,T063,Tomate,2,FALSE
+aquicultura,T061,Guaraná,2,FALSE
+aquicultura,T105,Manga: doenças,2,FALSE
+aquicultura,T133,Trópico Semiárido: pesquisa e mecanização,2,FALSE
+aquicultura,T074,"Chuvas, clima e evapotranspiração",2,FALSE
+aquicultura,T051,Abacaxi,2,FALSE
+aquicultura,T018,"Capins Panicum (Tanzânia, Mombaça) e manejo do pastejo",2,FALSE
+aquicultura,T072,Silagem,2,FALSE
+aquicultura,T103,Mosca-branca,2,FALSE
+aquicultura,T009,Soja: cultivares e sementes,1,FALSE
+aquicultura,T130,"Florestas tropicais, desmatamento e LiDAR",1,FALSE
+aquicultura,T117,Coqueiro,1,FALSE
+aquicultura,T049,Batata e batata-doce,1,FALSE
+aquicultura,T107,Paspalum,1,FALSE
+aquicultura,T053,Açaí,1,FALSE
+aquicultura,T126,Biossegurança e transgênicos,1,FALSE
+aquicultura,T048,Manga: produção,1,FALSE
+aquicultura,T030,Florística e estrutura de florestas nativas,1,FALSE
+aquicultura,T094,Andropogon e forrageiras do Cerrado,1,FALSE
+aquicultura,T108,Feijão-comum: manejo e adubação,1,FALSE
+aquicultura,T120,Braquiárias: melhoramento e apomixia,1,FALSE
+aquicultura,T097,Fungos micorrízicos,1,FALSE
+aquicultura,T002,Café,1,FALSE
+aquicultura,T087,Iniciação científica e formação,1,FALSE
+aquicultura,T071,Gado leiteiro: Gir e Girolando,1,FALSE
+aquicultura,T011,Carbono e qualidade física do solo,1,FALSE
+aquicultura,T034,Moscas-das-frutas,1,FALSE
+aquicultura,T136,Evapotranspiração por satélite,1,FALSE
+aquicultura,T143,Levantamento e classificação de solos,1,FALSE
+aquicultura,T132,Abóbora,1,FALSE
+aquicultura,T040,Cebola e alho,1,FALSE
+aquicultura,T044,Rizosfera e inoculantes,1,FALSE
+aquicultura,T067,Manejo de pastagens e sementes forrageiras,1,FALSE
+aquicultura,T104,Erva-mate,1,FALSE

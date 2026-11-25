@@ -675,14 +675,18 @@ function vEstudos(k){
   <main class="in cp" id="ev"><div class="loading">Carregando os estudos…</div></main></div>`;
   const go=()=>{if(location.hash.startsWith('#estudos'))desenharEstudos()};
   if(EC)return go();
-  fetch('estudos.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{EC=d;EC.docs.forEach(x=>x.s=semAc([x[3],x[7],x[8],x[9],x[2]].join(' ')));go()})
+  fetch('estudos.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{EC=d;EC.docs={};go()})
    .catch(()=>{const e=$('#ev');if(e)e.innerHTML='<div class="loading">Não foi possível carregar os estudos. Recarregue a página.</div>'});
+}
+function docsCadeia(k){
+  if(EC.docs[k])return Promise.resolve(EC.docs[k]);
+  return fetch(`estudos/${k}.json`,{cache:'no-cache'}).then(r=>r.json()).then(L=>{L.forEach(x=>x.s=semAc([x[3],x[7],x[8],x[9],x[2]].join(' ')));return EC.docs[k]=L});
 }
 function desenharEstudos(){
   const E=EC;if(!E.cad[SE.c])SE.c=E.cadeias.includes('cafe')?'cafe':E.cadeias[0];
   const ci=E.cadeias.indexOf(SE.c),C=E.cad[SE.c],c=C.g,b=E.embrapa,T=C.tipos,tot=T['publicação']+T.projeto+T.tecnologia,cn=C.nome;
-  const DOCS=E.docs.filter(d=>d[11].includes(ci));
-  const pf=c.pessoas_distintas_todas,pa=c.autorias_publicacoes,pr=c.primeira_autoria,lp=c.lideres_de_projeto_pessoas;
+  const pf=c.pessoas_distintas_todas,pa=c.autorias_publicacoes,pr=c.primeira_autoria,lp=c.lideres_de_projeto_pessoas,lpS=lp.suprimido!=null;
+  const ANO=new Date().getFullYear(),anoFim=C.anos?Math.min(C.anos[1],ANO):null;
   const bf=b.pessoas_distintas_todas,ba=b.autorias_publicacoes,br=b.primeira_autoria,bl=b.lideres_de_projeto_pessoas;
   const exp=(E.meta.exportacao_redape||'').split('-').reverse().join('/');
   const unis=C.unidade.slice().sort((a,b)=>b.documentos-a.documentos);
@@ -692,12 +696,13 @@ function desenharEstudos(){
   sel.innerHTML=Object.entries(GR).map(([gk,gv])=>{const ks=E.cadeias.filter(k=>grpOf(k)===gk);return ks.length?`<optgroup label="${esc(gv[0])}">${ks.map(k=>{const t=E.cad[k].tipos;return `<option value="${k}" ${k===SE.c?'selected':''}>${esc(E.cad[k].nome)} (${n0(t['publicação']+t.projeto+t.tecnologia)})</option>`}).join('')}</optgroup>`:''}).join('');
   sel.onchange=e=>{Object.assign(SE,{c:e.target.value,q:'',g:'',u:'',t:'',n:20});history.replaceState(null,'','#estudos/'+SE.c);desenharEstudos()};
   const semG=!(pf.mulheres+pf.homens);
-  $('#ev').innerHTML=`
+  const REV={fumo:'Muitos estudos com tabaco usam a planta só como modelo de laboratório, e parte deles ainda escapa do filtro.','outros-animais':'Estudos de polinização e de abelhas nativas que não tratam da criação ainda entram no recorte.','florestas-plantadas':'A fronteira com a integração lavoura-pecuária-floresta e com a tecnologia da madeira ainda é difusa.',pesca:'A separação entre pesca, aquicultura e a cadeia do pescado ainda é aproximada.'};
+  $('#ev').innerHTML=`${REV[SE.c]?`<p class="note" style="margin:0;padding:12px 16px;border:1px dashed var(--line);border-radius:12px"><span class="st prep">recorte em revisão</span> ${REV[SE.c]} Os números desta cadeia podem mudar.</p>`:''}
     <section class="kpis" aria-label="Totais">
-      <div class="kpi"><div class="v">${n0(tot)}</div><p>estudos sobre ${esc(cn.toLowerCase())}: ${n0(T['publicação'])} publicações, ${n0(T.projeto)} projetos e ${n0(T.tecnologia)} soluções tecnológicas${C.anos?`, de ${C.anos[0]} a ${C.anos[1]}`:''}</p></div>
-      <div class="kpi"><div class="wm"><span class="w">${n0(pf.mulheres)}</span><small>mulheres</small><span class="m">${n0(pf.homens)}</span><small>homens</small></div><p>pessoas da Embrapa na autoria ou na liderança</p><span class="cmp">${semG?'Sem autoria identificada.':`${pc(pf.pct_mulheres_entre_definidos)} são mulheres; na Embrapa toda, ${pc(bf.pct_mulheres_entre_definidos)}. ${n0(pf.indefinidos)} sem gênero definido.`}</span></div>
+      <div class="kpi"><div class="v">${n0(tot)}</div><p>estudos sobre ${esc(cn.toLowerCase())}: ${n0(T['publicação'])} publicações, ${n0(T.projeto)} ${T.projeto===1?'projeto':'projetos'} e ${n0(T.tecnologia)} ${T.tecnologia===1?'solução tecnológica':'soluções tecnológicas'}${C.anos?`, de ${C.anos[0]} a ${anoFim}`:''}</p></div>
+      <div class="kpi"><div class="wm"><span class="w">${n0(pf.mulheres)}</span><small>mulheres</small><span class="m">${n0(pf.homens)}</span><small>homens</small></div><p>pessoas da Embrapa na autoria ou na liderança</p><span class="cmp">${semG?'Sem autoria identificada.':`${pc(pf.pct_mulheres_entre_definidos)} são mulheres; na Embrapa toda, ${pc(bf.pct_mulheres_entre_definidos)}.${pf.indefinidos?` ${n0(pf.indefinidos)} sem gênero definido.`:''}`}</span></div>
       <div class="kpi"><div class="v">${pc(c.pct_publicacoes_com_autora)}</div><p>das publicações têm ao menos uma autora da Embrapa</p><span class="cmp">${n0(c.publicacoes_com_ao_menos_uma_autora)} de ${n0(c.publicacoes_com_autor_identificado)} com autoria identificada; na Embrapa toda, ${pc(b.pct_publicacoes_com_autora)}</span></div>
-      <div class="kpi"><div class="v">${pc(pr.pct_mulheres_entre_definidos)}</div><p>das primeiras autorias são de mulheres</p><span class="cmp">${n0(pr.mulheres)} mulheres e ${n0(pr.homens)} homens, quando a primeira autoria é de alguém da Embrapa; na Embrapa toda, ${pc(br.pct_mulheres_entre_definidos)}</span></div>
+      <div class="kpi"><div class="v">${pc(pr.pct_mulheres_entre_definidos)}</div><p>das primeiras autorias são de mulheres</p><span class="cmp">${n0(pr.mulheres)} ${pr.mulheres===1?'mulher':'mulheres'} e ${n0(pr.homens)} ${pr.homens===1?'homem':'homens'}, quando a primeira autoria é de alguém da Embrapa; na Embrapa toda, ${pc(br.pct_mulheres_entre_definidos)}</span></div>
     </section>
 
     <section aria-labelledby="e1"><div class="sec-h"><div><span class="eyebrow">Autoria</span><h2 id="e1">Quem assina a pesquisa: ${esc(cn)}</h2>
@@ -707,15 +712,15 @@ function desenharEstudos(){
           ${splitBar('Pessoas',pf.mulheres,pf.homens)}${splitBar('Embrapa toda',bf.mulheres,bf.homens,1)}
           ${splitBar('Autorias',pa.mulheres,pa.homens)}${splitBar('Embrapa toda',ba.mulheres,ba.homens,1)}
           ${splitBar('Primeira autoria',pr.mulheres,pr.homens)}${splitBar('Embrapa toda',br.mulheres,br.homens,1)}
-          ${splitBar('Liderança de projeto',lp.mulheres,lp.homens)}${splitBar('Embrapa toda',bl.mulheres,bl.homens,1)}
-          <p class="note">Liderança de projeto: ${n0(lp.mulheres)} ${lp.mulheres===1?'mulher':'mulheres'} e ${n0(lp.homens)} ${lp.homens===1?'homem':'homens'} à frente dos ${n0(c.projetos_liderados.projetos_com_lider_identificado)} projetos desta cadeia no Redape, que traz só o líder e não cobre toda a carteira.</p></div>
+          ${lpS?'':splitBar('Liderança de projeto',lp.mulheres,lp.homens)+splitBar('Embrapa toda',bl.mulheres,bl.homens,1)}
+          <p class="note">${lpS?`Liderança de projeto: esta cadeia tem menos de 5 líderes de projeto identificados, então a divisão por gênero não aparece, para ninguém ser identificado pela conta.`:`Liderança de projeto: ${n0(lp.mulheres)} ${lp.mulheres===1?'mulher':'mulheres'} e ${n0(lp.homens)} ${lp.homens===1?'homem':'homens'} à frente dos ${n0(c.projetos_liderados.projetos_com_lider_identificado)} projetos desta cadeia no Redape, que traz só o líder e não cobre toda a carteira.`}</p></div>
         <div class="panel"><h3>Por tipo de estudo</h3><p class="sub">Pessoas da Embrapa que assinam cada tipo. Entre parênteses, o número de estudos. Só tipos com 5 pessoas ou mais.</p>
           ${C.tipo.map(x=>splitBar(`${esc(x.grupo)} <small class="num" style="color:var(--ink-2)">(${n0(x.documentos)})</small>`,x.pessoas_mulheres,x.pessoas_homens)).join('')||'<p class="note">Poucas pessoas identificadas para separar por tipo.</p>'}
           <p class="note">As soluções tecnológicas não trazem autoria pessoal no Redape e ficam fora das contas de gênero.</p></div>
       </div></section>
 
     <section aria-labelledby="e2"><div class="sec-h"><div><span class="eyebrow">Ano a ano</span><h2 id="e2">Autorias por ano de publicação</h2>
-      <p>Autorias de mulheres e de homens da Embrapa nas publicações desta cadeia, somadas por ano. Passe o cursor ou toque numa coluna para ver os números.</p></div></div>
+      <p>Autorias de mulheres e de homens da Embrapa nas publicações desta cadeia, somadas por ano. Só aparecem os anos com 5 pessoas identificadas ou mais. Passe o cursor ou toque numa coluna para ver os números.</p></div></div>
       <div class="panel ychart"><div id="ych"></div><div class="ytip num" id="ytip"></div></div></section>
 
     <section aria-labelledby="e3"><div class="sec-h"><div><span class="eyebrow">Unidades</span><h2 id="e3">Pessoas que assinam, por unidade</h2>
@@ -726,10 +731,10 @@ function desenharEstudos(){
       <p>Busque por palavra no título, nas palavras-chave, no resumo ou nos autores, sem se preocupar com acento. Cada estudo leva à página de origem, no repositório Alice ou Infoteca ou no portal da Embrapa.</p></div></div>
       <div class="efil">
         <div><label class="eyebrow" for="eq">Palavra</label><input id="eq" type="search" placeholder="praga, cultivar, qualidade…" value="${esc(SE.q)}"></div>
-        <div><label class="eyebrow" for="eg">Tipo</label><select id="eg" class="sel"><option value="">Todos</option>${E.grupos.map((x,i)=>[x,i]).filter(([,i])=>DOCS.some(d=>d[1]===i)).map(([x,i])=>`<option value="${i}">${esc(x)}</option>`).join('')}</select></div>
-        <div><label class="eyebrow" for="eu">Unidade</label><select id="eu" class="sel"><option value="">Todas</option>${E.unidades.map((u,i)=>[u,i]).filter(([,i])=>DOCS.some(d=>d[5].includes(i))).sort((a,b)=>a[0][1].localeCompare(b[0][1],'pt')).map(([u,i])=>`<option value="${i}">${esc(u[1])}</option>`).join('')}</select></div>
-        <div><label class="eyebrow" for="et">Tema</label><select id="et" class="sel"><option value="">Todos</option>${E.temas.map((x,i)=>[x,i]).filter(([,i])=>DOCS.some(d=>d[6]===i)).sort((a,b)=>a[0].localeCompare(b[0],'pt')).map(([x,i])=>`<option value="${i}">${esc(x)}</option>`).join('')}</select></div>
-        <div><span class="eyebrow">Ano</span><div class="yrs"><input id="ede" type="number" placeholder="${C.anos?C.anos[0]:''}" aria-label="De" value="${esc(SE.de)}">a<input id="eate" type="number" placeholder="${C.anos?C.anos[1]:''}" aria-label="Até" value="${esc(SE.ate)}"></div></div>
+        <div><label class="eyebrow" for="eg">Tipo</label><select id="eg" class="sel"><option value="">Todos</option></select></div>
+        <div><label class="eyebrow" for="eu">Unidade</label><select id="eu" class="sel"><option value="">Todas</option></select></div>
+        <div><label class="eyebrow" for="et">Tema</label><select id="et" class="sel"><option value="">Todos</option></select></div>
+        <div><span class="eyebrow">Ano</span><div class="yrs"><input id="ede" type="number" placeholder="${C.anos?C.anos[0]:''}" aria-label="De" value="${esc(SE.de)}">a<input id="eate" type="number" placeholder="${anoFim??''}" aria-label="Até" value="${esc(SE.ate)}"></div></div>
       </div>
       <div class="ehd"><span id="ecnt" aria-live="polite"></span><span><button type="button" id="elimpa">Limpar</button> <button type="button" id="ecsv">Baixar a lista (CSV)</button></span></div>
       <div class="elist" id="elist"></div>
@@ -746,7 +751,7 @@ function desenharEstudos(){
     </ul></section>`;
 
   // série anual
-  const S=C.serie.filter(x=>!C.anos||x.ano<=C.anos[1]);
+  const S=C.serie.filter(x=>x.ano<=ANO);
   if(S.length){const W=Math.max(320,Math.min(1100,$('#ych').clientWidth||920)),H=W<600?200:230,mg={t:8,r:6,b:24,l:40};
   const x=d3.scaleBand().domain(d3.range(S[0].ano,S[S.length-1].ano+1)).range([mg.l,W-mg.r]).padding(.18);
   const y=d3.scaleLinear().domain([0,d3.max(S,d=>d.autorias_mulheres+d.autorias_homens)||1]).nice().range([H-mg.b,mg.t]);
@@ -764,7 +769,15 @@ function desenharEstudos(){
   let nU=12;const du=()=>{$('#eun').innerHTML=unis.slice(0,nU).map(u=>splitBar(`${esc(u.nome)}<br><small class="num" style="color:var(--ink-2)">${n0(u.pessoas)} pessoas, ${n0(u.documentos)} estudos</small>`,u.pessoas_mulheres,u.pessoas_homens)).join('')||'<p class="note">Nenhuma unidade com 5 pessoas ou mais nesta cadeia.</p>';$('#eunm').hidden=nU>=unis.length};
   du();$('#eunm').onclick=()=>{nU=unis.length;du()};
 
-  // base
+  // base: a lista da cadeia vem num arquivo próprio
+  $('#elist').innerHTML='<div class="loading">Carregando a lista de estudos…</div>';$('#emore').hidden=true;
+  const kAtual=SE.c;
+  docsCadeia(kAtual).then(DOCS=>{if(SE.c!==kAtual||!$('#elist'))return;base(DOCS)}).catch(()=>{$('#elist').innerHTML='<p class="note">Não foi possível carregar a lista. Recarregue a página.</p>'});
+  function base(DOCS){
+  const fsel=(id,itens)=>{const e=$('#'+id),v=e.options[0].outerHTML;e.innerHTML=v+itens};
+  fsel('eg',E.grupos.map((x,i)=>[x,i]).filter(([,i])=>DOCS.some(d=>d[1]===i)).map(([x,i])=>`<option value="${i}">${esc(x)}</option>`).join(''));
+  fsel('eu',E.unidades.map((u,i)=>[u,i]).filter(([,i])=>DOCS.some(d=>d[5].includes(i))).sort((a,b)=>a[0][1].localeCompare(b[0][1],'pt')).map(([u,i])=>`<option value="${i}">${esc(u[1])}</option>`).join(''));
+  fsel('et',E.temas.map((x,i)=>[x,i]).filter(([,i])=>DOCS.some(d=>d[6]===i)).sort((a,b)=>a[0].localeCompare(b[0],'pt')).map(([x,i])=>`<option value="${i}">${esc(x)}</option>`).join(''));
   ['eg','eu','et'].forEach(id=>{$('#'+id).value=SE[id.slice(1)]});
   const filtrar=()=>{const q=semAc(SE.q).trim().split(/\s+/).filter(Boolean),de=+SE.de||0,ate=+SE.ate||9999;
     return DOCS.filter(d=>(SE.g===''||d[1]==SE.g)&&(SE.u===''||d[5].includes(+SE.u))&&(SE.t===''||d[6]==SE.t)&&(d[4]==null?!(de||SE.ate):d[4]>=de&&d[4]<=ate)&&q.every(t=>d.s.includes(t)))};
@@ -787,6 +800,7 @@ function desenharEstudos(){
     const rows=[['id','tipo','subtipo','titulo','ano','unidades','tema','cadeias','palavras_chave','autores','link'].join(',')].concat(L.map(d=>[d[0],E.grupos[d[1]],d[2],d[3],d[4],d[5].map(i=>E.unidades[i][1]).join('; '),d[6]!=null?E.temas[d[6]]:'',d[11].map(i=>E.cad[E.cadeias[i]].nome).join('; '),d[7],d[9],d[10]].map(cv).join(',')));
     const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+rows.join('\n')],{type:'text/csv;charset=utf-8'}));a.download=`estudos_embrapa_${SE.c}.csv`;document.body.appendChild(a);a.click();a.remove()};
   desenhar();
+  }
 }
 function vOrgs(){
   app.innerHTML=`<div class="view">

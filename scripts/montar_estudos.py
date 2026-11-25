@@ -1,16 +1,18 @@
 """Monta os dados da página de estudos da Embrapa por cadeia.
 
-Lê dados/estudos/estudos.csv (um documento por linha, com as cadeias em que
-entra) e dados/estudos/resumo_genero.json (agregados de gênero por cadeia) e
-grava estudos.json ao lado da página. Enquanto o recorte por cadeia não existe,
-usa o recorte do café em dados/estudos_cafe/. A página só carrega esse arquivo
-quando alguém abre a seção de estudos.
+Lê dados/estudos/estudos.csv.gz (um documento por linha, com as cadeias em
+que entra) e dados/estudos/resumo_genero.json (agregados de gênero por cadeia).
+Grava estudos.json, com os totais de todas as cadeias, e um arquivo por cadeia
+em estudos/<cadeia>.json com a lista de estudos, para a página só baixar a
+lista da cadeia que a pessoa escolher. Sem o recorte por cadeia, usa o do café
+em dados/estudos_cafe/.
 
 Os números de gênero passam como estão no resumo; aqui só se confere que os
 totais do resumo cabem na base de estudos.
 """
 
 import csv
+import gzip
 import json
 import os
 import sys
@@ -63,14 +65,15 @@ def nome_unidade(sigla):
 
 
 def ler_csv(caminho):
-    with open(caminho, encoding="utf-8") as f:
+    abrir = gzip.open if caminho.endswith(".gz") else open
+    with abrir(caminho, "rt", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
 
 def ler_base():
     """Devolve linhas, resumo por cadeia, Embrapa toda e metadados."""
-    if os.path.exists(os.path.join(PASTA, "estudos.csv")):
-        linhas = ler_csv(os.path.join(PASTA, "estudos.csv"))
+    if os.path.exists(os.path.join(PASTA, "estudos.csv.gz")):
+        linhas = ler_csv(os.path.join(PASTA, "estudos.csv.gz"))
         with open(os.path.join(PASTA, "resumo_genero.json"), encoding="utf-8") as f:
             r = json.load(f)
         return linhas, r["cadeias"], r["embrapa_toda"], r["metadados"]
@@ -127,7 +130,10 @@ def main(saida):
         r = res.get(k)
         if r is None:
             sys.exit(f"sem resumo de gênero para {k}")
-        lid = r["projetos_liderados"]["projetos_com_lider_identificado"]
+        tot = r.get("totais")
+        if tot and (tot["publicacao"], tot["projeto"], tot["tecnologia"]) != (tipos["publicação"], tipos["projeto"], tipos["tecnologia"]):
+            sys.exit(f"{k}: totais do resumo {tot} diferem da base {tipos}")
+        lid = r["projetos_liderados"].get("projetos_com_lider_identificado", 0)
         if lid > tipos["projeto"]:
             sys.exit(f"{k}: resumo fala de {lid} projetos e a base tem {tipos['projeto']}")
         if r["primeira_autoria"]["publicacoes"] > tipos["publicação"]:
@@ -143,12 +149,14 @@ def main(saida):
         }
 
     out = {"meta": meta, "cadeias": chaves, "cad": cad, "embrapa": embrapa,
-           "unidades": [[s, nome_unidade(s)] for s in siglas], "temas": temas,
-           "grupos": grupos, "docs": docs}
-    os.makedirs(saida, exist_ok=True)
+           "unidades": [[s, nome_unidade(s)] for s in siglas], "temas": temas, "grupos": grupos}
+    os.makedirs(os.path.join(saida, "estudos"), exist_ok=True)
     with open(os.path.join(saida, "estudos.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
-    print(f"{len(docs)} estudos em {len(chaves)} cadeias -> {saida}/estudos.json")
+    for i, k in enumerate(chaves):
+        with open(os.path.join(saida, "estudos", k + ".json"), "w", encoding="utf-8") as f:
+            json.dump([d for d in docs if i in d[11]], f, ensure_ascii=False, separators=(",", ":"))
+    print(f"{len(docs)} estudos em {len(chaves)} cadeias -> {saida}/estudos.json e {saida}/estudos/")
 
 
 if __name__ == "__main__":
