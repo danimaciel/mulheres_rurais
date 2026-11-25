@@ -9,7 +9,7 @@ Publicações (contadas por obra: quando várias unidades depositam a mesma publ
 projetos e soluções tecnológicas da Embrapa ligados a cada cadeia da plataforma. As cadeias seguem as classes
 de atividade do Censo Agropecuário 2017 usadas no resto do site; um documento entra em todas as cadeias de que
 trata (um estudo de consórcio milho-feijão está em cereais e em outras lavouras temporárias), por isso os totais
-de cadeias diferentes não se somam. São 121.686 documentos distintos; 107.438 em uma só cadeia, 12.545 em duas
+de cadeias diferentes não se somam. São 121.472 documentos distintos; 107.353 em uma só cadeia, 12.454 em duas
 e o restante em três ou mais.
 
 O café não foi refeito: entra o recorte já publicado em `dados/estudos_cafe/`, com o mesmo método mais detalhado
@@ -113,7 +113,7 @@ termo fraco (candidatos → aceitos); descartados só com termo no resumo / só 
 | Outros animais de grande porte | 1.037 | 0 | 98 → 0 | 275 / 0 | 1.019 / 9 / 9 | 1.037 | 18/20 |
 | Outros animais | 939 | 0 | 430 → 296 | 279 / 197 | 1.196 / 27 / 12 | 1.235 | 10/20 |
 | Florestas nativas (extrativismo) | 5.151 | 0 | 2.111 → 74 | 2.212 / 1.010 | 5.075 / 95 / 55 | 5.225 | 16/20 |
-| Florestas plantadas | 4.109 | 0 | 1.391 → 101 | 2.045 / 258 | 4.097 / 75 / 38 | 4.210 | 11/20 |
+| Florestas plantadas | 4.109 | 0 | 1.391 → 101 | 2.045 / 258 | 3.705 / 75 / 36 | 3.816 | 11/20 (antes do cruzamento com o acervo do Centro) |
 | Pesca | 425 | 0 | 389 → 0 | 328 / 1.901 | 412 / 8 / 5 | 425 | 12/20 |
 | Aquicultura | 2.413 | 0 | 732 → 660 | 429 / 357 | 2.918 / 121 / 34 | 3.073 | 15/20 |
 
@@ -144,8 +144,16 @@ Cadeias que pedem cuidado ao ler os números:
   de laboratório. Ficaram 36 documentos, com ruído ainda perceptível.
 - **Outros animais**: dentro do tema de abelhas o recorte é bom; fora dele ainda entram estudos sobre abelhas
   nativas e polinização, que não são produção apícola.
-- **Florestas plantadas**: entram estudos de integração lavoura-pecuária-floresta com eucalipto e de tecnologia da
-  madeira; a fronteira com florestas nativas e com ILPF é difusa.
+- **Florestas plantadas**: foi conferida contra o acervo do Centro de Referência em Florestas Plantadas e ILPF
+  (classificador treinado com amostra rotulada, mesma base do Observatório). Dos 4.210 documentos achados pelos
+  termos, 3.351 estão no acervo, 237 não foram avaliados lá (entraram depois) e 622 o classificador de lá julgou
+  fora do tema. Desses 622, ficaram só os 228 que citam no título ou nas palavras-chave uma espécie de plantio
+  (eucalipto, pínus, teca, acácia, mogno-africano, cedro-australiano, paricá) ou florestas plantadas, sem ser ILPF
+  ou sistema agroflorestal; saíram 394 (araucária nativa, restauração, ILPF com milho, tecnologia de madeiras
+  tropicais). Documentos que estão só no acervo do Centro não foram acrescentados: o conceito de floresta plantada
+  de lá é mais amplo que a classe do Censo (inclui erva-mate, seringueira, nativas em restauração, ILPF e SAF) e,
+  na amostra, os candidatos de eucalipto e exóticas que faltavam aqui eram em boa parte óleos essenciais e outras
+  espécies arbóreas. A fronteira com ILPF e com florestas nativas continua difusa.
 - **Pesca**: os termos de pesca aparecem também em estudos de aquicultura e de cadeia do pescado; a separação
   entre pesca e aquicultura é aproximada.
 - **Sementes**: a classe do Censo é de sementes e mudas certificadas; aqui entram também estudos de qualidade e
@@ -195,16 +203,16 @@ publicações com ao menos uma autora e líderes de projeto (mulheres / homens):
 | Outros animais de grande porte | 117 / 282 / 11 | 29.3% | 24% | 42.3% | 2 / 4 |
 | Outros animais | 127 / 259 / 6 | 32.9% | 44.2% | 58.1% | 9 / 10 |
 | Florestas nativas (extrativismo) | 478 / 1087 / 29 | 30.5% | 35.9% | 53.2% | 33 / 34 |
-| Florestas plantadas | 343 / 873 / 17 | 28.2% | 21.8% | 35.4% | 15 / 34 |
+| Florestas plantadas | 310 / 814 / 15 | 27.6% | 21.7% | 35.2% | 15 / 34 |
 | Pesca | 78 / 119 / 6 | 39.6% | 38% | 47.7% | 1 / 6 |
 | Aquicultura | 235 / 419 / 13 | 35.9% | 41.5% | 57.8% | 31 / 28 |
 | **Toda a Embrapa** | 2.474 / 6.000 / 261 | 29.2% | 28.1% | 46% | 467 / 830 |
 
 ## Arquivos
 
-- `estudos.csv` — um documento por linha, com as mesmas colunas de `dados/estudos_cafe/estudos.csv` mais
+- `estudos.csv.gz` — um documento por linha, com as mesmas colunas de `dados/estudos_cafe/estudos.csv` mais
   `cadeias` (chaves separadas por `;`) e `vias` (vias por cadeia, por exemplo `cereais:tema+termo;soja:termo`).
-  O arquivo tem cerca de 88 MB.
+  Vai comprimido, como as tabelas do SIDRA do repositório; o R lê direto com `read.csv`.
 - `temas_cadeias.csv` — temas presentes em cada cadeia, com contagem e se foram usados como via.
 - `resumo_genero.json` — agregados de gênero.
 
@@ -217,4 +225,4 @@ IBGE. Produção Agrícola Municipal (tabela 5457), Pesquisa da Pecuária Munici
 da Silvicultura (SIDRA): categorias de produto. Censo Agropecuário 2017: classes de atividade.
 Observatório de Pesquisa da Embrapa (github.com/danimaciel/observatorio_embrapa): obras, temas, produtos e pessoas
 identificadas.
-MEIRELES, F. *genderBR*: predict gender from Brazilian first names. Versão 1.4.0.
+genderBR: pacote R para estimar gênero pelo primeiro nome (Censo 2010), versão 1.4.0.
