@@ -4,3 +4,4 @@
 *.tmp
 notas/
 _site/
+__pycache__/
