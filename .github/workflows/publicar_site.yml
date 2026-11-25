@@ -10,7 +10,7 @@ on:
       - "site/**"
       - "dados/**"
       - "config/**"
-      - "scripts/montar_site.py"
+      - "scripts/montar_*.py"
       - "scripts/conferir_*.py"
       - ".github/workflows/publicar_site.yml"
   workflow_run:

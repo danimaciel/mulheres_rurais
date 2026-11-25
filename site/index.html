@@ -273,6 +273,40 @@ main.cp{display:flex;flex-direction:column;gap:44px;padding-block:28px 40px}
 .fine ul{margin:0;padding-left:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 32px;font-size:14px;color:var(--ink-2)}
 @media (max-width:760px){.fine ul{grid-template-columns:minmax(0,1fr)}}
 .fine li{min-width:0}
+/* estudos de cafeicultura */
+.kpi .cmp{display:block;font-size:12.5px;color:var(--ink-2);margin-top:4px}
+.kpi .wm{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-family:var(--f-display);font-size:clamp(24px,2.6vw,32px);font-weight:600;line-height:1.05;font-variant-numeric:tabular-nums}
+.kpi .wm .w{color:var(--w)}.kpi .wm .m{color:var(--m)}
+.kpi .wm small{font-family:var(--f-body);font-size:12.5px;font-weight:500;color:var(--ink-2)}
+.ychart svg{display:block;width:100%;height:auto}
+.ychart .ax text{font-size:11px;fill:var(--ink-2)}
+.ychart .ax line,.ychart .ax path{stroke:var(--line)}
+.ychart rect.w{fill:var(--w)}.ychart rect.m{fill:var(--m)}.ychart rect.d{fill:var(--wine-2)}
+.ychart rect.hit{fill:transparent}
+.ychart rect.hit:hover{fill:var(--ink);fill-opacity:.06}
+.ytip{font-size:13px;color:var(--ink-2);min-height:1.5em;margin-top:6px}
+.efil{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end;margin-bottom:14px}
+.efil>div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.efil input[type=search],.efil input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:7px 12px;font:inherit;font-size:14px;color:inherit}
+.efil input[type=search]{width:300px;max-width:100%}
+.efil input[type=number]{width:84px}
+.efil .sel{max-width:240px}
+.efil .yrs{display:flex;flex-direction:row;align-items:center;gap:6px;font-size:13px;color:var(--ink-2)}
+@media (max-width:640px){.efil>div{flex:1 1 140px}.efil .sel,.efil input[type=search]{max-width:none;width:100%}}
+.elist{display:flex;flex-direction:column;gap:8px}
+.est{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;min-width:0}
+.est h3{font-family:var(--f-body);font-size:15px;font-weight:600;line-height:1.35;margin:2px 0 4px}
+.est h3 a{color:var(--ink);text-decoration:none}
+.est h3 a:hover{color:var(--acc);text-decoration:underline}
+.est .mt{font-size:12.5px;color:var(--ink-2)}
+.est .au{font-size:13px;color:var(--ink-2);margin:2px 0 0;overflow-wrap:anywhere}
+.est details{margin-top:6px;font-size:13.5px}
+.est summary{cursor:pointer;color:var(--acc);font-size:13px}
+.est details p{margin:6px 0 0;color:var(--ink-2);text-align:justify;hyphens:auto}
+.ehd{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;align-items:baseline;margin-bottom:10px;font-size:13.5px;color:var(--ink-2)}
+.ehd button{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 14px;cursor:pointer;font-size:13px}
+.ehd button:hover{background:var(--surface-2)}
+mark{background:var(--wine-soft);color:inherit;border-radius:2px;padding:0 1px}
 footer{border-top:1px solid var(--line);color:var(--ink-2);font-size:12.5px;padding-block:20px 32px}
 .loading{padding:80px 16px;text-align:center;color:var(--ink-2)}
 @media (prefers-reduced-motion:no-preference){.view{animation:fd .25s ease-out}@keyframes fd{from{opacity:.5}to{opacity:1}}}
@@ -344,6 +378,7 @@ function chips(cur){
   const outra=!!FR[cur];
   $('#chips').innerHTML=`<a class="chip all" href="#todas" ${outra||cur==='todas'?'aria-current="page"':''}>${outra?esc(FR[cur].nome):'Todas as cadeias'}</a>`
    +`<a class="chip" href="#organizacoes" ${cur==='organizacoes'?'aria-current="page"':''}><i style="background:var(--gold)"></i>Organizações</a>`
+   +`<a class="chip" href="#estudos-cafe" ${cur==='estudos-cafe'?'aria-current="page"':''}><i style="background:var(--leaf)"></i>Estudos do café</a>`
    +`<a class="chip" href="#sobre" ${cur==='sobre'?'aria-current="page"':''}>Sobre</a>`;
 }
 function route(){
@@ -352,7 +387,7 @@ function route(){
   document.body.classList.toggle('amz',!!(FR[r]&&FR[r].cls==='amz'));
   document.body.style.setProperty('--acc-band',FR[r]?FR[r].band:'#541D35');
   chips(r);
-  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else if(r==='organizacoes'){vOrgs();window.scrollTo(0,0)} else if(r==='sobre'){vSobre();window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
+  if(FR[r]){vCadeia(r);window.scrollTo(0,0)} else if(r==='organizacoes'){vOrgs();window.scrollTo(0,0)} else if(r==='sobre'){vSobre();window.scrollTo(0,0)} else if(r==='estudos-cafe'){vEstudos();window.scrollTo(0,0)} else {vHome();if(r==='todas'){const e=$('#todas');if(e)e.scrollIntoView()}else window.scrollTo(0,0)}
 }
 
 /* ---------- início ---------- */
@@ -493,6 +528,8 @@ function vCadeia(key){
       ${CAD_MAPA[key]!=null?`<p class="note"><a href="#organizacoes" id="vermapa">Ver no mapa de organizações</a>, junto com as cooperativas e associações desta cadeia registradas na Receita.</p>`:''}
     </section>`:`<section aria-labelledby="s5"><div class="sec-h"><div><span class="eyebrow">Organizações</span><h2 id="s5">Organizações de mulheres</h2><p><span class="st prep">em preparo</span> A base de organizações desta cadeia ainda não foi levantada. Ela entra pelo formulário, com fila de validação antes da publicação.</p></div></div></section>`}
 
+    ${key==='cafe'?`<section aria-labelledby="s5b"><div class="sec-h"><div><span class="eyebrow">Pesquisa</span><h2 id="s5b">Estudos da Embrapa sobre cafeicultura</h2><p>Publicações, projetos e soluções tecnológicas da Embrapa sobre o café, com quem assina essa pesquisa, mulheres e homens lado a lado, e uma base para buscar os estudos. <a href="#estudos-cafe">Abrir os estudos de cafeicultura</a>.</p></div></div></section>`:''}
+
     <section class="fine" aria-labelledby="s6">
       <h2 id="s6">Como ler estes números</h2>
       <ul>
@@ -619,6 +656,127 @@ function vSobre(){
       <a class="chip" href="https://github.com/danimaciel/mulheres_rurais/issues" target="_blank" rel="noopener">Abrir uma sugestão no repositório</a></p>
     </section>
   </main></div>`;
+}
+/* ---------- estudos de cafeicultura ---------- */
+let EC=null;
+const SE={q:'',g:'',u:'',t:'',de:'',ate:'',n:20};
+function splitBar(lab,w,m,ref){const t=w+m;if(!t)return '';const p=100*w/t;
+  return `<div class="split${ref?' ref':''}"><span>${lab}</span><div class="t" title="${n0(w)} mulheres e ${n0(m)} homens"><i class="w" style="width:${p}%">${p>=14?pc(p,ref?0:1):''}</i><i class="m">${p<14&&w>0?`<span style="margin-right:auto;font-weight:500">${pc(p,ref?0:1)} mulheres</span>`:''}${100-p>=14?pc(100-p,ref?0:1):''}</i></div></div>`}
+function vEstudos(){
+  app.innerHTML=`<div class="view">
+  <section class="band"><svg class="deco" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 44C14 36 9 27 11 17c6 2 11 7 13 15 2-8 7-13 13-15 2 10-3 19-13 27z" fill="#fff"/></svg>
+    <div class="in"><div class="crumb"><a href="#inicio">Mulheres Rurais</a> · <a href="#cafe">Café</a> · Estudos</div>
+    <h1>Estudos de cafeicultura da Embrapa</h1><p>O que a Embrapa publicou, pesquisou e lançou sobre o café, e quem assina essa produção. Mulheres e homens aparecem lado a lado, contados entre as pessoas da Embrapa identificadas na autoria. No fim da página fica a base, para buscar cada estudo.</p></div>
+    <svg class="wv" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C200 0 380 6 600 26C820 46 1000 40 1200 12V46H0Z"/></svg>
+  </section>
+  <main class="in cp" id="ev"><div class="loading">Carregando os estudos…</div></main></div>`;
+  const go=()=>{if(location.hash==='#estudos-cafe')desenharEstudos()};
+  if(EC)return go();
+  fetch('estudos_cafe.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{EC=d;EC.docs.forEach(x=>x.s=semAc([x[3],x[7],x[8],x[9],x[2]].join(' ')));go()})
+   .catch(()=>{const e=$('#ev');if(e)e.innerHTML='<div class="loading">Não foi possível carregar os estudos. Recarregue a página.</div>'});
+}
+function desenharEstudos(){
+  const E=EC,g=E.g,c=g.cafe,b=g.embrapa,T=E.tipos,tot=T['publicação']+T.projeto+T.tecnologia;
+  const pf=c.pessoas_distintas_todas,pa=c.autorias_publicacoes,pr=c.primeira_autoria,lp=c.lideres_de_projeto_pessoas;
+  const bf=b.pessoas_distintas_todas,ba=b.autorias_publicacoes,br=b.primeira_autoria,bl=b.lideres_de_projeto_pessoas;
+  const exp=(E.meta.exportacao_redape||'').split('-').reverse().join('/');
+  const unis=g.unidade.slice().sort((a,b)=>b.documentos-a.documentos);
+  $('#ev').innerHTML=`
+    <section class="kpis ekpi" aria-label="Totais">
+      <div class="kpi"><div class="v">${n0(tot)}</div><p>estudos de cafeicultura: ${n0(T['publicação'])} publicações, ${n0(T.projeto)} projetos e ${n0(T.tecnologia)} soluções tecnológicas, de ${E.anos[0]} a ${E.anos[1]}</p></div>
+      <div class="kpi"><div class="wm"><span class="w">${n0(pf.mulheres)}</span><small>mulheres</small><span class="m">${n0(pf.homens)}</span><small>homens</small></div><p>pessoas da Embrapa na autoria ou na liderança</p><span class="cmp">${pc(pf.pct_mulheres_entre_definidos)} são mulheres; na Embrapa toda, ${pc(bf.pct_mulheres_entre_definidos)}. ${n0(pf.indefinidos)} sem gênero definido.</span></div>
+      <div class="kpi"><div class="v">${pc(c.pct_publicacoes_com_autora)}</div><p>das publicações têm ao menos uma autora da Embrapa</p><span class="cmp">${n0(c.publicacoes_com_ao_menos_uma_autora)} de ${n0(c.publicacoes_com_autor_identificado)} com autoria identificada; na Embrapa toda, ${pc(b.pct_publicacoes_com_autora)}</span></div>
+      <div class="kpi"><div class="v">${pc(pr.pct_mulheres_entre_definidos)}</div><p>das primeiras autorias são de mulheres</p><span class="cmp">${n0(pr.mulheres)} mulheres e ${n0(pr.homens)} homens, quando a primeira autoria é de alguém da Embrapa; na Embrapa toda, ${pc(br.pct_mulheres_entre_definidos)}</span></div>
+    </section>
+
+    <section aria-labelledby="e1"><div class="sec-h"><div><span class="eyebrow">Autoria</span><h2 id="e1">Quem assina a pesquisa em café</h2>
+      <p>Cada barra divide mulheres e homens. A barra fina embaixo é a mesma conta para toda a produção da Embrapa, para comparar.</p></div>
+      <div class="legend"><span><i style="background:var(--w)"></i>Mulheres</span><span><i style="background:var(--m)"></i>Homens</span><span><i style="background:var(--ref)"></i>Embrapa toda</span></div></div>
+      <div class="g2">
+        <div class="panel"><h3>Café e Embrapa toda</h3><p class="sub">Pessoas distintas, autorias somadas em todas as publicações, primeiras autorias e líderes de projeto.</p>
+          ${splitBar('Pessoas',pf.mulheres,pf.homens)}${splitBar('Embrapa toda',bf.mulheres,bf.homens,1)}
+          ${splitBar('Autorias',pa.mulheres,pa.homens)}${splitBar('Embrapa toda',ba.mulheres,ba.homens,1)}
+          ${splitBar('Primeira autoria',pr.mulheres,pr.homens)}${splitBar('Embrapa toda',br.mulheres,br.homens,1)}
+          ${splitBar('Liderança de projeto',lp.mulheres,lp.homens)}${splitBar('Embrapa toda',bl.mulheres,bl.homens,1)}
+          <p class="note">Liderança de projeto: ${n0(lp.mulheres)} mulheres e ${n0(lp.homens)} homens à frente dos ${n0(c.projetos_liderados.projetos_com_lider_identificado)} projetos de café do Redape, que traz só o líder e não cobre toda a carteira.</p></div>
+        <div class="panel"><h3>Por tipo de estudo</h3><p class="sub">Pessoas da Embrapa que assinam cada tipo. Entre parênteses, o número de estudos.</p>
+          ${g.tipo.map(x=>splitBar(`${esc(x.grupo)} <small class="num" style="color:var(--ink-2)">(${n0(x.documentos)})</small>`,x.pessoas_mulheres,x.pessoas_homens)).join('')}
+          <p class="note">As soluções tecnológicas não trazem autoria pessoal no Redape e ficam fora das contas de gênero.</p></div>
+      </div></section>
+
+    <section aria-labelledby="e2"><div class="sec-h"><div><span class="eyebrow">Ano a ano</span><h2 id="e2">Autorias por ano de publicação</h2>
+      <p>Autorias de mulheres e de homens da Embrapa nas publicações de café, somadas por ano. Passe o cursor ou toque numa coluna para ver os números.</p></div>
+      <div class="legend"><span><i style="background:var(--w)"></i>Mulheres</span><span><i style="background:var(--m)"></i>Homens</span></div></div>
+      <div class="panel ychart"><div id="ych"></div><div class="ytip num" id="ytip"></div></div></section>
+
+    <section aria-labelledby="e3"><div class="sec-h"><div><span class="eyebrow">Unidades</span><h2 id="e3">Pessoas que assinam, por unidade</h2>
+      <p>Unidade atual de cada pessoa (ou a última, para quem saiu). Só entram unidades com 5 pessoas ou mais no café, para ninguém ser identificado pela conta.</p></div></div>
+      <div class="panel"><div id="eun"></div><button class="more" id="eunm" type="button">Ver todas as ${unis.length} unidades</button></div></section>
+
+    <section aria-labelledby="e4"><div class="sec-h"><div><span class="eyebrow">Base de estudos</span><h2 id="e4">Buscar estudos</h2>
+      <p>Busque por palavra no título, nas palavras-chave, no resumo ou nos autores, sem se preocupar com acento. Cada estudo leva à página de origem, no repositório Alice ou Infoteca ou no portal da Embrapa.</p></div></div>
+      <div class="efil">
+        <div><label class="eyebrow" for="eq">Palavra</label><input id="eq" type="search" placeholder="broca, conilon, qualidade…" value="${esc(SE.q)}"></div>
+        <div><label class="eyebrow" for="eg">Tipo</label><select id="eg" class="sel"><option value="">Todos</option>${E.grupos.map((x,i)=>`<option value="${i}">${esc(x)}</option>`).join('')}</select></div>
+        <div><label class="eyebrow" for="eu">Unidade</label><select id="eu" class="sel"><option value="">Todas</option>${E.unidades.map((u,i)=>[u,i]).sort((a,b)=>a[0][1].localeCompare(b[0][1],'pt')).map(([u,i])=>`<option value="${i}">${esc(u[1])}</option>`).join('')}</select></div>
+        <div><label class="eyebrow" for="et">Tema</label><select id="et" class="sel"><option value="">Todos</option>${E.temas.map((x,i)=>[x,i]).sort((a,b)=>a[0].localeCompare(b[0],'pt')).map(([x,i])=>`<option value="${i}">${esc(x)}</option>`).join('')}</select></div>
+        <div><span class="eyebrow">Ano</span><div class="yrs"><input id="ede" type="number" min="${E.anos[0]}" max="${E.anos[1]}" placeholder="${E.anos[0]}" aria-label="De" value="${esc(SE.de)}">a<input id="eate" type="number" min="${E.anos[0]}" max="${E.anos[1]}" placeholder="${E.anos[1]}" aria-label="Até" value="${esc(SE.ate)}"></div></div>
+      </div>
+      <div class="ehd"><span id="ecnt" aria-live="polite"></span><span><button type="button" id="elimpa">Limpar</button> <button type="button" id="ecsv">Baixar a lista (CSV)</button></span></div>
+      <div class="elist" id="elist"></div>
+      <button class="more" id="emore" type="button">Ver mais</button></section>
+
+    <section class="fine" aria-labelledby="e5"><h2 id="e5">Como ler estes números</h2><ul>
+      <li>Os estudos vêm das bases públicas da Embrapa no Redape (publicações, projetos e soluções tecnológicas), exportação de ${exp}, já tratadas pelo Observatório de Pesquisa da Embrapa. Uma publicação feita por várias unidades conta uma vez só.</li>
+      <li>Um estudo entra quando trata da cafeicultura: a planta e a lavoura, pragas e doenças, solo e clima, colheita e pós-colheita, qualidade, mercado e quem produz. O recorte junta o tema "Café" do agrupamento automático por significado do texto (SBERT e BERTopic), a busca por termos e a busca semântica, com leitura dos casos duvidosos. Ficam de fora os trabalhos em que o café é só ingrediente ou insumo de outra coisa.</li>
+      <li>Gênero só para pessoas da Embrapa identificadas na autoria. Vem do cargo ou da função escritos no portal da Embrapa e, sem isso, é estimado pelo primeiro nome (genderBR 1.4.0, com base no Censo 2010). Quem não tem gênero definido fica à parte, e as porcentagens são calculadas entre mulheres e homens.</li>
+      <li>Coautores de fora da Embrapa não entram nas contas de gênero, por isso a primeira autoria só é contada quando o primeiro autor é da Embrapa (${n0(pr.primeira_autoria_identificada)} das ${n0(pr.publicacoes)} publicações).</li>
+      <li>A página mostra só números agregados. Nenhuma lista liga o nome de alguém ao gênero.</li>
+      <li>O método completo, com os termos, as frases da busca semântica e a validação, está na <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/dados/estudos_cafe/metodo.md" target="_blank" rel="noopener">nota de método</a>, e a base inteira em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/dados/estudos_cafe/estudos.csv" target="_blank" rel="noopener">estudos.csv</a>.</li>
+      <li>Fontes: EMBRAPA. Publicações da Embrapa. Redape, DOI <a href="https://doi.org/10.48432/TRBT0S" target="_blank" rel="noopener">10.48432/TRBT0S</a>; Projetos da Embrapa, DOI <a href="https://doi.org/10.48432/EZDXWF" target="_blank" rel="noopener">10.48432/EZDXWF</a>; Soluções tecnológicas da Embrapa, DOI <a href="https://doi.org/10.48432/ZQE5FV" target="_blank" rel="noopener">10.48432/ZQE5FV</a>. Exportação de ${exp}.</li>
+    </ul></section>`;
+
+  // série anual
+  const S=g.serie.filter(x=>x.ano<=E.anos[1]),W=Math.max(320,Math.min(1100,$('#ych').clientWidth||920)),H=W<600?200:230,mg={t:8,r:6,b:24,l:40};
+  const x=d3.scaleBand().domain(S.map(d=>d.ano)).range([mg.l,W-mg.r]).padding(.18);
+  const y=d3.scaleLinear().domain([0,d3.max(S,d=>d.autorias_mulheres+d.autorias_homens)]).nice().range([H-mg.b,mg.t]);
+  const sv=d3.select('#ych').append('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('role','img').attr('aria-label','Autorias de mulheres e homens por ano');
+  sv.append('g').attr('class','ax').attr('transform',`translate(0,${H-mg.b})`).call(d3.axisBottom(x).tickValues(S.map(d=>d.ano).filter(a=>a%(W<600?10:5)===0)).tickSizeOuter(0));
+  sv.append('g').attr('class','ax').attr('transform',`translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(v=>nf.format(v))).call(s=>s.select('.domain').remove());
+  const cols=sv.append('g').selectAll('g').data(S).join('g').attr('transform',d=>`translate(${x(d.ano)},0)`);
+  cols.append('rect').attr('class','w').attr('width',x.bandwidth()).attr('y',d=>y(d.autorias_mulheres)).attr('height',d=>y(0)-y(d.autorias_mulheres));
+  cols.append('rect').attr('class','m').attr('width',x.bandwidth()).attr('y',d=>y(d.autorias_mulheres+d.autorias_homens)).attr('height',d=>y(d.autorias_mulheres)-y(d.autorias_mulheres+d.autorias_homens));
+  const tip=$('#ytip'),txt=d=>{const t=d.autorias_mulheres+d.autorias_homens;return `${d.ano}: ${n0(d.autorias_mulheres)} autorias de mulheres e ${n0(d.autorias_homens)} de homens (${pc(t?100*d.autorias_mulheres/t:null)} de mulheres), em ${n0(d.publicacoes)} publicações, ${n0(d.publicacoes_com_autora)} delas com ao menos uma autora.`};
+  cols.append('rect').attr('class','hit').attr('x',-x.step()*x.paddingInner()/2).attr('width',x.step()).attr('y',mg.t).attr('height',H-mg.t-mg.b)
+    .on('mouseenter click',(e,d)=>{tip.textContent=txt(d)});
+  const ul=S[S.length-1];tip.textContent='Último ano: '+txt(ul);
+
+  // unidades
+  let nU=12;const du=()=>{$('#eun').innerHTML=unis.slice(0,nU).map(u=>splitBar(`${esc(u.nome)}<br><small class="num" style="color:var(--ink-2)">${n0(u.pessoas)} pessoas, ${n0(u.documentos)} estudos</small>`,u.pessoas_mulheres,u.pessoas_homens)).join('');$('#eunm').hidden=nU>=unis.length};
+  du();$('#eunm').onclick=()=>{nU=unis.length;du()};
+
+  // base
+  ['eg','eu','et'].forEach(id=>{$('#'+id).value=SE[id.slice(1)]});
+  const filtrar=()=>{const q=semAc(SE.q).trim().split(/\s+/).filter(Boolean),de=+SE.de||0,ate=+SE.ate||9999;
+    return E.docs.filter(d=>(SE.g===''||d[1]==SE.g)&&(SE.u===''||d[5].includes(+SE.u))&&(SE.t===''||d[6]==SE.t)&&(d[4]==null?!(de||SE.ate):d[4]>=de&&d[4]<=ate)&&q.every(t=>d.s.includes(t)))};
+  const marca=(s,q)=>{let h=esc(s);if(!q.length)return h;
+    const re=new RegExp('('+q.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')','gi');
+    const n=semAc(s);let out='',i=0;n.replace(re,(m,_,o)=>{out+=esc(s.slice(i,o))+'<mark>'+esc(s.slice(o,o+m.length))+'</mark>';i=o+m.length});return n.length===s.length?out+esc(s.slice(i)):h};
+  const desenhar=()=>{const L=filtrar(),q=semAc(SE.q).trim().split(/\s+/).filter(Boolean);
+    $('#ecnt').textContent=`${n0(L.length)} ${L.length===1?'estudo':'estudos'}${L.length<E.docs.length?' de '+n0(E.docs.length):''}`;
+    $('#elist').innerHTML=L.slice(0,SE.n).map(d=>`<article class="est"><div class="mt">${esc(E.grupos[d[1]])}${d[2]&&!d[2].startsWith(E.grupos[d[1]])?' · '+esc(d[2]):''} · ${d[4]??'s.d.'}${d[5].length?' · '+d[5].map(i=>esc(E.unidades[i][1])).join(', '):''}</div>
+      <h3><a href="${esc(d[10])}" target="_blank" rel="noopener">${marca(d[3],q)}</a></h3>
+      ${d[9]?`<p class="au">${marca(d[9],q)}</p>`:''}
+      ${d[8]||d[7]?`<details><summary>Resumo e palavras-chave</summary>${d[8]?`<p>${marca(d[8],q)}</p>`:''}${d[7]?`<p><b>Palavras-chave:</b> ${marca(d[7],q)}</p>`:''}${d[6]!=null?`<p><b>Tema:</b> ${esc(E.temas[d[6]])}</p>`:''}</details>`:''}</article>`).join('')||'<p class="note">Nenhum estudo com esses filtros.</p>';
+    $('#emore').hidden=L.length<=SE.n};
+  let tm;$('#eq').oninput=e=>{clearTimeout(tm);tm=setTimeout(()=>{SE.q=e.target.value;SE.n=20;desenhar()},180)};
+  [['eg','g'],['eu','u'],['et','t'],['ede','de'],['eate','ate']].forEach(([id,k])=>{$('#'+id).onchange=e=>{SE[k]=e.target.value;SE.n=20;desenhar()}});
+  $('#emore').onclick=()=>{SE.n+=20;desenhar()};
+  $('#elimpa').onclick=()=>{Object.assign(SE,{q:'',g:'',u:'',t:'',de:'',ate:'',n:20});['eq','eg','eu','et','ede','eate'].forEach(id=>$('#'+id).value='');desenhar()};
+  $('#ecsv').onclick=()=>{const L=filtrar(),cv=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+    const rows=[['id','tipo','subtipo','titulo','ano','unidades','tema','palavras_chave','autores','link'].join(',')].concat(L.map(d=>[d[0],E.grupos[d[1]],d[2],d[3],d[4],d[5].map(i=>E.unidades[i][1]).join('; '),d[6]!=null?E.temas[d[6]]:'',d[7],d[9],d[10]].map(cv).join(',')));
+    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['﻿'+rows.join('\n')],{type:'text/csv;charset=utf-8'}));a.download='estudos_cafeicultura_embrapa.csv';document.body.appendChild(a);a.click();a.remove()};
+  desenhar();
 }
 function vOrgs(){
   app.innerHTML=`<div class="view">

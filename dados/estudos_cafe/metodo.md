@@ -112,5 +112,5 @@ Os números estão em `resumo_genero.json`, cada bloco com fonte, filtro e expor
 EMBRAPA. *Publicações da Embrapa*. Redape, DOI 10.48432/TRBT0S. Exportação de novembro de 2026.
 EMBRAPA. *Projetos da Embrapa*. Redape, DOI 10.48432/EZDXWF. Exportação de novembro de 2026.
 EMBRAPA. *Soluções tecnológicas da Embrapa*. Redape, DOI 10.48432/ZQE5FV. Exportação de novembro de 2026.
-Observatório de Pesquisa da Embrapa (github.com/danimaciel/observatorio_embrapa): obras, temas, pessoas identificadas.
+Observatório de Pesquisa da Embrapa: obras, temas, pessoas identificadas.
 MEIRELES, F. *genderBR*: predict gender from Brazilian first names. Versão 1.4.0.
