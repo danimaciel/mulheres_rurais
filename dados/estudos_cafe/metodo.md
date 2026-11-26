@@ -1,7 +1,7 @@
 # Estudos de cafeicultura da Embrapa: como o recorte foi montado
 
 *Recorte feito em 25/11/2026 a partir da exportação do Redape de novembro de 2026 (processada em 16/11/2026),
-já tratada pelo Observatório de Pesquisa da Embrapa. Status: proposta metodológica, em validação.*
+já tratada numa análise anterior das bases da Embrapa. Status: proposta metodológica, em validação.*
 
 ## O que entra
 
@@ -18,7 +18,7 @@ do feijão e da soja, café-do-mato, cafeína de guaraná e erva-mate, *Greville
 
 ## As três vias
 
-1. **Tema** — dos 146 temas automáticos do Observatório (BERTopic sobre vetores SBERT), um tem rótulo e
+1. **Tema** — dos 146 temas automáticos da análise anterior (BERTopic sobre vetores SBERT), um tem rótulo e
    termos de café: **T002 Café** (2.563 documentos). Nenhum outro tema tem café no rótulo nem nos termos
    principais. Os demais temas que aparecem no recorte estão em `temas_cafe.csv`.
 2. **Termo** — busca sem acento e sem diferença de maiúsculas, por palavra inteira, em título, resumo e
@@ -35,7 +35,7 @@ do feijão e da soja, café-do-mato, cafeína de guaraná e erva-mate, *Greville
 
    As frases sozinhas trouxeram muito ruído (trigo, cevada, algodão nas primeiras posições). Por isso a via
    semântica também usa os documentos já confirmados: (a) o centroide dos vetores dos documentos aceitos pelos
-   termos, com os 3.500 mais próximos; e (b) os documentos semelhantes já calculados pelo Observatório (10 por tipo),
+   termos, com os 3.500 mais próximos; e (b) os documentos semelhantes já calculados pela análise anterior (10 por tipo),
    entrando quem tem 5 ou mais vizinhos confirmados.
 
 ## Números de cada etapa (documentos: publicações por obra + projetos + soluções)
@@ -73,7 +73,7 @@ tema + semântica 5.
 
 ## Comparação com recortes de café anteriores
 
-- **Recorte do Observatório do Café** (Redape de outubro de 2026; termos da taxonomia de produtos, SBERT e
+- **Recorte de café anterior** (Redape de outubro de 2026; termos da taxonomia de produtos, SBERT e
   classificador; 3.225 documentos): 3.111 em comum. 114 estão só lá, 73 deles descartados aqui na revisão
   (insumo ou ingrediente, listas de culturas); o restante cita café no resumo. 72 publicações estão só aqui,
   quase todas sobre a lavoura de café que o classificador de lá deixou de fora, mais 5 de 2026.
@@ -86,7 +86,7 @@ tema + semântica 5.
 
 Os números estão em `resumo_genero.json`, cada bloco com fonte, filtro e exportação. Regras:
 
-- só pessoas identificadas pelo Observatório com nível A (determinístico) ou B (desambiguado); autores externos
+- só pessoas identificadas pela análise anterior com nível A (determinístico) ou B (desambiguado); autores externos
   ou não identificados ficam fora;
 - gênero vindo do cargo ou da função escritos no portal da Embrapa (página Equipe, coleta de novembro de 2026)
   e, sem isso, estimado pelo primeiro nome com genderBR 1.4.0 (Censo 2010; feminino com probabilidade a partir
@@ -99,7 +99,7 @@ Os números estão em `resumo_genero.json`, cada bloco com fonte, filtro e expor
 
 ## Arquivos
 
-- `estudos.csv` — um documento por linha: id do Observatório (`OB:` publicação, `P:` projeto, `T:` solução),
+- `estudos.csv` — um documento por linha: id do documento (`OB:` publicação, `P:` projeto, `T:` solução),
   tipo, subtipo, título, ano, unidades (siglas de todas as participações: depositante, líder, responsável e
   afiliação de autores), tema, macrotema, via, palavras-chave, resumo cortado em 400 caracteres, autores como
   constam no Redape (para projetos, o líder) e link (Alice ou Infoteca para publicações; página do projeto
@@ -112,5 +112,5 @@ Os números estão em `resumo_genero.json`, cada bloco com fonte, filtro e expor
 EMBRAPA. *Publicações da Embrapa*. Redape, DOI 10.48432/TRBT0S. Exportação de novembro de 2026.
 EMBRAPA. *Projetos da Embrapa*. Redape, DOI 10.48432/EZDXWF. Exportação de novembro de 2026.
 EMBRAPA. *Soluções tecnológicas da Embrapa*. Redape, DOI 10.48432/ZQE5FV. Exportação de novembro de 2026.
-Observatório de Pesquisa da Embrapa: obras, temas, pessoas identificadas.
+Análise anterior das bases da Embrapa no Redape: obras, temas, pessoas identificadas.
 MEIRELES, F. *genderBR*: predict gender from Brazilian first names. Versão 1.4.0.

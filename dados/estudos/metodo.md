@@ -1,7 +1,7 @@
 # Estudos da Embrapa por cadeia produtiva: como o recorte foi montado
 
 *Recorte feito em 25/11/2026 a partir da exportação do Redape de novembro de 2026 (processada em 16/11/2026),
-já tratada pelo Observatório de Pesquisa da Embrapa. Status: proposta metodológica, em validação.*
+já tratada numa análise anterior das bases da Embrapa. Status: proposta metodológica, em validação.*
 
 ## O que entra
 
@@ -45,28 +45,28 @@ O café não foi refeito: entra o recorte já publicado em `dados/estudos_cafe/`
 | Aquicultura | piscicultura, tilápia, tambaqui e peixes redondos, pirarucu, camarão, ostras e mexilhões, aquaponia |
 
 Os termos, sinônimos e agrupamentos são proposta metodológica, em validação. Os nomes de produto seguem a
-taxonomia de 104 produtos do Observatório, construída sobre as categorias oficiais do IBGE (PAM 5457, PPM,
+taxonomia de 104 produtos da análise anterior, construída sobre as categorias oficiais do IBGE (PAM 5457, PPM,
 PEVS), acrescida, para este recorte, de nomes científicos, pragas e doenças típicas e dos nomes em inglês.
 
 ## As três vias
 
-1. **Tema** — os temas automáticos do Observatório (146 temas, BERTopic sobre vetores SBERT) cujo rótulo e termos
+1. **Tema** — os temas automáticos da análise anterior (146 temas, BERTopic sobre vetores SBERT) cujo rótulo e termos
    principais são do produto: por exemplo T006 Mandioca, T009 e T041 soja, T025 e T071 gado, T101 Eucalipto,
    T022 Abelhas. A lista por cadeia, com contagens, está em `temas_cadeias.csv` (coluna `usado_como_via`).
    Cacau, fumo, flores, sementes e outros animais de grande porte não têm tema próprio.
 2. **Termo** — dois níveis:
-   - *forte*: o produto marcado como principal (no título ou nas palavras-chave) pela taxonomia de produtos do
-     Observatório, ou um termo forte da cadeia (nome comum, científico, praga ou doença típica, nome em inglês) no
+   - *forte*: o produto marcado como principal (no título ou nas palavras-chave) pela taxonomia de produtos da
+     análise anterior, ou um termo forte da cadeia (nome comum, científico, praga ou doença típica, nome em inglês) no
      título ou nas palavras-chave. Entra.
    - *fraco*: termo genérico (por exemplo "leite", "gado", "frutas", "ornamental", "abelhas", "madeira") no título
      ou nas palavras-chave. Só entra se o documento também está no tema da cadeia; em cereais, soja, frutas,
      outras temporárias, hortaliças, algodão, cacau, flores e aquicultura vale também o apoio da via semântica.
    - Termos só no resumo não bastam: nas amostras quase sempre eram menção de passagem (o produto citado numa
      lista ou como exemplo).
-3. **Semântica** — vetores SBERT (multilingual-e5-base) do Observatório: o centroide dos documentos confirmados
+3. **Semântica** — vetores SBERT (multilingual-e5-base) da análise anterior: o centroide dos documentos confirmados
    pelos termos fortes de cada cadeia (o documento entra como candidato se estiver entre os mais próximos,
    até 115% do número de confirmados), uma frase descritiva por cadeia (300 mais próximos) e os documentos
-   semelhantes já calculados pelo Observatório (5 ou mais vizinhos confirmados). A semântica serve de apoio aos
+   semelhantes já calculados pela análise anterior (5 ou mais vizinhos confirmados). A semântica serve de apoio aos
    termos fracos; documentos sem nenhum termo do produto não entram, porque nas amostras eram de outro assunto.
 
 Antes da busca são apagados do texto os nomes de unidades da Embrapa (Embrapa Soja, Embrapa Suínos e Aves, Embrapa
@@ -145,7 +145,7 @@ Cadeias que pedem cuidado ao ler os números:
 - **Outros animais**: dentro do tema de abelhas o recorte é bom; fora dele ainda entram estudos sobre abelhas
   nativas e polinização, que não são produção apícola.
 - **Florestas plantadas**: foi conferida contra o acervo do Centro de Referência em Florestas Plantadas e ILPF
-  (classificador treinado com amostra rotulada, mesma base do Observatório). Dos 4.210 documentos achados pelos
+  (classificador treinado com amostra rotulada, mesma base da análise anterior). Dos 4.210 documentos achados pelos
   termos, 3.351 estão no acervo, 237 não foram avaliados lá (entraram depois) e 622 o classificador de lá julgou
   fora do tema. Desses 622, ficaram só os 228 que citam no título ou nas palavras-chave uma espécie de plantio
   (eucalipto, pínus, teca, acácia, mogno-africano, cedro-australiano, paricá) ou florestas plantadas, sem ser ILPF
@@ -165,7 +165,7 @@ Cadeias que pedem cuidado ao ler os números:
 Os números estão em `resumo_genero.json`, por cadeia e para toda a Embrapa, cada bloco com fonte, filtro e
 exportação nos metadados. Regras, as mesmas do recorte do café:
 
-- só pessoas identificadas pelo Observatório com nível A (determinístico) ou B (desambiguado); autores externos
+- só pessoas identificadas pela análise anterior com nível A (determinístico) ou B (desambiguado); autores externos
   ou não identificados ficam fora;
 - gênero vindo do cargo ou da função escritos no portal da Embrapa (página Equipe, coleta de novembro de 2026)
   e, sem isso, estimado pelo primeiro nome com genderBR 1.4.0 (Censo 2010; feminino com probabilidade a partir
@@ -223,6 +223,5 @@ EMBRAPA. *Projetos da Embrapa*. Redape, DOI 10.48432/EZDXWF. Exportação de nov
 EMBRAPA. *Soluções tecnológicas da Embrapa*. Redape, DOI 10.48432/ZQE5FV. Exportação de novembro de 2026.
 IBGE. Produção Agrícola Municipal (tabela 5457), Pesquisa da Pecuária Municipal e Produção da Extração Vegetal e
 da Silvicultura (SIDRA): categorias de produto. Censo Agropecuário 2017: classes de atividade.
-Observatório de Pesquisa da Embrapa (github.com/danimaciel/observatorio_embrapa): obras, temas, produtos e pessoas
-identificadas.
+Análise anterior das bases da Embrapa no Redape: obras, temas, produtos e pessoas identificadas.
 genderBR: pacote R para estimar gênero pelo primeiro nome (Censo 2010), versão 1.4.0.
