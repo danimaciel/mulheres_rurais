@@ -30,7 +30,7 @@ Arquivo: `trabalho_familiar.csv`, com Brasil, UF e município.
 
 A tabela 6768 diz quem dirige os trabalhos do estabelecimento e, quando é o casal, registra o sexo de quem respondeu. O Censo registra um só produtor por estabelecimento, e todas as tabelas por sexo usam esse registro. Quando o casal dirige junto e quem respondeu foi o homem, supomos que a mulher divide a direção, mas ela não aparece nas estatísticas por sexo.
 
-A 6768 não tem a classe de atividade, só o grupo de atividade (classificação 12517). Por isso o recorte é o grupo da cadeia somado nos municípios da cadeia: lavoura permanente para café, cacau, frutas e outras permanentes; lavoura temporária para soja, cereais, cana, fumo, algodão, oleaginosas e outras temporárias; horticultura e floricultura para hortaliças e flores; pecuária para todas as criações; e os grupos próprios de sementes, florestas plantadas, florestas nativas, pesca e aquicultura. Um município entra quando tem pelo menos 20 estabelecimentos com a cadeia como atividade principal (6883 municipal por classe); no café e no cacau, também quando tem 50 estabelecimentos com o produto (6955) ou 100 toneladas na PAM. É um recorte mais largo que a cadeia, e a página diz isso. Nas criações, quase todo município do país entra, e os números de bovinos, aves, suínos e das outras criações ficam parecidos porque medem o mesmo grupo em territórios que se sobrepõem.
+A 6768 não tem a classe de atividade, só o grupo de atividade (classificação 12517). Por isso o recorte é o grupo da cadeia somado nos municípios da cadeia: lavoura permanente para café, cacau, frutas e outras permanentes; lavoura temporária para soja, cereais, cana, fumo, algodão, oleaginosas e outras temporárias; horticultura e floricultura para hortaliças e flores; pecuária para todas as criações; e os grupos próprios de sementes, florestas plantadas, florestas nativas, pesca e aquicultura. Um município entra quando tem pelo menos 20 estabelecimentos com a cadeia como atividade principal (6883 municipal por classe); no café e no cacau, também quando tem 50 estabelecimentos com o produto ou 100 toneladas produzidas no próprio Censo (ambos na 6955). A PAM não entra nesse critério, para que o recorte fique no mesmo ano e na mesma fonte dos dados por sexo. É um recorte mais largo que a cadeia, e a página diz isso. Nas criações, quase todo município do país entra, e os números de bovinos, aves, suínos e das outras criações ficam parecidos porque medem o mesmo grupo em territórios que se sobrepõem.
 
 As medidas são a participação das mulheres como dirigentes principais, a participação ampliada (somando o casal declarado pelo homem), a parcela invisível (casal declarado pelo homem dividido pelo total de mulheres na direção) e, entre os casais, a parcela em que só o homem ficou registrado. Percentuais ficam vazios em municípios com menos de 10 estabelecimentos e em UFs com menos de 500.
 
@@ -61,7 +61,7 @@ Arquivo: `valor_producao.csv`, Brasil e UF, com o recorte (`censo` ou `principal
 
 A cada publicação da página, `scripts/conferir_indicadores.py` refaz em Python, a partir dos arquivos brutos do SIDRA, as contas do Brasil de todas as cadeias (trabalho familiar, direção invisível, dupla jornada e valor da produção) e compara com `resumo.csv`. Qualquer diferença impede a publicação. Um indicador vazio só passa se o dado de origem for sigilo ou não existir.
 
-Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do estudo do café. As tabelas 6883 e 6887 do café batem célula a célula no Brasil, nas UFs e nos 5.563 municípios, assim como o valor da produção da PAM por município e as horas da PNAD por UF. Com os mesmos insumos, o script reproduz os números da nota de método desse estudo:
+Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do estudo do café. As tabelas 6883 e 6887 do café batem célula a célula no Brasil, nas UFs e nos 5.563 municípios, assim como o valor da produção da PAM por município e as horas da PNAD por UF. Com os mesmos insumos, o script reproduz os números da nota de método desse estudo. Na direção invisível, os dois usam desde novembro de 2026 o mesmo critério de município, só com o Censo 2017 (722 municípios no café):
 
 | | Estudo do café | Script |
 |---|---|---|
@@ -70,9 +70,9 @@ Os dados que a coleta baixa do SIDRA foram comparados com as tabelas do estudo d
 | Mulheres da família onde há café (estimado) | 150.100 | 150.127 |
 | Dirigentes mulheres onde há café (estimado) | 33.700 | 33.685 |
 | Trabalho familiar, cenário médio (principal / onde há café) | R$ 0,66 bi / R$ 1,13 bi | R$ 0,66 bi / R$ 1,13 bi |
-| Direção: dirigente principal / ampliada | 13,1% / 26,0% | 13,1% / 26,0% |
-| Mulheres na direção que ficam fora das estatísticas | 49,8% | 49,8% |
-| Casais em que só o homem é registrado | 85% (33.714 de 39.568) | 85,2% (33.714 de 39.568) |
+| Direção: dirigente principal / ampliada | 12,6% / 25,8% | 12,6% / 25,8% |
+| Mulheres na direção que ficam fora das estatísticas | 51,2% | 51,2% |
+| Casais em que só o homem é registrado | 86% (32.562 de 38.027) | 85,6% (32.562 de 38.027) |
 | Dupla jornada (principal / onde há café) | R$ 0,70 bi / R$ 1,26 bi | R$ 0,70 bi / R$ 1,26 bi |
 | Valor da produção, leituras A e B | R$ 8,4 bi e R$ 24 bi | R$ 8,4 bi e R$ 24,3 bi |
 

@@ -84,7 +84,6 @@ t6887 <- juntar(so_totais(ler("censo_agro_6887_classes.csv.gz")), so_totais(ler(
 mun_classes <- so_totais(ler("censo_agro_6883_classes_mun.csv.gz"))
 t6768 <- ler("censo_agro_6768_direcao.csv.gz")
 t6955 <- ler("censo_agro_6955_produtos.csv.gz")
-pam_mun <- ler("pam_5457.csv.gz")
 pam_uf <- ler("pam_5457_ultimo_ano.csv.gz")
 pevs <- ler("pevs_289.csv.gz")
 pnad <- ler("pnad_7015.csv.gz")
@@ -176,13 +175,14 @@ com_produto <- function(filtro) {
   s
 }
 
-# Produção municipal da PAM (coleta geral), só para o critério de município.
+# Quantidade produzida no Censo 2017 (6955, variável 9506), somando os produtos
+# da cadeia, só para o critério de município. Usa o Censo, e não a PAM, para que
+# o recorte fique no mesmo ano e na mesma fonte dos dados por sexo.
 producao_municipio <- function(cfg) {
-  if (is.null(pam_mun) || cfg$fonte_valor != "PAM" || !nzchar(cfg$min_producao_pam_t)) return(NULL)
-  d <- pam_mun[grepl(cfg$produto_valor, pam_mun$produto) & pam_mun$cod_nivel == 6 &
-                 pam_mun$variavel == "Quantidade produzida", ]
+  if (is.null(t6955) || !nzchar(cfg$produtos_6955) || !nzchar(cfg$min_producao_censo_t)) return(NULL)
+  d <- t6955[t6955$variavel_codigo == 9506 & t6955$cod_nivel == 6 &
+               grepl(cfg$produtos_6955, t6955$produto, ignore.case = TRUE), ]
   if (nrow(d) == 0) return(NULL)
-  d <- d[d$ano == max(d$ano), ]
   tapply(z(d$valor), d$cod_territorio, sum)
 }
 
@@ -373,7 +373,7 @@ for (i in seq_len(nrow(cadeias))) {
     producao <- if (is.null(pm)) NA else pm[dg$cod_territorio]
     lim <- function(x) if (nzchar(x)) as.numeric(x) else Inf
     dg$municipio_da_cadeia <- z(principal_mun[dg$cod_territorio]) >= lim(cfg$min_estab_principal) |
-      z(tem_produto) >= lim(cfg$min_estab_com_produto) | z(producao) >= lim(cfg$min_producao_pam_t)
+      z(tem_produto) >= lim(cfg$min_estab_com_produto) | z(producao) >= lim(cfg$min_producao_censo_t)
     dc <- dg[dg$municipio_da_cadeia, ]
     cols <- c("dir_t", "dir_m", "casal_t", "casal_h", "casal_m")
     sigilo_mun <- sum(apply(is.na(dc[cols]), 1, any))

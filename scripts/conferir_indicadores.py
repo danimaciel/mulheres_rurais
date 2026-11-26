@@ -109,14 +109,13 @@ if os.path.exists("dados/sidra/censo_agro_6955_produtos.csv.gz"):
     prod6955 = [(r["cod_territorio"], r["produto"], bruto(r["valor_bruto"]))
                 for r in ler("dados/sidra/censo_agro_6955_produtos.csv.gz")
                 if r["cod_nivel"] == "6" and r["variavel_codigo"] == "9504"]
+    quant6955 = [(r["cod_territorio"], r["produto"], bruto(r["valor_bruto"]))
+                 for r in ler("dados/sidra/censo_agro_6955_produtos.csv.gz")
+                 if r["cod_nivel"] == "6" and r["variavel_codigo"] == "9506"]
 else:
     prod6955 = []
+    quant6955 = []
 
-pam_mun = []
-if os.path.exists("dados/sidra/pam_5457.csv.gz"):
-    pam_mun = [(r["cod_territorio"], r["produto"], r["ano"], bruto(r["valor_bruto"]))
-               for r in ler("dados/sidra/pam_5457.csv.gz")
-               if r["cod_nivel"] == "6" and r["variavel"] == "Quantidade produzida"]
 
 valor_fonte = {"PAM": [], "PEVS": []}
 if os.path.exists("dados/sidra/pam_5457_ultimo_ano.csv.gz"):
@@ -167,10 +166,9 @@ for c in cadeias:
                 if re.search(filtro6955, prod, re.I):
                     tem[terr] += v or 0.0
         prod_t = defaultdict(float)
-        if c["fonte_valor"] == "PAM" and c["min_producao_pam_t"] and pam_mun:
-            ult = max(a for _, p, a, _ in pam_mun if re.search(c["produto_valor"], p))
-            for terr, p, a, v in pam_mun:
-                if a == ult and re.search(c["produto_valor"], p):
+        if filtro6955 and c["min_producao_censo_t"]:
+            for terr, prod, v in quant6955:
+                if re.search(filtro6955, prod, re.I):
                     prod_t[terr] += v or 0.0
         lim = lambda x: float(x) if x else float("inf")
         tot = defaultdict(float)
@@ -180,7 +178,7 @@ for c in cadeias:
                 continue
             principal = sum(mun_classe.get((k, terr), 0.0) for k in cods)
             if not (principal >= lim(c["min_estab_principal"]) or tem[terr] >= lim(c["min_estab_com_produto"])
-                    or prod_t[terr] >= lim(c["min_producao_pam_t"])):
+                    or prod_t[terr] >= lim(c["min_producao_censo_t"])):
                 continue
             n += 1
             for nome, chave in [("t", ("41149", "46500")), ("m", ("41149", "112644")),

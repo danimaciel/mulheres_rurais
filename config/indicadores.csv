@@ -1,4 +1,4 @@
-cadeia,codigos_12440,grupo_6768,produtos_6955,fonte_valor,produto_valor,min_estab_principal,min_estab_com_produto,min_producao_pam_t
+cadeia,codigos_12440,grupo_6768,produtos_6955,fonte_valor,produto_valor,min_estab_principal,min_estab_com_produto,min_producao_censo_t
 cafe,112888,111521,^Café,PAM,^Café \(em grão\) Total$,20,50,100
 cacau,112889,111521,^Cacau,PAM,^Cacau,20,50,100
 outras-temporarias,112879,111519,,PAM,^(Abacaxi|Alho|Batata-doce|Batata-inglesa|Cebola|Ervilha|Fava|Feijão|Mandioca|Melancia|Melão),20,,
