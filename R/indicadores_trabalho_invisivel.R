@@ -475,6 +475,10 @@ for (i in seq_len(nrow(cadeias))) {
     x$valor_a_mil_reais <- x$valor_mil_reais * x$pct_area_m / 100
     x$valor_b_mil_reais <- x$valor_mil_reais * x$pct_ocupadas_m / 100
     x <- x[x$valor_mil_reais > 0, ]
+    if (nrow(x) == 0) {
+      situacao(cadeia, "valor_producao", ref$recorte, FALSE, "valor da produção zero ou sem dado no ano")
+      next
+    }
     x <- x[order(x$cod_nivel, -x$valor_mil_reais), ]
     x$nivel <- nivel_nome(x$cod_nivel)
     x$recorte <- ref$recorte
