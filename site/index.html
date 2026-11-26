@@ -588,9 +588,18 @@ function indicadores(key,f){
   const c1=card(1,di.pct_invisivel==null?null:pc(di.pct_invisivel),`das mulheres que dirigem estabelecimentos de ${grupo} nos municípios onde há ${cn} ficam fora das estatísticas por sexo: o casal dirige junto e só o homem é registrado. Isso acontece em ${pc(di.pct_casal_homem_registrado,0)} dos casais. O Censo só publica esse dado por grupo de atividade, mais largo que a cadeia.`,'calculado',`O Censo não permite separar a direção do casal para ${cn}.`);
   const c2=card(2,reais(dj.valor),`por ano, a salário mínimo, em afazeres domésticos e cuidados das mulheres da família ${djOnde?'onde há '+cn:'nos estabelecimentos de '+cn}.${hr.horas_m?` São ${String(hr.horas_m).replace('.',',')} horas por semana, contra ${String(hr.horas_h).replace('.',',')} dos homens.`:''}${ufFora(dj.ufs_em_sigilo)}`,'estimativa',sigilo);
   const semVP=`O IBGE não publica todo ano um valor da produção que corresponda a ${cn}: a PAM cobre lavouras e a PEVS o extrativismo, mas não ${grupo==='pecuária e criação de outros animais'?'a produção de carne e animais':'esta cadeia'}.`;
-  const cV=card(3,reais(vp.valor_mil_reais==null?null:vp.valor_mil_reais*1000),`foi o valor da produção ${fonteV==='PEVS'?'da extração vegetal':'de '+cn} em ${ano(vp.ano)}, segundo a ${fonteV} do IBGE. É sobre esse total que se calcula a parte ligada às mulheres.`,'dado do IBGE',semVP);
-  const c3=card(4,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção corresponde à participação das mulheres na área dos estabelecimentos (${pc(vp.pct_area_m)}). Pela participação no trabalho (${pc(vp.pct_ocupadas_m)}), seriam ${reais(vp.valor_b_mil_reais==null?null:vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação',semVP);
-  return `<div class="inds c5">${[c0,c1,c2,cV,c3].join('')}</div>
+  // Valor de 2017 (ano do Censo) como referência; o último ano da PAM/PEVS fica como atualização.
+  const vc=I['valor_producao.censo']||{}, tem17=vc.valor_mil_reais!=null;
+  const R=x=>x==null?null:reais(x*1000);
+  const deCn=fonteV==='PEVS'?'da extração vegetal':'de '+cn;
+  const cV=tem17
+    ?card(3,R(vc.valor_mil_reais),`foi o valor da produção ${deCn} em 2017, o mesmo ano do Censo, segundo a ${fonteV} do IBGE. Em ${ano(vp.ano)}, foi ${R(vp.valor_mil_reais)||'–'}.`,'dado do IBGE',semVP)
+    :card(3,R(vp.valor_mil_reais),`foi o valor da produção ${deCn} em ${ano(vp.ano)}, segundo a ${fonteV} do IBGE. A ${fonteV} não tem esse valor para 2017, o ano do Censo.`,'dado do IBGE',semVP);
+  const trab=v=>v.pct_ocupadas_m==null?'':` Pela participação no trabalho (${pc(v.pct_ocupadas_m)}), seriam ${R(v.valor_b_mil_reais)||'–'}.`;
+  const c3=tem17
+    ?card(4,R(vc.valor_a_mil_reais),`do valor da produção de 2017 corresponde à participação das mulheres na área dos estabelecimentos (${pc(vc.pct_area_m)}), no mesmo ano do Censo.${trab(vc)} Com o valor de ${ano(vp.ano)}, as mesmas participações dariam ${R(vp.valor_a_mil_reais)||'–'}${vp.valor_b_mil_reais!=null?' e '+R(vp.valor_b_mil_reais):''}.`,'aproximação',semVP)
+    :card(4,R(vp.valor_a_mil_reais),`do valor da produção de ${ano(vp.ano)} corresponde à participação das mulheres na área dos estabelecimentos (${pc(vp.pct_area_m)}), medida no Censo 2017.${trab(vp)}`,'aproximação',semVP);
+  return `<div class="inds c5">${[c0,c1,cV,c3,c2].join('')}</div>
     <p class="note">Censo Agro 2017, PNAD Contínua ${ano(hr.ano_pnad)||''} (tabela 7015)${vp.ano?` e ${fonteV==='PEVS'?'PEVS (extração vegetal)':'PAM'} ${ano(vp.ano)}`:''}, com o salário mínimo de 2026.${tf?` "Onde há ${cn}" inclui quem tem o produto como atividade secundária e é estimado município a município.`:` Os números são dos estabelecimentos que têm ${cn} como atividade principal; quem tem ${cn} como atividade secundária fica de fora.`}${key==='cafe'?' As dirigentes estimadas seguem o método do painel Café em Números, da Embrapa Café e Embrapa Territorial.':''}${key==='amazonia'?' Os indicadores são do cacau no Brasil todo, não só da Amazônia; o sul da Bahia pesa bastante nesses números.':''}${I.produtos&&vp.fonte==='PAM'&&f.dados!=='cafe'&&f.dados!=='cacau'?` Produtos considerados no valor da produção: ${esc(I.produtos)}.`:''} Método completo em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/docs/indicadores.md">docs/indicadores.md</a>.</p>`;
 }
 function drawOrgs(key){

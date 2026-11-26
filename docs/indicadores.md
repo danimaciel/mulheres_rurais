@@ -46,12 +46,12 @@ Arquivo: `dupla_jornada.csv`.
 
 ## 4. Valor da produção ligado às mulheres
 
-O IBGE não publica o valor da produção por sexo de quem produz. Há duas leituras aproximadas sobre o valor da produção do último ano da PAM (lavouras) ou, nas florestas nativas, da PEVS (toda a extração vegetal). Os produtos de cada cadeia ficam em `config/indicadores.csv` e são listados na página; eles seguem a classificação de atividades do Censo, e produtos que caem em mais de uma classe ficaram de fora (o tomate, por exemplo, é dividido entre hortaliças e outras lavouras temporárias). Para hortaliças, a PAM cobre só parte dos produtos, então o valor é um piso.
+O IBGE não publica o valor da produção por sexo de quem produz. Há duas leituras aproximadas sobre o valor da produção da PAM (lavouras) ou, nas florestas nativas, da PEVS (toda a extração vegetal). A referência é o valor de 2017, o mesmo ano do Censo de onde vêm as participações (recorte `censo`). O valor do último ano aparece ao lado (recorte `principal`), com as mesmas participações de 2017, como atualização. O Censo 2017 publica o valor da produção dos estabelecimentos (tabelas 6897 e 6898), mas sem o sexo de quem dirige, por isso não serve para esta conta. Em hortaliças a PAM só passou a levantar os produtos depois de 2017, então ali fica só o último ano. Os produtos de cada cadeia ficam em `config/indicadores.csv` e são listados na página; eles seguem a classificação de atividades do Censo, e produtos que caem em mais de uma classe ficaram de fora (o tomate, por exemplo, é dividido entre hortaliças e outras lavouras temporárias). Para hortaliças, a PAM cobre só parte dos produtos, então o valor é um piso.
 
 - A: participação das mulheres na área dos estabelecimentos da cadeia (6883), contando só homens e mulheres no denominador. Supõe produtividade igual por hectare e usa a área total do estabelecimento, não só a da lavoura.
 - B: participação das mulheres no pessoal ocupado da cadeia (6887: família, permanentes, temporárias e parceiras). Supõe a mesma contribuição por pessoa ocupada, uma simplificação forte. Serve como ordem de grandeza.
 
-Arquivo: `valor_producao.csv`, Brasil e UF, com a lista de produtos somados.
+Arquivo: `valor_producao.csv`, Brasil e UF, com o recorte (`censo` ou `principal`) e a lista de produtos somados.
 
 ## Resumo
 
