@@ -206,6 +206,10 @@ main.cp{display:flex;flex-direction:column;gap:44px;padding-block:28px 40px}
 
 /* indicadores */
 .inds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.inds.c5{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1180px){.inds.c5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:980px){.inds.c5{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.inds.c5{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:980px){.inds{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.inds{grid-template-columns:minmax(0,1fr)}}
 .ind{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
@@ -565,9 +569,10 @@ function indicadores(key,f){
   const base=[['Trabalho familiar não reconhecido','mulheres da família trabalham no estabelecimento sem serem registradas como produtoras'],
     ['Direção invisível','das mulheres que dirigem junto com o cônjuge ficam fora das estatísticas por sexo'],
     ['Dupla jornada','valor anual das horas de afazeres domésticos e cuidados das mulheres da família'],
+    ['Valor da produção','valor total da produção da cadeia no ano, de mulheres e homens juntos'],
     ['Valor da produção ligado às mulheres','parte do valor da produção que corresponde à participação das mulheres']];
   const espera=(h,p)=>`<div class="ind wait"><span class="st prep">em preparo</span><h3>${h}</h3><div class="v">—</div><p>${p}</p></div>`;
-  if(!I)return `<div class="inds">${base.map(([h,p])=>espera(h,p)).join('')}</div>`;
+  if(!I)return `<div class="inds c5">${base.map(([h,p])=>espera(h,p)).join('')}</div>`;
   const tf=I['trabalho_familiar.onde_ha'], tp=I['trabalho_familiar.principal']||{}, di=I['direcao_invisivel.grupo_nos_municipios']||{},
     dj=I['dupla_jornada.onde_ha']||I['dupla_jornada.principal']||{}, djOnde=!!I['dupla_jornada.onde_ha'], hr=I['dupla_jornada.horas']||{},
     vp=I['valor_producao.principal']||{}, grupo=I.grupo||'';
@@ -582,9 +587,10 @@ function indicadores(key,f){
     :card(0,tp.mulheres_nao_dirigentes==null?null:kfmt(tp.mulheres_nao_dirigentes),`mulheres da família trabalham nos estabelecimentos que têm ${cn} como atividade principal e não aparecem como produtoras. A salário mínimo, meio período, esse trabalho valeria ${reais(tp.valor_medio)||'–'} por ano.`,'calculado',sigilo);
   const c1=card(1,di.pct_invisivel==null?null:pc(di.pct_invisivel),`das mulheres que dirigem estabelecimentos de ${grupo} nos municípios onde há ${cn} ficam fora das estatísticas por sexo: o casal dirige junto e só o homem é registrado. Isso acontece em ${pc(di.pct_casal_homem_registrado,0)} dos casais. O Censo só publica esse dado por grupo de atividade, mais largo que a cadeia.`,'calculado',`O Censo não permite separar a direção do casal para ${cn}.`);
   const c2=card(2,reais(dj.valor),`por ano, a salário mínimo, em afazeres domésticos e cuidados das mulheres da família ${djOnde?'onde há '+cn:'nos estabelecimentos de '+cn}.${hr.horas_m?` São ${String(hr.horas_m).replace('.',',')} horas por semana, contra ${String(hr.horas_h).replace('.',',')} dos homens.`:''}${ufFora(dj.ufs_em_sigilo)}`,'estimativa',sigilo);
-  const c3=card(3,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção ${fonteV==='PEVS'?'da extração vegetal':'de '+cn} em ${ano(vp.ano)} corresponde à participação das mulheres na área dos estabelecimentos. Pela participação no trabalho, seriam ${reais(vp.valor_b_mil_reais==null?null:vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação',
-    `O IBGE não publica todo ano um valor da produção que corresponda a ${cn}: a PAM cobre lavouras e a PEVS o extrativismo, mas não ${grupo==='pecuária e criação de outros animais'?'a produção de carne e animais':'esta cadeia'}.`);
-  return `<div class="inds">${[c0,c1,c2,c3].join('')}</div>
+  const semVP=`O IBGE não publica todo ano um valor da produção que corresponda a ${cn}: a PAM cobre lavouras e a PEVS o extrativismo, mas não ${grupo==='pecuária e criação de outros animais'?'a produção de carne e animais':'esta cadeia'}.`;
+  const cV=card(3,reais(vp.valor_mil_reais==null?null:vp.valor_mil_reais*1000),`foi o valor da produção ${fonteV==='PEVS'?'da extração vegetal':'de '+cn} em ${ano(vp.ano)}, segundo a ${fonteV} do IBGE. É sobre esse total que se calcula a parte ligada às mulheres.`,'dado do IBGE',semVP);
+  const c3=card(4,reais(vp.valor_a_mil_reais==null?null:vp.valor_a_mil_reais*1000),`do valor da produção corresponde à participação das mulheres na área dos estabelecimentos (${pc(vp.pct_area_m)}). Pela participação no trabalho (${pc(vp.pct_ocupadas_m)}), seriam ${reais(vp.valor_b_mil_reais==null?null:vp.valor_b_mil_reais*1000)||'–'}.`,'aproximação',semVP);
+  return `<div class="inds c5">${[c0,c1,c2,cV,c3].join('')}</div>
     <p class="note">Censo Agro 2017, PNAD Contínua ${ano(hr.ano_pnad)||''} (tabela 7015)${vp.ano?` e ${fonteV==='PEVS'?'PEVS (extração vegetal)':'PAM'} ${ano(vp.ano)}`:''}, com o salário mínimo de 2026.${tf?` "Onde há ${cn}" inclui quem tem o produto como atividade secundária e é estimado município a município.`:` Os números são dos estabelecimentos que têm ${cn} como atividade principal; quem tem ${cn} como atividade secundária fica de fora.`}${key==='cafe'?' As dirigentes estimadas seguem o método do painel Café em Números, da Embrapa Café e Embrapa Territorial.':''}${key==='amazonia'?' Os indicadores são do cacau no Brasil todo, não só da Amazônia; o sul da Bahia pesa bastante nesses números.':''}${I.produtos&&vp.fonte==='PAM'&&f.dados!=='cafe'&&f.dados!=='cacau'?` Produtos considerados no valor da produção: ${esc(I.produtos)}.`:''} Método completo em <a href="https://github.com/danimaciel/mulheres_rurais/blob/main/docs/indicadores.md">docs/indicadores.md</a>.</p>`;
 }
 function drawOrgs(key){
