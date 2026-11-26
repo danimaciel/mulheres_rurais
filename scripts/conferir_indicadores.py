@@ -220,8 +220,8 @@ for c in cadeias:
     for recorte in ("principal", "censo"):
         rec = (cad, "valor_producao", recorte)
         ano = (max(a for _, a, _ in linhas) if linhas else None) if recorte == "principal" else "2017"
-        doano = [v for _, a, v in linhas if a == ano]
-        if doano:
+        doano = [v for _, a, v in linhas if a == ano and v is not None]
+        if doano and sum(doano) > 0:
             total = sum(v or 0.0 for v in doano)
             confere(*rec, "valor_mil_reais", total)
             confere(*rec, "valor_a_mil_reais", None if pa is None else total * pa)
