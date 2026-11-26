@@ -1,7 +1,7 @@
 "fonte","arquivo","situacao","detalhe","linhas","verificado_em"
 "organizacoes_amazonia","dados/organizacoes/amazonia.csv","atualizada","","70","2026-11-16 19:57"
 "pam_5457","dados/sidra/pam_5457.csv.gz","sem mudança","","983500","2026-11-16 19:42"
-"pam_5457_ultimo_ano","dados/sidra/pam_5457_ultimo_ano.csv.gz","atualizada","","12040","2026-11-17 18:45"
+"pam_5457_ultimo_ano","dados/sidra/pam_5457_ultimo_ano.csv.gz","atualizada","","24080","2026-11-26 13:28"
 "pevs_289","dados/sidra/pevs_289.csv.gz","sem mudança","","3467520","2026-11-16 19:56"
 "pnad_7015","dados/sidra/pnad_7015.csv.gz","sem mudança","","840","2026-11-16 19:57"
 "ppm_74","dados/sidra/ppm_74.csv.gz","sem mudança","","393820","2026-11-16 19:57"
