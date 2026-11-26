@@ -218,7 +218,7 @@ def ler_indicadores():
     caminho = "dados/indicadores/valor_producao.csv"
     if os.path.exists(caminho):
         for r in ler_csv(caminho):
-            if r["nivel"] == "Brasil" and r["cadeia"] in ind:
+            if r["nivel"] == "Brasil" and r["cadeia"] in ind and r.get("recorte", "principal") == "principal":
                 ind[r["cadeia"]]["valor_producao.principal"]["fonte"] = r["fonte"]
                 ind[r["cadeia"]]["produtos"] = r["produtos"]
     return {k: dict(x) for k, x in ind.items()}

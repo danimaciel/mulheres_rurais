@@ -209,23 +209,25 @@ for c in cadeias:
     confere(*rec, "valor", val if val > 0 else None)
     confere(*rec, "ufs_em_sigilo", fora if val > 0 else None)
 
-    # 4. valor da produção
-    rec = (cad, "valor_producao", "principal")
+    # 4. valor da produção: último ano da fonte ("principal") e 2017, ano do Censo ("censo")
     linhas = [(p, a, v) for p, a, v in valor_fonte.get(c["fonte_valor"], []) if re.search(c["produto_valor"], p)] \
         if c["fonte_valor"] else []
-    if linhas:
-        ult = max(a for _, a, _ in linhas)
-        total = sum(v or 0.0 for _, a, v in linhas if a == ult)
-        am, ah = v6883(cods, "1", "184", "112635"), v6883(cods, "1", "184", "112634")
-        pa = None if am is None or ah is None else am / (am + ah)
-        mulheres = soma([v6887(cods, "1", t) for t in ("45963", "45964", "45969", "45974", "45979")])
-        pt = v6887(cods, "1", "112967")
-        po = None if mulheres is None or not pt else mulheres / pt
-        confere(*rec, "valor_mil_reais", total)
-        confere(*rec, "valor_a_mil_reais", None if pa is None else total * pa)
-        confere(*rec, "valor_b_mil_reais", None if po is None else total * po)
-    else:
-        confere(*rec, "valor_mil_reais", None)
+    am, ah = v6883(cods, "1", "184", "112635"), v6883(cods, "1", "184", "112634")
+    pa = None if am is None or ah is None else am / (am + ah)
+    mulheres = soma([v6887(cods, "1", t) for t in ("45963", "45964", "45969", "45974", "45979")])
+    pt = v6887(cods, "1", "112967")
+    po = None if mulheres is None or not pt else mulheres / pt
+    for recorte in ("principal", "censo"):
+        rec = (cad, "valor_producao", recorte)
+        ano = (max(a for _, a, _ in linhas) if linhas else None) if recorte == "principal" else "2017"
+        doano = [v for _, a, v in linhas if a == ano]
+        if doano:
+            total = sum(v or 0.0 for v in doano)
+            confere(*rec, "valor_mil_reais", total)
+            confere(*rec, "valor_a_mil_reais", None if pa is None else total * pa)
+            confere(*rec, "valor_b_mil_reais", None if po is None else total * po)
+        else:
+            confere(*rec, "valor_mil_reais", None)
 
 print(f"{conta['igual']} números iguais à conta refeita da fonte, "
       f"{conta['vazio_na_fonte']} vazios que são sigilo ou dado inexistente na fonte, "

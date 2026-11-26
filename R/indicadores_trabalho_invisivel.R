@@ -186,8 +186,9 @@ producao_municipio <- function(cfg) {
   tapply(z(d$valor), d$cod_territorio, sum)
 }
 
-# Valor da produção do último ano, Brasil e UFs, somando os produtos da cadeia.
-valor_producao <- function(cfg) {
+# Valor da produção, Brasil e UFs, somando os produtos da cadeia. Sem ano
+# pedido, usa o último ano da fonte; com ano_ref (2017, ano do Censo), só ele.
+valor_producao <- function(cfg, ano_ref = NULL) {
   if (cfg$fonte_valor == "PAM") {
     # Só a PAM com todos os produtos: a coleta geral traz uma seleção, e uma
     # cadeia de vários produtos sairia com parte deles.
@@ -201,8 +202,9 @@ valor_producao <- function(cfg) {
                 grepl(cfg$produto_valor, pevs$produto), ]
   } else return(NULL)
   if (nrow(d) == 0) return(NULL)
-  ano <- max(d$ano)
+  ano <- if (is.null(ano_ref)) max(d$ano) else ano_ref
   d <- d[d$ano == ano, ]
+  if (nrow(d) == 0) return(NULL)
   v <- aggregate(valor ~ cod_nivel + cod_territorio, data = transform(d, valor = z(valor)), FUN = sum)
   v$territorio <- d$territorio[match(v$cod_territorio, d$cod_territorio)]
   names(v)[names(v) == "valor"] <- "valor_mil_reais"
@@ -454,9 +456,12 @@ for (i in seq_len(nrow(cadeias))) {
   # A: valor da produção x participação das mulheres na área dos
   #    estabelecimentos da cadeia (6883). B: valor x participação das mulheres
   #    no pessoal ocupado (6887). O IBGE não publica valor da produção por sexo.
-  vp <- valor_producao(cfg)
+  # "principal": valor do último ano da PAM ou PEVS. "censo": valor de 2017,
+  #  mesmo ano das participações do Censo.
+  for (ref in list(list(recorte = "principal", ano = NULL), list(recorte = "censo", ano = 2017))) {
+  vp <- valor_producao(cfg, ref$ano)
   if (is.null(vp)) {
-    situacao(cadeia, "valor_producao", "principal", FALSE,
+    situacao(cadeia, "valor_producao", ref$recorte, FALSE,
              if (!nzchar(cfg$fonte_valor)) "sem produto correspondente na PAM ou na PEVS" else
                "falta o arquivo da PAM ou da PEVS")
   } else {
@@ -472,14 +477,16 @@ for (i in seq_len(nrow(cadeias))) {
     x <- x[x$valor_mil_reais > 0, ]
     x <- x[order(x$cod_nivel, -x$valor_mil_reais), ]
     x$nivel <- nivel_nome(x$cod_nivel)
+    x$recorte <- ref$recorte
     saidas$valor[[length(saidas$valor) + 1]] <- cbind(cadeia = cadeia, x[c(
-      "nivel", "cod_territorio", "territorio", "fonte", "ano", "valor_mil_reais", "pct_area_m",
+      "recorte", "nivel", "cod_territorio", "territorio", "fonte", "ano", "valor_mil_reais", "pct_area_m",
       "mulheres_ocupadas", "pessoal_total", "pct_ocupadas_m", "valor_a_mil_reais", "valor_b_mil_reais", "produtos")])
     b <- x[x$cod_nivel == 1, ]
-    situacao(cadeia, "valor_producao", "principal", nrow(b) == 1 && !is.na(b$valor_a_mil_reais),
+    situacao(cadeia, "valor_producao", ref$recorte, nrow(b) == 1 && !is.na(b$valor_a_mil_reais),
              sprintf("%s %s: %s", b$fonte, b$ano, b$produtos))
     for (k in c("ano", "valor_mil_reais", "pct_area_m", "pct_ocupadas_m", "valor_a_mil_reais", "valor_b_mil_reais"))
-      resumir(cadeia, "valor_producao", "principal", k, b[[k]])
+      resumir(cadeia, "valor_producao", ref$recorte, k, b[[k]])
+  }
   }
 }
 

@@ -56,13 +56,16 @@ pedidos <- list(
          d <- consultar_nivel("6883", "n6", "c12564/41145", codigos_recorte = "all")
          cbind(tabela = "6883", tratar_valor(d))
        }),
-  # Valor da produção da PAM no último ano, todos os produtos, Brasil e UFs.
-  # A coleta geral da PAM traz só alguns produtos, por causa do peso municipal.
+  # Valor da produção da PAM no último ano e em 2017 (ano do Censo), todos os
+  # produtos, Brasil e UFs. A coleta geral da PAM traz só alguns produtos, por
+  # causa do peso municipal.
   list(fonte = "pam_5457_ultimo_ano", arquivo = "dados/sidra/pam_5457_ultimo_ano.csv.gz",
        coleta = function() {
-         partes <- lapply(c("n1", "n3"), function(nivel)
-           consultar_nivel("5457", nivel, character(), "all", classe_recorte = "782",
-                           nomes_recorte = c("cod_produto", "produto"), periodo = "last 1"))
+         pedidos <- expand.grid(nivel = c("n1", "n3"), periodo = c("2017", "last 1"),
+                                stringsAsFactors = FALSE)
+         partes <- lapply(seq_len(nrow(pedidos)), function(i)
+           consultar_nivel("5457", pedidos$nivel[i], character(), "all", classe_recorte = "782",
+                           nomes_recorte = c("cod_produto", "produto"), periodo = pedidos$periodo[i]))
          d <- tratar_valor(do.call(rbind, partes))
          message(sprintf("  %d produtos", length(unique(d$produto))))
          cbind(tabela = "5457", fonte = "PAM", d)
